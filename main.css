@@ -1,0 +1,269 @@
+/* * * * * * * * * * * * * * * * * * * * * * *
+ * Device screen size
+ * Usage: @include responsive(mobile) { ... }
+ *        @include responsive(transition){ ... }
+ *        @include responsive(desktop) { ... }
+ * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * *
+ * Helpers / Functions
+ * Usage:
+ *        @include transform(translateX(1px));
+ *        @include transform((translateX(1px) rotateY(5deg)));
+ *        @include opacity(0.5);
+ *        @include transition((margin 0.5s 1s));
+ *        @include responsive(mobile){ ... }
+ * * * * * * * * * * * * * * * * * * * * * * */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+html, body {
+  height: 100%;
+  width: 100%; }
+
+div {
+  box-sizing: border-box; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 1px solid black;
+  padding-bottom: .5px;
+  margin-top: 20px; }
+
+.section-container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh; }
+
+.section-content {
+  padding: 5% 0 5% 5%;
+  height: 100vh; }
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * *
+ * In order to allow centering functions below,
+ * the container's position has to be relative.
+ * * * * * * * * * * * * * * * * * * * * * * * * * */
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.horizontal-center, #nav-menu {
+  position: absolute;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+.center, #cover-tagline {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%); }
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Links
+ * * * * * * * * * * * * * * * * * * * * * * * * * */
+.more-link {
+  background-image: url("images/buttons/buttons_more.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 45px;
+  width: 45px;
+  top: 5%;
+  right: 5%; }
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * *
+  * Group of images and descriptions
+  * - image-and-description-box: a box to contain
+  *     one image and its description below
+  * - container to contain all boxes that allows
+  *     horizontal scrolling
+  * * * * * * * * * * * * * * * * * * * * * * * * * */
+.image-and-description-box {
+  display: inline-block;
+  width: 200px;
+  padding: 5px;
+  height: auto;
+  white-space: normal;
+  margin-right: 50px; }
+  .image-and-description-box h2 {
+    margin-bottom: 20px; }
+
+.images-descriptions-container {
+  padding: 50px;
+  height: 80vh;
+  width: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap; }
+
+.image-group {
+  display: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 250px;
+  margin-bottom: 20px; }
+
+h1 {
+  line-height: 45px;
+  font-size: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    h1 {
+      line-height: 52px;
+      font-size: 36px; } }
+  @media only screen and (min-width: 1280px) {
+    h1 {
+      line-height: 52px;
+      font-size: 36px; } }
+
+/* * * * * * * * * * * * * * * * * * * *
+ * h2 and h3 have the same size.
+ * Difference: h2 is uppercase.
+ * * * * * * * * * * * * * * * * * * * */
+h2 {
+  line-height: 15px;
+  font-size: 15px;
+  font-weight: normal;
+  width: 100%;
+  box-sizing: border-box;
+  text-transform: uppercase; }
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    h2 {
+      line-height: 35px;
+      font-size: 22px; } }
+  @media only screen and (min-width: 1280px) {
+    h2 {
+      line-height: 40px;
+      font-size: 24px; } }
+
+h3 {
+  line-height: 30px;
+  font-size: 15px;
+  width: 100%;
+  font-weight: normal;
+  box-sizing: border-box; }
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    h3 {
+      line-height: 35px;
+      font-size: 22px; } }
+  @media only screen and (min-width: 1280px) {
+    h3 {
+      line-height: 40px;
+      font-size: 24px; } }
+
+p {
+  line-height: 20px;
+  font-size: 15px;
+  width: 100%;
+  font-weight: normal;
+  box-sizing: border-box; }
+  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    p {
+      line-height: 35px;
+      font-size: 22px; } }
+  @media only screen and (min-width: 1280px) {
+    p {
+      line-height: 40px;
+      font-size: 24px; } }
+
+#cover-container {
+  background-image: url("images/index/1_coverimage.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative; }
+  #cover-container h2 {
+    color: white; }
+
+#cover-tagline {
+  background-image: url("images/index/1_tagline.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 50%;
+  width: 80%; }
+
+#nav-menu {
+  top: 5%; }
+
+#scroll-tag {
+  position: absolute;
+  left: 10%;
+  bottom: 3%; }
+
+#down-tag {
+  position: absolute;
+  right: 10%;
+  bottom: 3%; }
+
+#aboutus h2 {
+  font-weight: bold; }
+
+#aboutus-content {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 50%;
+  float: left; }
+
+#aboutus-image {
+  background-image: url("images/index/2_aboutus.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  bottom: 5%;
+  height: 50%;
+  width: 60%; }
+
+#bespoke-description {
+  width: 70%;
+  margin-top: 20%;
+  margin-left: 5%; }
+
+#bespoke-image-shelves {
+  background-image: url("images/index/5_bespoke1.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+  top: 15%;
+  right: 0;
+  width: 55%;
+  height: 50%; }
+
+#bespoke-image-marble {
+  background-image: url("images/index/5_bespoke2.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -2;
+  bottom: 5%;
+  right: 0;
+  width: 95%;
+  height: 35%; }

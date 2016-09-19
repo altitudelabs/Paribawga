@@ -1,0 +1,53 @@
+/* * * * * * * * * * * * * * * * * * * * * * *
+ * Helpers / Functions
+ * Usage:
+ *        @include transform(translateX(1px));
+ *        @include transform((translateX(1px) rotateY(5deg)));
+ *        @include opacity(0.5);
+ *        @include transition((margin 0.5s 1s));
+ *        @include responsive(mobile){ ... }
+ * * * * * * * * * * * * * * * * * * * * * * */
+
+
+@mixin transform($tranform){
+  -webkit-transform: $tranform;
+  -moz-transform: $tranform;
+  -ms-transform: $tranform;
+  -o-transform: $tranform;
+  transform: $tranform;
+}
+
+// @mixin opacity($o) {
+//   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity="+($o * 100)+")";
+// 	filter: alpha(opacity= $o * 100);
+//   -moz-opacity:$o;
+//   -khtml-opacity: $o;
+//   opacity: $o;
+// }
+
+// @mixin transition($t) {
+//   -webkit-transition: $t;
+//   -moz-transition: $t;
+//   -o-transition: $t;
+//   transition: $t;
+// }
+
+@mixin responsive($media) {
+  @if $media == smallmobile {
+    @media only screen and (max-width: $mobile-small-width) { @content; }
+
+  }
+
+  @if $media == mobile {
+    @media only screen and (max-width: $mobile-large-width - 1) { @content; }
+
+  }
+
+  @if $media == transition {
+    @media only screen and (min-width: $mobile-large-width) and (max-width: $desktop-large-width - 1) { @content; }
+  }
+
+  @else if $media == desktop {
+    @media only screen and (min-width: $desktop-large-width) { @content; }
+  }
+}

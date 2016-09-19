@@ -1,0 +1,41 @@
+#cover-container {
+  background-image: url('images/index/1_coverimage.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  // To make the content vertically centered
+  position: relative;
+
+  h2 {
+    color: white;
+  }
+}
+
+#cover-tagline {
+  @extend .center;
+  background-image: url('images/index/1_tagline.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  height: 50%;
+  width: 80%;
+
+}
+
+#nav-menu {
+  @extend .horizontal-center;
+  top: 5%;
+}
+
+#scroll-tag {
+  position: absolute;
+  left: 10%;
+  bottom: 3%;
+}
+
+#down-tag {
+  position: absolute;
+  right: 10%;
+  bottom: 3%;
+}

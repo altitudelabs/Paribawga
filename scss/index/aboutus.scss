@@ -1,0 +1,24 @@
+#aboutus {
+  h2 {
+    font-weight: bold;
+  }
+}
+
+#aboutus-content {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  width: 50%;
+  float: left;
+}
+
+#aboutus-image {
+  background-image: url('images/index/2_aboutus.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  right: 0;
+  bottom: 5%;
+  height: 50%;
+  width: 60%;
+}

@@ -1,0 +1,27 @@
+{
+  "name": "paribawga",
+  "version": "1.0.0",
+  "description": "paribawga",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss ./scss/main.scss ./main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/altitudelabs/Paribawga.git"
+  },
+  "author": "Altitude Labs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/altitudelabs/Paribawga/issues"
+  },
+  "homepage": "https://github.com/altitudelabs/Paribawga#readme",
+  "devDependencies": {
+    "node-sass": "^3.8.0"
+  },
+  "dependencies": {
+    "tween.js": "^16.3.4"
+  }
+}

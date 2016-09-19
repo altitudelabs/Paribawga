@@ -1,0 +1,79 @@
+h1 {
+  line-height: 45px;
+  font-size: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  @include responsive(transition){
+    line-height: 52px;
+    font-size: 36px;
+  }
+
+  @include responsive(desktop){
+    line-height: 52px;
+    font-size: 36px;
+  }
+}
+
+/* * * * * * * * * * * * * * * * * * * *
+ * h2 and h3 have the same size.
+ * Difference: h2 is uppercase.
+ * * * * * * * * * * * * * * * * * * * */
+
+h2 {
+  line-height: 15px;
+  font-size: 15px;
+  font-weight: normal;
+  width: 100%;
+  box-sizing: border-box;
+  text-transform: uppercase;
+
+  @include responsive(transition) {
+    line-height: 35px;
+    font-size: 22px;
+  }
+
+  @include responsive(desktop) {
+    line-height: 40px;
+    font-size: 24px;
+  }
+}
+
+h3 {
+  line-height: 30px;
+  font-size: 15px;
+  width: 100%;
+  font-weight: normal;
+  box-sizing: border-box;
+
+  @include responsive(transition){
+      line-height: 35px;
+      font-size: 22px;
+  }
+
+  @include responsive(desktop){
+    line-height: 40px;
+    font-size: 24px;
+  }
+}
+
+p {
+  line-height: 20px;
+  font-size: 15px;
+  width: 100%;
+  font-weight: normal;
+  box-sizing: border-box;
+
+  @include responsive(transition){
+      line-height: 35px;
+      font-size: 22px;
+  }
+
+  @include responsive(desktop){
+    line-height: 40px;
+    font-size: 24px;
+  }
+}
