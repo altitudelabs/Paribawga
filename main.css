@@ -242,9 +242,9 @@ p {
   z-index: -2; }
 
 #bespoke-description {
-  width: 70%;
+  width: 60%;
   margin-top: 20%;
-  margin-left: 5%; }
+  margin-left: 15%; }
 
 #bespoke-image-shelves {
   background-image: url("images/index/5_bespoke1.jpg");
