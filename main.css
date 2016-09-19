@@ -42,10 +42,6 @@ a {
   overflow: hidden;
   height: 100vh; }
 
-.section-content {
-  padding: 5% 0 5% 5%;
-  height: 100vh; }
-
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
  * In order to allow centering functions below,
  * the container's position has to be relative.
@@ -127,6 +123,8 @@ a {
   margin-bottom: 20px; }
 
 h1 {
+  margin-left: 10%;
+  margin-top: 15%;
   line-height: 45px;
   font-size: 30px;
   width: 100%;
@@ -227,8 +225,9 @@ p {
 
 #aboutus-content {
   padding-top: 5%;
+  padding-left: 7%;
   padding-bottom: 5%;
-  width: 50%;
+  width: 55%;
   float: left; }
 
 #aboutus-image {
@@ -239,7 +238,8 @@ p {
   right: 0;
   bottom: 5%;
   height: 50%;
-  width: 60%; }
+  width: 60%;
+  z-index: -2; }
 
 #bespoke-description {
   width: 70%;
