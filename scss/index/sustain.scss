@@ -1,12 +1,30 @@
 #sustain-image-marble {
-  background-image: url('images/1-sustainability/sustain1.jpg');
+  background-image: url('images/index/6_sustain1.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  right: 0;
+  top: 5%;
+  height: 40%;
+  width: 70%;
+  z-index: -1;
+
 }
 
 #sustain-image-chair {
+  background-image: url('images/index/6_sustain2.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 
+  position: relative;
+  height: 40%;
+  width: 50%;
+  margin-top: 10px;
 }
 
 #sustain-description {
   padding-left: 10%;
   padding-right: 10%;
+  margin-top: 10%;
 }
