@@ -1,7 +1,5 @@
 #contact-section {
 
-  $logo-width: 150px;
-
   text-align: center;
   padding: 20px;
 
@@ -36,15 +34,4 @@
       margin-bottom: 108px;
     }
   }
-
-  .logo {
-    background-image: url('./images/buttons/sosmed_paribawga logo.svg');
-    @extend .background-contain;
-    width: $logo-width;
-    height: 60px;
-    margin: auto;
-    margin-bottom: 16px;
-  }
-
-
 }

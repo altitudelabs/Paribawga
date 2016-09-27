@@ -4,6 +4,7 @@
 
   $navigations-top: 50px;
   $navigations-sidemargin: 20px;
+  $navigations-height: 60px;
 
   $previous-width-mobile: 44px;
   $previous-left: 13px;
@@ -30,6 +31,7 @@
     margin-top: $navigations-top;
     margin-left: $previous-left;
     margin-right: $next-right;
+    height: $navigations-height;
 
     .previous { // 300 x 131
       background-image: url('./images/buttons/buttons_previous.svg');
