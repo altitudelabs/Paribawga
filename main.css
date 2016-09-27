@@ -120,14 +120,14 @@ html, body {
 .clearfix:after {
   clear: both; }
 
-.background-image, .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .img2-marble-container .marble, .background-contain, #footer .logo, #footer .apps-logo .app, .header .navigations .previous, .header .navigations .next, .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair, .collection-page .image-description .image, .collection-page .back-to-top {
+.background-image, .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .img2-marble-container .marble, .background-contain, #footer .logo, #footer .apps-logo .app, .header .navigations .previous, .header .navigations .next, .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair, .collection-page .image-description .image, .collection-page .back-to-top, #furniture .image {
   background-position: center center;
   background-repeat: no-repeat; }
 
 .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .img2-marble-container .marble {
   background-size: cover; }
 
-.background-contain, #footer .logo, #footer .apps-logo .app, .header .navigations .previous, .header .navigations .next, .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair, .collection-page .image-description .image, .collection-page .back-to-top {
+.background-contain, #footer .logo, #footer .apps-logo .app, .header .navigations .previous, .header .navigations .next, .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair, .collection-page .image-description .image, .collection-page .back-to-top, #furniture .image {
   background-size: contain; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -164,29 +164,29 @@ html, body {
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%); }
 
-#footer .logo {
-  background-image: url("./images/buttons/sosmed_paribawga logo.svg");
-  width: 150px;
-  height: 60px;
-  margin: auto;
-  margin-bottom: 16px; }
-
-#footer .apps-logo {
-  left: 50%;
-  position: relative;
-  margin-bottom: 30px;
-  height: 30px; }
-  #footer .apps-logo .app {
-    margin-right: 11.5px;
-    margin-left: 11.5px;
-    width: 30px;
-    height: 30px;
-    float: left; }
-
-#footer .outer-div {
-  float: right;
-  position: relative;
-  left: -50%; }
+#footer {
+  margin-top: 75px; }
+  #footer .logo {
+    background-image: url("./images/buttons/sosmed_paribawga logo.svg");
+    width: 150px;
+    height: 60px;
+    margin: auto;
+    margin-bottom: 16px; }
+  #footer .apps-logo {
+    left: 50%;
+    position: relative;
+    margin-bottom: 30px;
+    height: 30px; }
+    #footer .apps-logo .app {
+      margin-right: 11.5px;
+      margin-left: 11.5px;
+      width: 30px;
+      height: 30px;
+      float: left; }
+  #footer .outer-div {
+    float: right;
+    position: relative;
+    left: -50%; }
 
 .header .title {
   margin-top: 5%;
@@ -202,7 +202,7 @@ html, body {
   margin-top: 50px;
   margin-left: 13px;
   margin-right: 20px;
-  height: 60px; }
+  height: 50px; }
   .header .navigations .previous {
     background-image: url("./images/buttons/buttons_previous.svg");
     float: left;
@@ -217,7 +217,7 @@ html, body {
     height: 0;
     padding-bottom: 21.73913px;
     margin-top: 10px; }
-  .header .navigations .main-title {
+  .header .navigations .main-title, .header .navigations .sub-title {
     font-family: parabola;
     font-weight: 300;
     font-size: 43px;
@@ -225,6 +225,14 @@ html, body {
     float: left;
     width: calc(100% - 86px);
     text-align: center; }
+  .header .navigations .sub-title {
+    font-family: sourceCodePro;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    margin-top: 10px;
+    width: calc(100% - 76px); }
 
 .images-slide-section, #collection-section, #projects-section, #press-section {
   /* * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -506,16 +514,13 @@ html, body {
       text-decoration: underline;
       color: inherit; }
     #contact-section .content .contact-info {
-      margin-top: 40px;
-      margin-bottom: 108px; }
-
-.collection-page .content {
-  margin-bottom: 75px; }
+      margin-top: 40px; }
 
 .collection-page .image-description {
   margin-top: 50px; }
   .collection-page .image-description .image {
     height: 200px;
+    max-width: 320px;
     display: block;
     margin: auto; }
   .collection-page .image-description .desc {
@@ -536,3 +541,29 @@ html, body {
   position: absolute;
   right: 18px;
   bottom: 96px; }
+
+#furniture .image {
+  padding-top: 40px;
+  height: 340px;
+  max-width: 300px;
+  display: block;
+  position: relative;
+  margin: auto; }
+
+#furniture .desc {
+  font-family: sourceCodePro;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: .05em;
+  line-height: 19px;
+  margin: 40px 15px; }
+
+#furniture .back-link {
+  font-family: sourceCodePro;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: .05em;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: inherit;
+  text-align: center; }

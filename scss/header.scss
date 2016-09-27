@@ -4,7 +4,7 @@
 
   $navigations-top: 50px;
   $navigations-sidemargin: 20px;
-  $navigations-height: 60px;
+  $navigations-height: 50px;
 
   $previous-width-mobile: 44px;
   $previous-left: 13px;
@@ -13,6 +13,7 @@
   $next-right: 20px;
 
   $main-title-width: calc(100% - 86px);
+  $sub-title-width: calc(100% - 76px);
 
   .title {
     margin-top: $title-top-mobile;
@@ -66,6 +67,18 @@
       float: left;
       width: $main-title-width;
       text-align: center;
+    }
+
+    .sub-title {
+      @extend .main-title;
+      font-family: sourceCodePro;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      margin-top: 10px;
+
+      width: $sub-title-width;
     }
   }
 }

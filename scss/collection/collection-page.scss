@@ -5,10 +5,6 @@
   $backtotop-bottom: 96px;
   $backtotop-right: 18px;
 
-  .content {
-    margin-bottom: 75px;
-  }
-
   .image-description {
 
     margin-top: 50px;
@@ -17,6 +13,7 @@
     .image {
       @extend .background-contain;
       height: $image-height-temp;
+      max-width: 320px;
       display: block;
       margin: auto;
     }
