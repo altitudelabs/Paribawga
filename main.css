@@ -128,14 +128,14 @@ a {
 .clearfix:after {
   clear: both; }
 
-.background-image, .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, .background-contain, .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image {
+.background-image, .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .img2-marble-container .marble, .background-contain, .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair {
   background-position: center center;
   background-repeat: no-repeat; }
 
-.background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag {
+.background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .img2-marble-container .marble {
   background-size: cover; }
 
-.background-contain, .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image {
+.background-contain, .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair {
   background-size: contain; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -381,57 +381,102 @@ p {
     height: 243px;
     bottom: 0; }
 
-#bespoke-description {
-  width: 60%;
-  margin-top: 20%;
-  margin-left: 15%; }
+#bespoke-section {
+  margin-bottom: 115px; }
+  #bespoke-section .title {
+    font-family: parabola;
+    font-weight: 300;
+    font-size: 43px;
+    letter-spacing: .015em;
+    margin-left: 35px;
+    margin-bottom: 20px; }
+  #bespoke-section .desc-container {
+    width: calc(100% - 190px);
+    height: 220px;
+    padding-top: 48px;
+    padding-left: 43px;
+    float: left;
+    overflow: visible;
+    position: relative; }
+    #bespoke-section .desc-container .text, #bespoke-section .desc-container .images-slide-section .image-and-description-box .name, .images-slide-section .image-and-description-box #bespoke-section .desc-container .name, #bespoke-section .desc-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #bespoke-section .desc-container .name, #bespoke-section .desc-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #bespoke-section .desc-container .name {
+      width: 230px;
+      font-family: sourceCodePro;
+      font-weight: 300;
+      font-size: 12px;
+      letter-spacing: .05em;
+      line-height: 19px; }
+    #bespoke-section .desc-container .contact-link {
+      font-family: sourceCodePro;
+      font-weight: 600;
+      font-decoration: none;
+      font-size: 12px;
+      letter-spacing: .1em;
+      text-transform: uppercase; }
+  #bespoke-section .img1-shelf-container {
+    width: 190px;
+    overflow: visible;
+    float: right; }
+    #bespoke-section .img1-shelf-container .shelf {
+      background-image: url("images/index/5_bespoke1.jpg");
+      width: 190px;
+      height: 246px;
+      right: 0; }
+  #bespoke-section .img2-marble-container {
+    width: 351px;
+    height: 208px;
+    overflow: visible;
+    float: right; }
+    #bespoke-section .img2-marble-container .marble {
+      background-image: url("images/index/5_bespoke2.jpg");
+      position: relative;
+      width: 100%;
+      height: 234px;
+      top: -26px;
+      z-index: -1; }
 
-#bespoke-image-shelves {
-  background-image: url("images/index/5_bespoke1.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  position: absolute;
-  z-index: -1;
-  top: 15%;
-  right: 0;
-  width: 55%;
-  height: 50%; }
+#sustain-section .title {
+  font-family: parabola;
+  font-weight: 300;
+  font-size: 43px;
+  letter-spacing: .015em;
+  margin-left: 35px;
+  margin-bottom: 20px; }
 
-#bespoke-image-marble {
-  background-image: url("images/index/5_bespoke2.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  position: absolute;
-  z-index: -2;
-  bottom: 5%;
-  right: 0;
-  width: 95%;
-  height: 35%; }
+#sustain-section .img1-chair-container {
+  float: left;
+  overflow: visible;
+  width: 197px; }
+  #sustain-section .img1-chair-container .chair {
+    background-image: url("images/index/6_sustain2.jpg");
+    width: 100%;
+    height: 231px; }
 
-#sustain-image-marble {
-  background-image: url("images/index/6_sustain1.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  position: absolute;
-  right: 0;
-  top: 5%;
-  height: 40%;
-  width: 70%;
-  z-index: -1; }
+#sustain-section .img2-marble-container {
+  float: right;
+  overflow: visible;
+  width: calc(100% - 197px); }
+  #sustain-section .img2-marble-container .marble {
+    background-image: url("images/index/6_sustain1.jpg");
+    width: 255px;
+    height: 221px;
+    top: -73px;
+    left: -74px;
+    position: relative;
+    z-index: -1; }
 
-#sustain-image-chair {
-  background-image: url("images/index/6_sustain2.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  position: relative;
-  height: 40%;
-  width: 50%;
-  margin-top: 10px; }
-
-#sustain-description {
-  padding-left: 10%;
-  padding-right: 10%;
-  margin-top: 10%; }
+#sustain-section .text-container {
+  width: 100%;
+  margin-top: 24px;
+  float: left;
+  padding-left: 49px;
+  padding-right: 49px;
+  margin-bottom: 120px; }
+  #sustain-section .text-container p {
+    font-family: sourceCodePro;
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: .05em;
+    line-height: 19px; }
 
 #contact-section {
   height: auto; }
