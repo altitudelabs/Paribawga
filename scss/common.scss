@@ -32,11 +32,6 @@ a {
   height: 100vh;
 }
 
-.section-content {
-  padding: 5% 0 5% 5%;
-  height: 100vh;
-}
-
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
  * In order to allow centering functions below,
  * the container's position has to be relative.
@@ -75,7 +70,7 @@ a {
    position: absolute;
    height: 45px;
    width: 45px;
-   top: 5%;
+   top: 7%;
    right: 5%;
  }
 

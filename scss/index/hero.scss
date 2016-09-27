@@ -29,13 +29,23 @@
 }
 
 #scroll-tag {
+  background-image: url('images/buttons/buttons_scroll.svg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   position: absolute;
-  left: 10%;
-  bottom: 3%;
+  width: 25%;
+  height: 15%;
+  bottom: 0;
+  left: 0;
 }
 
 #down-tag {
+  background-image: url('images/buttons/buttons_down.svg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   position: absolute;
-  right: 10%;
-  bottom: 3%;
+  width: 25%;
+  height: 15%;
+  bottom: 0;
+  right: 0;
 }

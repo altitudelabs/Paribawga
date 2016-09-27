@@ -42,10 +42,6 @@ a {
   overflow: hidden;
   height: 100vh; }
 
-.section-content {
-  padding: 5% 0 5% 5%;
-  height: 100vh; }
-
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
  * In order to allow centering functions below,
  * the container's position has to be relative.
@@ -90,7 +86,7 @@ a {
   position: absolute;
   height: 45px;
   width: 45px;
-  top: 5%;
+  top: 7%;
   right: 5%; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -127,6 +123,8 @@ a {
   margin-bottom: 20px; }
 
 h1 {
+  margin-left: 10%;
+  margin-top: 15%;
   line-height: 45px;
   font-size: 30px;
   width: 100%;
@@ -213,22 +211,33 @@ p {
   top: 5%; }
 
 #scroll-tag {
+  background-image: url("images/buttons/buttons_scroll.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   position: absolute;
-  left: 10%;
-  bottom: 3%; }
+  width: 25%;
+  height: 15%;
+  bottom: 0;
+  left: 0; }
 
 #down-tag {
+  background-image: url("images/buttons/buttons_down.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   position: absolute;
-  right: 10%;
-  bottom: 3%; }
+  width: 25%;
+  height: 15%;
+  bottom: 0;
+  right: 0; }
 
 #aboutus h2 {
   font-weight: bold; }
 
 #aboutus-content {
   padding-top: 5%;
+  padding-left: 7%;
   padding-bottom: 5%;
-  width: 50%;
+  width: 55%;
   float: left; }
 
 #aboutus-image {
@@ -239,12 +248,13 @@ p {
   right: 0;
   bottom: 5%;
   height: 50%;
-  width: 60%; }
+  width: 60%;
+  z-index: -2; }
 
 #bespoke-description {
-  width: 70%;
+  width: 60%;
   margin-top: 20%;
-  margin-left: 5%; }
+  margin-left: 15%; }
 
 #bespoke-image-shelves {
   background-image: url("images/index/5_bespoke1.jpg");
@@ -267,3 +277,28 @@ p {
   right: 0;
   width: 95%;
   height: 35%; }
+
+#sustain-image-marble {
+  background-image: url("images/index/6_sustain1.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  top: 5%;
+  height: 40%;
+  width: 70%;
+  z-index: -1; }
+
+#sustain-image-chair {
+  background-image: url("images/index/6_sustain2.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 40%;
+  width: 50%;
+  margin-top: 10px; }
+
+#sustain-description {
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 10%; }
