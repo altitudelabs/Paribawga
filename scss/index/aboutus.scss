@@ -1,26 +1,71 @@
-#aboutus {
-  h2 {
-    font-weight: bold;
+#aboutus-section {
+  $section-height-mobile: 576px + 37px;
+  $section-marginbottom: 64px;
+
+  $image-width: 166px;
+  $image-height: 243px;
+  $image-margintop: 240px; // 203
+  $text-container: calc(100% - 166px);
+  $text-width: 180px;
+
+  @include responsive (mobile) {
+    height: $section-height-mobile;
+    margin-bottom: $section-marginbottom;
   }
-}
+  .title {
+    text-transform: uppercase;
 
-#aboutus-content {
-  padding-top: 5%;
-  padding-left: 7%;
-  padding-bottom: 5%;
-  width: 55%;
-  float: left;
-}
+    font-family: parabola;
+    font-weight: normal;
+    font-size: 43px;
+    letter-spacing: .015em;
 
-#aboutus-image {
-  background-image: url('images/index/2_aboutus.jpg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+    margin-top: 58px;
+    margin-left: 35px;
+    margin-bottom: 28px;
+  }
 
-  position: absolute;
-  right: 0;
-  bottom: 5%;
-  height: 50%;
-  width: 60%;
-  z-index: -2;
+  .text-container {
+    width: calc(100% - 166px); //image-width
+    float: left;
+    overflow-x: visible;
+
+    .text {
+      margin-left: 27px;
+      width: $text-width;
+      left: 27px;
+
+      p {
+        font-family: sourceCodePro;
+        font-weight: 300;
+        font-size: 12px;
+        letter-spacing: .05em;
+        line-height: 15px;
+      }
+
+      .video-link {
+        font-family: sourceCodePro;
+        font-weight: 800;
+        font-size: 12px;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .image-container {
+    width: $image-width;
+    float: right;
+
+    .image {
+      background-image: url('images/index/2_aboutus.jpg');
+      @extend .background-contain;
+
+      position: relative;
+      margin-top: $image-margintop;
+      width: 100%;
+      height: $image-height;
+      bottom: 0;
+    }
+  }
 }
