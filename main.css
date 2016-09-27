@@ -128,14 +128,14 @@ a {
 .clearfix:after {
   clear: both; }
 
-.background-image, .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, .background-contain, #hero-section .cover-tagline, #aboutus-section .image-container .image {
+.background-image, .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, .background-contain, .images-slide-section .more-tag, #collection-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image {
   background-position: center center;
   background-repeat: no-repeat; }
 
 .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag {
   background-size: cover; }
 
-.background-contain, #hero-section .cover-tagline, #aboutus-section .image-container .image {
+.background-contain, .images-slide-section .more-tag, #collection-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image {
   background-size: contain; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -171,52 +171,6 @@ a {
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%); }
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * *
- * Links
- * * * * * * * * * * * * * * * * * * * * * * * * * */
-.more-link {
-  background-image: url("images/buttons/buttons_more.svg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  position: absolute;
-  height: 45px;
-  width: 45px;
-  top: 7%;
-  right: 5%; }
-
-/* * * * * * * * * * * * * * * * * * * * * * * * * *
-  * Group of images and descriptions
-  * - image-and-description-box: a box to contain
-  *     one image and its description below
-  * - container to contain all boxes that allows
-  *     horizontal scrolling
-  * * * * * * * * * * * * * * * * * * * * * * * * * */
-.image-and-description-box {
-  display: inline-block;
-  width: 200px;
-  padding: 5px;
-  height: auto;
-  white-space: normal;
-  margin-right: 50px; }
-  .image-and-description-box h2 {
-    margin-bottom: 20px; }
-
-.images-descriptions-container {
-  padding: 50px;
-  height: 80vh;
-  width: auto;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap; }
-
-.image-group {
-  display: auto;
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
-  height: 250px;
-  margin-bottom: 20px; }
 
 h1 {
   margin-left: 10%;
@@ -287,6 +241,59 @@ p {
       line-height: 40px;
       font-size: 24px; } }
 
+.images-slide-section, #collection-section {
+  /* * * * * * * * * * * * * * * * * * * * * * * * * *
+  * Group of images and descriptions
+  * - image-and-description-box: a box to contain
+  *     one image and its description below
+  * - container to contain all boxes that allows
+  *     horizontal scrolling
+  * * * * * * * * * * * * * * * * * * * * * * * * * */ }
+  .images-slide-section .title, #collection-section .title {
+    font-family: parabola;
+    font-weight: 300;
+    font-size: 43px;
+    letter-spacing: .015em;
+    margin-left: 35px;
+    margin-bottom: 40px; }
+  .images-slide-section .more-tag, #collection-section .more-tag {
+    background-image: url("images/buttons/buttons_more.svg");
+    position: absolute;
+    top: 0;
+    right: 28px;
+    width: 30px;
+    height: 0;
+    padding-bottom: 27.10843px;
+    margin-top: 10px; }
+  .images-slide-section .image-and-description-box, #collection-section .image-and-description-box {
+    display: inline-block;
+    width: 152px;
+    margin-right: 22px;
+    margin-left: 22px;
+    white-space: normal; }
+    .images-slide-section .image-and-description-box .image, #collection-section .image-and-description-box .image {
+      display: auto;
+      width: 152px;
+      height: 177px; }
+    .images-slide-section .image-and-description-box .text, #collection-section .image-and-description-box .text, .images-slide-section .image-and-description-box .name, #collection-section .image-and-description-box .name {
+      font-family: sourceCodePro;
+      font-weight: 300;
+      font-size: 12px;
+      letter-spacing: .05em;
+      line-height: 19px; }
+    .images-slide-section .image-and-description-box .name, #collection-section .image-and-description-box .name {
+      margin-top: 23px;
+      margin-bottom: 23px;
+      text-transform: uppercase; }
+  .images-slide-section .images-descriptions-container, #collection-section .images-descriptions-container {
+    margin-left: 68px;
+    margin-bottom: 79px;
+    width: auto;
+    height: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap; }
+
 #hero-section {
   background-image: url("images/index/1_coverimage.jpg"); }
   @media only screen and (max-width: 720px) {
@@ -346,17 +353,17 @@ p {
   width: calc(100% - 166px);
   float: left;
   overflow-x: visible; }
-  #aboutus-section .text-container .text {
+  #aboutus-section .text-container .text, #aboutus-section .text-container .images-slide-section .image-and-description-box .name, .images-slide-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #aboutus-section .text-container .name {
     margin-left: 27px;
     width: 180px;
     left: 27px; }
-    #aboutus-section .text-container .text p {
+    #aboutus-section .text-container .text p, #aboutus-section .text-container .images-slide-section .image-and-description-box .name p, .images-slide-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #aboutus-section .text-container .name p {
       font-family: sourceCodePro;
       font-weight: 300;
       font-size: 12px;
       letter-spacing: .05em;
       line-height: 15px; }
-    #aboutus-section .text-container .text .video-link {
+    #aboutus-section .text-container .text .video-link, #aboutus-section .text-container .images-slide-section .image-and-description-box .name .video-link, .images-slide-section .image-and-description-box #aboutus-section .text-container .name .video-link, #aboutus-section .text-container #collection-section .image-and-description-box .name .video-link, #collection-section .image-and-description-box #aboutus-section .text-container .name .video-link {
       font-family: sourceCodePro;
       font-weight: 800;
       font-size: 12px;
