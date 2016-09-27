@@ -109,14 +109,6 @@ html, body {
   max-width: 100%;
   overflow-x: hidden; }
 
-a {
-  color: inherit;
-  text-decoration: none;
-  display: inline-block;
-  border-bottom: 1px solid black;
-  padding-bottom: .5px;
-  margin-top: 20px; }
-
 .section-container {
   position: relative;
   overflow: hidden; }
@@ -171,75 +163,6 @@ a {
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%); }
-
-h1 {
-  margin-left: 10%;
-  margin-top: 15%;
-  line-height: 45px;
-  font-size: 30px;
-  width: 100%;
-  box-sizing: border-box;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase; }
-  @media only screen and (min-width: 721px) and (max-width: 1199px) {
-    h1 {
-      line-height: 52px;
-      font-size: 36px; } }
-  @media only screen and (min-width: 1200px) {
-    h1 {
-      line-height: 52px;
-      font-size: 36px; } }
-
-/* * * * * * * * * * * * * * * * * * * *
- * h2 and h3 have the same size.
- * Difference: h2 is uppercase.
- * * * * * * * * * * * * * * * * * * * */
-h2 {
-  line-height: 15px;
-  font-size: 15px;
-  font-weight: normal;
-  width: 100%;
-  box-sizing: border-box;
-  text-transform: uppercase; }
-  @media only screen and (min-width: 721px) and (max-width: 1199px) {
-    h2 {
-      line-height: 35px;
-      font-size: 22px; } }
-  @media only screen and (min-width: 1200px) {
-    h2 {
-      line-height: 40px;
-      font-size: 24px; } }
-
-h3 {
-  line-height: 30px;
-  font-size: 15px;
-  width: 100%;
-  font-weight: normal;
-  box-sizing: border-box; }
-  @media only screen and (min-width: 721px) and (max-width: 1199px) {
-    h3 {
-      line-height: 35px;
-      font-size: 22px; } }
-  @media only screen and (min-width: 1200px) {
-    h3 {
-      line-height: 40px;
-      font-size: 24px; } }
-
-p {
-  line-height: 20px;
-  font-size: 15px;
-  width: 100%;
-  font-weight: normal;
-  box-sizing: border-box; }
-  @media only screen and (min-width: 721px) and (max-width: 1199px) {
-    p {
-      line-height: 35px;
-      font-size: 22px; } }
-  @media only screen and (min-width: 1200px) {
-    p {
-      line-height: 40px;
-      font-size: 24px; } }
 
 .images-slide-section, #collection-section, #projects-section, #press-section {
   /* * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -495,16 +418,26 @@ p {
   margin-top: 19px; }
 
 #contact-section {
-  height: auto; }
-  #contact-section h1 {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center; }
-  #contact-section h3 {
-    text-align: center;
-    padding: 10px; }
-  #contact-section a {
-    color: inherit; }
-
-#contact-content {
-  margin: 20px; }
+  text-align: center;
+  padding: 20px; }
+  #contact-section .title {
+    font-family: parabola;
+    font-weight: 300;
+    font-size: 43px;
+    letter-spacing: .055em;
+    margin: auto; }
+  #contact-section .content {
+    margin-top: 50px;
+    margin-left: 32px;
+    margin-right: 28px; }
+    #contact-section .content p {
+      font-family: sourceCodePro;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: .01em;
+      margin-top: 20px; }
+    #contact-section .content a {
+      text-decoration: underline;
+      color: inherit; }
+    #contact-section .content .contact-info {
+      margin-top: 40px; }
