@@ -1,29 +1,23 @@
 #contact-section {
+  height: auto;
+
   h1 {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
   }
 
-  h2 {
-    margin-top: 40px;
-    margin-bottom: 30px;
+  h3 {
+    text-align: center;
+    padding: 10px;
   }
+
+  a {
+    color: inherit;
+  }
+
 }
 
 #contact-content {
   margin: 20px;
-}
-
-#contact-form {
-  td {
-    padding-right: 5px;
-  }
-}
-
-#contact-info {
-  text-transform: uppercase;
-  td {
-    padding-right: 5px;
-  }
 }
