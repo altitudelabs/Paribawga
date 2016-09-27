@@ -302,3 +302,18 @@ p {
   padding-left: 10%;
   padding-right: 10%;
   margin-top: 10%; }
+
+#contact-section {
+  height: auto; }
+  #contact-section h1 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; }
+  #contact-section h3 {
+    text-align: center;
+    padding: 10px; }
+  #contact-section a {
+    color: inherit; }
+
+#contact-content {
+  margin: 20px; }
