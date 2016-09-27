@@ -1,0 +1,93 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * *
+ * SourceCodePro
+ * font-weight:
+ * - black     : 900
+ * - bold      : 800
+ * - semibold  : 600
+ * - medium    : 400
+ * - regular   : 300
+ * - light     : 200
+ * - extralight: 100
+ * * * * * * * * * * * * * * * * * * * * * * * * */
+
+@font-face {
+  font-family: sourceCodePro;
+  src: url('./fonts/SourceCodePro/SourceCodePro-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: sourceCodePro;
+  src: url('./fonts/SourceCodePro/SourceCodePro-Bold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: sourceCodePro;
+  src: url('./fonts/SourceCodePro/SourceCodePro-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: sourceCodePro;
+  src: url('./fonts/SourceCodePro/SourceCodePro-Medium.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: sourceCodePro;
+  src: url('./fonts/SourceCodePro/SourceCodePro-Regular.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: sourceCodePro;
+  src: url('./fonts/SourceCodePro/SourceCodePro-Light.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: sourceCodePro;
+  src: url('./fonts/SourceCodePro/SourceCodePro-ExtraLight.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * *
+ * NeutraText
+ * * * * * * * * * * * * * * * * * * * * * * * * */
+
+ @font-face {
+   font-family: neutraText;
+   src: url('./fonts/NeutraText/NeutraTextTF Book.otf') format('opentype');
+   font-weight: normal;
+   font-style: normal;
+ }
+
+ /* * * * * * * * * * * * * * * * * * * * * * * * *
+ * Parabola
+ * * * * * * * * * * * * * * * * * * * * * * * * */
+
+ @font-face {
+   font-family: parabola;
+   src: url('./fonts/Parabola/PARABOLA-Regular.otf') format('opentype');
+   font-weight: normal;
+   font-style: normal;
+ }
+
+ /* * * * * * * * * * * * * * * * * * * * * * * * *
+ * Edmondsans
+ * * * * * * * * * * * * * * * * * * * * * * * * */
+
+ @font-face {
+   font-family: edmondSans;
+   src: url('./fonts/EdmondSans/Edmondsans-Regular.otf') format('opentype');
+   font-weight: normal;
+   font-style: normal;
+ }

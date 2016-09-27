@@ -1,0 +1,79 @@
+.images-slide-section {
+
+  $image-width: 152px;
+  $image-height: 177px;
+  $image-between-margin: 44px / 2;
+
+  $more-tag-width: 30px;
+
+  .title {
+    font-family: parabola;
+    font-weight: 300;
+    font-size: 43px;
+    letter-spacing: .015em;
+    margin-left: 35px;
+    margin-bottom: 40px;
+  }
+
+  .more-tag { // 166 x 150
+    background-image: url('images/buttons/buttons_more.svg');
+    @extend .background-contain;
+
+    position: absolute;
+    top: 0;
+    right: 28px;
+
+    width: $more-tag-width;
+    height: 0;
+    padding-bottom: 150 / 166 * $more-tag-width;
+    margin-top: 10px;
+  }
+
+  /* * * * * * * * * * * * * * * * * * * * * * * * * *
+  * Group of images and descriptions
+  * - image-and-description-box: a box to contain
+  *     one image and its description below
+  * - container to contain all boxes that allows
+  *     horizontal scrolling
+  * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+  .image-and-description-box {
+    display: inline-block;
+    width: $image-width;
+    margin-right: $image-between-margin;
+    margin-left: $image-between-margin;
+    white-space: normal;
+
+    .image {
+      display: auto;
+      width: $image-width;
+      height: $image-height;
+    }
+
+    .text {
+      font-family: sourceCodePro;
+      font-weight: 300;
+      font-size: 12px;
+      letter-spacing: .05em;
+      line-height: 19px;
+    }
+
+    .name {
+      @extend .text;
+      margin-top: 23px;
+      margin-bottom: 23px;
+
+      text-transform: uppercase;
+    }
+  }
+
+  .images-descriptions-container {
+    margin-left: 68px;
+    margin-bottom: 79px;
+    width: auto;
+    height: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+}

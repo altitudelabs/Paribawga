@@ -1,31 +1,88 @@
-#bespoke-description {
-  width: 60%;
-  margin-top: 20%;
-  margin-left: 15%;
-}
+#bespoke-section {
 
-#bespoke-image-shelves {
-  background-image: url('images/index/5_bespoke1.jpg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  $desc-container-width: calc(100% - 190px); // shelf-width
+  $desc-container-height: 220px;
 
-  position: absolute;
-  z-index: -1;
-  top: 15%;
-  right: 0;
-  width: 55%;
-  height: 50%;
-}
+  $text-width: 230px;
 
-#bespoke-image-marble {
-  background-image: url('images/index/5_bespoke2.jpg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  $shelf-width: 190px;
+  $shelf-height: 246px;
 
-  position: absolute;
-  z-index: -2;
-  bottom: 5%;
-  right: 0;
-  width: 95%;
-  height: 35%;
+  $marble-width: 315px;
+  $marble-height: 234px;
+
+  $shelf-marble-overlap: 26px;
+
+  margin-bottom: 115px;
+
+  .title {
+    font-family: parabola;
+    font-weight: 300;
+    font-size: 43px;
+    letter-spacing: .015em;
+    margin-left: 35px;
+    margin-bottom: 20px;
+  }
+
+  .desc-container {
+    width: $desc-container-width;
+    height: $desc-container-height;
+    padding-top: 48px;
+    padding-left: 43px;
+    float: left;
+    overflow: visible;
+    position: relative;
+
+    .text {
+      width: $text-width;
+      font-family: sourceCodePro;
+      font-weight: 300;
+      font-size: 12px;
+      letter-spacing: .05em;
+      line-height: 19px;
+    }
+
+    .contact-link {
+      font-family: sourceCodePro;
+      font-weight: 600;
+      font-decoration: underline;
+      font-size: 12px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: inherit;
+    }
+  }
+
+  .img1-shelf-container {
+    width: $shelf-width;
+    overflow: visible;
+    float: right;
+
+    .shelf {
+      background-image: url('images/index/5_bespoke1.jpg');
+      @extend .background-contain;
+
+      width: $shelf-width;
+      height: $shelf-height;
+      right: 0;
+    }
+  }
+
+  .img2-marble-container {
+    width: 351px;
+    height: $marble-height - $shelf-marble-overlap;
+    overflow: visible;
+    float: right;
+
+    .marble {
+      background-image: url('images/index/5_bespoke2.jpg');
+      @extend .background-cover;
+
+      position: relative;
+      width: 100%;
+      height: $marble-height;
+      top: -1 * $shelf-marble-overlap;
+      z-index: -1;
+    }
+  }
 }

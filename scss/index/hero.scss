@@ -1,51 +1,71 @@
-#cover-container {
+#hero-section {
+  $section-height-mobile: 558px;
+
+  $tagline-height-mobile: 50%;
+  $tagline-width-mobile: 80%;
+
+  $nav-menu-top-mobile: 5%;
+
+  $scroll-tag-width-mobile: 48px;
+  $down-tag-width-mobile: 42px;
+
   background-image: url('images/index/1_coverimage.jpg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  height: 100vh;
+  @extend .background-cover;
 
-  // To make the content vertically centered
-  position: relative;
-
-  h2 {
-    color: white;
+  @include responsive(mobile) {
+    height: $section-height-mobile;
   }
-}
 
-#cover-tagline {
-  @extend .center;
-  background-image: url('images/index/1_tagline.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  .cover-tagline {
+    background-image: url('images/index/1_tagline.png');
+    @extend .background-contain;
+    @extend .center;
 
-  height: 50%;
-  width: 80%;
+    height: $tagline-height-mobile;
+    width: $tagline-width-mobile;
+  }
 
-}
+  .nav-menu {
+    @extend .horizontal-center;
+    top: $nav-menu-top-mobile;
 
-#nav-menu {
-  @extend .horizontal-center;
-  top: 5%;
-}
+    p {
+      text-decoration: none;
+      color: white;
+      text-transform: uppercase;
 
-#scroll-tag {
-  background-image: url('images/buttons/buttons_scroll.svg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 25%;
-  height: 15%;
-  bottom: 0;
-  left: 0;
-}
+      font-family: sourceCodePro;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: .2em;
+    }
+  }
 
-#down-tag {
-  background-image: url('images/buttons/buttons_down.svg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 25%;
-  height: 15%;
-  bottom: 0;
-  right: 0;
+  .scroll-tag { // 256 x 150
+    background-image: url('images/buttons/buttons_scroll.svg');
+    @extend .background-cover;
+    position: absolute;
+    height: 0;
+
+    @include responsive (mobile) {
+      width: $scroll-tag-width-mobile;
+      padding-bottom: 150 / 256 * $scroll-tag-width-mobile;
+      left: 29px;
+      bottom: 30px;
+    }
+  }
+
+  .down-tag { // 193 x 150
+    background-image: url('images/buttons/buttons_down.svg');
+    @extend .background-cover;
+    position: absolute;
+    height: 0;
+
+    @include responsive (mobile) {
+      width: $down-tag-width-mobile;
+      padding-bottom: 150 / 193 * $down-tag-width-mobile;
+      right: 22px;
+      bottom: 30px;
+    }
+  }
 }

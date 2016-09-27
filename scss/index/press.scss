@@ -1,0 +1,23 @@
+#press-section {
+  @extend .images-slide-section;
+
+  .title {
+    margin-bottom: 0;
+  }
+
+  .date {
+    margin-top: 26px;
+    margin-bottom: 12px;
+
+    font-family: sourceCodePro;
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: .05em;
+    line-height: 19px;
+    text-transform: uppercase;
+  }
+
+  .text {
+    margin-top: 19px;
+  }
+}

@@ -1,23 +1,70 @@
 #contact-section {
-  height: auto;
 
-  h1 {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+  $logo-width: 150px;
+
+  $app-width: 30px;
+
+  text-align: center;
+  padding: 20px;
+
+  .title {
+    font-family: parabola;
+    font-weight: 300;
+    font-size: 43px;
+    letter-spacing: .055em;
+    margin: auto;
   }
 
-  h3 {
-    text-align: center;
-    padding: 10px;
+  .content {
+    margin-top: 50px;
+    margin-left: 32px;
+    margin-right: 28px;
+
+    p {
+      font-family: sourceCodePro;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: .01em;
+      margin-top: 20px;
+    }
+
+    a {
+      text-decoration: underline;
+      color: inherit;
+    }
+
+    .contact-info {
+      margin-top: 40px;
+      margin-bottom: 108px;
+    }
   }
 
-  a {
-    color: inherit;
+  .logo {
+    background-image: url('./images/buttons/sosmed_paribawga logo.svg');
+    @extend .background-contain;
+    width: $logo-width;
+    height: 60px;
+    margin: auto;
+    margin-bottom: 16px;
   }
 
-}
+  .outer-div {
+    float: right;
+    position: relative;
+    left: -50%;
+  }
 
-#contact-content {
-  margin: 20px;
+  .apps-logo {
+    left: 50%;
+    position: relative;
+
+    .app {
+      @extend .background-contain;
+      margin-right: 11.5px;
+      margin-left: 11.5px;
+      width: $app-width;
+      height: $app-width;
+      float: left;
+    }
+  }
 }
