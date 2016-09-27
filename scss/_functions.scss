@@ -39,15 +39,15 @@
   }
 
   @if $media == mobile {
-    @media only screen and (max-width: $mobile-large-width - 1) { @content; }
+    @media only screen and (max-width: $mobile-large-width) { @content; }
 
   }
 
   @if $media == transition {
-    @media only screen and (min-width: $mobile-large-width) and (max-width: $desktop-large-width - 1) { @content; }
+    @media only screen and (min-width: $mobile-large-width + 1) and (max-width: $desktop-min-width - 1) { @content; }
   }
 
   @else if $media == desktop {
-    @media only screen and (min-width: $desktop-large-width) { @content; }
+    @media only screen and (min-width: $desktop-min-width) { @content; }
   }
 }

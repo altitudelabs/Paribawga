@@ -100,14 +100,14 @@
   font-size: 100%;
   font: inherit;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box; }
 
 html, body {
   height: 100%;
-  width: 100%; }
-
-div {
-  box-sizing: border-box; }
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; }
 
 a {
   color: inherit;
@@ -119,8 +119,24 @@ a {
 
 .section-container {
   position: relative;
-  overflow: hidden;
-  height: 100vh; }
+  overflow: hidden; }
+
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.background-image, .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, .background-contain, #hero-section .cover-tagline {
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag {
+  background-size: cover; }
+
+.background-contain, #hero-section .cover-tagline {
+  background-size: contain; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
  * In order to allow centering functions below,
@@ -135,7 +151,7 @@ a {
   -o-transform: translateY(-50%);
   transform: translateY(-50%); }
 
-.horizontal-center, #nav-menu {
+.horizontal-center, #hero-section .nav-menu {
   position: absolute;
   left: 50%;
   margin-right: -50%;
@@ -145,7 +161,7 @@ a {
   -o-transform: translateX(-50%);
   transform: translateX(-50%); }
 
-.center, #cover-tagline {
+.center, #hero-section .cover-tagline {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -212,11 +228,11 @@ h1 {
   font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 721px) and (max-width: 1199px) {
     h1 {
       line-height: 52px;
       font-size: 36px; } }
-  @media only screen and (min-width: 1280px) {
+  @media only screen and (min-width: 1200px) {
     h1 {
       line-height: 52px;
       font-size: 36px; } }
@@ -232,11 +248,11 @@ h2 {
   width: 100%;
   box-sizing: border-box;
   text-transform: uppercase; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 721px) and (max-width: 1199px) {
     h2 {
       line-height: 35px;
       font-size: 22px; } }
-  @media only screen and (min-width: 1280px) {
+  @media only screen and (min-width: 1200px) {
     h2 {
       line-height: 40px;
       font-size: 24px; } }
@@ -247,11 +263,11 @@ h3 {
   width: 100%;
   font-weight: normal;
   box-sizing: border-box; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 721px) and (max-width: 1199px) {
     h3 {
       line-height: 35px;
       font-size: 22px; } }
-  @media only screen and (min-width: 1280px) {
+  @media only screen and (min-width: 1200px) {
     h3 {
       line-height: 40px;
       font-size: 24px; } }
@@ -262,53 +278,54 @@ p {
   width: 100%;
   font-weight: normal;
   box-sizing: border-box; }
-  @media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  @media only screen and (min-width: 721px) and (max-width: 1199px) {
     p {
       line-height: 35px;
       font-size: 22px; } }
-  @media only screen and (min-width: 1280px) {
+  @media only screen and (min-width: 1200px) {
     p {
       line-height: 40px;
       font-size: 24px; } }
 
-#cover-container {
-  background-image: url("images/index/1_coverimage.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  height: 100vh;
-  position: relative; }
-  #cover-container h2 {
-    color: white; }
-
-#cover-tagline {
-  background-image: url("images/index/1_tagline.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  height: 50%;
-  width: 80%; }
-
-#nav-menu {
-  top: 5%; }
-
-#scroll-tag {
-  background-image: url("images/buttons/buttons_scroll.svg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 25%;
-  height: 15%;
-  bottom: 0;
-  left: 0; }
-
-#down-tag {
-  background-image: url("images/buttons/buttons_down.svg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 25%;
-  height: 15%;
-  bottom: 0;
-  right: 0; }
+#hero-section {
+  background-image: url("images/index/1_coverimage.jpg"); }
+  @media only screen and (max-width: 720px) {
+    #hero-section {
+      height: 558px; } }
+  #hero-section .cover-tagline {
+    background-image: url("images/index/1_tagline.png");
+    height: 50%;
+    width: 80%; }
+  #hero-section .nav-menu {
+    top: 5%; }
+    #hero-section .nav-menu p {
+      text-decoration: none;
+      color: white;
+      text-transform: uppercase;
+      font-family: sourceCodePro;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: .2em; }
+  #hero-section .scroll-tag {
+    background-image: url("images/buttons/buttons_scroll.svg");
+    position: absolute;
+    height: 0; }
+    @media only screen and (max-width: 720px) {
+      #hero-section .scroll-tag {
+        width: 48px;
+        padding-bottom: 28.125px;
+        left: 29px;
+        bottom: 30px; } }
+  #hero-section .down-tag {
+    background-image: url("images/buttons/buttons_down.svg");
+    position: absolute;
+    height: 0; }
+    @media only screen and (max-width: 720px) {
+      #hero-section .down-tag {
+        width: 42px;
+        padding-bottom: 32.64249px;
+        right: 22px;
+        bottom: 30px; } }
 
 #aboutus h2 {
   font-weight: bold; }
