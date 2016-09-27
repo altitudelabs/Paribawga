@@ -2,8 +2,6 @@
 
   $logo-width: 150px;
 
-  $app-width: 30px;
-
   text-align: center;
   padding: 20px;
 
@@ -48,23 +46,5 @@
     margin-bottom: 16px;
   }
 
-  .outer-div {
-    float: right;
-    position: relative;
-    left: -50%;
-  }
 
-  .apps-logo {
-    left: 50%;
-    position: relative;
-
-    .app {
-      @extend .background-contain;
-      margin-right: 11.5px;
-      margin-left: 11.5px;
-      width: $app-width;
-      height: $app-width;
-      float: left;
-    }
-  }
 }

@@ -120,14 +120,14 @@ html, body {
 .clearfix:after {
   clear: both; }
 
-.background-image, .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .img2-marble-container .marble, .background-contain, .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair, #contact-section .logo, #contact-section .apps-logo .app {
+.background-image, .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .img2-marble-container .marble, .background-contain, .apps-logo .app, .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair, #contact-section .logo, .header .navigations .previous, .header .navigations .next {
   background-position: center center;
   background-repeat: no-repeat; }
 
 .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .img2-marble-container .marble {
   background-size: cover; }
 
-.background-contain, .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair, #contact-section .logo, #contact-section .apps-logo .app {
+.background-contain, .apps-logo .app, .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair, #contact-section .logo, .header .navigations .previous, .header .navigations .next {
   background-size: contain; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -163,6 +163,21 @@ html, body {
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%); }
+
+.apps-logo {
+  left: 50%;
+  position: relative; }
+  .apps-logo .app {
+    margin-right: 11.5px;
+    margin-left: 11.5px;
+    width: 30px;
+    height: 30px;
+    float: left; }
+
+.outer-div {
+  float: right;
+  position: relative;
+  left: -50%; }
 
 .images-slide-section, #collection-section, #projects-section, #press-section {
   /* * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -452,16 +467,40 @@ html, body {
     height: 60px;
     margin: auto;
     margin-bottom: 16px; }
-  #contact-section .outer-div {
+
+.header .title {
+  margin-top: 5%;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: sourceCodePro;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: .2em; }
+
+.header .navigations {
+  margin-top: 50px;
+  margin-left: 13px;
+  margin-right: 20px; }
+  .header .navigations .previous {
+    background-image: url("./images/buttons/buttons_previous.svg");
+    float: left;
+    width: 44px;
+    height: 0;
+    padding-bottom: 19.21333px;
+    margin-top: 10px; }
+  .header .navigations .next {
+    background-image: url("./images/buttons/buttons_next.svg");
     float: right;
-    position: relative;
-    left: -50%; }
-  #contact-section .apps-logo {
-    left: 50%;
-    position: relative; }
-    #contact-section .apps-logo .app {
-      margin-right: 11.5px;
-      margin-left: 11.5px;
-      width: 30px;
-      height: 30px;
-      float: left; }
+    width: 20px;
+    height: 0;
+    padding-bottom: 21.73913px;
+    margin-top: 10px; }
+  .header .navigations .main-title {
+    font-family: parabola;
+    font-weight: 300;
+    font-size: 43px;
+    letter-spacing: .015em;
+    float: left;
+    width: calc(100% - 86px);
+    text-align: center; }
