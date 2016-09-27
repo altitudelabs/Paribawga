@@ -291,7 +291,10 @@ html, body {
       font-weight: 800;
       font-size: 12px;
       letter-spacing: .1em;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      color: inherit;
+      margin-top: 20px;
+      text-decoration: underline; }
 
 #aboutus-section .image-container {
   width: 166px;
@@ -331,10 +334,11 @@ html, body {
     #bespoke-section .desc-container .contact-link {
       font-family: sourceCodePro;
       font-weight: 600;
-      font-decoration: none;
+      font-decoration: underline;
       font-size: 12px;
       letter-spacing: .1em;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      color: inherit; }
   #bespoke-section .img1-shelf-container {
     width: 190px;
     overflow: visible;

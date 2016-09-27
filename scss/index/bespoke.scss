@@ -45,10 +45,11 @@
     .contact-link {
       font-family: sourceCodePro;
       font-weight: 600;
-      font-decoration: none;
+      font-decoration: underline;
       font-size: 12px;
       letter-spacing: .1em;
       text-transform: uppercase;
+      color: inherit;
     }
   }
 
