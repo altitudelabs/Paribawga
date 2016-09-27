@@ -288,7 +288,8 @@ html, body {
     white-space: nowrap; }
 
 #hero-section {
-  background-image: url("images/index/1_coverimage.jpg"); }
+  background-image: url("images/index/1_coverimage.jpg");
+  height: 650px; }
   @media only screen and (max-width: 720px) {
     #hero-section {
       height: 558px; } }
@@ -297,33 +298,55 @@ html, body {
     height: 50%;
     width: 80%; }
   #hero-section .nav-menu {
-    top: 5%; }
+    top: 5%;
+    font-family: sourceCodePro;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: white; }
+    #hero-section .nav-menu ul {
+      list-style-type: none; }
+      @media only screen and (min-width: 721px) and (max-width: 1199px) {
+        #hero-section .nav-menu ul {
+          display: none; } }
+      @media only screen and (max-width: 720px) {
+        #hero-section .nav-menu ul {
+          display: none; } }
+      #hero-section .nav-menu ul li {
+        float: left;
+        margin-left: 20px;
+        margin-right: 20px; }
     #hero-section .nav-menu p {
-      text-decoration: none;
-      color: white;
-      text-transform: uppercase;
-      font-family: sourceCodePro;
-      font-weight: 600;
-      font-size: 14px;
-      letter-spacing: .2em; }
+      display: none; }
+      @media only screen and (min-width: 721px) and (max-width: 1199px) {
+        #hero-section .nav-menu p {
+          display: block; } }
+      @media only screen and (max-width: 720px) {
+        #hero-section .nav-menu p {
+          display: block; } }
   #hero-section .scroll-tag {
     background-image: url("images/buttons/buttons_scroll.svg");
     position: absolute;
-    height: 0; }
+    height: 0;
+    left: 29px;
+    bottom: 30px;
+    width: 48px;
+    padding-bottom: 28.125px; }
     @media only screen and (max-width: 720px) {
       #hero-section .scroll-tag {
-        width: 48px;
-        padding-bottom: 28.125px;
         left: 29px;
         bottom: 30px; } }
   #hero-section .down-tag {
     background-image: url("images/buttons/buttons_down.svg");
     position: absolute;
-    height: 0; }
+    height: 0;
+    width: 42px;
+    padding-bottom: 32.64249px;
+    right: 22px;
+    bottom: 30px; }
     @media only screen and (max-width: 720px) {
       #hero-section .down-tag {
-        width: 42px;
-        padding-bottom: 32.64249px;
         right: 22px;
         bottom: 30px; } }
 
