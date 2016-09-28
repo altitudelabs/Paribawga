@@ -72,3 +72,69 @@ html, body {
   margin-right: -50%;
   @include transform(translateX(-50%) translateY(-50%));
 }
+
+.grid {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .grid-item {
+    float: left;
+    position: relative;
+  }
+  .grid-item.full {
+    width: 100%;
+  }
+  .grid-item.one-half {
+    width: 50%;
+  }
+  .grid-item.one-third {
+    width: 33.33%;
+  }
+  .grid-item.two-third {
+    width: 66.66%;
+  }
+  .grid-item.one-fourth {
+    width: 25%;
+  }
+  .grid-item.three-fourth {
+    width: 75%;
+  }
+  .grid-item.one-fifth {
+    width: 20%;
+  }
+  .grid-item.two-fifth {
+    width: 40%;
+  }
+  .grid-item.three-fifth {
+    width: 60%;
+  }
+  .grid-item.four-fifth {
+    width: 80%;
+  }
+  .grid-item.one-sixth {
+    width: 16.66%;
+  }
+  .grid-item.five-sixth {
+    width: 83.33%;
+  }
+  .grid-item.one-eighth {
+    width: 12.5%;
+  }
+  .grid-item.three-eighth {
+    width: 37.5%;
+  }
+  .grid-item.five-eighth {
+    width: 62.5%;
+  }
+  .grid-item.seven-eighth {
+    width: 87.5%;
+  }
+}
+
+.max-width-content {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+}

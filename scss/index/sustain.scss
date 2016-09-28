@@ -5,7 +5,8 @@
 
   $chair-marble-overlap: -74px;
 
-  $marble-container-width: calc(100% - 197px); //chair-width
+  $marble-container-width: calc(40% - 197px);
+  $marble-container-width-mobile: calc(100% - 197px); //chair-width
   $marble-top: -73px;
   $marble-width: 320px;
   $marble-height: 221px;
@@ -34,35 +35,70 @@
   }
 
   .img2-marble-container {
-    float: right;
+    float: left;
     overflow: visible;
     width: $marble-container-width;
+
+    @include responsive (mobile) {
+      float: right;
+      width: $marble-container-width-mobile;
+    }
 
     .marble {
       background-image: url('images/index/6_sustain1.jpg');
       width: $marble-width;
       height: $marble-height;
       top: $marble-top;
-      left: $chair-marble-overlap;
       position: relative;
       z-index: -1;
+
+      @include responsive (mobile) {
+        left: $chair-marble-overlap;
+
+      }
     }
   }
 
   .text-container {
-    width: 100%;
+    width: 40%;
     margin-top: 24px;
     float: left;
     padding-left: 49px;
     padding-right: 49px;
-    margin-bottom: 120px;
 
-    p {
-      font-family: sourceCodePro;
-      font-weight: 300;
-      font-size: 12px;
-      letter-spacing: .05em;
-      line-height: 19px;
+    @include responsive (mobile) {
+      width: 100%;
+      margin-bottom: 120px;
+    }
+
+    .text {
+
+      width: 400px;
+      margin-left: -65px;
+
+      @include responsive (mobile) {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      p {
+        width: 240px;
+        float: left;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        min-height: 160px;
+
+        font-family: sourceCodePro;
+        font-weight: 300;
+        font-size: 12px;
+        letter-spacing: .05em;
+        line-height: 19px;
+
+        @include responsive (mobile) {
+          width: 100%;
+          min-height: auto;
+        }
+      }
     }
   }
 }
