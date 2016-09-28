@@ -3,7 +3,7 @@
   $desc-container-width: calc(100% - 190px); // shelf-width
   $desc-container-height: 220px;
 
-  $text-width: 230px;
+  $text-width: 290px;
 
   $shelf-width: 190px;
   $shelf-height: 246px;
@@ -12,6 +12,9 @@
   $marble-height: 234px;
 
   $shelf-marble-overlap: 26px;
+
+  $images-margintop: -80px;
+  $images-margintop-mobile: 0;
 
   margin-bottom: 115px;
 
@@ -27,13 +30,16 @@
   .desc-container {
     width: $desc-container-width;
     height: $desc-container-height;
-    padding-top: 48px;
-    padding-left: 43px;
+    padding-top: 38px; // 48 - text.margin-top
     float: left;
     overflow: visible;
     position: relative;
 
     .text {
+      float: left;
+      padding-left: 43px;
+      min-height: 175px;
+      margin-top: 10px;
       width: $text-width;
       font-family: sourceCodePro;
       font-weight: 300;
@@ -65,6 +71,12 @@
       width: $shelf-width;
       height: $shelf-height;
       right: 0;
+
+      margin-top: $images-margintop;
+
+      @include responsive (mobile) {
+        margin-top: $images-margintop-mobile;
+      }
     }
   }
 
@@ -79,10 +91,24 @@
       @extend .background-cover;
 
       position: relative;
-      width: 100%;
+      width: 550px;
       height: $marble-height;
       top: -1 * $shelf-marble-overlap;
       z-index: -1;
+      float: right;
+
+      margin-top: $images-margintop;
+      margin-right: 40px;
+
+      @include responsive (transition) {
+        margin-right: 0;
+      }
+
+      @include responsive (mobile) {
+        width: 100%;
+        margin-top: $images-margintop-mobile;
+        margin-right: 0;
+      }
     }
   }
 }
