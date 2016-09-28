@@ -527,31 +527,56 @@ html, body {
     height: 231px; }
 
 #sustain-section .img2-marble-container {
-  float: right;
+  float: left;
   overflow: visible;
-  width: calc(100% - 197px); }
+  width: calc(40% - 197px); }
+  @media only screen and (max-width: 720px) {
+    #sustain-section .img2-marble-container {
+      float: right;
+      width: calc(100% - 197px); } }
   #sustain-section .img2-marble-container .marble {
     background-image: url("images/index/6_sustain1.jpg");
     width: 320px;
     height: 221px;
     top: -73px;
-    left: -74px;
     position: relative;
     z-index: -1; }
+    @media only screen and (max-width: 720px) {
+      #sustain-section .img2-marble-container .marble {
+        left: -74px; } }
 
 #sustain-section .text-container {
-  width: 100%;
+  width: 40%;
   margin-top: 24px;
   float: left;
   padding-left: 49px;
   padding-right: 49px;
   margin-bottom: 120px; }
-  #sustain-section .text-container p {
-    font-family: sourceCodePro;
-    font-weight: 300;
-    font-size: 12px;
-    letter-spacing: .05em;
-    line-height: 19px; }
+  @media only screen and (max-width: 720px) {
+    #sustain-section .text-container {
+      width: 100%; } }
+  #sustain-section .text-container .text, #sustain-section .text-container .images-slide-section .image-and-description-box .name, .images-slide-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #sustain-section .text-container .name {
+    width: 750px;
+    margin-left: -130px; }
+    @media only screen and (max-width: 720px) {
+      #sustain-section .text-container .text, #sustain-section .text-container .images-slide-section .image-and-description-box .name, .images-slide-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #sustain-section .text-container .name {
+        width: 100%;
+        margin-left: 0; } }
+    #sustain-section .text-container .text p, #sustain-section .text-container .images-slide-section .image-and-description-box .name p, .images-slide-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #sustain-section .text-container .name p {
+      width: 240px;
+      float: left;
+      margin-bottom: 20px;
+      margin-right: 20px;
+      min-height: 160px;
+      font-family: sourceCodePro;
+      font-weight: 300;
+      font-size: 12px;
+      letter-spacing: .05em;
+      line-height: 19px; }
+      @media only screen and (max-width: 720px) {
+        #sustain-section .text-container .text p, #sustain-section .text-container .images-slide-section .image-and-description-box .name p, .images-slide-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #sustain-section .text-container .name p {
+          width: 100%;
+          min-height: auto; } }
 
 #press-section .title {
   margin-bottom: 0; }
