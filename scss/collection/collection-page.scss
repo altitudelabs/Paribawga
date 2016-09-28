@@ -5,6 +5,12 @@
   $backtotop-bottom: 96px;
   $backtotop-right: 18px;
 
+  .max-width-content {
+    position: relative;
+    max-width: 300px;
+    margin: auto;
+  }
+
   .image-description {
 
     margin-top: 50px;

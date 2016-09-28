@@ -3,6 +3,12 @@
   $image-height: 340px;
   $image-maxwidth: 300px;
 
+  .max-width-content {
+    position: relative;
+    max-width: 500px;
+    margin: auto;
+  }
+
   .image {
     @extend .background-contain;
     padding-top: 40px;

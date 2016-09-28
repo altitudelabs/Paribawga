@@ -2,7 +2,7 @@
   $section-height-mobile: 576px + 37px;
   $section-marginbottom: 64px;
 
-  $title-marginleft: 20%;
+  $title-marginleft: 10%;
   $title-marginleft-trans: 10%;
   $title-marginleft-mobile: 35px;
 
@@ -14,7 +14,7 @@
 
   $image-margintop: -190px;
   $image-margintop-mobile: -44px; // 203
-  $text-container-width: 50%;
+  $text-container-width: 46%;
   $text-container-width-trans: 46%;
   $text-width-mobile: 180px;
 
@@ -80,8 +80,10 @@
     .text {
       width: $text-width-mobile;
       left: 27px;
+      margin-bottom: 60px;
 
       @include responsive(mobile) {
+        margin-bottom: 0;
         margin-left: 27px;
       }
 

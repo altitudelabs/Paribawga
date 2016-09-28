@@ -164,6 +164,68 @@ html, body {
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%); }
 
+.grid:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.grid .grid-item {
+  float: left;
+  position: relative; }
+
+.grid .grid-item.full {
+  width: 100%; }
+
+.grid .grid-item.one-half {
+  width: 50%; }
+
+.grid .grid-item.one-third {
+  width: 33.33%; }
+
+.grid .grid-item.two-third {
+  width: 66.66%; }
+
+.grid .grid-item.one-fourth {
+  width: 25%; }
+
+.grid .grid-item.three-fourth {
+  width: 75%; }
+
+.grid .grid-item.one-fifth {
+  width: 20%; }
+
+.grid .grid-item.two-fifth {
+  width: 40%; }
+
+.grid .grid-item.three-fifth {
+  width: 60%; }
+
+.grid .grid-item.four-fifth {
+  width: 80%; }
+
+.grid .grid-item.one-sixth {
+  width: 16.66%; }
+
+.grid .grid-item.five-sixth {
+  width: 83.33%; }
+
+.grid .grid-item.one-eighth {
+  width: 12.5%; }
+
+.grid .grid-item.three-eighth {
+  width: 37.5%; }
+
+.grid .grid-item.five-eighth {
+  width: 62.5%; }
+
+.grid .grid-item.seven-eighth {
+  width: 87.5%; }
+
+.max-width-content {
+  position: relative;
+  max-width: 600px;
+  margin: auto; }
+
 #footer {
   margin-top: 75px; }
   #footer .logo {
@@ -373,7 +435,7 @@ html, body {
   letter-spacing: .015em;
   font-size: 64px;
   margin-top: 58px;
-  margin-left: 20%; }
+  margin-left: 10%; }
   @media only screen and (min-width: 721px) and (max-width: 1023px) {
     #aboutus-section .title {
       margin-left: 10%; } }
@@ -384,10 +446,10 @@ html, body {
       margin-bottom: 28px; } }
 
 #aboutus-section .text-container {
-  width: 50%;
+  width: 46%;
   float: left;
   overflow-x: visible;
-  padding-left: 30%; }
+  padding-left: 20%; }
   @media only screen and (min-width: 721px) and (max-width: 1023px) {
     #aboutus-section .text-container {
       width: 46%;
@@ -397,9 +459,11 @@ html, body {
       padding-left: 0; } }
   #aboutus-section .text-container .text, #aboutus-section .text-container .images-slide-section .image-and-description-box .name, .images-slide-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #aboutus-section .text-container .name {
     width: 180px;
-    left: 27px; }
+    left: 27px;
+    margin-bottom: 60px; }
     @media only screen and (max-width: 720px) {
       #aboutus-section .text-container .text, #aboutus-section .text-container .images-slide-section .image-and-description-box .name, .images-slide-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #aboutus-section .text-container .name {
+        margin-bottom: 0;
         margin-left: 27px; } }
     #aboutus-section .text-container .text p, #aboutus-section .text-container .images-slide-section .image-and-description-box .name p, .images-slide-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #aboutus-section .text-container .name p {
       font-family: sourceCodePro;
@@ -550,14 +614,14 @@ html, body {
   margin-top: 24px;
   float: left;
   padding-left: 49px;
-  padding-right: 49px;
-  margin-bottom: 120px; }
+  padding-right: 49px; }
   @media only screen and (max-width: 720px) {
     #sustain-section .text-container {
-      width: 100%; } }
+      width: 100%;
+      margin-bottom: 120px; } }
   #sustain-section .text-container .text, #sustain-section .text-container .images-slide-section .image-and-description-box .name, .images-slide-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #sustain-section .text-container .name {
-    width: 750px;
-    margin-left: -130px; }
+    width: 400px;
+    margin-left: -65px; }
     @media only screen and (max-width: 720px) {
       #sustain-section .text-container .text, #sustain-section .text-container .images-slide-section .image-and-description-box .name, .images-slide-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #sustain-section .text-container .name {
         width: 100%;
@@ -619,6 +683,11 @@ html, body {
     #contact-section .content .contact-info {
       margin-top: 40px; }
 
+.collection-page .max-width-content {
+  position: relative;
+  max-width: 300px;
+  margin: auto; }
+
 .collection-page .image-description {
   margin-top: 50px; }
   .collection-page .image-description .image {
@@ -644,6 +713,11 @@ html, body {
   position: absolute;
   right: 18px;
   bottom: 96px; }
+
+#furniture .max-width-content {
+  position: relative;
+  max-width: 500px;
+  margin: auto; }
 
 #furniture .image {
   padding-top: 40px;
