@@ -120,14 +120,14 @@ html, body {
 .clearfix:after {
   clear: both; }
 
-.background-image, .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .img2-marble-container .marble, .background-contain, .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair, #contact-section .logo, #contact-section .apps-logo .app {
+.background-image, .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .img2-marble-container .marble, .background-contain, #footer .logo, #footer .apps-logo .app, .header .navigations .previous, .header .navigations .next, .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair, .collection-page .image-description .image, .collection-page .back-to-top, #furniture .image {
   background-position: center center;
   background-repeat: no-repeat; }
 
 .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .img2-marble-container .marble {
   background-size: cover; }
 
-.background-contain, .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair, #contact-section .logo, #contact-section .apps-logo .app {
+.background-contain, #footer .logo, #footer .apps-logo .app, .header .navigations .previous, .header .navigations .next, .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair, .collection-page .image-description .image, .collection-page .back-to-top, #furniture .image {
   background-size: contain; }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -163,6 +163,76 @@ html, body {
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%); }
+
+#footer {
+  margin-top: 75px; }
+  #footer .logo {
+    background-image: url("./images/buttons/sosmed_paribawga logo.svg");
+    width: 150px;
+    height: 60px;
+    margin: auto;
+    margin-bottom: 16px; }
+  #footer .apps-logo {
+    left: 50%;
+    position: relative;
+    margin-bottom: 30px;
+    height: 30px; }
+    #footer .apps-logo .app {
+      margin-right: 11.5px;
+      margin-left: 11.5px;
+      width: 30px;
+      height: 30px;
+      float: left; }
+  #footer .outer-div {
+    float: right;
+    position: relative;
+    left: -50%; }
+
+.header .title {
+  margin-top: 5%;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: sourceCodePro;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: .2em; }
+
+.header .navigations {
+  margin-top: 50px;
+  margin-left: 13px;
+  margin-right: 20px;
+  height: 50px; }
+  .header .navigations .previous {
+    background-image: url("./images/buttons/buttons_previous.svg");
+    float: left;
+    width: 44px;
+    height: 0;
+    padding-bottom: 19.21333px;
+    margin-top: 10px; }
+  .header .navigations .next {
+    background-image: url("./images/buttons/buttons_next.svg");
+    float: right;
+    width: 20px;
+    height: 0;
+    padding-bottom: 21.73913px;
+    margin-top: 10px; }
+  .header .navigations .main-title, .header .navigations .sub-title {
+    font-family: parabola;
+    font-weight: 300;
+    font-size: 43px;
+    letter-spacing: .015em;
+    float: left;
+    width: calc(100% - 86px);
+    text-align: center; }
+  .header .navigations .sub-title {
+    font-family: sourceCodePro;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    margin-top: 10px;
+    width: calc(100% - 76px); }
 
 .images-slide-section, #collection-section, #projects-section, #press-section {
   /* * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -218,7 +288,8 @@ html, body {
     white-space: nowrap; }
 
 #hero-section {
-  background-image: url("images/index/1_coverimage.jpg"); }
+  background-image: url("images/index/1_coverimage.jpg");
+  height: 650px; }
   @media only screen and (max-width: 720px) {
     #hero-section {
       height: 558px; } }
@@ -227,33 +298,55 @@ html, body {
     height: 50%;
     width: 80%; }
   #hero-section .nav-menu {
-    top: 5%; }
+    top: 5%;
+    font-family: sourceCodePro;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: white; }
+    #hero-section .nav-menu ul {
+      list-style-type: none; }
+      @media only screen and (min-width: 721px) and (max-width: 1199px) {
+        #hero-section .nav-menu ul {
+          display: none; } }
+      @media only screen and (max-width: 720px) {
+        #hero-section .nav-menu ul {
+          display: none; } }
+      #hero-section .nav-menu ul li {
+        float: left;
+        margin-left: 20px;
+        margin-right: 20px; }
     #hero-section .nav-menu p {
-      text-decoration: none;
-      color: white;
-      text-transform: uppercase;
-      font-family: sourceCodePro;
-      font-weight: 600;
-      font-size: 14px;
-      letter-spacing: .2em; }
+      display: none; }
+      @media only screen and (min-width: 721px) and (max-width: 1199px) {
+        #hero-section .nav-menu p {
+          display: block; } }
+      @media only screen and (max-width: 720px) {
+        #hero-section .nav-menu p {
+          display: block; } }
   #hero-section .scroll-tag {
     background-image: url("images/buttons/buttons_scroll.svg");
     position: absolute;
-    height: 0; }
+    height: 0;
+    left: 29px;
+    bottom: 30px;
+    width: 48px;
+    padding-bottom: 28.125px; }
     @media only screen and (max-width: 720px) {
       #hero-section .scroll-tag {
-        width: 48px;
-        padding-bottom: 28.125px;
         left: 29px;
         bottom: 30px; } }
   #hero-section .down-tag {
     background-image: url("images/buttons/buttons_down.svg");
     position: absolute;
-    height: 0; }
+    height: 0;
+    width: 42px;
+    padding-bottom: 32.64249px;
+    right: 22px;
+    bottom: 30px; }
     @media only screen and (max-width: 720px) {
       #hero-section .down-tag {
-        width: 42px;
-        padding-bottom: 32.64249px;
         right: 22px;
         bottom: 30px; } }
 
@@ -444,24 +537,56 @@ html, body {
       text-decoration: underline;
       color: inherit; }
     #contact-section .content .contact-info {
-      margin-top: 40px;
-      margin-bottom: 108px; }
-  #contact-section .logo {
-    background-image: url("./images/buttons/sosmed_paribawga logo.svg");
-    width: 150px;
-    height: 60px;
-    margin: auto;
-    margin-bottom: 16px; }
-  #contact-section .outer-div {
-    float: right;
-    position: relative;
-    left: -50%; }
-  #contact-section .apps-logo {
-    left: 50%;
-    position: relative; }
-    #contact-section .apps-logo .app {
-      margin-right: 11.5px;
-      margin-left: 11.5px;
-      width: 30px;
-      height: 30px;
-      float: left; }
+      margin-top: 40px; }
+
+.collection-page .image-description {
+  margin-top: 50px; }
+  .collection-page .image-description .image {
+    height: 200px;
+    max-width: 320px;
+    display: block;
+    margin: auto; }
+  .collection-page .image-description .desc {
+    font-family: sourceCodePro;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: .05em;
+    line-height: 21px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-left: 30px; }
+
+.collection-page .back-to-top {
+  background-image: url("./images/buttons/buttons_backtotop.svg");
+  width: 40px;
+  height: 0;
+  padding-bottom: 30.92784px;
+  position: absolute;
+  right: 18px;
+  bottom: 96px; }
+
+#furniture .image {
+  padding-top: 40px;
+  height: 340px;
+  max-width: 300px;
+  display: block;
+  position: relative;
+  margin: auto; }
+
+#furniture .desc {
+  font-family: sourceCodePro;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: .05em;
+  line-height: 19px;
+  margin: 40px 15px; }
+
+#furniture .back-link {
+  font-family: sourceCodePro;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: .05em;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: inherit;
+  text-align: center; }

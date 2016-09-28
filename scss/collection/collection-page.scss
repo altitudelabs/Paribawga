@@ -1,0 +1,45 @@
+.collection-page {
+  $image-height-temp: 200px;
+
+  $backtotop-width: 40px;
+  $backtotop-bottom: 96px;
+  $backtotop-right: 18px;
+
+  .image-description {
+
+    margin-top: 50px;
+
+
+    .image {
+      @extend .background-contain;
+      height: $image-height-temp;
+      max-width: 320px;
+      display: block;
+      margin: auto;
+    }
+
+    .desc {
+      font-family: sourceCodePro;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: .05em;
+      line-height: 21px;
+      text-transform: uppercase;
+
+      margin-top: 20px;
+      margin-left: 30px;
+    }
+  }
+
+  .back-to-top { // 194 x 150
+    background-image: url('./images/buttons/buttons_backtotop.svg');
+    @extend .background-contain;
+
+    width: $backtotop-width;
+    height: 0;
+    padding-bottom: 150 / 194 * $backtotop-width;
+    position: absolute;
+    right: $backtotop-right;
+    bottom: $backtotop-bottom;
+  }
+}

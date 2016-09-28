@@ -1,0 +1,35 @@
+#furniture {
+
+  $image-height: 340px;
+  $image-maxwidth: 300px;
+
+  .image {
+    @extend .background-contain;
+    padding-top: 40px;
+    height: $image-height;
+    max-width: $image-maxwidth;
+    display: block;
+    position: relative;
+    margin: auto;
+  }
+
+  .desc {
+    font-family: sourceCodePro;
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: .05em;
+    line-height: 19px;
+    margin: 40px 15px;
+  }
+
+  .back-link {
+    font-family: sourceCodePro;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: .05em;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: inherit;
+    text-align: center;
+  }
+}

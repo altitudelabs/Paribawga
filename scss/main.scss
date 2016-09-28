@@ -1,14 +1,20 @@
-@import '_variables.scss';
-@import '_functions.scss';
-@import '_fonts.scss';
-@import 'common.scss';
+@import './_variables.scss';
+@import './_functions.scss';
+@import './_fonts.scss';
+@import './common.scss';
+@import './footer.scss';
+@import './header.scss';
 
-@import 'scss/index/images-slide-section.scss';
-@import 'scss/index/hero.scss';
-@import 'scss/index/aboutus.scss';
-@import 'scss/index/collection.scss';
-@import 'scss/index/projects.scss';
-@import 'scss/index/bespoke.scss';
-@import 'scss/index/sustain.scss';
-@import 'scss/index/press.scss';
-@import 'scss/index/contact.scss';
+
+@import './index/images-slide-section.scss';
+@import './index/hero.scss';
+@import './index/aboutus.scss';
+@import './index/collection.scss';
+@import './index/projects.scss';
+@import './index/bespoke.scss';
+@import './index/sustain.scss';
+@import './index/press.scss';
+@import './index/contact.scss';
+
+@import './collection/collection-page.scss';
+@import './collection/furniture.scss';
