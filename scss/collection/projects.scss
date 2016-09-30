@@ -1,0 +1,29 @@
+#project-info {
+
+  padding-top: 20px;
+
+  .component {
+    text-align: center;
+    width: 80%;
+    max-width: 255px;
+    margin: auto;
+    margin-top: 35px;
+  }
+
+  .title {
+    font-family: sourceCodePro;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: .05em;
+    line-height: 21px;
+    text-transform: uppercase;
+  }
+
+  .desc {
+    font-family: edmondSans;
+    font-weight: normal;
+    font-size: 12px;
+    letter-spacing: .05em;
+    line-height: 15px;
+  }
+}

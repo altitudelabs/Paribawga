@@ -752,3 +752,25 @@ html, body {
   text-transform: uppercase;
   color: inherit;
   text-align: center; }
+
+#project-info {
+  padding-top: 20px; }
+  #project-info .component {
+    text-align: center;
+    width: 80%;
+    max-width: 255px;
+    margin: auto;
+    margin-top: 35px; }
+  #project-info .title {
+    font-family: sourceCodePro;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: .05em;
+    line-height: 21px;
+    text-transform: uppercase; }
+  #project-info .desc {
+    font-family: edmondSans;
+    font-weight: normal;
+    font-size: 12px;
+    letter-spacing: .05em;
+    line-height: 15px; }
