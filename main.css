@@ -331,12 +331,14 @@ html, body {
       width: 152px;
       height: 177px; }
     .images-slide-section .image-and-description-box .text, #collection-section .image-and-description-box .text, #projects-section .image-and-description-box .text, #press-section .image-and-description-box .text, .images-slide-section .image-and-description-box .name, #collection-section .image-and-description-box .name, #projects-section .image-and-description-box .name, #press-section .image-and-description-box .name {
-      font-family: sourceCodePro;
-      font-weight: 300;
+      font-family: edmondSans;
+      font-weight: normal;
       font-size: 12px;
       letter-spacing: .05em;
       line-height: 19px; }
     .images-slide-section .image-and-description-box .name, #collection-section .image-and-description-box .name, #projects-section .image-and-description-box .name, #press-section .image-and-description-box .name {
+      font-family: sourceCodePro;
+      font-weight: 300;
       margin-top: 23px;
       margin-bottom: 23px;
       text-transform: uppercase; }
@@ -350,14 +352,15 @@ html, body {
     white-space: nowrap; }
 
 #hero-section {
-  background-image: url("images/index/1_coverimage.jpg");
+  background-image: url("images/index/1_coverimage-desktop.jpg");
   height: 650px; }
   @media only screen and (max-width: 720px) {
     #hero-section {
+      background-image: url("images/index/1_coverimage-mobile.jpg");
       height: 558px; } }
   #hero-section .cover-tagline {
     background-image: url("images/index/1_tagline.png");
-    height: 50%;
+    height: 70%;
     width: 80%; }
   #hero-section .nav-menu {
     top: 5%;
@@ -466,8 +469,8 @@ html, body {
         margin-bottom: 0;
         margin-left: 27px; } }
     #aboutus-section .text-container .text p, #aboutus-section .text-container .images-slide-section .image-and-description-box .name p, .images-slide-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #aboutus-section .text-container .name p {
-      font-family: sourceCodePro;
-      font-weight: 300;
+      font-family: edmondSans;
+      font-weight: normal;
       font-size: 12px;
       letter-spacing: .05em;
       line-height: 15px; }
@@ -523,8 +526,8 @@ html, body {
       min-height: 175px;
       margin-top: 10px;
       width: 290px;
-      font-family: sourceCodePro;
-      font-weight: 300;
+      font-family: edmondSans;
+      font-weight: normal;
       font-size: 12px;
       letter-spacing: .05em;
       line-height: 19px; }
@@ -632,8 +635,8 @@ html, body {
       margin-bottom: 20px;
       margin-right: 20px;
       min-height: 160px;
-      font-family: sourceCodePro;
-      font-weight: 300;
+      font-family: edmondSans;
+      font-weight: normal;
       font-size: 12px;
       letter-spacing: .05em;
       line-height: 19px; }
@@ -677,11 +680,16 @@ html, body {
       font-size: 12px;
       letter-spacing: .01em;
       margin-top: 20px; }
+      #contact-section .content p .info {
+        font-family: edmondSans;
+        font-weight: normal; }
     #contact-section .content a {
       text-decoration: underline;
       color: inherit; }
     #contact-section .content .contact-info {
-      margin-top: 40px; }
+      margin-top: 40px;
+      font-family: edmondSans;
+      font-weight: normal; }
 
 .collection-page .max-width-content {
   position: relative;
@@ -728,8 +736,8 @@ html, body {
   margin: auto; }
 
 #furniture .desc {
-  font-family: sourceCodePro;
-  font-weight: 300;
+  font-family: edmondSans;
+  font-weight: normal;
   font-size: 12px;
   letter-spacing: .05em;
   line-height: 19px;
@@ -744,3 +752,25 @@ html, body {
   text-transform: uppercase;
   color: inherit;
   text-align: center; }
+
+#project-info {
+  padding-top: 20px; }
+  #project-info .component {
+    text-align: center;
+    width: 80%;
+    max-width: 255px;
+    margin: auto;
+    margin-top: 35px; }
+  #project-info .title {
+    font-family: sourceCodePro;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: .05em;
+    line-height: 21px;
+    text-transform: uppercase; }
+  #project-info .desc {
+    font-family: edmondSans;
+    font-weight: normal;
+    font-size: 12px;
+    letter-spacing: .05em;
+    line-height: 15px; }

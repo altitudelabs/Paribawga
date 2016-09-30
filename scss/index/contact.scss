@@ -22,6 +22,11 @@
       font-size: 12px;
       letter-spacing: .01em;
       margin-top: 20px;
+
+      .info {
+        font-family: edmondSans;
+        font-weight: normal;
+      }
     }
 
     a {
@@ -31,6 +36,8 @@
 
     .contact-info {
       margin-top: 40px;
+      font-family: edmondSans;
+      font-weight: normal;
     }
   }
 }

@@ -2,7 +2,7 @@
   $section-height: 650px;
   $section-height-mobile: 558px;
 
-  $tagline-height-mobile: 50%;
+  $tagline-height-mobile: 70%;
   $tagline-width-mobile: 80%;
 
   $nav-menu-top-mobile: 5%;
@@ -10,11 +10,12 @@
   $scroll-tag-width-mobile: 48px;
   $down-tag-width-mobile: 42px;
 
-  background-image: url('images/index/1_coverimage.jpg');
+  background-image: url('images/index/1_coverimage-desktop.jpg');
   @extend .background-cover;
   height: $section-height;
 
   @include responsive(mobile) {
+    background-image: url('images/index/1_coverimage-mobile.jpg');
     height: $section-height-mobile;
   }
 
