@@ -428,7 +428,7 @@ html, body {
 
 @media only screen and (max-width: 720px) {
   #aboutus-section {
-    height: 613px;
+    height: 660px;
     margin-bottom: 64px; } }
 
 #aboutus-section .title {
@@ -461,7 +461,7 @@ html, body {
     #aboutus-section .text-container {
       padding-left: 0; } }
   #aboutus-section .text-container .text, #aboutus-section .text-container .images-slide-section .image-and-description-box .name, .images-slide-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #aboutus-section .text-container .name {
-    width: 180px;
+    width: 285px;
     left: 27px;
     margin-bottom: 60px; }
     @media only screen and (max-width: 720px) {
@@ -491,18 +491,21 @@ html, body {
     #aboutus-section .image-container {
       float: right; } }
   #aboutus-section .image-container .image {
+    z-index: -1;
     background-image: url("images/index/2_aboutus.jpg");
     background-position-x: right;
     position: relative;
     width: 200px;
     height: 500px;
     margin-top: -190px;
-    float: right; }
+    float: right;
+    right: -86px; }
     @media only screen and (max-width: 720px) {
       #aboutus-section .image-container .image {
-        margin-top: -44px;
+        margin-top: -37px;
         height: 243px;
-        bottom: 0; } }
+        bottom: 0;
+        right: 0; } }
 
 #bespoke-section {
   margin-bottom: 115px; }
