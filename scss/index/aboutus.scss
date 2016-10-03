@@ -1,5 +1,5 @@
 #aboutus-section {
-  $section-height-mobile: 576px + 37px;
+  $section-height-mobile: 660px;
   $section-marginbottom: 64px;
 
   $title-marginleft: 10%;
@@ -13,10 +13,10 @@
   $image-height-mobile: 243px;
 
   $image-margintop: -190px;
-  $image-margintop-mobile: -44px; // 203
+  $image-margintop-mobile: -37px; // 203
   $text-container-width: 46%;
   $text-container-width-trans: 46%;
-  $text-width-mobile: 180px;
+  $text-width-mobile: 285px;
 
   //width: 900px;
 
@@ -118,6 +118,7 @@
     }
 
     .image {
+      z-index: -1;
       background-image: url('images/index/2_aboutus.jpg');
       @extend .background-contain;
       background-position-x: right;
@@ -127,11 +128,13 @@
       height: $image-height;
       margin-top: $image-margintop;
       float: right;
+      right: -86px;
 
       @include responsive(mobile) {
         margin-top: $image-margintop-mobile;
         height: $image-height-mobile;
         bottom: 0;
+        right: 0;
 
       }
     }
