@@ -47,6 +47,25 @@ html, body {
   background-size: contain;
 }
 
+body.loading {
+  height: 100%;
+}
+
+.loading .loader {
+  display: block;
+}
+
+.loader {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: white;
+  display: none;
+}
+
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
  * In order to allow centering functions below,
  * the container's position has to be relative.

@@ -8,13 +8,53 @@
   $scroll-tag-width-mobile: 48px;
   $down-tag-width-mobile: 42px;
 
-  background-image: url('images/index/1_coverimage-desktop.jpg');
   @extend .background-cover;
   height: $section-height;
 
   @include responsive(mobile) {
-    background-image: url('images/index/1_coverimage-mobile.jpg');
     height: $section-height-mobile;
+  }
+
+  .header {
+    height: 100vh;
+    position: relative;
+  }
+
+  .header .bx-wrapper {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 0px;
+  }
+
+  .header .bx-viewport {
+    height: 100% !important;
+  }
+
+  .header .bxslider {
+    height: 100%;
+  }
+
+  .bxslider .slide {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .other {
+    background-color: transparent;
+    padding-top: 30%;
+  }
+  
+  .banner {
+    padding: 40px;
+    text-align: center;
+    background: white;
   }
 
   .cover-tagline {
