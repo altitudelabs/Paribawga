@@ -39,13 +39,13 @@
 
   .image-and-description-box {
     display: inline-block;
+    vertical-align: top;
     width: $image-width;
     margin-right: $image-between-margin;
     margin-left: $image-between-margin;
     white-space: normal;
 
     .image {
-      display: auto;
       width: $image-width;
       height: $image-height;
     }
