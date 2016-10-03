@@ -8,15 +8,28 @@
     name="viewport"
     content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1"
     >
-    <title></title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="./node_modules/lightbox2/dist/css/lightbox.min.css">
+    <title>Paribawga</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="node_modules/lightbox2/dist/css/lightbox.min.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/bxslider/dist/jquery.bxslider.min.css">
   </head>
 
-  <body>
+  <body class="loading">
+    <div class="loader">
+      LOADING........
+    </div>
 
     <!-- HERO SECTION -->
     <section class="section-container" id="hero-section">
+      <div class="header">
+        <ul class="bxslider"> <!-- classname bxslider is unique and required! -->
+          <li class="slide" style="background-image: url('images/index/burma1.jpg');"><a href="#"></a></li>
+          <li class="slide" style="background-image: url('images/index/burma2.jpg');"><a href="#"></a></li>
+          <li class="slide" style="background-image: url('images/index/forest.jpg');"><a href="#"></a></li>
+          <li class="slide" style="background-image: url('images/index/nature.jpg');"><a href="#"></a></li>
+          <li class="slide" style="background-image: url('images/index/wood.jpg');"><a href="#"></a></li>
+        </ul>
+      </div>
       <div class="cover-tagline"></div>
       <div class="scroll-tag"></div>
       <div class="down-tag"></div>
@@ -247,8 +260,9 @@
         </div>
       </div>
     </section>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="./node_modules/lightbox2/dist/js/lightbox.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
   </body>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="./node_modules/lightbox2/dist/js/lightbox.min.js"></script>
+  <script type="text/javascript" src="./node_modules/bxslider/dist/jquery.bxslider.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </html>

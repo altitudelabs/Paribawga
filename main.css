@@ -130,6 +130,22 @@ html, body {
 .background-contain, #footer .logo, #footer .apps-logo .app, .header .navigations .previous, .header .navigations .next, .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair, .collection-page .image-description .image, .collection-page .back-to-top, #furniture .image {
   background-size: contain; }
 
+body.loading {
+  height: 100%; }
+
+.loading .loader {
+  display: block; }
+
+.loader {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: white;
+  display: none; }
+
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
  * In order to allow centering functions below,
  * the container's position has to be relative.
@@ -352,12 +368,38 @@ html, body {
     white-space: nowrap; }
 
 #hero-section {
-  background-image: url("images/index/1_coverimage-desktop.jpg");
   height: 650px; }
   @media only screen and (max-width: 720px) {
     #hero-section {
-      background-image: url("images/index/1_coverimage-mobile.jpg");
       height: 558px; } }
+  #hero-section .header {
+    height: 100vh;
+    position: relative; }
+  #hero-section .header .bx-wrapper {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 0px; }
+  #hero-section .header .bx-viewport {
+    height: 100% !important; }
+  #hero-section .header .bxslider {
+    height: 100%; }
+  #hero-section .bxslider .slide {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; }
+  #hero-section .other {
+    background-color: transparent;
+    padding-top: 30%; }
+  #hero-section .banner {
+    padding: 40px;
+    text-align: center;
+    background: white; }
   #hero-section .cover-tagline {
     background-image: url("images/index/1_tagline.png");
     height: 70%;
