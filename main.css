@@ -322,12 +322,12 @@ html, body {
     margin-top: 10px; }
   .images-slide-section .image-and-description-box, #collection-section .image-and-description-box, #projects-section .image-and-description-box, #press-section .image-and-description-box {
     display: inline-block;
+    vertical-align: top;
     width: 152px;
     margin-right: 22px;
     margin-left: 22px;
     white-space: normal; }
     .images-slide-section .image-and-description-box .image, #collection-section .image-and-description-box .image, #projects-section .image-and-description-box .image, #press-section .image-and-description-box .image {
-      display: auto;
       width: 152px;
       height: 177px; }
     .images-slide-section .image-and-description-box .text, #collection-section .image-and-description-box .text, #projects-section .image-and-description-box .text, #press-section .image-and-description-box .text, .images-slide-section .image-and-description-box .name, #collection-section .image-and-description-box .name, #projects-section .image-and-description-box .name, #press-section .image-and-description-box .name {
@@ -506,6 +506,12 @@ html, body {
         height: 243px;
         bottom: 0;
         right: 0; } }
+
+#collection-section .image-and-description-box {
+  width: 180px; }
+  #collection-section .image-and-description-box .image {
+    width: 180px;
+    height: 210px; }
 
 #bespoke-section {
   margin-bottom: 115px; }

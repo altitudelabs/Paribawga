@@ -1,3 +1,15 @@
 #collection-section {
   @extend .images-slide-section;
+
+  $image-width: 180px;
+  $image-height: 210px;
+
+  .image-and-description-box {
+    width: $image-width;
+
+    .image {
+      width: $image-width;
+      height: $image-height;
+    }
+  }
 }
