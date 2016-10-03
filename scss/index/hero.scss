@@ -50,6 +50,11 @@
         display: none;
       }
 
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
       li {
         float: left;
         margin-left: 15px;
