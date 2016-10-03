@@ -5,8 +5,6 @@
   $tagline-height-mobile: 70%;
   $tagline-width-mobile: 80%;
 
-  $nav-menu-top-mobile: 5%;
-
   $scroll-tag-width-mobile: 48px;
   $down-tag-width-mobile: 42px;
 
@@ -26,53 +24,6 @@
 
     height: $tagline-height-mobile;
     width: $tagline-width-mobile;
-  }
-
-  .nav-menu {
-    @extend .horizontal-center;
-    top: $nav-menu-top-mobile;
-
-    font-family: sourceCodePro;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    color: white;
-
-    ul {
-      list-style-type: none;
-
-      @include responsive(transition) {
-        display: none;
-      }
-
-      @include responsive(mobile) {
-        display: none;
-      }
-
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-
-      li {
-        float: left;
-        margin-left: 15px;
-        margin-right: 15px;
-      }
-    }
-
-    p {
-      display: none;
-
-      @include responsive(transition) {
-        display: block;
-      }
-
-      @include responsive(mobile) {
-        display: block;
-      }
-    }
   }
 
   .scroll-tag { // 256 x 150

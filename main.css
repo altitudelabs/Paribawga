@@ -143,7 +143,7 @@ html, body {
   -o-transform: translateY(-50%);
   transform: translateY(-50%); }
 
-.horizontal-center, #hero-section .nav-menu {
+.horizontal-center, .nav-menu {
   position: absolute;
   left: 50%;
   margin-right: -50%;
@@ -362,37 +362,6 @@ html, body {
     background-image: url("images/index/1_tagline.png");
     height: 70%;
     width: 80%; }
-  #hero-section .nav-menu {
-    top: 5%;
-    font-family: sourceCodePro;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    color: white; }
-    #hero-section .nav-menu ul {
-      list-style-type: none; }
-      @media only screen and (min-width: 721px) and (max-width: 1023px) {
-        #hero-section .nav-menu ul {
-          display: none; } }
-      @media only screen and (max-width: 720px) {
-        #hero-section .nav-menu ul {
-          display: none; } }
-      #hero-section .nav-menu ul a {
-        text-decoration: none;
-        color: inherit; }
-      #hero-section .nav-menu ul li {
-        float: left;
-        margin-left: 15px;
-        margin-right: 15px; }
-    #hero-section .nav-menu p {
-      display: none; }
-      @media only screen and (min-width: 721px) and (max-width: 1023px) {
-        #hero-section .nav-menu p {
-          display: block; } }
-      @media only screen and (max-width: 720px) {
-        #hero-section .nav-menu p {
-          display: block; } }
   #hero-section .scroll-tag {
     background-image: url("images/buttons/buttons_scroll.svg");
     position: absolute;
@@ -702,6 +671,65 @@ html, body {
       margin-top: 40px;
       font-family: edmondSans;
       font-weight: normal; }
+
+.nav-menu {
+  top: 5%;
+  font-family: sourceCodePro;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: white; }
+  @media only screen and (max-width: 720px) {
+    .nav-menu {
+      width: 250px;
+      text-align: center; } }
+  .nav-menu ul {
+    list-style-type: none; }
+    @media only screen and (min-width: 721px) and (max-width: 1023px) {
+      .nav-menu ul {
+        display: none; } }
+    @media only screen and (max-width: 720px) {
+      .nav-menu ul {
+        display: none; } }
+    .nav-menu ul a {
+      text-decoration: none;
+      color: inherit; }
+    .nav-menu ul li {
+      float: left;
+      margin-left: 15px;
+      margin-right: 15px; }
+      @media only screen and (max-width: 720px) {
+        .nav-menu ul li {
+          width: 100%;
+          margin-left: 0;
+          margin-right: 0;
+          margin-top: 35px; } }
+  .nav-menu .title {
+    display: none; }
+    @media only screen and (min-width: 721px) and (max-width: 1023px) {
+      .nav-menu .title {
+        display: block; } }
+    @media only screen and (max-width: 720px) {
+      .nav-menu .title {
+        display: block; } }
+
+.gray-bg {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 650px;
+  background-color: #aaaaa9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  -moz-opacity: 0.8;
+  -khtml-opacity: 0.8;
+  opacity: 0.8; }
+  @media only screen and (max-width: 720px) {
+    .gray-bg {
+      height: 558px; } }
 
 .collection-page .max-width-content {
   position: relative;
