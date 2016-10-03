@@ -17,13 +17,13 @@
   transform: $tranform;
 }
 
-// @mixin opacity($o) {
-//   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity="+($o * 100)+")";
-// 	filter: alpha(opacity= $o * 100);
-//   -moz-opacity:$o;
-//   -khtml-opacity: $o;
-//   opacity: $o;
-// }
+@mixin opacity($o) {
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity="+($o * 100)+")";
+	filter: alpha(opacity= $o * 100);
+  -moz-opacity:$o;
+  -khtml-opacity: $o;
+  opacity: $o;
+}
 
 // @mixin transition($t) {
 //   -webkit-transition: $t;
