@@ -10,6 +10,7 @@
     >
     <title></title>
     <link rel="stylesheet" type="text/css" href="./../main.css">
+    <link rel="stylesheet" href="./../node_modules/lightbox2/dist/css/lightbox.min.css">
   </head>
 
   <body id="furniture">
@@ -22,9 +23,9 @@
       </div>
     </div>
     <div class="content max-width-content">
-      <img class="image" src="./../images/furniture/1-furniture1.jpg"/>
-      <img class="image" src="./../images/furniture/1-furniture2.jpg"/>
-      <img class="image" src="./../images/furniture/1-furniture3.jpg"/>
+      <a href="./../images/furniture/1-furniture1.jpg" data-lightbox="furniture1"><img class="image" src="./../images/furniture/1-furniture1.jpg"/></a>
+      <a href="./../images/furniture/1-furniture2.jpg" data-lightbox="furniture1"><img class="image" src="./../images/furniture/1-furniture2.jpg"/></a>
+      <a href="./../images/furniture/1-furniture3.jpg" data-lightbox="furniture1"><img class="image" src="./../images/furniture/1-furniture3.jpg"/></a>
       <div class="desc">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         <br><br>
@@ -49,5 +50,8 @@
       </div>
       <div class="back-to-top"></div>
     </section>
+    <script type="text/javascript" src="./../js/jquery.min.js"></script>
+    <script type="text/javascript" src="./../node_modules/lightbox2/dist/js/lightbox.min.js"></script>
+    <script type="text/javascript" src="./../js/main.js"></script>
   </body>
 </html>
