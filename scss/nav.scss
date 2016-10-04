@@ -13,6 +13,7 @@
   // color: white;
 
   @include responsive(mobile) {
+    font-size: 15px;
     width: 250px;
     text-align: center;
   }

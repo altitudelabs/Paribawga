@@ -1,4 +1,4 @@
-.images-slide-section {
+.mobile-images-collection {
 
   $image-width: 152px;
   $image-height: 177px;
@@ -46,16 +46,25 @@
     white-space: normal;
 
     .image {
+      display: none;
       width: $image-width;
       height: $image-height;
+    }
+
+    .first {
+      display: block;
     }
 
     .text {
       font-family: edmondSans;
       font-weight: normal;
-      font-size: 12px;
+      font-size: 14px;
       letter-spacing: .05em;
-      line-height: 19px;
+      line-height: 17px;
+
+      @include responsive(mobile) {
+        font-size: 12px;
+      }
     }
 
     .name {

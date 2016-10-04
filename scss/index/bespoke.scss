@@ -43,9 +43,13 @@
       width: $text-width;
       font-family: edmondSans;
       font-weight: normal;
-      font-size: 12px;
+      font-size: 14px;
       letter-spacing: .05em;
-      line-height: 19px;
+      line-height: 17px;
+
+      @include responsive(mobile) {
+        font-size: 12px;
+      }
     }
 
     .contact-link {

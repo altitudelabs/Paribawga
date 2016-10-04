@@ -1,5 +1,5 @@
 #press-section {
-  @extend .images-slide-section;
+  @extend .mobile-images-collection;
   //
   // .title {
   //   margin-bottom: 0;
@@ -9,12 +9,16 @@
   //   margin-top: 26px;
   //   margin-bottom: 12px;
   //
-  //   font-family: sourceCodePro;
-  //   font-weight: 300;
-  //   font-size: 12px;
+  //   font-family: edmondSans;
+  //   font-weight: normal;
+  //   font-size: 14px;
   //   letter-spacing: .05em;
-  //   line-height: 19px;
+  //   line-height: 17px;
   //   text-transform: uppercase;
+      //
+      // @include responsive(mobile) {
+      //   font-size: 12px;
+      // }
   // }
   //
   // .text {

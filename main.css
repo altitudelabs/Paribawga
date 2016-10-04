@@ -120,14 +120,14 @@ html, body {
 .clearfix:after {
   clear: both; }
 
-.background-image, .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .img2-marble-container .marble, .background-contain, #footer .logo, #footer .apps-logo .app, .header .navigations .previous, .header .navigations .next, .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair, .collection-page .image-description .image, .collection-page .back-to-top, #furniture .image {
+.background-image, .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .img2-marble-container .marble, .background-contain, #footer .logo, #footer .apps-logo .app, .header .navigations .previous, .header .navigations .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair, .collection-page .image-description .image, .collection-page .back-to-top, #furniture .image {
   background-position: center center;
   background-repeat: no-repeat; }
 
 .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .img2-marble-container .marble {
   background-size: cover; }
 
-.background-contain, #footer .logo, #footer .apps-logo .app, .header .navigations .previous, .header .navigations .next, .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair, .collection-page .image-description .image, .collection-page .back-to-top, #furniture .image {
+.background-contain, #footer .logo, #footer .apps-logo .app, .header .navigations .previous, .header .navigations .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair, .collection-page .image-description .image, .collection-page .back-to-top, #furniture .image {
   background-size: contain; }
 
 body.loading {
@@ -248,13 +248,23 @@ body.loading {
     background-image: url("./images/buttons/sosmed_paribawga logo.svg");
     width: 150px;
     height: 60px;
-    margin: auto;
-    margin-bottom: 16px; }
+    margin-left: 100px;
+    float: left; }
+    @media only screen and (max-width: 720px) {
+      #footer .logo {
+        float: none;
+        margin: auto;
+        left: auto;
+        margin-bottom: 16px; } }
   #footer .apps-logo {
-    left: 50%;
+    margin-right: 100px;
     position: relative;
-    margin-bottom: 30px;
     height: 30px; }
+    @media only screen and (max-width: 720px) {
+      #footer .apps-logo {
+        margin-right: 0;
+        left: 50%;
+        margin-bottom: 30px; } }
     #footer .apps-logo .app {
       margin-right: 3px;
       margin-left: 3px;
@@ -263,8 +273,10 @@ body.loading {
       float: left; }
   #footer .outer-div {
     float: right;
-    position: relative;
-    left: -50%; }
+    position: relative; }
+    @media only screen and (max-width: 720px) {
+      #footer .outer-div {
+        left: -50%; } }
 
 .header .title {
   margin-top: 46px;
@@ -323,6 +335,7 @@ body.loading {
   text-transform: uppercase; }
   @media only screen and (max-width: 720px) {
     .nav-menu {
+      font-size: 15px;
       width: 250px;
       text-align: center; } }
   .nav-menu ul {
@@ -376,7 +389,7 @@ body.loading {
 .hidden {
   display: none; }
 
-.images-slide-section, #collection-section, #projects-section, #press-section {
+.mobile-images-collection, #collection-section, #projects-section, #press-section {
   /* * * * * * * * * * * * * * * * * * * * * * * * * *
   * Group of images and descriptions
   * - image-and-description-box: a box to contain
@@ -384,14 +397,14 @@ body.loading {
   * - container to contain all boxes that allows
   *     horizontal scrolling
   * * * * * * * * * * * * * * * * * * * * * * * * * */ }
-  .images-slide-section .title, #collection-section .title, #projects-section .title, #press-section .title {
+  .mobile-images-collection .title, #collection-section .title, #projects-section .title, #press-section .title {
     font-family: parabola;
     font-weight: 300;
     font-size: 43px;
     letter-spacing: .015em;
     margin-left: 35px;
     margin-bottom: 40px; }
-  .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag {
+  .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag {
     background-image: url("images/buttons/buttons_more.svg");
     position: absolute;
     top: 0;
@@ -400,29 +413,35 @@ body.loading {
     height: 0;
     padding-bottom: 27.10843px;
     margin-top: 10px; }
-  .images-slide-section .image-and-description-box, #collection-section .image-and-description-box, #projects-section .image-and-description-box, #press-section .image-and-description-box {
+  .mobile-images-collection .image-and-description-box, #collection-section .image-and-description-box, #projects-section .image-and-description-box, #press-section .image-and-description-box {
     display: inline-block;
     vertical-align: top;
     width: 152px;
     margin-right: 22px;
     margin-left: 22px;
     white-space: normal; }
-    .images-slide-section .image-and-description-box .image, #collection-section .image-and-description-box .image, #projects-section .image-and-description-box .image, #press-section .image-and-description-box .image {
+    .mobile-images-collection .image-and-description-box .image, #collection-section .image-and-description-box .image, #projects-section .image-and-description-box .image, #press-section .image-and-description-box .image {
+      display: none;
       width: 152px;
       height: 177px; }
-    .images-slide-section .image-and-description-box .text, #collection-section .image-and-description-box .text, #projects-section .image-and-description-box .text, #press-section .image-and-description-box .text, .images-slide-section .image-and-description-box .name, #collection-section .image-and-description-box .name, #projects-section .image-and-description-box .name, #press-section .image-and-description-box .name {
+    .mobile-images-collection .image-and-description-box .first, #collection-section .image-and-description-box .first, #projects-section .image-and-description-box .first, #press-section .image-and-description-box .first {
+      display: block; }
+    .mobile-images-collection .image-and-description-box .text, #collection-section .image-and-description-box .text, #projects-section .image-and-description-box .text, #press-section .image-and-description-box .text, .mobile-images-collection .image-and-description-box .name, #collection-section .image-and-description-box .name, #projects-section .image-and-description-box .name, #press-section .image-and-description-box .name {
       font-family: edmondSans;
       font-weight: normal;
-      font-size: 12px;
+      font-size: 14px;
       letter-spacing: .05em;
-      line-height: 19px; }
-    .images-slide-section .image-and-description-box .name, #collection-section .image-and-description-box .name, #projects-section .image-and-description-box .name, #press-section .image-and-description-box .name {
+      line-height: 17px; }
+      @media only screen and (max-width: 720px) {
+        .mobile-images-collection .image-and-description-box .text, #collection-section .image-and-description-box .text, #projects-section .image-and-description-box .text, #press-section .image-and-description-box .text, .mobile-images-collection .image-and-description-box .name, #collection-section .image-and-description-box .name, #projects-section .image-and-description-box .name, #press-section .image-and-description-box .name {
+          font-size: 12px; } }
+    .mobile-images-collection .image-and-description-box .name, #collection-section .image-and-description-box .name, #projects-section .image-and-description-box .name, #press-section .image-and-description-box .name {
       font-family: sourceCodePro;
       font-weight: 300;
       margin-top: 23px;
       margin-bottom: 23px;
       text-transform: uppercase; }
-  .images-slide-section .images-descriptions-container, #collection-section .images-descriptions-container, #projects-section .images-descriptions-container, #press-section .images-descriptions-container {
+  .mobile-images-collection .images-descriptions-container, #collection-section .images-descriptions-container, #projects-section .images-descriptions-container, #press-section .images-descriptions-container {
     margin-left: 68px;
     margin-bottom: 79px;
     width: auto;
@@ -514,11 +533,12 @@ body.loading {
   font-family: parabola;
   font-weight: normal;
   letter-spacing: .015em;
-  font-size: 64px;
+  font-size: 80px;
   margin-top: 58px;
   margin-left: 10%; }
   @media only screen and (min-width: 721px) and (max-width: 1023px) {
     #aboutus-section .title {
+      font-size: 64px;
       margin-left: 10%; } }
   @media only screen and (max-width: 720px) {
     #aboutus-section .title {
@@ -538,29 +558,36 @@ body.loading {
   @media only screen and (max-width: 720px) {
     #aboutus-section .text-container {
       padding-left: 0; } }
-  #aboutus-section .text-container .text, #aboutus-section .text-container .images-slide-section .image-and-description-box .name, .images-slide-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #aboutus-section .text-container .name {
+  #aboutus-section .text-container .text, #aboutus-section .text-container .mobile-images-collection .image-and-description-box .name, .mobile-images-collection .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #aboutus-section .text-container .name {
     width: 285px;
     left: 27px;
     margin-bottom: 60px; }
     @media only screen and (max-width: 720px) {
-      #aboutus-section .text-container .text, #aboutus-section .text-container .images-slide-section .image-and-description-box .name, .images-slide-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #aboutus-section .text-container .name {
+      #aboutus-section .text-container .text, #aboutus-section .text-container .mobile-images-collection .image-and-description-box .name, .mobile-images-collection .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #aboutus-section .text-container .name {
         margin-bottom: 0;
         margin-left: 27px; } }
-    #aboutus-section .text-container .text p, #aboutus-section .text-container .images-slide-section .image-and-description-box .name p, .images-slide-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #aboutus-section .text-container .name p {
+    #aboutus-section .text-container .text p, #aboutus-section .text-container .mobile-images-collection .image-and-description-box .name p, .mobile-images-collection .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #aboutus-section .text-container .name p {
       font-family: edmondSans;
       font-weight: normal;
-      font-size: 12px;
+      font-size: 14px;
       letter-spacing: .05em;
-      line-height: 15px; }
-    #aboutus-section .text-container .text .video-link, #aboutus-section .text-container .images-slide-section .image-and-description-box .name .video-link, .images-slide-section .image-and-description-box #aboutus-section .text-container .name .video-link, #aboutus-section .text-container #collection-section .image-and-description-box .name .video-link, #collection-section .image-and-description-box #aboutus-section .text-container .name .video-link, #aboutus-section .text-container #projects-section .image-and-description-box .name .video-link, #projects-section .image-and-description-box #aboutus-section .text-container .name .video-link, #aboutus-section .text-container #press-section .image-and-description-box .name .video-link, #press-section .image-and-description-box #aboutus-section .text-container .name .video-link {
+      line-height: 17px; }
+      @media only screen and (max-width: 720px) {
+        #aboutus-section .text-container .text p, #aboutus-section .text-container .mobile-images-collection .image-and-description-box .name p, .mobile-images-collection .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #aboutus-section .text-container .name p {
+          font-size: 12px;
+          line-height: 15px; } }
+    #aboutus-section .text-container .text .video-link, #aboutus-section .text-container .mobile-images-collection .image-and-description-box .name .video-link, .mobile-images-collection .image-and-description-box #aboutus-section .text-container .name .video-link, #aboutus-section .text-container #collection-section .image-and-description-box .name .video-link, #collection-section .image-and-description-box #aboutus-section .text-container .name .video-link, #aboutus-section .text-container #projects-section .image-and-description-box .name .video-link, #projects-section .image-and-description-box #aboutus-section .text-container .name .video-link, #aboutus-section .text-container #press-section .image-and-description-box .name .video-link, #press-section .image-and-description-box #aboutus-section .text-container .name .video-link {
       font-family: sourceCodePro;
-      font-weight: 800;
+      font-weight: 600;
       font-size: 12px;
       letter-spacing: .1em;
       text-transform: uppercase;
       color: inherit;
       margin-top: 20px;
       text-decoration: underline; }
+      @media only screen and (max-width: 720px) {
+        #aboutus-section .text-container .text .video-link, #aboutus-section .text-container .mobile-images-collection .image-and-description-box .name .video-link, .mobile-images-collection .image-and-description-box #aboutus-section .text-container .name .video-link, #aboutus-section .text-container #collection-section .image-and-description-box .name .video-link, #collection-section .image-and-description-box #aboutus-section .text-container .name .video-link, #aboutus-section .text-container #projects-section .image-and-description-box .name .video-link, #projects-section .image-and-description-box #aboutus-section .text-container .name .video-link, #aboutus-section .text-container #press-section .image-and-description-box .name .video-link, #press-section .image-and-description-box #aboutus-section .text-container .name .video-link {
+          font-size: 16px; } }
 
 #aboutus-section .image-container {
   width: 250px;
@@ -607,7 +634,7 @@ body.loading {
     float: left;
     overflow: visible;
     position: relative; }
-    #bespoke-section .desc-container .text, #bespoke-section .desc-container .images-slide-section .image-and-description-box .name, .images-slide-section .image-and-description-box #bespoke-section .desc-container .name, #bespoke-section .desc-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #bespoke-section .desc-container .name, #bespoke-section .desc-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #bespoke-section .desc-container .name, #bespoke-section .desc-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #bespoke-section .desc-container .name {
+    #bespoke-section .desc-container .text, #bespoke-section .desc-container .mobile-images-collection .image-and-description-box .name, .mobile-images-collection .image-and-description-box #bespoke-section .desc-container .name, #bespoke-section .desc-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #bespoke-section .desc-container .name, #bespoke-section .desc-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #bespoke-section .desc-container .name, #bespoke-section .desc-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #bespoke-section .desc-container .name {
       float: left;
       padding-left: 43px;
       min-height: 175px;
@@ -615,9 +642,12 @@ body.loading {
       width: 290px;
       font-family: edmondSans;
       font-weight: normal;
-      font-size: 12px;
+      font-size: 14px;
       letter-spacing: .05em;
-      line-height: 19px; }
+      line-height: 17px; }
+      @media only screen and (max-width: 720px) {
+        #bespoke-section .desc-container .text, #bespoke-section .desc-container .mobile-images-collection .image-and-description-box .name, .mobile-images-collection .image-and-description-box #bespoke-section .desc-container .name, #bespoke-section .desc-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #bespoke-section .desc-container .name, #bespoke-section .desc-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #bespoke-section .desc-container .name, #bespoke-section .desc-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #bespoke-section .desc-container .name {
+          font-size: 12px; } }
     #bespoke-section .desc-container .contact-link {
       font-family: sourceCodePro;
       font-weight: 600;
@@ -709,14 +739,14 @@ body.loading {
     #sustain-section .text-container {
       width: 100%;
       margin-bottom: 120px; } }
-  #sustain-section .text-container .text, #sustain-section .text-container .images-slide-section .image-and-description-box .name, .images-slide-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #sustain-section .text-container .name {
+  #sustain-section .text-container .text, #sustain-section .text-container .mobile-images-collection .image-and-description-box .name, .mobile-images-collection .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #sustain-section .text-container .name {
     width: 400px;
     margin-left: -65px; }
     @media only screen and (max-width: 720px) {
-      #sustain-section .text-container .text, #sustain-section .text-container .images-slide-section .image-and-description-box .name, .images-slide-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #sustain-section .text-container .name {
+      #sustain-section .text-container .text, #sustain-section .text-container .mobile-images-collection .image-and-description-box .name, .mobile-images-collection .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #sustain-section .text-container .name {
         width: 100%;
         margin-left: 0; } }
-    #sustain-section .text-container .text p, #sustain-section .text-container .images-slide-section .image-and-description-box .name p, .images-slide-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #sustain-section .text-container .name p {
+    #sustain-section .text-container .text p, #sustain-section .text-container .mobile-images-collection .image-and-description-box .name p, .mobile-images-collection .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #sustain-section .text-container .name p {
       width: 240px;
       float: left;
       margin-bottom: 20px;
@@ -728,11 +758,11 @@ body.loading {
       letter-spacing: .05em;
       line-height: 19px; }
       @media only screen and (max-width: 720px) {
-        #sustain-section .text-container .text p, #sustain-section .text-container .images-slide-section .image-and-description-box .name p, .images-slide-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #sustain-section .text-container .name p {
+        #sustain-section .text-container .text p, #sustain-section .text-container .mobile-images-collection .image-and-description-box .name p, .mobile-images-collection .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #sustain-section .text-container .name p {
           width: 100%;
           min-height: auto; } }
 
-#press-section .text, .images-slide-section .image-and-description-box #press-section .name, #collection-section .image-and-description-box #press-section .name, #projects-section .image-and-description-box #press-section .name, #press-section .image-and-description-box .name {
+#press-section .text, .mobile-images-collection .image-and-description-box #press-section .name, #collection-section .image-and-description-box #press-section .name, #projects-section .image-and-description-box #press-section .name, #press-section .image-and-description-box .name {
   text-align: center;
   font-family: sourceCodePro;
   font-weight: 300;
@@ -758,20 +788,28 @@ body.loading {
     margin-right: 28px; }
     #contact-section .content p {
       font-family: sourceCodePro;
-      font-weight: 600;
-      font-size: 12px;
-      letter-spacing: .01em;
+      font-weight: 300;
+      font-size: 18px;
+      letter-spacing: .1em;
       margin-top: 20px; }
       #contact-section .content p .info {
+        font-size: 17px;
         font-family: edmondSans;
         font-weight: normal; }
+        @media only screen and (max-width: 720px) {
+          #contact-section .content p .info {
+            font-size: 12px; } }
     #contact-section .content a {
       text-decoration: underline;
       color: inherit; }
     #contact-section .content .contact-info {
       margin-top: 40px;
       font-family: edmondSans;
-      font-weight: normal; }
+      font-weight: normal;
+      font-size: 17px; }
+      @media only screen and (max-width: 720px) {
+        #contact-section .content .contact-info {
+          font-size: 12px; } }
 
 .collection-page .max-width-content {
   position: relative;

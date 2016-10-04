@@ -1,6 +1,7 @@
 #footer {
 
   $logo-width: 150px;
+  $app-width: 30px;
 
   margin-top: 75px;
 
@@ -9,18 +10,31 @@
     @extend .background-contain;
     width: $logo-width;
     height: 60px;
-    margin: auto;
-    margin-bottom: 16px;
+    margin-left: 100px;
+    float: left;
+
+    @include responsive(mobile) {
+      float: none;
+      margin: auto;
+      left: auto;
+      margin-bottom: 16px;
+    }
   }
 
   .apps-logo {
 
-    $app-width: 30px;
 
-    left: 50%;
+    margin-right: 100px;
+
     position: relative;
-    margin-bottom: 30px;
     height: $app-width;
+
+    @include responsive(mobile) {
+      margin-right: 0;
+      left: 50%;
+      margin-bottom: 30px;
+
+    }
 
     .app {
       @extend .background-contain;
@@ -35,6 +49,10 @@
   .outer-div {
     float: right;
     position: relative;
-    left: -50%;
+
+    @include responsive(mobile) {
+      left: -50%;
+
+    }
   }
 }
