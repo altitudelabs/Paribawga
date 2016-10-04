@@ -267,7 +267,7 @@ body.loading {
     left: -50%; }
 
 .header .title {
-  margin-top: 5%;
+  margin-top: 12%;
   width: 100%;
   text-align: center;
   text-transform: uppercase;
@@ -277,7 +277,7 @@ body.loading {
   letter-spacing: .2em; }
 
 .header .navigations {
-  margin-top: 50px;
+  margin-top: 33px;
   margin-left: 13px;
   margin-right: 20px;
   height: 50px; }
@@ -311,6 +311,70 @@ body.loading {
     text-transform: uppercase;
     margin-top: 10px;
     width: calc(100% - 76px); }
+
+.nav-menu {
+  z-index: 101;
+  top: 5%;
+  position: fixed;
+  font-family: sourceCodePro;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: .2em;
+  text-transform: uppercase; }
+  @media only screen and (max-width: 720px) {
+    .nav-menu {
+      width: 250px;
+      text-align: center; } }
+  .nav-menu ul {
+    list-style-type: none; }
+    @media only screen and (min-width: 721px) and (max-width: 1023px) {
+      .nav-menu ul {
+        display: none; } }
+    @media only screen and (max-width: 720px) {
+      .nav-menu ul {
+        display: none; } }
+    .nav-menu ul a {
+      text-decoration: none;
+      color: inherit; }
+    .nav-menu ul li {
+      float: left;
+      margin-left: 15px;
+      margin-right: 15px; }
+      @media only screen and (max-width: 720px) {
+        .nav-menu ul li {
+          width: 100%;
+          margin-left: 0;
+          margin-right: 0;
+          margin-top: 35px; } }
+  .nav-menu .title {
+    display: none; }
+    @media only screen and (min-width: 721px) and (max-width: 1023px) {
+      .nav-menu .title {
+        display: block; } }
+    @media only screen and (max-width: 720px) {
+      .nav-menu .title {
+        display: block; } }
+
+.gray-bg {
+  z-index: 100;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 650px;
+  background-color: #aaaaa9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  -moz-opacity: 0.8;
+  -khtml-opacity: 0.8;
+  opacity: 0.8; }
+  @media only screen and (max-width: 720px) {
+    .gray-bg {
+      height: 558px; } }
+
+.hidden {
+  display: none; }
 
 .images-slide-section, #collection-section, #projects-section, #press-section {
   /* * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -713,68 +777,6 @@ body.loading {
       margin-top: 40px;
       font-family: edmondSans;
       font-weight: normal; }
-
-.nav-menu {
-  z-index: 101;
-  top: 5%;
-  position: fixed;
-  font-family: sourceCodePro;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: white; }
-  @media only screen and (max-width: 720px) {
-    .nav-menu {
-      width: 250px;
-      text-align: center; } }
-  .nav-menu ul {
-    list-style-type: none; }
-    @media only screen and (min-width: 721px) and (max-width: 1023px) {
-      .nav-menu ul {
-        display: none; } }
-    @media only screen and (max-width: 720px) {
-      .nav-menu ul {
-        display: none; } }
-    .nav-menu ul a {
-      text-decoration: none;
-      color: inherit; }
-    .nav-menu ul li {
-      float: left;
-      margin-left: 15px;
-      margin-right: 15px; }
-      @media only screen and (max-width: 720px) {
-        .nav-menu ul li {
-          width: 100%;
-          margin-left: 0;
-          margin-right: 0;
-          margin-top: 35px; } }
-  .nav-menu .title {
-    display: none; }
-    @media only screen and (min-width: 721px) and (max-width: 1023px) {
-      .nav-menu .title {
-        display: block; } }
-    @media only screen and (max-width: 720px) {
-      .nav-menu .title {
-        display: block; } }
-
-.gray-bg {
-  z-index: 100;
-  visibility: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 650px;
-  background-color: #aaaaa9;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-  filter: alpha(opacity=80);
-  -moz-opacity: 0.8;
-  -khtml-opacity: 0.8;
-  opacity: 0.8; }
-  @media only screen and (max-width: 720px) {
-    .gray-bg {
-      height: 558px; } }
 
 .collection-page .max-width-content {
   position: relative;

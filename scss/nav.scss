@@ -10,7 +10,7 @@
   font-size: 14px;
   letter-spacing: .2em;
   text-transform: uppercase;
-  color: white;
+  // color: white;
 
   @include responsive(mobile) {
     width: 250px;
@@ -78,4 +78,8 @@
   @include responsive(mobile) {
     height: $section-height-mobile;
   }
+}
+
+.hidden {
+  display: none;
 }
