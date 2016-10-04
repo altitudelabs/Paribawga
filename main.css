@@ -715,7 +715,9 @@ body.loading {
       font-weight: normal; }
 
 .nav-menu {
+  z-index: 101;
   top: 5%;
+  position: fixed;
   font-family: sourceCodePro;
   font-weight: 600;
   font-size: 14px;
@@ -757,8 +759,9 @@ body.loading {
         display: block; } }
 
 .gray-bg {
+  z-index: 100;
   visibility: hidden;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;

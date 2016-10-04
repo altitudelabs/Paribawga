@@ -20,7 +20,7 @@ $(document).ready(function(){
     $('.nav-menu .links').css('display', 'none');
   }
 
-  var firstImageUrl = "images/index/burma1.jpg";
+  var firstImageUrl = "images/index/idx_1_burma1.jpg";
   var firstSlideImage = new Image;
   firstSlideImage.onload = function() {
     $('body').removeClass('loading');
