@@ -1,15 +1,16 @@
 .nav-menu {
   $nav-menu-top-mobile: 5%;
-
+  z-index: 101;
   @extend .horizontal-center;
   top: $nav-menu-top-mobile;
 
+  position: fixed;
   font-family: sourceCodePro;
   font-weight: 600;
   font-size: 14px;
   letter-spacing: .2em;
   text-transform: uppercase;
-  color: white;
+  // color: white;
 
   @include responsive(mobile) {
     width: 250px;
@@ -62,10 +63,10 @@
 .gray-bg {
   $section-height: 650px;
   $section-height-mobile: 558px;
-
+  z-index: 100;
   visibility: hidden;
 
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 
@@ -77,4 +78,8 @@
   @include responsive(mobile) {
     height: $section-height-mobile;
   }
+}
+
+.hidden {
+  display: none;
 }
