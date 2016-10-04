@@ -21,10 +21,14 @@
   .title {
     font-family: parabola;
     font-weight: 300;
-    font-size: 43px;
     letter-spacing: .015em;
+    font-size: 80px;
     margin-left: 35px;
     margin-bottom: 20px;
+
+    @include responsive(mobile) {
+      font-size: 43px;
+    }
   }
 
   .desc-container {

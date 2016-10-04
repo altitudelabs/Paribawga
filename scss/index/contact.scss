@@ -6,9 +6,14 @@
   .title {
     font-family: parabola;
     font-weight: 300;
-    font-size: 43px;
+    font-size: 80px;
     letter-spacing: .055em;
     margin: auto;
+
+    @include responsive(mobile) {
+      font-size: 43px;
+
+    }
   }
 
   .content {

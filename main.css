@@ -400,10 +400,15 @@ body.loading {
   .mobile-images-collection .title, #collection-section .title, #projects-section .title, #press-section .title {
     font-family: parabola;
     font-weight: 300;
-    font-size: 43px;
+    font-size: 80px;
     letter-spacing: .015em;
     margin-left: 35px;
     margin-bottom: 40px; }
+    @media only screen and (max-width: 720px) {
+      .mobile-images-collection .title, #collection-section .title, #projects-section .title, #press-section .title {
+        font-size: 43px;
+        margin-left: 35px;
+        margin-bottom: 40px; } }
   .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag {
     background-image: url("images/buttons/buttons_more.svg");
     position: absolute;
@@ -623,10 +628,13 @@ body.loading {
   #bespoke-section .title {
     font-family: parabola;
     font-weight: 300;
-    font-size: 43px;
     letter-spacing: .015em;
+    font-size: 80px;
     margin-left: 35px;
     margin-bottom: 20px; }
+    @media only screen and (max-width: 720px) {
+      #bespoke-section .title {
+        font-size: 43px; } }
   #bespoke-section .desc-container {
     width: calc(100% - 190px);
     height: 220px;
@@ -696,10 +704,13 @@ body.loading {
 #sustain-section .title {
   font-family: parabola;
   font-weight: 300;
-  font-size: 43px;
+  font-size: 80px;
   letter-spacing: .015em;
   margin-left: 35px;
   margin-bottom: 20px; }
+  @media only screen and (max-width: 720px) {
+    #sustain-section .title {
+      font-size: 43px; } }
 
 #sustain-section .img1-chair-container {
   float: left;
@@ -779,9 +790,12 @@ body.loading {
   #contact-section .title {
     font-family: parabola;
     font-weight: 300;
-    font-size: 43px;
+    font-size: 80px;
     letter-spacing: .055em;
     margin: auto; }
+    @media only screen and (max-width: 720px) {
+      #contact-section .title {
+        font-size: 43px; } }
   #contact-section .content {
     margin-top: 50px;
     margin-left: 32px;

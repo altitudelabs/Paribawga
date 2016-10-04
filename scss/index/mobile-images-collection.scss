@@ -9,10 +9,16 @@
   .title {
     font-family: parabola;
     font-weight: 300;
-    font-size: 43px;
+    font-size: 80px;
     letter-spacing: .015em;
     margin-left: 35px;
     margin-bottom: 40px;
+
+    @include responsive(mobile) {
+      font-size: 43px;
+      margin-left: 35px;
+      margin-bottom: 40px;
+    }
   }
 
   .more-tag { // 166 x 150
