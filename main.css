@@ -256,8 +256,8 @@ body.loading {
     margin-bottom: 30px;
     height: 30px; }
     #footer .apps-logo .app {
-      margin-right: 11.5px;
-      margin-left: 11.5px;
+      margin-right: 3px;
+      margin-left: 3px;
       width: 30px;
       height: 30px;
       float: left; }
@@ -267,7 +267,7 @@ body.loading {
     left: -50%; }
 
 .header .title {
-  margin-top: 12%;
+  margin-top: 46px;
   width: 100%;
   text-align: center;
   text-transform: uppercase;
@@ -291,17 +291,17 @@ body.loading {
   .header .navigations .next {
     background-image: url("./images/buttons/buttons_next.svg");
     float: right;
-    width: 20px;
+    width: 23px;
     height: 0;
-    padding-bottom: 21.73913px;
-    margin-top: 10px; }
+    padding-bottom: 25px;
+    margin-top: 4px; }
   .header .navigations .main-title, .header .navigations .sub-title {
     font-family: parabola;
     font-weight: 300;
     font-size: 43px;
     letter-spacing: .015em;
     float: left;
-    width: calc(100% - 86px);
+    width: calc(100% - 67px);
     text-align: center; }
   .header .navigations .sub-title {
     font-family: sourceCodePro;
@@ -722,8 +722,8 @@ body.loading {
       margin-bottom: 20px;
       margin-right: 20px;
       min-height: 160px;
-      font-family: edmondSans;
-      font-weight: normal;
+      font-family: sourceCodePro;
+      font-weight: 300;
       font-size: 12px;
       letter-spacing: .05em;
       line-height: 19px; }
@@ -732,21 +732,16 @@ body.loading {
           width: 100%;
           min-height: auto; } }
 
-#press-section .title {
-  margin-bottom: 0; }
-
-#press-section .date {
-  margin-top: 26px;
-  margin-bottom: 12px;
+#press-section .text, .images-slide-section .image-and-description-box #press-section .name, #collection-section .image-and-description-box #press-section .name, #projects-section .image-and-description-box #press-section .name, #press-section .image-and-description-box .name {
+  text-align: center;
   font-family: sourceCodePro;
   font-weight: 300;
   font-size: 12px;
   letter-spacing: .05em;
   line-height: 19px;
-  text-transform: uppercase; }
-
-#press-section .text, .images-slide-section .image-and-description-box #press-section .name, #collection-section .image-and-description-box #press-section .name, #projects-section .image-and-description-box #press-section .name, #press-section .image-and-description-box .name {
-  margin-top: 19px; }
+  text-transform: uppercase;
+  margin-top: 150px;
+  margin-bottom: 150px; }
 
 #contact-section {
   text-align: center;
@@ -807,7 +802,7 @@ body.loading {
   padding-bottom: 30.92784px;
   position: absolute;
   right: 18px;
-  bottom: 96px; }
+  bottom: 91px; }
 
 #furniture .max-width-content {
   position: relative;

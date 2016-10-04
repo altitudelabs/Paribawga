@@ -1,6 +1,6 @@
 .header {
 
-  $title-top-mobile: 12%;
+  $title-top-mobile: 46px;
 
   $navigations-top: 33px;
   $navigations-sidemargin: 20px;
@@ -9,10 +9,10 @@
   $previous-width-mobile: 44px;
   $previous-left: 13px;
 
-  $next-width-mobile: 20px;
+  $next-width-mobile: 23px;
   $next-right: 20px;
 
-  $main-title-width: calc(100% - 86px);
+  $main-title-width: calc(100% - 67px);
   $sub-title-width: calc(100% - 76px);
 
   .title {
@@ -55,7 +55,7 @@
       height: 0;
 
       padding-bottom: 150 / 138 * $next-width-mobile;
-      margin-top: 10px;
+      margin-top: 4px;
     }
 
     .main-title {
