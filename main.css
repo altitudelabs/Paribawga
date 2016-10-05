@@ -104,9 +104,9 @@
   box-sizing: border-box; }
 
 html, body {
-  height: 100%;
   width: 100%;
   max-width: 100%;
+  overflow: auto;
   overflow-x: hidden; }
 
 .section-container {
@@ -272,6 +272,7 @@ body.loading {
     width: calc(100% - 76px); }
 
 .nav-menu {
+  color: white;
   z-index: 101;
   top: 5%;
   position: fixed;
