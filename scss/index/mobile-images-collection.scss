@@ -1,7 +1,7 @@
 .mobile-images-collection {
 
-  $image-width: 152px;
-  $image-height: 177px;
+  $image-width: 180px; // 152
+  $image-height: 210px; // 177
   $image-between-margin: 44px / 2;
 
   $more-tag-width: 30px;
@@ -9,16 +9,10 @@
   .title {
     font-family: parabola;
     font-weight: 300;
-    font-size: 80px;
+    font-size: 43px;
     letter-spacing: .015em;
     margin-left: 35px;
     margin-bottom: 40px;
-
-    @include responsive(mobile) {
-      font-size: 43px;
-      margin-left: 35px;
-      margin-bottom: 40px;
-    }
   }
 
   .more-tag { // 166 x 150
@@ -37,11 +31,21 @@
 
   /* * * * * * * * * * * * * * * * * * * * * * * * * *
   * Group of images and descriptions
-  * - image-and-description-box: a box to contain
-  *     one image and its description below
   * - container to contain all boxes that allows
   *     horizontal scrolling
+  * - image-and-description-box: a box to contain
+  *     one image and its description below
   * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+  .images-descriptions-container {
+    margin-left: 68px;
+    margin-bottom: 79px;
+    width: auto;
+    height: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
 
   .image-and-description-box {
     display: inline-block;
@@ -51,26 +55,23 @@
     margin-left: $image-between-margin;
     white-space: normal;
 
-    .image {
+    .image1, .image2, .image3, .image4 {
       display: none;
+      @extend .background-contain;
       width: $image-width;
       height: $image-height;
     }
 
-    .first {
+    .image1 {
       display: block;
     }
 
     .text {
       font-family: edmondSans;
       font-weight: normal;
-      font-size: 14px;
+      font-size: 12px;
       letter-spacing: .05em;
       line-height: 17px;
-
-      @include responsive(mobile) {
-        font-size: 12px;
-      }
     }
 
     .name {
@@ -84,13 +85,4 @@
     }
   }
 
-  .images-descriptions-container {
-    margin-left: 68px;
-    margin-bottom: 79px;
-    width: auto;
-    height: auto;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-  }
 }

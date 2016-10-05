@@ -120,14 +120,14 @@ html, body {
 .clearfix:after {
   clear: both; }
 
-.background-image, .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .img2-marble-container .marble, .background-contain, #footer .logo, #footer .apps-logo .app, .header .navigations .previous, .header .navigations .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair, .collection-page .image-description .image, .collection-page .back-to-top, #furniture .image {
+.background-image, .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .img2-marble-container .marble, #sustain-section .img1-chair-container .chair, .background-contain, #footer .logo, #footer .apps-logo .app, .header .navigations .previous, .header .navigations .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1, .mobile-images-collection .image-and-description-box .image2, #collection-section .image-and-description-box .image2, #projects-section .image-and-description-box .image2, #press-section .image-and-description-box .image2, .mobile-images-collection .image-and-description-box .image3, #collection-section .image-and-description-box .image3, #projects-section .image-and-description-box .image3, #press-section .image-and-description-box .image3, .mobile-images-collection .image-and-description-box .image4, #collection-section .image-and-description-box .image4, #projects-section .image-and-description-box .image4, #press-section .image-and-description-box .image4, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, .collection-page .image-description .image, .collection-page .back-to-top, #furniture .image {
   background-position: center center;
   background-repeat: no-repeat; }
 
-.background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .img2-marble-container .marble {
+.background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .img2-marble-container .marble, #sustain-section .img1-chair-container .chair {
   background-size: cover; }
 
-.background-contain, #footer .logo, #footer .apps-logo .app, .header .navigations .previous, .header .navigations .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair, .collection-page .image-description .image, .collection-page .back-to-top, #furniture .image {
+.background-contain, #footer .logo, #footer .apps-logo .app, .header .navigations .previous, .header .navigations .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1, .mobile-images-collection .image-and-description-box .image2, #collection-section .image-and-description-box .image2, #projects-section .image-and-description-box .image2, #press-section .image-and-description-box .image2, .mobile-images-collection .image-and-description-box .image3, #collection-section .image-and-description-box .image3, #projects-section .image-and-description-box .image3, #press-section .image-and-description-box .image3, .mobile-images-collection .image-and-description-box .image4, #collection-section .image-and-description-box .image4, #projects-section .image-and-description-box .image4, #press-section .image-and-description-box .image4, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, .collection-page .image-description .image, .collection-page .back-to-top, #furniture .image {
   background-size: contain; }
 
 body.loading {
@@ -241,6 +241,10 @@ body.loading {
   position: relative;
   max-width: 600px;
   margin: auto; }
+
+@media only screen and (max-width: 720px) {
+  .desktop-only {
+    display: none; } }
 
 #footer {
   margin-top: 75px; }
@@ -392,23 +396,18 @@ body.loading {
 .mobile-images-collection, #collection-section, #projects-section, #press-section {
   /* * * * * * * * * * * * * * * * * * * * * * * * * *
   * Group of images and descriptions
-  * - image-and-description-box: a box to contain
-  *     one image and its description below
   * - container to contain all boxes that allows
   *     horizontal scrolling
+  * - image-and-description-box: a box to contain
+  *     one image and its description below
   * * * * * * * * * * * * * * * * * * * * * * * * * */ }
   .mobile-images-collection .title, #collection-section .title, #projects-section .title, #press-section .title {
     font-family: parabola;
     font-weight: 300;
-    font-size: 80px;
+    font-size: 43px;
     letter-spacing: .015em;
     margin-left: 35px;
     margin-bottom: 40px; }
-    @media only screen and (max-width: 720px) {
-      .mobile-images-collection .title, #collection-section .title, #projects-section .title, #press-section .title {
-        font-size: 43px;
-        margin-left: 35px;
-        margin-bottom: 40px; } }
   .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag {
     background-image: url("images/buttons/buttons_more.svg");
     position: absolute;
@@ -418,34 +417,6 @@ body.loading {
     height: 0;
     padding-bottom: 27.10843px;
     margin-top: 10px; }
-  .mobile-images-collection .image-and-description-box, #collection-section .image-and-description-box, #projects-section .image-and-description-box, #press-section .image-and-description-box {
-    display: inline-block;
-    vertical-align: top;
-    width: 152px;
-    margin-right: 22px;
-    margin-left: 22px;
-    white-space: normal; }
-    .mobile-images-collection .image-and-description-box .image, #collection-section .image-and-description-box .image, #projects-section .image-and-description-box .image, #press-section .image-and-description-box .image {
-      display: none;
-      width: 152px;
-      height: 177px; }
-    .mobile-images-collection .image-and-description-box .first, #collection-section .image-and-description-box .first, #projects-section .image-and-description-box .first, #press-section .image-and-description-box .first {
-      display: block; }
-    .mobile-images-collection .image-and-description-box .text, #collection-section .image-and-description-box .text, #projects-section .image-and-description-box .text, #press-section .image-and-description-box .text, .mobile-images-collection .image-and-description-box .name, #collection-section .image-and-description-box .name, #projects-section .image-and-description-box .name, #press-section .image-and-description-box .name {
-      font-family: edmondSans;
-      font-weight: normal;
-      font-size: 14px;
-      letter-spacing: .05em;
-      line-height: 17px; }
-      @media only screen and (max-width: 720px) {
-        .mobile-images-collection .image-and-description-box .text, #collection-section .image-and-description-box .text, #projects-section .image-and-description-box .text, #press-section .image-and-description-box .text, .mobile-images-collection .image-and-description-box .name, #collection-section .image-and-description-box .name, #projects-section .image-and-description-box .name, #press-section .image-and-description-box .name {
-          font-size: 12px; } }
-    .mobile-images-collection .image-and-description-box .name, #collection-section .image-and-description-box .name, #projects-section .image-and-description-box .name, #press-section .image-and-description-box .name {
-      font-family: sourceCodePro;
-      font-weight: 300;
-      margin-top: 23px;
-      margin-bottom: 23px;
-      text-transform: uppercase; }
   .mobile-images-collection .images-descriptions-container, #collection-section .images-descriptions-container, #projects-section .images-descriptions-container, #press-section .images-descriptions-container {
     margin-left: 68px;
     margin-bottom: 79px;
@@ -454,6 +425,31 @@ body.loading {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap; }
+  .mobile-images-collection .image-and-description-box, #collection-section .image-and-description-box, #projects-section .image-and-description-box, #press-section .image-and-description-box {
+    display: inline-block;
+    vertical-align: top;
+    width: 180px;
+    margin-right: 22px;
+    margin-left: 22px;
+    white-space: normal; }
+    .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1, .mobile-images-collection .image-and-description-box .image2, #collection-section .image-and-description-box .image2, #projects-section .image-and-description-box .image2, #press-section .image-and-description-box .image2, .mobile-images-collection .image-and-description-box .image3, #collection-section .image-and-description-box .image3, #projects-section .image-and-description-box .image3, #press-section .image-and-description-box .image3, .mobile-images-collection .image-and-description-box .image4, #collection-section .image-and-description-box .image4, #projects-section .image-and-description-box .image4, #press-section .image-and-description-box .image4 {
+      display: none;
+      width: 180px;
+      height: 210px; }
+    .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1 {
+      display: block; }
+    .mobile-images-collection .image-and-description-box .text, #collection-section .image-and-description-box .text, #projects-section .image-and-description-box .text, #press-section .image-and-description-box .text, .mobile-images-collection .image-and-description-box .name, #collection-section .image-and-description-box .name, #projects-section .image-and-description-box .name, #press-section .image-and-description-box .name {
+      font-family: edmondSans;
+      font-weight: normal;
+      font-size: 12px;
+      letter-spacing: .05em;
+      line-height: 17px; }
+    .mobile-images-collection .image-and-description-box .name, #collection-section .image-and-description-box .name, #projects-section .image-and-description-box .name, #press-section .image-and-description-box .name {
+      font-family: sourceCodePro;
+      font-weight: 300;
+      margin-top: 23px;
+      margin-bottom: 23px;
+      text-transform: uppercase; }
 
 #hero-section {
   height: 650px; }
@@ -617,11 +613,85 @@ body.loading {
         bottom: 0;
         right: 0; } }
 
-#collection-section .image-and-description-box {
-  width: 180px; }
-  #collection-section .image-and-description-box .image {
-    width: 180px;
-    height: 210px; }
+@media only screen and (min-width: 1024px) {
+  #collection-section {
+    /* * * * * * * * * * * * * * * * * * * * * * * * * *
+    * Group of images and descriptions
+    * - image-and-description-box: a box to contain
+    *     one image and its description below
+    * - container to contain all boxes that allows
+    *     horizontal scrolling
+    * * * * * * * * * * * * * * * * * * * * * * * * * */ }
+    #collection-section .max-width-content {
+      max-width: 800px; }
+    #collection-section .title {
+      font-size: 80px;
+      text-align: right;
+      position: relative;
+      margin-right: -35px;
+      margin-bottom: 0; }
+    #collection-section .more-tag {
+      position: absolute;
+      top: 250px;
+      right: 28px; }
+    #collection-section .more-tag.desktop-only {
+      left: 28px;
+      right: auto; }
+    #collection-section .images-descriptions-container {
+      overflow: visible;
+      white-space: normal;
+      margin-left: 0;
+      margin-bottom: 79px;
+      width: 100%;
+      height: auto;
+      overflow: visible; }
+    #collection-section .row {
+      width: 100%;
+      clear: both;
+      top: -30px;
+      position: relative; }
+    #collection-section .image-and-description-box {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+      overflow: visible; }
+      #collection-section .image-and-description-box .image1, #collection-section .image-and-description-box .image2, #collection-section .image-and-description-box .image3, #collection-section .image-and-description-box .image4 {
+        display: block;
+        position: relative;
+        float: left; }
+      #collection-section .image-and-description-box .image1 {
+        width: 180px;
+        height: 210px; }
+      #collection-section .image-and-description-box .image2 {
+        width: 300px;
+        height: 210px;
+        margin-left: 40px;
+        top: -30px; }
+      #collection-section .image-and-description-box .image3 {
+        width: 180px;
+        height: 300px; }
+      #collection-section .image-and-description-box .image4 {
+        width: 210px;
+        height: 400px;
+        margin-left: 60px;
+        top: -98px; }
+      #collection-section .image-and-description-box .content-text {
+        float: left;
+        width: 320px;
+        padding-right: 20px; }
+      #collection-section .image-and-description-box .text, #collection-section .image-and-description-box .name {
+        font-family: edmondSans;
+        font-weight: normal;
+        font-size: 14px;
+        letter-spacing: .05em;
+        line-height: 17px; }
+      #collection-section .image-and-description-box .name {
+        font-family: sourceCodePro;
+        font-weight: 300;
+        margin-top: 23px;
+        margin-bottom: 23px;
+        text-transform: uppercase; } }
 
 #bespoke-section {
   margin-bottom: 115px; }
@@ -706,38 +776,56 @@ body.loading {
   font-weight: 300;
   font-size: 80px;
   letter-spacing: .015em;
-  margin-left: 35px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  float: right;
+  margin-right: 50px; }
   @media only screen and (max-width: 720px) {
     #sustain-section .title {
-      font-size: 43px; } }
+      font-size: 43px;
+      float: none;
+      margin-left: 35px; } }
 
 #sustain-section .img1-chair-container {
   float: left;
   overflow: visible;
-  width: 197px; }
+  width: 250px;
+  margin-top: 50px; }
+  @media only screen and (max-width: 720px) {
+    #sustain-section .img1-chair-container {
+      margin-top: 0;
+      width: 197px; } }
   #sustain-section .img1-chair-container .chair {
     background-image: url("images/index/6_sustain2.jpg");
+    position: relative;
     width: 100%;
-    height: 231px; }
+    height: 400px;
+    top: -40px; }
+    @media only screen and (max-width: 720px) {
+      #sustain-section .img1-chair-container .chair {
+        top: 0;
+        height: 231px; } }
 
 #sustain-section .img2-marble-container {
   float: left;
   overflow: visible;
-  width: calc(40% - 197px); }
+  width: calc(40% - 197px);
+  margin-top: 50px; }
   @media only screen and (max-width: 720px) {
     #sustain-section .img2-marble-container {
       float: right;
+      margin-top: 0;
       width: calc(100% - 197px); } }
   #sustain-section .img2-marble-container .marble {
     background-image: url("images/index/6_sustain1.jpg");
-    width: 320px;
-    height: 221px;
-    top: -73px;
+    height: 250px;
+    width: 500px;
     position: relative;
     z-index: -1; }
     @media only screen and (max-width: 720px) {
       #sustain-section .img2-marble-container .marble {
+        height: 221px;
+        width: 320px;
+        top: -73px;
         left: -74px; } }
 
 #sustain-section .text-container {

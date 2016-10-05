@@ -158,3 +158,8 @@ body.loading {
   margin: auto;
 }
 
+.desktop-only {
+  @include responsive(mobile) {
+    display: none;
+  }
+}
