@@ -1,5 +1,4 @@
 .nav-menu {
-  color: white;
   $nav-menu-top-mobile: 5%;
   z-index: 101;
   @extend .horizontal-center;
@@ -11,7 +10,6 @@
   font-size: 14px;
   letter-spacing: .2em;
   text-transform: uppercase;
-  // color: white;
 
   @include responsive(mobile) {
     font-size: 15px;
@@ -84,4 +82,8 @@
 
 .hidden {
   display: none;
+}
+
+.white {
+  color: white;
 }

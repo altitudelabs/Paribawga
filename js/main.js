@@ -41,9 +41,9 @@ $(document).ready(function(){
 
     if (winWidth >= 1024) {
       if (winScrollTop >= 600) { // 1st section-height
-        $('.nav-menu').css('color', 'black');
+        $('.index .nav-menu').removeClass('white');
       } else {
-        $('.nav-menu').css('color', 'white');
+        $('.index .nav-menu').addClass('white');
       }
     }
   }));

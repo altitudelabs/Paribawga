@@ -127,6 +127,19 @@
         line-height: 17px;
       }
 
+      .explore-link {
+        font-family: sourceCodePro;
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        text-align: left;
+
+        a {
+          color: inherit;
+        }
+      }
+
       .name {
         // @extend .text;
         font-family: sourceCodePro;

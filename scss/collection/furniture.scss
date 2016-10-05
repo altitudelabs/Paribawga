@@ -1,5 +1,7 @@
 #furniture {
 
+  @extend .mobile-header;
+
   $image-height: 340px;
   $image-maxwidth: 300px;
 
