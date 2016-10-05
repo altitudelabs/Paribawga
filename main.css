@@ -120,14 +120,14 @@ html, body {
 .clearfix:after {
   clear: both; }
 
-.background-image, .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .img2-marble-container .marble, #sustain-section .img1-chair-container .chair, .background-contain, #footer .logo, #footer .apps-logo .app, .header .navigations .previous, .header .navigations .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1, .mobile-images-collection .image-and-description-box .image2, #collection-section .image-and-description-box .image2, #projects-section .image-and-description-box .image2, #press-section .image-and-description-box .image2, .mobile-images-collection .image-and-description-box .image3, #collection-section .image-and-description-box .image3, #projects-section .image-and-description-box .image3, #press-section .image-and-description-box .image3, .mobile-images-collection .image-and-description-box .image4, #collection-section .image-and-description-box .image4, #projects-section .image-and-description-box .image4, #press-section .image-and-description-box .image4, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, .collection-page .image-description .image, .collection-page .back-to-top, #furniture .image {
+.background-image, .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .shelf, #bespoke-section .marble, #sustain-section .img1-chair-container .chair, .background-contain, #footer .logo, #footer .apps-logo .app, .header .navigations .previous, .header .navigations .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1, .mobile-images-collection .image-and-description-box .image2, #collection-section .image-and-description-box .image2, #projects-section .image-and-description-box .image2, #press-section .image-and-description-box .image2, .mobile-images-collection .image-and-description-box .image3, #collection-section .image-and-description-box .image3, #projects-section .image-and-description-box .image3, #press-section .image-and-description-box .image3, .mobile-images-collection .image-and-description-box .image4, #collection-section .image-and-description-box .image4, #projects-section .image-and-description-box .image4, #press-section .image-and-description-box .image4, #hero-section .cover-tagline, #aboutus-section .image-container .image, .collection-page .image-description .image, .collection-page .back-to-top, #furniture .image {
   background-position: center center;
   background-repeat: no-repeat; }
 
-.background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .img2-marble-container .marble, #sustain-section .img1-chair-container .chair {
+.background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .shelf, #bespoke-section .marble, #sustain-section .img1-chair-container .chair {
   background-size: cover; }
 
-.background-contain, #footer .logo, #footer .apps-logo .app, .header .navigations .previous, .header .navigations .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1, .mobile-images-collection .image-and-description-box .image2, #collection-section .image-and-description-box .image2, #projects-section .image-and-description-box .image2, #press-section .image-and-description-box .image2, .mobile-images-collection .image-and-description-box .image3, #collection-section .image-and-description-box .image3, #projects-section .image-and-description-box .image3, #press-section .image-and-description-box .image3, .mobile-images-collection .image-and-description-box .image4, #collection-section .image-and-description-box .image4, #projects-section .image-and-description-box .image4, #press-section .image-and-description-box .image4, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, .collection-page .image-description .image, .collection-page .back-to-top, #furniture .image {
+.background-contain, #footer .logo, #footer .apps-logo .app, .header .navigations .previous, .header .navigations .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1, .mobile-images-collection .image-and-description-box .image2, #collection-section .image-and-description-box .image2, #projects-section .image-and-description-box .image2, #press-section .image-and-description-box .image2, .mobile-images-collection .image-and-description-box .image3, #collection-section .image-and-description-box .image3, #projects-section .image-and-description-box .image3, #press-section .image-and-description-box .image3, .mobile-images-collection .image-and-description-box .image4, #collection-section .image-and-description-box .image4, #projects-section .image-and-description-box .image4, #press-section .image-and-description-box .image4, #hero-section .cover-tagline, #aboutus-section .image-container .image, .collection-page .image-description .image, .collection-page .back-to-top, #furniture .image {
   background-size: contain; }
 
 body.loading {
@@ -771,82 +771,91 @@ body.loading {
         display: block; } }
 
 #bespoke-section {
-  margin-bottom: 115px; }
+  margin-bottom: 115px;
+  padding-left: 100px; }
+  @media only screen and (max-width: 720px) {
+    #bespoke-section {
+      padding-left: 0; } }
   #bespoke-section .title {
+    z-index: 1;
+    position: relative;
     font-family: parabola;
     font-weight: 300;
     letter-spacing: .015em;
     font-size: 80px;
-    margin-left: 35px;
+    margin-left: 130px;
     margin-bottom: 20px; }
     @media only screen and (max-width: 720px) {
       #bespoke-section .title {
-        font-size: 43px; } }
-  #bespoke-section .desc-container {
-    width: calc(100% - 190px);
-    height: 220px;
+        font-size: 43px;
+        margin-left: 35px; } }
+  #bespoke-section .text-container {
+    width: 290px;
+    z-index: 1;
+    overflow: visible;
     padding-top: 38px;
     float: left;
-    overflow: visible;
-    position: relative; }
-    #bespoke-section .desc-container .text, #bespoke-section .desc-container .mobile-images-collection .image-and-description-box .name, .mobile-images-collection .image-and-description-box #bespoke-section .desc-container .name, #bespoke-section .desc-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #bespoke-section .desc-container .name, #bespoke-section .desc-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #bespoke-section .desc-container .name, #bespoke-section .desc-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #bespoke-section .desc-container .name {
-      float: left;
-      padding-left: 43px;
-      min-height: 175px;
+    position: relative;
+    min-height: 175px;
+    padding-left: 43px; }
+    #bespoke-section .text-container .desc {
       margin-top: 10px;
-      width: 290px;
       font-family: edmondSans;
       font-weight: normal;
       font-size: 14px;
       letter-spacing: .05em;
       line-height: 17px; }
       @media only screen and (max-width: 720px) {
-        #bespoke-section .desc-container .text, #bespoke-section .desc-container .mobile-images-collection .image-and-description-box .name, .mobile-images-collection .image-and-description-box #bespoke-section .desc-container .name, #bespoke-section .desc-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #bespoke-section .desc-container .name, #bespoke-section .desc-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #bespoke-section .desc-container .name, #bespoke-section .desc-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #bespoke-section .desc-container .name {
+        #bespoke-section .text-container .desc {
           font-size: 12px; } }
-    #bespoke-section .desc-container .contact-link {
+    #bespoke-section .text-container .contact-link {
       font-family: sourceCodePro;
       font-weight: 600;
-      font-decoration: underline;
       font-size: 12px;
       letter-spacing: .1em;
       text-transform: uppercase;
-      color: inherit; }
-  #bespoke-section .img1-shelf-container {
-    width: 190px;
-    overflow: visible;
-    float: right; }
-    #bespoke-section .img1-shelf-container .shelf {
-      background-image: url("images/index/5_bespoke1.jpg");
-      width: 190px;
-      height: 246px;
-      right: 0;
-      margin-top: -80px; }
+      text-align: right; }
       @media only screen and (max-width: 720px) {
-        #bespoke-section .img1-shelf-container .shelf {
-          margin-top: 0; } }
-  #bespoke-section .img2-marble-container {
-    width: 351px;
-    height: 208px;
+        #bespoke-section .text-container .contact-link {
+          text-align: left; } }
+      #bespoke-section .text-container .contact-link a {
+        color: inherit; }
+  #bespoke-section .column {
+    float: right;
     overflow: visible;
-    float: right; }
-    #bespoke-section .img2-marble-container .marble {
-      background-image: url("images/index/5_bespoke2.jpg");
-      position: relative;
-      width: 550px;
-      height: 234px;
-      top: -26px;
-      z-index: -1;
-      float: right;
-      margin-top: -80px;
-      margin-right: 40px; }
-      @media only screen and (min-width: 721px) and (max-width: 1023px) {
-        #bespoke-section .img2-marble-container .marble {
-          margin-right: 0; } }
-      @media only screen and (max-width: 720px) {
-        #bespoke-section .img2-marble-container .marble {
-          width: 100%;
-          margin-top: 0;
-          margin-right: 0; } }
+    width: 0; }
+  #bespoke-section .shelf {
+    background-image: url("images/index/5_bespoke1.jpg");
+    width: 500px;
+    height: 300px;
+    float: right;
+    position: relative;
+    margin-top: -80px; }
+    @media only screen and (max-width: 720px) {
+      #bespoke-section .shelf {
+        width: 190px;
+        height: 246px;
+        margin-top: 0; } }
+  #bespoke-section .marble {
+    background-image: url("images/index/5_bespoke2.jpg");
+    position: relative;
+    clear: right;
+    width: 750px;
+    height: 300px;
+    top: -26px;
+    z-index: -1;
+    float: right;
+    margin-top: -80px;
+    margin-right: 40px; }
+    @media only screen and (min-width: 721px) and (max-width: 1023px) {
+      #bespoke-section .marble {
+        margin-right: 0; } }
+    @media only screen and (max-width: 720px) {
+      #bespoke-section .marble {
+        width: 315px;
+        height: 234px;
+        margin-top: 0;
+        margin-right: 0; } }
 
 #sustain-section .title {
   font-family: parabola;
