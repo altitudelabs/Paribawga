@@ -2,24 +2,62 @@
 
   @extend .mobile-header;
 
-  $image-height: 340px;
-  $image-maxwidth: 300px;
+  /* * * * * * * * * * * * * * * *
+   * HEADER
+   * * * * * * * * * * * * * * * */
+  $next-prev-top: 300px;
+
+  @include responsive(desktop) {
+
+    .next, .prev {
+      top: $next-prev-top;
+    }
+  }
+
+  /* * * * * * * * * * * * * * * *
+   * CONTENT
+   * * * * * * * * * * * * * * * */
+
+  $image1-top: 100px;
+  $image1-width: 292px;
+  $image1-height: 340px;
+
+  $image2-top: 40px;
+  $image2-left: 350px;
+  $image2-width: 202px;
+  $image2-height: 340px;
+
+  $image3-top: 80px;
+  $image3-left: 383px;
+  $image3-width: 280px;
+  $image3-height: 237px;
+
+  $text-top: 200px;
+  $text-left: 684px;
 
   .max-width-content {
+
     position: relative;
-    max-width: 500px;
+    max-width: 320px;
     margin: auto;
+    top: 80px;
+    @extend .clearfix;
+
+    @include responsive(desktop) {
+      max-width: 1000px;
+      min-height: 675px;
+    }
   }
 
   .image {
-    @extend .background-contain;
+    @extend .background-cover;
+    max-width: 320px;
     padding-top: 40px;
-    height: $image-height;
-    max-width: $image-maxwidth;
     display: block;
     position: relative;
     margin: auto;
   }
+
 
   .desc {
     font-family: edmondSans;
@@ -28,6 +66,22 @@
     letter-spacing: .05em;
     line-height: 19px;
     margin: 40px 15px;
+
+    @include responsive (desktop) {
+      margin-top: $text-top;
+      margin-left: $text-left;
+      width: 350px;
+    }
+
+    .title {
+      font-family: sourceCodePro;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      margin-top: 10px;
+      text-align: center;
+    }
   }
 
   .back-link {
@@ -39,5 +93,41 @@
     text-transform: uppercase;
     color: inherit;
     text-align: center;
+
+    @include responsive(desktop) {
+      text-align: left;
+    }
+  }
+
+  @include responsive(desktop) {
+    .column {
+      float: left;
+      width: 0;
+      height: 500px;
+      overflow: visible;
+    }
+
+    .image1 {
+      padding-top: 0;
+      top: $image1-top;
+      width:$image1-width;
+      height: $image1-height;
+    }
+
+    .image2 {
+      padding-top: 0;
+      top: $image2-top;
+      left: $image2-left;
+      width: $image2-width;
+      height: $image2-height;
+    }
+
+    .image3 {
+      padding-top: 0;
+      top: $image3-top;
+      left: $image3-left;
+      width: $image3-width;
+      height: $image3-height;
+    }
   }
 }

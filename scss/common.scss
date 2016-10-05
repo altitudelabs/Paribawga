@@ -107,3 +107,9 @@ body.loading {
     display: none;
   }
 }
+
+.mobile-transition-only {
+  @include responsive(desktop) {
+    display: none;
+  }
+}

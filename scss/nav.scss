@@ -85,5 +85,7 @@
 }
 
 .white {
-  color: white;
+  @include responsive(desktop) {
+    color: white;
+  }
 }

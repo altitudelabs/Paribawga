@@ -2,16 +2,13 @@
 
   $title-top-mobile: 46px;
 
-  $next-prev-top: 125px;
+  $next-prev-top: 80px;
 
   $previous-width-mobile: 44px;
   $previous-left: 13px;
 
   $next-width-mobile: 23px;
   $next-right: 20px;
-
-  $main-title-width: calc(100% - 67px);
-  $sub-title-width: calc(100% - 76px);
 
   .title {
     width: 100%;
@@ -25,64 +22,55 @@
     letter-spacing: .2em;
   }
 
-  // .navigations {
-  //   margin-top: $navigations-top;
-  //   margin-left: $previous-left;
-  //   margin-right: $next-right;
-  //   height: $navigations-height;
+  .prev { // 300 x 131
+    background-image: url('./images/buttons/buttons_previous.svg');
+    @extend .background-contain;
 
-    .prev { // 300 x 131
-      background-image: url('./images/buttons/buttons_previous.svg');
-      @extend .background-contain;
+    position: absolute;
 
-      position: absolute;
+    width: $previous-width-mobile;
+    height: 0;
+    padding-bottom: 131 / 300 * $previous-width-mobile;
 
-      width: $previous-width-mobile;
-      height: 0;
-      padding-bottom: 131 / 300 * $previous-width-mobile;
+    top: $next-prev-top;
+    left: 0;
 
-      top: $next-prev-top;
-      left: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
 
-      margin-top: 10px;
-      margin-left: 10px;
-    }
+  .next { // 138 x 150
+    background-image: url('./images/buttons/buttons_next.svg');
+    @extend .background-contain;
 
-    .next { // 138 x 150
-      background-image: url('./images/buttons/buttons_next.svg');
-      @extend .background-contain;
+    position: absolute;
+    width: $next-width-mobile;
+    height: 0;
+    padding-bottom: 150 / 138 * $next-width-mobile;
 
-      position: absolute;
-      width: $next-width-mobile;
-      height: 0;
-      padding-bottom: 150 / 138 * $next-width-mobile;
+    top: $next-prev-top;
+    right: 0;
 
-      top: $next-prev-top;
-      right: 0;
+    margin-top: 4px;
+    margin-right: 20px;
+  }
 
-      margin-top: 4px;
-      margin-right: 20px;
-    }
+  .main-title {
+    font-family: parabola;
+    font-weight: 300;
+    font-size: 43px;
+    letter-spacing: .015em;
 
-    .main-title {
-      font-family: parabola;
-      font-weight: 300;
-      font-size: 43px;
-      letter-spacing: .015em;
+    text-align: center;
+  }
 
-      text-align: center;
-    }
-
-    .sub-title {
-      @extend .main-title;
-      font-family: sourceCodePro;
-      font-weight: 600;
-      font-size: 14px;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      margin-top: 10px;
-
-      width: $sub-title-width;
-    }
-  // }
+  .sub-title {
+    font-family: sourceCodePro;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    margin-top: 10px;
+    text-align: center;
+  }
 }

@@ -28,6 +28,10 @@
       letter-spacing: .1em;
       margin-top: 20px;
 
+      @include responsive(mobile) {
+        font-size: 14px;
+      }
+
       .info {
         font-size: 17px;
         font-family: edmondSans;

@@ -114,21 +114,21 @@ html, body {
 a {
   cursor: pointer; }
 
-.clearfix:before, .clearfix:after {
+.clearfix:before, .furniture .max-width-content:before, .clearfix:after, .furniture .max-width-content:after {
   content: " ";
   display: table; }
 
-.clearfix:after {
+.clearfix:after, .furniture .max-width-content:after {
   clear: both; }
 
-.background-image, .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .shelf, #bespoke-section .marble, #sustain-section .img1-chair-container .chair, .background-contain, #footer .logo, #footer .apps-logo .app, .mobile-header .prev, .collection-page .prev, .furniture .prev, .mobile-header .next, .collection-page .next, .furniture .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, .mobile-images-collection .image-and-description-box .image, #collection-section .image-and-description-box .image, #projects-section .image-and-description-box .image, #press-section .image-and-description-box .image, .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1, .mobile-images-collection .image-and-description-box .image2, #collection-section .image-and-description-box .image2, #projects-section .image-and-description-box .image2, #press-section .image-and-description-box .image2, .mobile-images-collection .image-and-description-box .image3, #collection-section .image-and-description-box .image3, #projects-section .image-and-description-box .image3, #press-section .image-and-description-box .image3, .mobile-images-collection .image-and-description-box .image4, #collection-section .image-and-description-box .image4, #projects-section .image-and-description-box .image4, #press-section .image-and-description-box .image4, #hero-section .cover-tagline, #aboutus-section .image-container .image, .collection-page .image-description .image, .collection-page .back-to-top, .furniture .image {
+.background-image, .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .shelf, #bespoke-section .marble, #sustain-section .img1-chair-container .chair, .furniture .image, .background-contain, #footer .logo, #footer .apps-logo .app, .mobile-header .prev, .collection-page .prev, .furniture .prev, .mobile-header .next, .collection-page .next, .furniture .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, .mobile-images-collection .image-and-description-box .image, #collection-section .image-and-description-box .image, #projects-section .image-and-description-box .image, #press-section .image-and-description-box .image, .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1, .mobile-images-collection .image-and-description-box .image2, #collection-section .image-and-description-box .image2, #projects-section .image-and-description-box .image2, #press-section .image-and-description-box .image2, .mobile-images-collection .image-and-description-box .image3, #collection-section .image-and-description-box .image3, #projects-section .image-and-description-box .image3, #press-section .image-and-description-box .image3, .mobile-images-collection .image-and-description-box .image4, #collection-section .image-and-description-box .image4, #projects-section .image-and-description-box .image4, #press-section .image-and-description-box .image4, #hero-section .cover-tagline, #aboutus-section .image-container .image, .collection-page .image-description .image, .collection-page .back-to-top {
   background-position: center center;
   background-repeat: no-repeat; }
 
-.background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .shelf, #bespoke-section .marble, #sustain-section .img1-chair-container .chair {
+.background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .shelf, #bespoke-section .marble, #sustain-section .img1-chair-container .chair, .furniture .image {
   background-size: cover; }
 
-.background-contain, #footer .logo, #footer .apps-logo .app, .mobile-header .prev, .collection-page .prev, .furniture .prev, .mobile-header .next, .collection-page .next, .furniture .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, .mobile-images-collection .image-and-description-box .image, #collection-section .image-and-description-box .image, #projects-section .image-and-description-box .image, #press-section .image-and-description-box .image, .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1, .mobile-images-collection .image-and-description-box .image2, #collection-section .image-and-description-box .image2, #projects-section .image-and-description-box .image2, #press-section .image-and-description-box .image2, .mobile-images-collection .image-and-description-box .image3, #collection-section .image-and-description-box .image3, #projects-section .image-and-description-box .image3, #press-section .image-and-description-box .image3, .mobile-images-collection .image-and-description-box .image4, #collection-section .image-and-description-box .image4, #projects-section .image-and-description-box .image4, #press-section .image-and-description-box .image4, #hero-section .cover-tagline, #aboutus-section .image-container .image, .collection-page .image-description .image, .collection-page .back-to-top, .furniture .image {
+.background-contain, #footer .logo, #footer .apps-logo .app, .mobile-header .prev, .collection-page .prev, .furniture .prev, .mobile-header .next, .collection-page .next, .furniture .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, .mobile-images-collection .image-and-description-box .image, #collection-section .image-and-description-box .image, #projects-section .image-and-description-box .image, #press-section .image-and-description-box .image, .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1, .mobile-images-collection .image-and-description-box .image2, #collection-section .image-and-description-box .image2, #projects-section .image-and-description-box .image2, #press-section .image-and-description-box .image2, .mobile-images-collection .image-and-description-box .image3, #collection-section .image-and-description-box .image3, #projects-section .image-and-description-box .image3, #press-section .image-and-description-box .image3, .mobile-images-collection .image-and-description-box .image4, #collection-section .image-and-description-box .image4, #projects-section .image-and-description-box .image4, #press-section .image-and-description-box .image4, #hero-section .cover-tagline, #aboutus-section .image-container .image, .collection-page .image-description .image, .collection-page .back-to-top {
   background-size: contain; }
 
 body.loading {
@@ -190,8 +190,13 @@ body.loading {
   .desktop-only {
     display: none; } }
 
+@media only screen and (min-width: 1200px) {
+  .mobile-transition-only {
+    display: none; } }
+
 #footer {
-  margin-top: 75px; }
+  clear: both;
+  padding-top: 125px; }
   #footer .logo {
     background-image: url("./images/buttons/sosmed_paribawga logo.svg");
     width: 150px;
@@ -241,7 +246,7 @@ body.loading {
   width: 44px;
   height: 0;
   padding-bottom: 19.21333px;
-  top: 125px;
+  top: 80px;
   left: 0;
   margin-top: 10px;
   margin-left: 10px; }
@@ -252,12 +257,12 @@ body.loading {
   width: 23px;
   height: 0;
   padding-bottom: 25px;
-  top: 125px;
+  top: 80px;
   right: 0;
   margin-top: 4px;
   margin-right: 20px; }
 
-.mobile-header .main-title, .collection-page .main-title, .furniture .main-title, .mobile-header .sub-title, .collection-page .sub-title, .furniture .sub-title {
+.mobile-header .main-title, .collection-page .main-title, .furniture .main-title {
   font-family: parabola;
   font-weight: 300;
   font-size: 43px;
@@ -271,7 +276,7 @@ body.loading {
   letter-spacing: .2em;
   text-transform: uppercase;
   margin-top: 10px;
-  width: calc(100% - 76px); }
+  text-align: center; }
 
 .nav-menu {
   z-index: 101;
@@ -289,7 +294,7 @@ body.loading {
       text-align: center; } }
   .nav-menu ul {
     list-style-type: none; }
-    @media only screen and (min-width: 721px) and (max-width: 1023px) {
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
       .nav-menu ul {
         display: none; } }
     @media only screen and (max-width: 720px) {
@@ -310,7 +315,7 @@ body.loading {
           margin-top: 35px; } }
   .nav-menu .title {
     display: none; }
-    @media only screen and (min-width: 721px) and (max-width: 1023px) {
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
       .nav-menu .title {
         display: block; } }
     @media only screen and (max-width: 720px) {
@@ -338,8 +343,9 @@ body.loading {
 .hidden {
   display: none; }
 
-.white {
-  color: white; }
+@media only screen and (min-width: 1200px) {
+  .white {
+    color: white; } }
 
 .mobile-images-collection, #collection-section, #projects-section, #press-section {
   margin-bottom: 0;
@@ -468,7 +474,7 @@ body.loading {
   position: relative;
   margin: auto;
   width: 75%; }
-  @media only screen and (min-width: 721px) and (max-width: 1023px) {
+  @media only screen and (min-width: 721px) and (max-width: 1199px) {
     #aboutus-section .content {
       width: 90%; } }
   @media only screen and (max-width: 720px) {
@@ -488,7 +494,7 @@ body.loading {
   font-size: 80px;
   margin-top: 58px;
   margin-left: 10%; }
-  @media only screen and (min-width: 721px) and (max-width: 1023px) {
+  @media only screen and (min-width: 721px) and (max-width: 1199px) {
     #aboutus-section .title {
       font-size: 64px;
       margin-left: 10%; } }
@@ -503,7 +509,7 @@ body.loading {
   float: left;
   overflow-x: visible;
   padding-left: 20%; }
-  @media only screen and (min-width: 721px) and (max-width: 1023px) {
+  @media only screen and (min-width: 721px) and (max-width: 1199px) {
     #aboutus-section .text-container {
       width: 46%;
       padding-left: 20%; } }
@@ -564,7 +570,7 @@ body.loading {
         bottom: 0;
         right: 0; } }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   #collection-section {
     /* * * * * * * * * * * * * * * * * * * * * * * * * *
     * Group of images and descriptions
@@ -657,7 +663,7 @@ body.loading {
 
 #projects-section {
   margin-bottom: 79px; }
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 1200px) {
     #projects-section {
       /* * * * * * * * * * * * * * * * * * * * * * * * * *
     * Group of images and descriptions
@@ -815,7 +821,7 @@ body.loading {
     float: right;
     margin-top: -80px;
     margin-right: 40px; }
-    @media only screen and (min-width: 721px) and (max-width: 1023px) {
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
       #bespoke-section .marble {
         margin-right: 0; } }
     @media only screen and (max-width: 720px) {
@@ -931,7 +937,7 @@ body.loading {
 #press-section .text, .mobile-images-collection .image-and-description-box #press-section .name, #collection-section .image-and-description-box #press-section .name, #projects-section .image-and-description-box #press-section .name, #press-section .image-and-description-box .name {
   margin-top: 19px; }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1200px) {
   #press-section .max-width-content {
     max-width: 800px; }
   #press-section .title {
@@ -1008,6 +1014,9 @@ body.loading {
       font-size: 18px;
       letter-spacing: .1em;
       margin-top: 20px; }
+      @media only screen and (max-width: 720px) {
+        #contact-section .content p {
+          font-size: 14px; } }
       #contact-section .content p .info {
         font-size: 17px;
         font-family: edmondSans;
@@ -1034,14 +1043,14 @@ body.loading {
   /* * * * * * * * * * * * * * * *
    * CONTENT
    * * * * * * * * * * * * * * * */ }
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 1200px) {
     .collection-page .next, .collection-page .prev {
       top: 300px; }
-    .collection-page .main-title, .collection-page .sub-title {
+    .collection-page .main-title {
       font-size: 80px;
       text-align: right; } }
   .collection-page .max-width-content {
-    top: 120px;
+    top: 75px;
     position: relative;
     max-width: 800px;
     margin: auto;
@@ -1051,7 +1060,7 @@ body.loading {
         max-width: 300px;
         height: auto;
         margin-bottom: 150px; } }
-    @media only screen and (min-width: 721px) and (max-width: 1023px) {
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
       .collection-page .max-width-content {
         max-width: 300px;
         height: auto;
@@ -1083,7 +1092,7 @@ body.loading {
     @media only screen and (max-width: 720px) {
       .collection-page .image-desc-container {
         height: 380px; } }
-    @media only screen and (min-width: 721px) and (max-width: 1023px) {
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
       .collection-page .image-desc-container {
         height: 380px; } }
   .collection-page .back-to-top {
@@ -1094,7 +1103,7 @@ body.loading {
     position: absolute;
     right: 18px;
     bottom: 91px; }
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 1200px) {
     .collection-page .image-description {
       margin: 0; }
     .collection-page .image-description1 {
@@ -1128,42 +1137,92 @@ body.loading {
       margin-top: 30px;
       margin-left: 108px; } }
 
-.furniture .max-width-content {
-  position: relative;
-  max-width: 500px;
-  margin: auto; }
-
-.furniture .image {
-  padding-top: 40px;
-  height: 340px;
-  max-width: 300px;
-  display: block;
-  position: relative;
-  margin: auto; }
-
-.furniture .desc {
-  font-family: edmondSans;
-  font-weight: normal;
-  font-size: 12px;
-  letter-spacing: .05em;
-  line-height: 19px;
-  margin: 40px 15px; }
-
-.furniture .back-link {
-  font-family: sourceCodePro;
-  font-weight: 600;
-  font-size: 12px;
-  letter-spacing: .05em;
-  line-height: 19px;
-  text-transform: uppercase;
-  color: inherit;
-  text-align: center; }
+.furniture {
+  /* * * * * * * * * * * * * * * *
+   * HEADER
+   * * * * * * * * * * * * * * * */
+  /* * * * * * * * * * * * * * * *
+   * CONTENT
+   * * * * * * * * * * * * * * * */ }
+  @media only screen and (min-width: 1200px) {
+    .furniture .next, .furniture .prev {
+      top: 300px; } }
+  .furniture .max-width-content {
+    position: relative;
+    max-width: 320px;
+    margin: auto;
+    top: 80px; }
+    @media only screen and (min-width: 1200px) {
+      .furniture .max-width-content {
+        max-width: 1000px;
+        min-height: 675px; } }
+  .furniture .image {
+    max-width: 320px;
+    padding-top: 40px;
+    display: block;
+    position: relative;
+    margin: auto; }
+  .furniture .desc {
+    font-family: edmondSans;
+    font-weight: normal;
+    font-size: 12px;
+    letter-spacing: .05em;
+    line-height: 19px;
+    margin: 40px 15px; }
+    @media only screen and (min-width: 1200px) {
+      .furniture .desc {
+        margin-top: 200px;
+        margin-left: 684px;
+        width: 350px; } }
+    .furniture .desc .title {
+      font-family: sourceCodePro;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      margin-top: 10px;
+      text-align: center; }
+  .furniture .back-link {
+    font-family: sourceCodePro;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: .05em;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: inherit;
+    text-align: center; }
+    @media only screen and (min-width: 1200px) {
+      .furniture .back-link {
+        text-align: left; } }
+  @media only screen and (min-width: 1200px) {
+    .furniture .column {
+      float: left;
+      width: 0;
+      height: 500px;
+      overflow: visible; }
+    .furniture .image1 {
+      padding-top: 0;
+      top: 100px;
+      width: 292px;
+      height: 340px; }
+    .furniture .image2 {
+      padding-top: 0;
+      top: 40px;
+      left: 350px;
+      width: 202px;
+      height: 340px; }
+    .furniture .image3 {
+      padding-top: 0;
+      top: 80px;
+      left: 383px;
+      width: 280px;
+      height: 237px; } }
 
 #project-info {
   padding-top: 20px;
   width: 100%;
   display: table; }
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 1200px) {
     #project-info {
       padding-top: 150px;
       width: 500px;
@@ -1174,7 +1233,7 @@ body.loading {
     max-width: 255px;
     margin: auto;
     margin-top: 35px; }
-    @media only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 1200px) {
       #project-info .component {
         display: table-row;
         height: 35px; } }
@@ -1185,7 +1244,7 @@ body.loading {
     letter-spacing: .05em;
     line-height: 21px;
     text-transform: uppercase; }
-    @media only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 1200px) {
       #project-info .title {
         display: table-cell;
         text-align: left;
@@ -1197,7 +1256,7 @@ body.loading {
     font-size: 12px;
     letter-spacing: .05em;
     line-height: 15px; }
-    @media only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 1200px) {
       #project-info .desc {
         display: table-cell;
         text-align: left;
