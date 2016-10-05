@@ -57,11 +57,15 @@
     margin-left: $image-between-margin;
     white-space: normal;
 
-    .image1, .image2, .image3, .image4 {
+    .image, .image1, .image2, .image3, .image4 {
       display: none;
       @extend .background-contain;
       width: $image-width;
       height: $image-height;
+    }
+
+    .image {
+      display: block;
     }
 
     .image1 {
