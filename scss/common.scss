@@ -121,3 +121,15 @@ body.loading {
 .hidden {
   display: none;
 }
+
+.frictionFast {
+  transition: 1s ease;
+}
+
+.frictionMed {
+  transition: 2s ease;
+}
+
+.frictionSlow {
+  transition: 4s ease;
+}

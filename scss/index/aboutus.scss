@@ -1,7 +1,9 @@
 #aboutus-section {
+
+  overflow: visible;
   $section-height: 660px;
-  $section-marginbottom: 200px;
-  $section-marginbottom-mobile: 64px;
+  $section-marginbottom: 0;
+  $section-marginbottom-mobile: 50px;
 
   $title-marginleft: 0;
   $title-marginleft-trans: 10%;

@@ -1,5 +1,4 @@
 .mobile-images-collection {
-
   margin-bottom: 0;
 
   $image-width: 180px; // 152
@@ -7,6 +6,10 @@
   $image-between-margin: 44px / 2;
 
   $more-tag-width: 30px;
+
+  .max-width-content {
+    top: 30px;
+  }
 
   .title {
     font-family: parabola;
@@ -22,7 +25,7 @@
     @extend .background-contain;
 
     position: absolute;
-    top: 0;
+    top: 30px;
     right: 28px;
 
     width: $more-tag-width;
@@ -41,9 +44,9 @@
 
   .images-descriptions-container {
     margin-left: 68px;
-    margin-bottom: 79px;
+    margin-bottom: 30px;
     width: auto;
-    height: auto;
+    min-height: 450px;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;

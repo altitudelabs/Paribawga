@@ -15,9 +15,11 @@
       color: inherit;
     }
   }
-  
+
+
   @include responsive(desktop) {
-    margin-bottom: 200px;
+    height: 600px;
+    margin-bottom: 150px;
 
     $image1-width: 258px;
     $image1-height: 297px;

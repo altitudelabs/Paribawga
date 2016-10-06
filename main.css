@@ -201,6 +201,15 @@ body.loading {
 .hidden {
   display: none; }
 
+.frictionFast {
+  transition: 1s ease; }
+
+.frictionMed {
+  transition: 2s ease; }
+
+.frictionSlow {
+  transition: 4s ease; }
+
 #footer {
   clear: both;
   margin-top: 125px; }
@@ -335,8 +344,9 @@ body.loading {
     @media only screen and (min-width: 1200px) {
       .nav-menu .title {
         display: none; } }
-  .nav-menu .underline {
-    border-bottom: 1px solid; }
+  @media only screen and (min-width: 1200px) {
+    .nav-menu .underline {
+      border-bottom: 1px solid; } }
 
 .gray-bg {
   z-index: 100;
@@ -369,6 +379,8 @@ body.loading {
   * - image-and-description-box: a box to contain
   *     one image and its description below
   * * * * * * * * * * * * * * * * * * * * * * * * * */ }
+  .mobile-images-collection .max-width-content, #collection-section .max-width-content, #projects-section .max-width-content, #press-section .max-width-content {
+    top: 30px; }
   .mobile-images-collection .title, #collection-section .title, #projects-section .title, #press-section .title {
     font-family: parabola;
     font-weight: 300;
@@ -379,7 +391,7 @@ body.loading {
   .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag {
     background-image: url("images/buttons/buttons_more.svg");
     position: absolute;
-    top: 0;
+    top: 30px;
     right: 28px;
     width: 30px;
     height: 0;
@@ -387,9 +399,9 @@ body.loading {
     margin-top: 10px; }
   .mobile-images-collection .images-descriptions-container, #collection-section .images-descriptions-container, #projects-section .images-descriptions-container, #press-section .images-descriptions-container {
     margin-left: 68px;
-    margin-bottom: 79px;
+    margin-bottom: 30px;
     width: auto;
-    height: auto;
+    min-height: 450px;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap; }
@@ -422,6 +434,7 @@ body.loading {
       text-transform: uppercase; }
 
 #hero-section {
+  overflow: hidden;
   height: 558px; }
   @media only screen and (min-width: 1200px) {
     #hero-section {
@@ -487,11 +500,12 @@ body.loading {
         bottom: 32px; } }
 
 #aboutus-section {
+  overflow: visible;
   height: 660px;
-  margin-bottom: 64px; }
+  margin-bottom: 50px; }
   @media only screen and (min-width: 1200px) {
     #aboutus-section {
-      margin-bottom: 200px; } }
+      margin-bottom: 0; } }
   #aboutus-section .max-width-content {
     position: relative;
     max-width: 600px;
@@ -686,7 +700,8 @@ body.loading {
       color: inherit; }
   @media only screen and (min-width: 1200px) {
     #projects-section {
-      margin-bottom: 200px;
+      height: 600px;
+      margin-bottom: 150px;
       /* * * * * * * * * * * * * * * * * * * * * * * * * *
     * Group of images and descriptions
     * - image-and-description-box: a box to contain
@@ -760,7 +775,9 @@ body.loading {
         display: block; } }
 
 #bespoke-section {
-  margin-bottom: 115px; }
+  margin-bottom: 65px; }
+  #bespoke-section .content {
+    top: 50px; }
   #bespoke-section .title {
     z-index: 1;
     position: relative;
@@ -849,7 +866,9 @@ body.loading {
         margin-right: 0; } }
 
 #sustain-section {
-  margin-bottom: 125px; }
+  margin-bottom: 75px; }
+  #sustain-section .content {
+    top: 50px; }
   #sustain-section .title {
     font-family: parabola;
     font-weight: 300;
@@ -961,103 +980,105 @@ body.loading {
             width: 100%;
             min-height: auto; } }
 
-#press-section .date {
-  margin-top: 26px;
-  margin-bottom: 12px;
-  font-family: sourceCodePro;
-  font-weight: normal;
-  font-size: 14px;
-  letter-spacing: .05em;
-  line-height: 17px;
-  text-transform: uppercase; }
-  @media only screen and (max-width: 720px) {
-    #press-section .date {
-      font-size: 12px; } }
-
-#press-section .text, .mobile-images-collection .image-and-description-box #press-section .name, #collection-section .image-and-description-box #press-section .name, #projects-section .image-and-description-box #press-section .name, #press-section .image-and-description-box .name {
-  margin-top: 19px; }
-
-#press-section .image-and-description-box .image {
-  width: 180px;
-  height: 180px; }
-
-#press-section .explore-link {
-  font-family: sourceCodePro;
-  font-weight: 600;
-  font-size: 12px;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  text-align: left;
-  color: inherit; }
-  @media only screen and (min-width: 1200px) {
-    #press-section .explore-link {
-      font-size: 14px; } }
-  #press-section .explore-link a {
-    color: inherit; }
-
-@media only screen and (min-width: 1200px) {
-  #press-section .max-width-content {
-    max-width: 900px; }
-  #press-section .title {
-    font-size: 80px;
-    text-align: left;
-    position: relative;
-    margin-left: -85px;
-    margin-bottom: 10px; }
-  #press-section .more-tag {
-    position: absolute;
-    top: 250px;
-    right: 77px; }
+#press-section {
+  height: 600px; }
+  #press-section .date {
+    margin-top: 26px;
+    margin-bottom: 12px;
+    font-family: sourceCodePro;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: .05em;
+    line-height: 17px;
+    text-transform: uppercase; }
+    @media only screen and (max-width: 720px) {
+      #press-section .date {
+        font-size: 12px; } }
   #press-section .text, .mobile-images-collection .image-and-description-box #press-section .name, #collection-section .image-and-description-box #press-section .name, #projects-section .image-and-description-box #press-section .name, #press-section .image-and-description-box .name {
-    font-size: 14px; }
-  #press-section .images-descriptions-container {
-    margin-left: 0;
-    margin-bottom: 200px; }
-  #press-section .image-and-description-box {
-    margin-right: 35px;
-    margin-left: 35px; }
-    #press-section .image-and-description-box .image {
-      width: 233px;
-      height: 233px; }
-  #press-section .grid:after {
-    content: "";
-    display: table;
-    clear: both; }
-  #press-section .grid .grid-item {
-    float: left;
-    position: relative; }
-  #press-section .grid .grid-item.full {
-    width: 100%; }
-  #press-section .grid .grid-item.one-half {
-    width: 50%; }
-  #press-section .grid .grid-item.one-third {
-    width: 33.33%; }
-  #press-section .grid .grid-item.two-third {
-    width: 66.66%; }
-  #press-section .grid .grid-item.one-fourth {
-    width: 25%; }
-  #press-section .grid .grid-item.three-fourth {
-    width: 75%; }
-  #press-section .grid .grid-item.one-fifth {
-    width: 20%; }
-  #press-section .grid .grid-item.two-fifth {
-    width: 40%; }
-  #press-section .grid .grid-item.three-fifth {
-    width: 60%; }
-  #press-section .grid .grid-item.four-fifth {
-    width: 80%; }
-  #press-section .grid .grid-item.one-sixth {
-    width: 16.66%; }
-  #press-section .grid .grid-item.five-sixth {
-    width: 83.33%; }
-  #press-section .grid .grid-item.one-eighth {
-    width: 12.5%; }
-  #press-section .grid .grid-item.three-eighth {
-    width: 37.5%; }
-  #press-section .grid .grid-item.five-eighth {
-    width: 62.5%; }
-  #press-section .grid .grid-item.seven-eighth {
-    width: 87.5%; } }
+    margin-top: 19px; }
+  #press-section .image-and-description-box .image {
+    width: 180px;
+    height: 180px; }
+  #press-section .explore-link {
+    font-family: sourceCodePro;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    text-align: left;
+    color: inherit; }
+    @media only screen and (min-width: 1200px) {
+      #press-section .explore-link {
+        font-size: 14px; } }
+    #press-section .explore-link a {
+      color: inherit; }
+  @media only screen and (min-width: 1200px) {
+    #press-section {
+      height: 700px; }
+      #press-section .max-width-content {
+        max-width: 900px;
+        top: 50px;
+        height: 100%; }
+      #press-section .title {
+        font-size: 80px;
+        text-align: left;
+        position: relative;
+        margin-left: -85px;
+        margin-bottom: 10px; }
+      #press-section .more-tag {
+        position: absolute;
+        top: 250px;
+        right: 77px; }
+      #press-section .text, .mobile-images-collection .image-and-description-box #press-section .name, #collection-section .image-and-description-box #press-section .name, #projects-section .image-and-description-box #press-section .name, #press-section .image-and-description-box .name {
+        font-size: 14px; }
+      #press-section .images-descriptions-container {
+        margin-left: 0;
+        margin-bottom: 200px; }
+      #press-section .image-and-description-box {
+        margin-right: 35px;
+        margin-left: 35px; }
+        #press-section .image-and-description-box .image {
+          width: 233px;
+          height: 233px; }
+      #press-section .grid:after {
+        content: "";
+        display: table;
+        clear: both; }
+      #press-section .grid .grid-item {
+        float: left;
+        position: relative; }
+      #press-section .grid .grid-item.full {
+        width: 100%; }
+      #press-section .grid .grid-item.one-half {
+        width: 50%; }
+      #press-section .grid .grid-item.one-third {
+        width: 33.33%; }
+      #press-section .grid .grid-item.two-third {
+        width: 66.66%; }
+      #press-section .grid .grid-item.one-fourth {
+        width: 25%; }
+      #press-section .grid .grid-item.three-fourth {
+        width: 75%; }
+      #press-section .grid .grid-item.one-fifth {
+        width: 20%; }
+      #press-section .grid .grid-item.two-fifth {
+        width: 40%; }
+      #press-section .grid .grid-item.three-fifth {
+        width: 60%; }
+      #press-section .grid .grid-item.four-fifth {
+        width: 80%; }
+      #press-section .grid .grid-item.one-sixth {
+        width: 16.66%; }
+      #press-section .grid .grid-item.five-sixth {
+        width: 83.33%; }
+      #press-section .grid .grid-item.one-eighth {
+        width: 12.5%; }
+      #press-section .grid .grid-item.three-eighth {
+        width: 37.5%; }
+      #press-section .grid .grid-item.five-eighth {
+        width: 62.5%; }
+      #press-section .grid .grid-item.seven-eighth {
+        width: 87.5%; } }
 
 #contact-section {
   text-align: center;
@@ -1065,6 +1086,8 @@ body.loading {
   @media only screen and (min-width: 1200px) {
     #contact-section {
       margin-bottom: 100px; } }
+  #contact-section .content {
+    top: 50px; }
   #contact-section .title {
     font-family: parabola;
     font-weight: 300;
@@ -1238,7 +1261,7 @@ body.loading {
     .collection-page .image-description {
       margin: 0; }
     .collection-page .image-description1 {
-      margin-top: -232px;
+      margin-top: -176px;
       margin-left: 200px; }
     .collection-page .image-description2 {
       margin-top: -27px;
