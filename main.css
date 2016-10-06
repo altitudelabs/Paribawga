@@ -335,8 +335,9 @@ body.loading {
     @media only screen and (min-width: 1200px) {
       .nav-menu .title {
         display: none; } }
-  .nav-menu .underline {
-    border-bottom: 1px solid; }
+  @media only screen and (min-width: 1200px) {
+    .nav-menu .underline {
+      border-bottom: 1px solid; } }
 
 .gray-bg {
   z-index: 100;
@@ -1135,35 +1136,67 @@ body.loading {
       padding-bottom: 38.04348px; }
     .collection-page .main-title {
       font-size: 80px;
-      margin-right: -45px;
       text-align: right; } }
   .collection-page .max-width-content {
     top: 80px;
     position: relative;
     max-width: 300px;
     height: auto;
-    margin-bottom: 150px; }
+    margin-bottom: 150px;
+    overflow: hidden; }
     @media only screen and (min-width: 1200px) {
       .collection-page .max-width-content {
         max-width: 800px;
+        overflow: visible;
         margin: auto;
-        top: 120px; } }
+        top: 150px; } }
   @media only screen and (min-width: 1200px) {
     .collection-page .content {
       height: 2200px; } }
   .collection-page .image-description {
     position: relative;
     padding-top: 50px;
-    width: 320px;
+    width: 300px;
     margin: auto; }
     .collection-page .image-description .image {
       height: 200px;
-      max-width: 300px;
       display: block;
-      margin: auto; }
+      margin: auto;
+      max-width: 250px; }
       @media only screen and (min-width: 1200px) {
         .collection-page .image-description .image {
+          max-width: none;
           margin: 0; } }
+    .collection-page .image-description .image1 {
+      width: 210px;
+      height: 150px; }
+    .collection-page .image-description .image2 {
+      width: 183px;
+      height: 250px; }
+    .collection-page .image-description .image3 {
+      width: 188px;
+      height: 218px; }
+    .collection-page .image-description .image4 {
+      width: 182px;
+      height: 129px; }
+    .collection-page .image-description .image5 {
+      width: 140px;
+      height: 218px; }
+    .collection-page .image-description .image6 {
+      width: 168px;
+      height: 254px; }
+    .collection-page .image-description .image7 {
+      width: 293px;
+      height: 225px; }
+    .collection-page .image-description .image8 {
+      width: 293px;
+      height: 225px; }
+    .collection-page .image-description .image9 {
+      width: 246px;
+      height: 176px; }
+    .collection-page .image-description .image10 {
+      width: 293px;
+      height: 225px; }
     .collection-page .image-description .desc {
       font-family: sourceCodePro;
       font-weight: 600;
@@ -1172,21 +1205,15 @@ body.loading {
       line-height: 21px;
       text-transform: uppercase;
       margin-top: 20px;
-      margin-left: 30px; }
+      margin-left: 20px; }
       @media only screen and (min-width: 1200px) {
         .collection-page .image-description .desc {
           margin-left: 0; } }
   .collection-page .image-desc-container {
     position: relative;
     width: 0;
-    height: 50px;
+    height: auto;
     overflow: visible; }
-    @media only screen and (max-width: 720px) {
-      .collection-page .image-desc-container {
-        height: 380px; } }
-    @media only screen and (min-width: 721px) and (max-width: 1199px) {
-      .collection-page .image-desc-container {
-        height: 380px; } }
   .collection-page .back-to-top {
     background-image: url("./images/buttons/buttons_backtotop.svg");
     width: 40px;
@@ -1199,35 +1226,35 @@ body.loading {
     .collection-page .image-description {
       margin: 0; }
     .collection-page .image-description1 {
-      margin-top: -140px;
-      margin-left: 156px; }
+      margin-top: -175px;
+      margin-left: 200px; }
     .collection-page .image-description2 {
-      margin-top: 189px;
+      margin-top: -50px;
       margin-left: 441px; }
     .collection-page .image-description3 {
-      margin-top: 76px;
-      margin-left: 85px; }
+      margin-top: -308px;
+      margin-left: 156px; }
     .collection-page .image-description4 {
-      margin-top: 162px;
-      margin-left: 474px; }
+      margin-top: -94px;
+      margin-left: 510px; }
     .collection-page .image-description5 {
-      margin-top: 62px;
-      margin-left: 178px; }
+      margin-top: -202px;
+      margin-left: 254px; }
     .collection-page .image-description6 {
-      margin-top: 212px;
-      margin-left: 500px; }
+      margin-top: -178px;
+      margin-left: 548px; }
     .collection-page .image-description7 {
-      margin-top: 72px;
+      margin-top: -252px;
       margin-left: 103px; }
     .collection-page .image-description8 {
-      margin-top: 281px;
-      margin-left: 206px; }
+      margin-top: -30px;
+      margin-left: 261px; }
     .collection-page .image-description9 {
-      margin-top: 264px;
-      margin-left: 447px; }
+      margin-top: -50px;
+      margin-left: 493px; }
     .collection-page .image-description10 {
-      margin-top: 30px;
-      margin-left: 108px; } }
+      margin-top: -278px;
+      margin-left: 96px; } }
 
 .furniture {
   /* * * * * * * * * * * * * * * *
@@ -1238,7 +1265,7 @@ body.loading {
    * * * * * * * * * * * * * * * */ }
   @media only screen and (min-width: 1200px) {
     .furniture .next, .furniture .prev {
-      top: 300px; }
+      top: 364px; }
     .furniture .prev {
       left: 20px;
       width: 60px;
@@ -1259,11 +1286,19 @@ body.loading {
         max-width: 1000px;
         min-height: 675px; } }
   .furniture .image {
-    max-width: 300px;
-    padding-top: 40px;
     display: block;
     position: relative;
-    margin: auto; }
+    margin: auto;
+    margin-top: 50px; }
+  .furniture .image1 {
+    width: 176px;
+    height: 207px; }
+  .furniture .image2 {
+    width: 118px;
+    height: 168px; }
+  .furniture .image3 {
+    width: 134px;
+    height: 118px; }
   .furniture .desc {
     font-family: edmondSans;
     font-weight: normal;
@@ -1274,7 +1309,7 @@ body.loading {
     @media only screen and (min-width: 1200px) {
       .furniture .desc {
         margin-top: 200px;
-        margin-left: 684px;
+        margin-left: 632px;
         width: 350px; } }
     .furniture .desc .title {
       font-family: sourceCodePro;
@@ -1307,20 +1342,20 @@ body.loading {
     .furniture .image1 {
       padding-top: 0;
       top: 100px;
-      width: 292px;
-      height: 340px; }
+      width: 270px;
+      height: 317.55682px; }
     .furniture .image2 {
       padding-top: 0;
       top: 40px;
-      left: 350px;
+      left: 313px;
       width: 202px;
-      height: 340px; }
+      height: 292.55172px; }
     .furniture .image3 {
       padding-top: 0;
-      top: 80px;
-      left: 383px;
-      width: 280px;
-      height: 237px; } }
+      top: 75px;
+      left: 376px;
+      width: 215px;
+      height: 189.32836px; } }
 
 #project-info {
   padding-top: 20px;

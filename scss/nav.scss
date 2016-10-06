@@ -57,7 +57,9 @@
   }
 
   .underline {
-    border-bottom: 1px solid;
+    @include responsive(desktop) {
+      border-bottom: 1px solid;
+    }
   }
 }
 
