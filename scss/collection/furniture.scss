@@ -5,7 +5,7 @@
   /* * * * * * * * * * * * * * * *
    * HEADER
    * * * * * * * * * * * * * * * */
-  $next-prev-top: 300px;
+  $next-prev-top: 364px;
   $prev-width: 60px;
   $next-width: 35px;
 
@@ -35,21 +35,27 @@
    * * * * * * * * * * * * * * * */
 
   $image1-top: 100px;
-  $image1-width: 292px;
-  $image1-height: 340px;
+  $image1-width: 270px;
+  $image1-height: 207 / 176 * 270px;
+  $image1-width-mobile: 176px;
+  $image1-height-mobile: 207px;
 
   $image2-top: 40px;
-  $image2-left: 350px;
+  $image2-left: 313px;
   $image2-width: 202px;
-  $image2-height: 340px;
+  $image2-height: 168 / 116 * 202px;
+  $image2-width-mobile: 118px;
+  $image2-height-mobile: 168px;
 
-  $image3-top: 80px;
-  $image3-left: 383px;
-  $image3-width: 280px;
-  $image3-height: 237px;
+  $image3-top: 75px;
+  $image3-left: 376px;
+  $image3-width: 215px;
+  $image3-height: 118 / 134 * 215px;
+  $image3-width-mobile: 134px;
+  $image3-height-mobile: 118px;
 
   $text-top: 200px;
-  $text-left: 684px;
+  $text-left: 632px;
 
   .max-width-content {
 
@@ -67,11 +73,25 @@
 
   .image {
     @extend .background-cover;
-    max-width: 300px;
-    padding-top: 40px;
     display: block;
     position: relative;
     margin: auto;
+    margin-top: 50px;
+  }
+
+  .image1 {
+    width: $image1-width-mobile;
+    height: $image1-height-mobile;
+  }
+
+  .image2 {
+    width: $image2-width-mobile;
+    height: $image2-height-mobile;
+  }
+
+  .image3 {
+    width: $image3-width-mobile;
+    height: $image3-height-mobile;
   }
 
 
