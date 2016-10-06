@@ -50,6 +50,8 @@ $(document).ready(function(){
         $('.index .nav-menu').addClass('white');
         $('.index #footer').addClass('hidden');
       }
+    } else {
+      $('#footer').removeClass('hidden');
     }
   }));
 

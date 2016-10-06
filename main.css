@@ -527,7 +527,7 @@ body.loading {
       #aboutus-section .title {
         font-size: 80px;
         margin-top: 128px;
-        margin-left: 10%;
+        margin-left: 0;
         margin-bottom: 43px; } }
   #aboutus-section .text-container {
     width: 46%;
@@ -537,10 +537,10 @@ body.loading {
     @media only screen and (min-width: 721px) and (max-width: 1199px) {
       #aboutus-section .text-container {
         width: 46%;
-        padding-left: 20%; } }
+        padding-left: 17%; } }
     @media only screen and (min-width: 1200px) {
       #aboutus-section .text-container {
-        padding-left: 20%; } }
+        padding-left: 7%; } }
     #aboutus-section .text-container .text, #aboutus-section .text-container .mobile-images-collection .image-and-description-box .name, .mobile-images-collection .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #aboutus-section .text-container .name {
       width: 285px;
       left: 27px;
@@ -548,6 +548,7 @@ body.loading {
       margin-left: 27px; }
       @media only screen and (min-width: 1200px) {
         #aboutus-section .text-container .text, #aboutus-section .text-container .mobile-images-collection .image-and-description-box .name, .mobile-images-collection .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #aboutus-section .text-container .name {
+          width: 350px;
           margin-bottom: 60px;
           margin-left: 0; } }
       #aboutus-section .text-container .text p, #aboutus-section .text-container .mobile-images-collection .image-and-description-box .name p, .mobile-images-collection .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #aboutus-section .text-container .name p {
@@ -563,15 +564,12 @@ body.loading {
   #aboutus-section .image-container {
     width: 250px;
     float: right; }
-    @media only screen and (min-width: 1200px) {
-      #aboutus-section .image-container {
-        float: left; } }
     #aboutus-section .image-container .image {
       z-index: -1;
       background-image: url("images/index/2_aboutus.jpg");
       background-position-x: right;
       position: relative;
-      width: 263px;
+      width: 330px;
       height: 243px;
       margin-top: -37px;
       float: right;
@@ -579,9 +577,8 @@ body.loading {
       @media only screen and (min-width: 1200px) {
         #aboutus-section .image-container .image {
           margin-top: -136px;
-          height: 364px;
-          bottom: auto;
-          right: -106px; } }
+          height: 465px;
+          bottom: auto; } }
 
 @media only screen and (min-width: 1200px) {
   #collection-section {
