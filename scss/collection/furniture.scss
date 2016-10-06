@@ -6,11 +6,27 @@
    * HEADER
    * * * * * * * * * * * * * * * */
   $next-prev-top: 300px;
+  $prev-width: 60px;
+  $next-width: 35px;
 
   @include responsive(desktop) {
 
     .next, .prev {
       top: $next-prev-top;
+    }
+
+    .prev {
+      left: 20px;
+      width: $prev-width;
+      height: 0;
+      padding-bottom: 131 / 300 * $prev-width;
+    }
+
+    .next {
+      right: 20px;
+      width: $next-width;
+      height: 0;
+      padding-bottom: 150 / 138 * $next-width;
     }
   }
 
@@ -51,7 +67,7 @@
 
   .image {
     @extend .background-cover;
-    max-width: 320px;
+    max-width: 300px;
     padding-top: 40px;
     display: block;
     position: relative;
@@ -105,6 +121,10 @@
       width: 0;
       height: 500px;
       overflow: visible;
+    }
+
+    .image {
+      max-width: none;
     }
 
     .image1 {

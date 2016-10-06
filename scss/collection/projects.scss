@@ -6,10 +6,10 @@
   display: table;
 
   @include responsive(desktop) {
-    padding-top: 150px;
+    padding-top: 100px;
     width: 500px;
     margin: auto;
-
+    margin-bottom: 100px;
   }
 
   .component {

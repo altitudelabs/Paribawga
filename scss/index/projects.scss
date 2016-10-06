@@ -4,13 +4,14 @@
   // desktop
   margin-bottom: 79px;
   @include responsive(desktop) {
+    margin-bottom: 200px;
 
-    $image1-width: 250px;
-    $image1-height: 320px;
+    $image1-width: 258px;
+    $image1-height: 297px;
 
-    $image2-width: 370px;
-    $image2-height: 210px;
-    $image2-marginleft: 80px;
+    $image2-width: 393px;
+    $image2-height: 218px;
+    $image2-marginleft: 82px;
     $image2-top: -130px;
 
     $more-tag-top: 250px;
@@ -19,7 +20,7 @@
     $content-text-width: 320px;
 
     .max-width-content {
-      max-width: 700px;
+      max-width: 800px;
     }
 
     .title {
@@ -27,16 +28,17 @@
       text-align: left;
       position: relative;
       margin-left: -85px;
+      margin-bottom: 42px;
     }
 
     .more-tag { // 166 x 150
       position: absolute;
       top: $more-tag-top;
-      right: 28px;
+      right: 77px;
     }
 
     .more-tag.desktop-only {
-      left: 28px;
+      left: 66px;
       right: auto;
     }
 
@@ -91,8 +93,8 @@
       .content-text {
         clear: left;
         width: $content-text-width;
-        padding: 20px;
-        padding-left: 40px;
+        padding: 22px;
+        padding-left: 45px;
       }
 
       .text {

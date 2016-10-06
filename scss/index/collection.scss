@@ -6,27 +6,28 @@
 
   // desktop
   @include responsive(desktop) {
+    margin-bottom: 100px;
 
-    $image1-width: 180px;
-    $image1-height: 210px;
+    $image1-width: 197px;
+    $image1-height: 232px;
 
-    $image2-width: 300px;
-    $image2-height: 210px;
-    $image2-marginleft: 40px;
-    $image2-top: -30px;
+    $image2-width: 270px;
+    $image2-height: 194px;
+    $image2-marginleft: 60px;
+    $image2-top: -16px;
 
-    $image3-width: 180px;
-    $image3-height: 300px;
+    $image3-width: 146px;
+    $image3-height: 230px;
 
-    $image4-width: 210px;
-    $image4-height: 400px;
+    $image4-width: 197px;
+    $image4-height: 299px;
     $image4-marginleft: 60px;
-    $image4-top: -98px;
+    $image4-top: -70px;
 
     $more-tag-top: 250px;
     $more-tag-width: 30px;
 
-    $content-text-width: 320px;
+    $content-text-width: 365px;
 
     .max-width-content {
       max-width: 800px;
@@ -36,18 +37,19 @@
       font-size: 80px;
       text-align: right;
       position: relative;
-      margin-right: -35px;
+      margin-top: 90px;
+      margin-right: -64px;
       margin-bottom: 0;
     }
 
     .more-tag { // 166 x 150
       position: absolute;
       top: $more-tag-top;
-      right: 28px;
+      right: 66px;
     }
 
     .more-tag.desktop-only {
-      left: 28px;
+      left: 77px;
       right: auto;
     }
 
@@ -72,7 +74,7 @@
     .row {
       width: 100%;
       clear: both;
-      top: -30px;
+      top: -75px;
       position: relative;
     }
 
@@ -116,7 +118,7 @@
       .content-text {
         float: left;
         width: $content-text-width;
-        padding-right: 20px;
+        padding-right: 45px;
       }
 
       .text {

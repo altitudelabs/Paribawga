@@ -1,24 +1,42 @@
 #aboutus-section {
   $section-height: 660px;
-  $section-marginbottom: 64px;
+  $section-marginbottom: 200px;
+  $section-marginbottom-mobile: 64px;
 
   $title-marginleft: 10%;
   $title-marginleft-trans: 10%;
   $title-marginleft-mobile: 35px;
 
-  $image-width: 200px; // 200px
+  $image-width: 263px; // 200px
   $image-width-mobile: 250px; // 166px
 
-  $image-height: 500px;
+  $image-height: 364px;
   $image-height-mobile: 243px;
 
-  $image-margintop: -190px;
+  $image-margintop: -136px;
   $image-margintop-mobile: -37px; // 203
+  $image-right: -106px;
   $text-container-width: 46%;
   $text-container-width-trans: 46%;
   $text-width-mobile: 285px;
 
-  //width: 900px;
+  height: $section-height;
+  margin-bottom: $section-marginbottom-mobile;
+
+  @include responsive(desktop) {
+    margin-bottom: $section-marginbottom;
+  }
+
+
+  .max-width-content {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+
+    @include responsive(desktop) {
+      max-width: 800px;
+    }
+  }
 
   .content {
     position: relative;
@@ -34,8 +52,6 @@
     }
   }
 
-  height: $section-height;
-  margin-bottom: $section-marginbottom;
 
   .title {
     text-transform: uppercase;
@@ -59,8 +75,9 @@
 
       font-size: 80px;
 
+      margin-top: 128px;
       margin-left: $title-marginleft;
-      margin-bottom: 0;
+      margin-bottom: 43px;
     }
   }
 
@@ -130,7 +147,7 @@
         margin-top: $image-margintop;
         height: $image-height;
         bottom: auto;
-        right: -86px;
+        right: $image-right;
       }
     }
   }

@@ -6,26 +6,23 @@
 
   $text-width: 290px;
 
-  $shelf-width: 500px;
+  $shelf-width: 583px;
   $shelf-width-mobile: 190px;
-  $shelf-height: 300px;
+  $shelf-height: 357px;
   $shelf-height-mobile: 246px;
 
-  $marble-width: 750px;
+  $marble-width: 882px;
   $marble-width-mobile: 315px;
-  $marble-height: 300px;
+  $marble-height: 337px;
   $marble-height-mobile: 234px;
 
-  $shelf-marble-overlap: 26px;
+  $shelf-marble-overlap: 155px;
+  $shelf-marble-overlap-mobile: 26px;
 
   $images-margintop: -80px;
   $images-margintop-mobile: 0;
 
   margin-bottom: 115px;
-
-  @include responsive(mobile) {
-    padding-left: 100px;
-  }
 
   .title {
     z-index: 1;
@@ -34,7 +31,7 @@
     font-weight: 300;
     letter-spacing: .015em;
     font-size: 80px;
-    margin-left: 130px;
+    margin-left: 308px;
     margin-bottom: 20px;
 
     @include responsive(mobile) {
@@ -51,7 +48,12 @@
     float: left;
     position: relative;
     min-height: 175px;
-    padding-left: 43px;
+    margin-left: 229px;
+
+    @include responsive(mobile) {
+      padding-left: 43px;
+      margin-left: 0;
+    }
 
 
     .desc {
@@ -124,10 +126,12 @@
     margin-right: 40px;
 
     @include responsive (transition) {
+      top: -1 * $shelf-marble-overlap-mobile;
       margin-right: 0;
     }
 
     @include responsive (mobile) {
+      top: -1 * $shelf-marble-overlap-mobile;
       width: $marble-width-mobile;
       height: $marble-height-mobile;
       margin-top: $images-margintop-mobile;

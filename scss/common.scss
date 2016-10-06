@@ -103,6 +103,10 @@ body.loading {
 }
 
 .desktop-only {
+  @include responsive(transition) {
+    display: none;
+  }
+
   @include responsive(mobile) {
     display: none;
   }
@@ -112,4 +116,8 @@ body.loading {
   @include responsive(desktop) {
     display: none;
   }
+}
+
+.hidden {
+  display: none;
 }

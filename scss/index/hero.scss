@@ -2,6 +2,7 @@
   $section-height: 650px;
   $section-height-mobile: 558px;
 
+  $tagline-height: 490px;
   $tagline-height-mobile: 70%;
   $tagline-width-mobile: 80%;
 
@@ -64,6 +65,10 @@
 
     height: $tagline-height-mobile;
     width: $tagline-width-mobile;
+
+    @include responsive(desktop) {
+      height: $tagline-height;
+    }
   }
 
   .scroll-tag { // 256 x 150
@@ -77,6 +82,11 @@
 
     width: $scroll-tag-width-mobile;
     padding-bottom: 150 / 256 * $scroll-tag-width-mobile;
+
+    @include responsive(desktop) {
+      left: 58px;
+      bottom: 32px;
+    }
   }
 
   .down-tag { // 193 x 150
@@ -89,5 +99,10 @@
     padding-bottom: 150 / 193 * $down-tag-width-mobile;
     right: 22px;
     bottom: 30px;
+
+    @include responsive(desktop) {
+      right: 58px;
+      bottom: 32px;
+    }
   }
 }
