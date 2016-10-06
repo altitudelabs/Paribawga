@@ -6,6 +6,8 @@
    * HEADER
    * * * * * * * * * * * * * * * */
   $next-prev-top: 300px;
+  $prev-width: 60px;
+  $next-width: 35px;
 
   @include responsive(desktop) {
 
@@ -13,8 +15,23 @@
       top: $next-prev-top;
     }
 
+    .prev {
+      left: 77px;
+      width: $prev-width;
+      height: 0;
+      padding-bottom: 131 / 300 * $prev-width;
+    }
+
+    .next {
+      right: 66px;
+      width: $next-width;
+      height: 0;
+      padding-bottom: 150 / 138 * $next-width;
+    }
+
     .main-title {
       font-size: 80px;
+      margin-right: -45px;
       text-align: right;
     }
   }
@@ -24,7 +41,7 @@
    * CONTENT
    * * * * * * * * * * * * * * * */
   .max-width-content {
-    top: 75px;
+    top: 80px;
     position: relative;
     max-width: 300px;
     height: auto;
@@ -33,7 +50,13 @@
     @include responsive(desktop) {
       max-width: 800px;
       margin: auto;
-      height: 2000px;
+      top: 120px;
+    }
+  }
+
+  .content {
+    @include responsive(desktop) {
+      height: 2200px;
     }
   }
 
@@ -44,30 +67,30 @@
   $backtotop-right: 18px;
 
   $container1-top: -140px;
-  $container1-left: 100px;
+  $container1-left: 156px;
 
-  $container2-top: 192px;
-  $container2-left: 319px;
+  $container2-top: 189px;
+  $container2-left: 441px;
 
-  $container3-top: 51px;
-  $container3-left: 4px;
+  $container3-top: 76px;
+  $container3-left: 85px;
 
   $container4-top: 162px;
-  $container4-left: 438px;
+  $container4-left: 474px;
 
   $container5-top: 62px;
-  $container5-left: 75px;
+  $container5-left: 178px;
 
-  $container6-top: 150px;
-  $container6-left: 296px;
+  $container6-top: 212px;
+  $container6-left: 500px;
 
   $container7-top: 72px;
-  $container7-left: 10px;
+  $container7-left: 103px;
 
-  $container8-top: 251px;
+  $container8-top: 281px;
   $container8-left: 206px;
 
-  $container9-top: 233px;
+  $container9-top: 264px;
   $container9-left: 447px;
 
   $container10-top: 30px;

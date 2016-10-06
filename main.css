@@ -1121,11 +1121,22 @@ body.loading {
   @media only screen and (min-width: 1200px) {
     .collection-page .next, .collection-page .prev {
       top: 300px; }
+    .collection-page .prev {
+      left: 77px;
+      width: 60px;
+      height: 0;
+      padding-bottom: 26.2px; }
+    .collection-page .next {
+      right: 66px;
+      width: 35px;
+      height: 0;
+      padding-bottom: 38.04348px; }
     .collection-page .main-title {
       font-size: 80px;
+      margin-right: -45px;
       text-align: right; } }
   .collection-page .max-width-content {
-    top: 75px;
+    top: 80px;
     position: relative;
     max-width: 300px;
     height: auto;
@@ -1134,7 +1145,10 @@ body.loading {
       .collection-page .max-width-content {
         max-width: 800px;
         margin: auto;
-        height: 2000px; } }
+        top: 120px; } }
+  @media only screen and (min-width: 1200px) {
+    .collection-page .content {
+      height: 2200px; } }
   .collection-page .image-description {
     position: relative;
     padding-top: 50px;
@@ -1184,30 +1198,30 @@ body.loading {
       margin: 0; }
     .collection-page .image-description1 {
       margin-top: -140px;
-      margin-left: 100px; }
+      margin-left: 156px; }
     .collection-page .image-description2 {
-      margin-top: 192px;
-      margin-left: 319px; }
+      margin-top: 189px;
+      margin-left: 441px; }
     .collection-page .image-description3 {
-      margin-top: 51px;
-      margin-left: 4px; }
+      margin-top: 76px;
+      margin-left: 85px; }
     .collection-page .image-description4 {
       margin-top: 162px;
-      margin-left: 438px; }
+      margin-left: 474px; }
     .collection-page .image-description5 {
       margin-top: 62px;
-      margin-left: 75px; }
+      margin-left: 178px; }
     .collection-page .image-description6 {
-      margin-top: 150px;
-      margin-left: 296px; }
+      margin-top: 212px;
+      margin-left: 500px; }
     .collection-page .image-description7 {
       margin-top: 72px;
-      margin-left: 10px; }
+      margin-left: 103px; }
     .collection-page .image-description8 {
-      margin-top: 251px;
+      margin-top: 281px;
       margin-left: 206px; }
     .collection-page .image-description9 {
-      margin-top: 233px;
+      margin-top: 264px;
       margin-left: 447px; }
     .collection-page .image-description10 {
       margin-top: 30px;
@@ -1222,7 +1236,17 @@ body.loading {
    * * * * * * * * * * * * * * * */ }
   @media only screen and (min-width: 1200px) {
     .furniture .next, .furniture .prev {
-      top: 300px; } }
+      top: 300px; }
+    .furniture .prev {
+      left: 77px;
+      width: 60px;
+      height: 0;
+      padding-bottom: 26.2px; }
+    .furniture .next {
+      right: 66px;
+      width: 35px;
+      height: 0;
+      padding-bottom: 38.04348px; } }
   .furniture .max-width-content {
     position: relative;
     max-width: 320px;
@@ -1300,7 +1324,7 @@ body.loading {
   display: table; }
   @media only screen and (min-width: 1200px) {
     #project-info {
-      padding-top: 150px;
+      padding-top: 100px;
       width: 500px;
       margin: auto;
       margin-bottom: 100px; } }
