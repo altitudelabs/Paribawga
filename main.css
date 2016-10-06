@@ -973,17 +973,17 @@ body.loading {
 
 @media only screen and (min-width: 1200px) {
   #press-section .max-width-content {
-    max-width: 800px; }
+    max-width: 900px; }
   #press-section .title {
     font-size: 80px;
     text-align: left;
     position: relative;
     margin-left: -85px;
-    margin-bottom: 0; }
+    margin-bottom: 10px; }
   #press-section .more-tag {
     position: absolute;
     top: 250px;
-    right: 28px; }
+    right: 77px; }
   #press-section .text, .mobile-images-collection .image-and-description-box #press-section .name, #collection-section .image-and-description-box #press-section .name, #projects-section .image-and-description-box #press-section .name, #press-section .image-and-description-box .name {
     font-size: 14px; }
   #press-section .explore-link {
@@ -995,6 +995,15 @@ body.loading {
     text-align: left; }
     #press-section .explore-link a {
       color: inherit; }
+  #press-section .images-descriptions-container {
+    margin-left: 0;
+    margin-bottom: 200px; }
+  #press-section .image-and-description-box {
+    margin-right: 35px;
+    margin-left: 35px; }
+    #press-section .image-and-description-box .image {
+      width: 233px;
+      height: 233px; }
   #press-section .grid:after {
     content: "";
     display: table;
