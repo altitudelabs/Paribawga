@@ -842,95 +842,118 @@ body.loading {
         margin-top: 0;
         margin-right: 0; } }
 
-#sustain-section .title {
-  font-family: parabola;
-  font-weight: 300;
-  font-size: 80px;
-  letter-spacing: .015em;
-  margin-bottom: 20px;
-  float: right;
-  margin-right: 50px; }
-  @media only screen and (max-width: 720px) {
-    #sustain-section .title {
-      font-size: 43px;
-      float: none;
-      margin-left: 35px; } }
-
-#sustain-section .img1-chair-container {
-  float: left;
-  overflow: visible;
-  width: 250px;
-  margin-top: 50px; }
-  @media only screen and (max-width: 720px) {
-    #sustain-section .img1-chair-container {
-      margin-top: 0;
-      width: 197px; } }
-  #sustain-section .img1-chair-container .chair {
-    background-image: url("images/index/6_sustain2.jpg");
-    position: relative;
-    width: 100%;
-    height: 400px;
-    top: -40px; }
+#sustain-section {
+  margin-bottom: 125px; }
+  #sustain-section .title {
+    font-family: parabola;
+    font-weight: 300;
+    font-size: 80px;
+    letter-spacing: .015em;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 60px;
+    left: 769px; }
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
+      #sustain-section .title {
+        left: 330px; } }
     @media only screen and (max-width: 720px) {
-      #sustain-section .img1-chair-container .chair {
-        top: 0;
-        height: 231px; } }
-
-#sustain-section .img2-marble-container {
-  float: left;
-  overflow: visible;
-  width: calc(40% - 197px);
-  margin-top: 50px; }
-  @media only screen and (max-width: 720px) {
-    #sustain-section .img2-marble-container {
-      float: right;
-      margin-top: 0;
-      width: calc(100% - 197px); } }
-  #sustain-section .img2-marble-container .marble {
-    background-image: url("images/index/6_sustain1.jpg");
-    height: 250px;
-    width: 500px;
-    position: relative;
-    z-index: -1; }
+      #sustain-section .title {
+        position: relative;
+        top: auto;
+        left: auto;
+        font-size: 43px;
+        float: none;
+        margin-left: 35px; } }
+  #sustain-section .img1-chair-container {
+    float: left;
+    overflow: visible;
+    width: 464px;
+    margin-top: 50px; }
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
+      #sustain-section .img1-chair-container {
+        margin-top: 0;
+        width: 250px; } }
     @media only screen and (max-width: 720px) {
-      #sustain-section .img2-marble-container .marble {
-        height: 221px;
-        width: 320px;
-        top: -73px;
-        left: -74px; } }
-
-#sustain-section .text-container {
-  width: 40%;
-  margin-top: 24px;
-  float: left;
-  padding-left: 49px;
-  padding-right: 49px; }
-  @media only screen and (max-width: 720px) {
-    #sustain-section .text-container {
+      #sustain-section .img1-chair-container {
+        margin-top: 0;
+        width: 197px; } }
+    #sustain-section .img1-chair-container .chair {
+      background-image: url("images/index/6_sustain2.jpg");
+      position: relative;
       width: 100%;
-      margin-bottom: 120px; } }
-  #sustain-section .text-container .text, #sustain-section .text-container .mobile-images-collection .image-and-description-box .name, .mobile-images-collection .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #sustain-section .text-container .name {
-    width: 400px;
-    margin-left: -65px; }
-    @media only screen and (max-width: 720px) {
-      #sustain-section .text-container .text, #sustain-section .text-container .mobile-images-collection .image-and-description-box .name, .mobile-images-collection .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #sustain-section .text-container .name {
-        width: 100%;
-        margin-left: 0; } }
-    #sustain-section .text-container .text p, #sustain-section .text-container .mobile-images-collection .image-and-description-box .name p, .mobile-images-collection .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #sustain-section .text-container .name p {
-      width: 240px;
-      float: left;
-      margin-bottom: 20px;
-      margin-right: 20px;
-      min-height: 160px;
-      font-family: sourceCodePro;
-      font-weight: 300;
-      font-size: 12px;
-      letter-spacing: .05em;
-      line-height: 19px; }
+      height: 543px;
+      top: -40px; }
+      @media only screen and (min-width: 721px) and (max-width: 1199px) {
+        #sustain-section .img1-chair-container .chair {
+          top: 0;
+          height: 350px; } }
       @media only screen and (max-width: 720px) {
-        #sustain-section .text-container .text p, #sustain-section .text-container .mobile-images-collection .image-and-description-box .name p, .mobile-images-collection .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #sustain-section .text-container .name p {
+        #sustain-section .img1-chair-container .chair {
+          top: 0;
+          height: 231px; } }
+  #sustain-section .img2-marble-container {
+    float: left;
+    overflow: visible;
+    width: calc(40% - 197px);
+    margin-top: 50px; }
+    @media only screen and (max-width: 720px) {
+      #sustain-section .img2-marble-container {
+        float: right;
+        margin-top: 0;
+        width: calc(100% - 197px); } }
+    #sustain-section .img2-marble-container .marble {
+      background-image: url("images/index/6_sustain1.jpg");
+      height: 330px;
+      width: 566px;
+      position: relative;
+      z-index: -1; }
+      @media only screen and (min-width: 721px) and (max-width: 1199px) {
+        #sustain-section .img2-marble-container .marble {
+          height: 240px;
+          width: 400px; } }
+      @media only screen and (max-width: 720px) {
+        #sustain-section .img2-marble-container .marble {
+          height: 221px;
+          width: 320px;
+          top: -73px;
+          left: -74px; } }
+  #sustain-section .text-container {
+    width: 0;
+    margin-top: 24px;
+    float: left;
+    padding-left: 49px;
+    padding-right: 49px; }
+    @media only screen and (max-width: 720px) {
+      #sustain-section .text-container {
+        width: 100%;
+        margin-bottom: 120px; } }
+    #sustain-section .text-container .text, #sustain-section .text-container .mobile-images-collection .image-and-description-box .name, .mobile-images-collection .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #sustain-section .text-container .name {
+      width: 400px;
+      margin-left: -320px;
+      margin-top: 155px; }
+      @media only screen and (min-width: 721px) and (max-width: 1199px) {
+        #sustain-section .text-container .text, #sustain-section .text-container .mobile-images-collection .image-and-description-box .name, .mobile-images-collection .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #sustain-section .text-container .name {
+          margin-left: -200px; } }
+      @media only screen and (max-width: 720px) {
+        #sustain-section .text-container .text, #sustain-section .text-container .mobile-images-collection .image-and-description-box .name, .mobile-images-collection .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #sustain-section .text-container .name {
           width: 100%;
-          min-height: auto; } }
+          margin-left: 0;
+          margin-top: 0; } }
+      #sustain-section .text-container .text p, #sustain-section .text-container .mobile-images-collection .image-and-description-box .name p, .mobile-images-collection .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #sustain-section .text-container .name p {
+        width: 240px;
+        float: left;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        min-height: 160px;
+        font-family: sourceCodePro;
+        font-weight: 300;
+        font-size: 12px;
+        letter-spacing: .05em;
+        line-height: 19px; }
+        @media only screen and (max-width: 720px) {
+          #sustain-section .text-container .text p, #sustain-section .text-container .mobile-images-collection .image-and-description-box .name p, .mobile-images-collection .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #sustain-section .text-container .name p {
+            width: 100%;
+            min-height: auto; } }
 
 #press-section .date {
   margin-top: 26px;
