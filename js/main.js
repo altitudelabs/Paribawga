@@ -27,12 +27,14 @@ $(document).ready(function(){
   $('.header .title').one("click", showMenu);
 
   $(window).resize($.throttle(250, function(){
-    if ($(window).innerWidth() >= 1024) {
+    var winWidth = $(window).innerWidth();
+
+    if (winWidth >= 1200) {
       $('.nav-menu .links').css('display', 'block');
-      console.log("hey");
     } else {
       $('.nav-menu .links').css('display', 'none');
     }
+
   }));
 
   $(window).scroll($.throttle(250, function() {

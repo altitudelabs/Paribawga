@@ -1,5 +1,5 @@
 #aboutus-section {
-  $section-height-mobile: 660px;
+  $section-height: 660px;
   $section-marginbottom: 64px;
 
   $title-marginleft: 10%;
@@ -23,21 +23,19 @@
   .content {
     position: relative;
     margin: auto;
-    width: 75%;
+    width: 100%;
 
     @include responsive (transition) {
       width: 90%;
     }
 
-    @include responsive (mobile) {
-      width: 100%;
+    @include responsive (desktop) {
+      width: 75%;
     }
   }
 
-  @include responsive (mobile) {
-    height: $section-height-mobile;
-    margin-bottom: $section-marginbottom;
-  }
+  height: $section-height;
+  margin-bottom: $section-marginbottom;
 
   .title {
     text-transform: uppercase;
@@ -45,22 +43,24 @@
     font-family: parabola;
     font-weight: normal;
     letter-spacing: .015em;
-    font-size: 80px;
+    font-size: 43px;
 
+    margin-left: $title-marginleft-mobile;
     margin-top: 58px;
-    margin-left: $title-marginleft;
+    margin-bottom: 28px;
 
     @include responsive(transition) {
       font-size: 64px;
       margin-left: $title-marginleft-trans;
+      margin-bottom: 0;
     }
 
-    @include responsive(mobile) {
+    @include responsive(desktop) {
 
-      font-size: 43px;
+      font-size: 80px;
 
-      margin-left: $title-marginleft-mobile;
-      margin-bottom: 28px;
+      margin-left: $title-marginleft;
+      margin-bottom: 0;
     }
   }
 
@@ -68,53 +68,38 @@
     width: $text-container-width;
     float: left;
     overflow-x: visible;
-    padding-left: $title-marginleft + 10%;
+    padding-left: 0;
 
     @include responsive (transition) {
       width: $text-container-width-trans;
       padding-left: $title-marginleft-trans + 10%;
     }
 
-    @include responsive (mobile) {
-      padding-left: 0;
+    @include responsive (desktop) {
+      padding-left: $title-marginleft + 10%;
     }
 
     .text {
       width: $text-width-mobile;
       left: 27px;
-      margin-bottom: 60px;
+      margin-bottom: 0;
+      margin-left: 27px;
 
-      @include responsive(mobile) {
-        margin-bottom: 0;
-        margin-left: 27px;
+      @include responsive(desktop) {
+        margin-bottom: 60px;
+        margin-left: 0;
       }
 
       p {
         font-family: edmondSans;
         font-weight: normal;
-        font-size: 14px;
-        letter-spacing: .05em;
-        line-height: 17px;
-
-        @include responsive(mobile) {
-          font-size: 12px;
-          line-height: 15px;
-        }
-      }
-
-      .video-link {
-        font-family: sourceCodePro;
-        font-weight: 600;
         font-size: 12px;
-        letter-spacing: .1em;
-        text-transform: uppercase;
+        letter-spacing: .05em;
+        line-height: 15px;
 
-        color: inherit;
-        margin-top: 20px;
-        text-decoration: underline;
-
-        @include responsive(mobile) {
-          font-size: 16px;
+        @include responsive(desktop) {
+          font-size: 14px;
+          line-height: 17px;
         }
       }
     }
@@ -122,10 +107,10 @@
 
   .image-container {
     width: $image-width-mobile;
-    float: left;
+    float: right;
 
-    @include responsive (mobile) {
-      float: right;
+    @include responsive (desktop) {
+      float: left;
     }
 
     .image {
@@ -136,17 +121,16 @@
 
       position: relative;
       width: $image-width;
-      height: $image-height;
-      margin-top: $image-margintop;
+      height: $image-height-mobile;
+      margin-top: $image-margintop-mobile;
       float: right;
-      right: -86px;
+      bottom: 0;
 
-      @include responsive(mobile) {
-        margin-top: $image-margintop-mobile;
-        height: $image-height-mobile;
-        bottom: 0;
-        right: 0;
-
+      @include responsive(desktop) {
+        margin-top: $image-margintop;
+        height: $image-height;
+        bottom: auto;
+        right: -86px;
       }
     }
   }

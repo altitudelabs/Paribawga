@@ -1,7 +1,8 @@
 .nav-menu {
   $nav-menu-top-mobile: 5%;
-  z-index: 101;
   @extend .horizontal-center;
+
+  z-index: 101;
   top: $nav-menu-top-mobile;
 
   position: fixed;
@@ -10,22 +11,20 @@
   font-size: 14px;
   letter-spacing: .2em;
   text-transform: uppercase;
+  width: 250px;
+  text-align: center;
 
-  @include responsive(mobile) {
+  @include responsive(desktop) {
     font-size: 15px;
-    width: 250px;
-    text-align: center;
+    width: auto;
   }
 
   ul {
     list-style-type: none;
+    display: none;
 
-    @include responsive(transition) {
-      display: none;
-    }
-
-    @include responsive(mobile) {
-      display: none;
+    @include responsive(desktop) {
+      display: block;
     }
 
     a {
@@ -34,28 +33,24 @@
     }
 
     li {
-      float: left;
-      margin-left: 15px;
-      margin-right: 15px;
+      width: 100%;
+      margin-top: 35px;
 
-      @include responsive(mobile) {
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 35px;
+      @include responsive(desktop) {
+        width: auto;
+        float: left;
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 0;
       }
     }
   }
 
   .title {
-    display: none;
+    display: block;
 
-    @include responsive(transition) {
-      display: block;
-    }
-
-    @include responsive(mobile) {
-      display: block;
+    @include responsive(desktop) {
+      display: none;
     }
   }
 }
@@ -71,12 +66,12 @@
   left: 0;
 
   width: 100%;
-  height: $section-height;
+  height: $section-height-mobile;
   background-color: $gray;
   @include opacity(.8);
 
-  @include responsive(mobile) {
-    height: $section-height-mobile;
+  @include responsive(desktop) {
+    height: $section-height;
   }
 }
 

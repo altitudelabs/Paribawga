@@ -9,10 +9,10 @@
   $down-tag-width-mobile: 42px;
 
   @extend .background-cover;
-  height: $section-height;
+  height: $section-height-mobile;
 
-  @include responsive(mobile) {
-    height: $section-height-mobile;
+  @include responsive(desktop) {
+    height: $section-height;
   }
 
   .header {
@@ -50,7 +50,7 @@
     background-color: transparent;
     padding-top: 30%;
   }
-  
+
   .banner {
     padding: 40px;
     text-align: center;
@@ -77,11 +77,6 @@
 
     width: $scroll-tag-width-mobile;
     padding-bottom: 150 / 256 * $scroll-tag-width-mobile;
-
-    @include responsive (mobile) {
-      left: 29px;
-      bottom: 30px;
-    }
   }
 
   .down-tag { // 193 x 150
@@ -94,10 +89,5 @@
     padding-bottom: 150 / 193 * $down-tag-width-mobile;
     right: 22px;
     bottom: 30px;
-
-    @include responsive(mobile) {
-      right: 22px;
-      bottom: 30px;
-    }
   }
 }
