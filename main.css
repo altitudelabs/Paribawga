@@ -335,9 +335,8 @@ body.loading {
     @media only screen and (min-width: 1200px) {
       .nav-menu .title {
         display: none; } }
-  @media only screen and (min-width: 1200px) {
-    .nav-menu .underline {
-      border-bottom: 1px solid; } }
+  .nav-menu .underline {
+    border-bottom: 1px solid; }
 
 .gray-bg {
   z-index: 100;
@@ -690,7 +689,8 @@ body.loading {
     *     horizontal scrolling
     * * * * * * * * * * * * * * * * * * * * * * * * * */ }
       #projects-section .max-width-content {
-        max-width: 800px; }
+        max-width: 800px;
+        padding-left: 56px; }
       #projects-section .title {
         font-size: 80px;
         text-align: left;
@@ -1226,22 +1226,22 @@ body.loading {
     .collection-page .image-description {
       margin: 0; }
     .collection-page .image-description1 {
-      margin-top: -175px;
+      margin-top: -232px;
       margin-left: 200px; }
     .collection-page .image-description2 {
-      margin-top: -50px;
+      margin-top: -27px;
       margin-left: 441px; }
     .collection-page .image-description3 {
-      margin-top: -308px;
+      margin-top: -282px;
       margin-left: 156px; }
     .collection-page .image-description4 {
-      margin-top: -94px;
+      margin-top: -27px;
       margin-left: 510px; }
     .collection-page .image-description5 {
       margin-top: -202px;
       margin-left: 254px; }
     .collection-page .image-description6 {
-      margin-top: -178px;
+      margin-top: -132px;
       margin-left: 548px; }
     .collection-page .image-description7 {
       margin-top: -252px;
@@ -1250,10 +1250,10 @@ body.loading {
       margin-top: -30px;
       margin-left: 261px; }
     .collection-page .image-description9 {
-      margin-top: -50px;
+      margin-top: -24px;
       margin-left: 493px; }
     .collection-page .image-description10 {
-      margin-top: -278px;
+      margin-top: -253px;
       margin-left: 96px; } }
 
 .furniture {

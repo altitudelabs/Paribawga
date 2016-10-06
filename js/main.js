@@ -12,6 +12,7 @@ $(document).ready(function(){
     $('.gray-bg').css('visibility', 'visible');
     $(this).one("click", removeMenu);
     $('.nav-menu .title').one("click", removeMenu);
+    $('.nav-menu ul li').one("click", removeMenu);
   }
 
   function removeMenu(){
