@@ -44,8 +44,10 @@ $(document).ready(function(){
     if (winWidth >= 1024) {
       if (winScrollTop >= 600) { // 1st section-height
         $('.index .nav-menu').removeClass('white');
+        $('.index #footer').removeClass('hidden');
       } else {
         $('.index .nav-menu').addClass('white');
+        $('.index #footer').addClass('hidden');
       }
     }
   }));

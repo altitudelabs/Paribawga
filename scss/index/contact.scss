@@ -3,6 +3,14 @@
   text-align: center;
   padding: 20px;
 
+  $backtotop-width: 60px;
+  $backtotop-right: 77px;
+  $backtotop-top: 50px;
+
+  @include responsive(desktop) {
+    margin-bottom: 100px;
+  }
+
   .title {
     font-family: parabola;
     font-weight: 300;
@@ -65,5 +73,17 @@
         line-height: 26px;
       }
     }
+  }
+
+  .back-to-top { // 194 x 150
+    background-image: url('./images/buttons/buttons_backtotop.svg');
+    @extend .background-contain;
+
+    width: $backtotop-width;
+    height: 0;
+    padding-bottom: 150 / 194 * $backtotop-width;
+    position: absolute;
+    right: $backtotop-right;
+    top: $backtotop-top;
   }
 }
