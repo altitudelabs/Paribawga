@@ -4,6 +4,7 @@
   // desktop
   margin-bottom: 79px;
   @include responsive(desktop) {
+    margin-bottom: 200px;
 
     $image1-width: 258px;
     $image1-height: 297px;

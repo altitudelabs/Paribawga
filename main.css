@@ -186,6 +186,10 @@ body.loading {
   max-width: 600px;
   margin: auto; }
 
+@media only screen and (min-width: 721px) and (max-width: 1199px) {
+  .desktop-only {
+    display: none; } }
+
 @media only screen and (max-width: 720px) {
   .desktop-only {
     display: none; } }
@@ -668,6 +672,7 @@ body.loading {
   margin-bottom: 79px; }
   @media only screen and (min-width: 1200px) {
     #projects-section {
+      margin-bottom: 200px;
       /* * * * * * * * * * * * * * * * * * * * * * * * * *
     * Group of images and descriptions
     * - image-and-description-box: a box to contain
@@ -750,9 +755,6 @@ body.loading {
 
 #bespoke-section {
   margin-bottom: 115px; }
-  @media only screen and (max-width: 720px) {
-    #bespoke-section {
-      padding-left: 100px; } }
   #bespoke-section .title {
     z-index: 1;
     position: relative;
@@ -760,7 +762,7 @@ body.loading {
     font-weight: 300;
     letter-spacing: .015em;
     font-size: 80px;
-    margin-left: 130px;
+    margin-left: 308px;
     margin-bottom: 20px; }
     @media only screen and (max-width: 720px) {
       #bespoke-section .title {
@@ -774,7 +776,11 @@ body.loading {
     float: left;
     position: relative;
     min-height: 175px;
-    padding-left: 43px; }
+    margin-left: 229px; }
+    @media only screen and (max-width: 720px) {
+      #bespoke-section .text-container {
+        padding-left: 43px;
+        margin-left: 0; } }
     #bespoke-section .text-container .desc {
       margin-top: 10px;
       font-family: edmondSans;
@@ -803,8 +809,8 @@ body.loading {
     width: 0; }
   #bespoke-section .shelf {
     background-image: url("images/index/5_bespoke1.jpg");
-    width: 500px;
-    height: 300px;
+    width: 583px;
+    height: 357px;
     float: right;
     position: relative;
     margin-top: -80px; }
@@ -817,18 +823,20 @@ body.loading {
     background-image: url("images/index/5_bespoke2.jpg");
     position: relative;
     clear: right;
-    width: 750px;
-    height: 300px;
-    top: -26px;
+    width: 882px;
+    height: 337px;
+    top: -155px;
     z-index: -1;
     float: right;
     margin-top: -80px;
     margin-right: 40px; }
     @media only screen and (min-width: 721px) and (max-width: 1199px) {
       #bespoke-section .marble {
+        top: -26px;
         margin-right: 0; } }
     @media only screen and (max-width: 720px) {
       #bespoke-section .marble {
+        top: -26px;
         width: 315px;
         height: 234px;
         margin-top: 0;
