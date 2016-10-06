@@ -1060,6 +1060,9 @@ body.loading {
     margin-top: 50px;
     margin-left: 32px;
     margin-right: 28px; }
+    @media only screen and (min-width: 1200px) {
+      #contact-section .content {
+        margin-top: 100px; } }
     #contact-section .content p {
       font-family: sourceCodePro;
       font-weight: 300;
@@ -1083,10 +1086,13 @@ body.loading {
       margin-top: 40px;
       font-family: edmondSans;
       font-weight: normal;
-      font-size: 12px; }
+      font-size: 12px;
+      line-height: 15px; }
       @media only screen and (min-width: 1200px) {
         #contact-section .content .contact-info {
-          font-size: 17px; } }
+          margin-top: 80px;
+          font-size: 17px;
+          line-height: 26px; } }
 
 .collection-page {
   /* * * * * * * * * * * * * * * *

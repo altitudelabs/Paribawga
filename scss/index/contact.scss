@@ -21,6 +21,10 @@
     margin-left: 32px;
     margin-right: 28px;
 
+    @include responsive(desktop) {
+      margin-top: 100px;
+    }
+
     p {
       font-family: sourceCodePro;
       font-weight: 300;
@@ -53,9 +57,12 @@
       font-family: edmondSans;
       font-weight: normal;
       font-size: 12px;
+      line-height: 15px;
 
       @include responsive(desktop) {
+        margin-top: 80px;
         font-size: 17px;
+        line-height: 26px;
       }
     }
   }
