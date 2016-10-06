@@ -22,10 +22,9 @@
   $images-margintop-mobile: 0;
 
   margin-bottom: 115px;
-  padding-left: 100px;
 
   @include responsive(mobile) {
-    padding-left: 0;
+    padding-left: 100px;
   }
 
   .title {

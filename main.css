@@ -719,11 +719,10 @@ body.loading {
         display: block; } }
 
 #bespoke-section {
-  margin-bottom: 115px;
-  padding-left: 100px; }
+  margin-bottom: 115px; }
   @media only screen and (max-width: 720px) {
     #bespoke-section {
-      padding-left: 0; } }
+      padding-left: 100px; } }
   #bespoke-section .title {
     z-index: 1;
     position: relative;
@@ -972,12 +971,12 @@ body.loading {
   #contact-section .title {
     font-family: parabola;
     font-weight: 300;
-    font-size: 80px;
+    font-size: 43px;
     letter-spacing: .055em;
     margin: auto; }
-    @media only screen and (max-width: 720px) {
+    @media only screen and (min-width: 1200px) {
       #contact-section .title {
-        font-size: 43px; } }
+        font-size: 80px; } }
   #contact-section .content {
     margin-top: 50px;
     margin-left: 32px;
@@ -985,19 +984,19 @@ body.loading {
     #contact-section .content p {
       font-family: sourceCodePro;
       font-weight: 300;
-      font-size: 18px;
+      font-size: 14px;
       letter-spacing: .1em;
       margin-top: 20px; }
-      @media only screen and (max-width: 720px) {
+      @media only screen and (min-width: 1200px) {
         #contact-section .content p {
-          font-size: 14px; } }
+          font-size: 18px; } }
       #contact-section .content p .info {
-        font-size: 17px;
+        font-size: 12px;
         font-family: edmondSans;
         font-weight: normal; }
-        @media only screen and (max-width: 720px) {
+        @media only screen and (min-width: 1200px) {
           #contact-section .content p .info {
-            font-size: 12px; } }
+            font-size: 17px; } }
     #contact-section .content a {
       text-decoration: underline;
       color: inherit; }
@@ -1005,10 +1004,10 @@ body.loading {
       margin-top: 40px;
       font-family: edmondSans;
       font-weight: normal;
-      font-size: 17px; }
-      @media only screen and (max-width: 720px) {
+      font-size: 12px; }
+      @media only screen and (min-width: 1200px) {
         #contact-section .content .contact-info {
-          font-size: 12px; } }
+          font-size: 17px; } }
 
 .collection-page {
   /* * * * * * * * * * * * * * * *
