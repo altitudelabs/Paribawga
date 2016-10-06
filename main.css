@@ -1149,7 +1149,7 @@ body.loading {
         top: 150px; } }
   @media only screen and (min-width: 1200px) {
     .collection-page .content {
-      height: 2200px; } }
+      height: 2800px; } }
   .collection-page .image-description {
     position: relative;
     padding-top: 50px;
@@ -1194,6 +1194,12 @@ body.loading {
     .collection-page .image-description .image10 {
       width: 293px;
       height: 225px; }
+    .collection-page .image-description .image11 {
+      width: 236px;
+      height: 281px; }
+    .collection-page .image-description .image12 {
+      width: 315px;
+      height: 260px; }
     .collection-page .image-description .desc {
       font-family: sourceCodePro;
       font-weight: 600;
@@ -1250,8 +1256,14 @@ body.loading {
       margin-top: -24px;
       margin-left: 493px; }
     .collection-page .image-description10 {
-      margin-top: -253px;
-      margin-left: 96px; } }
+      margin-top: -216px;
+      margin-left: 96px; }
+    .collection-page .image-description11 {
+      margin-top: -124px;
+      margin-left: 450px; }
+    .collection-page .image-description12 {
+      margin-top: 0px;
+      margin-left: 210px; } }
 
 .furniture {
   /* * * * * * * * * * * * * * * *

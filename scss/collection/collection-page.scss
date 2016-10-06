@@ -57,7 +57,7 @@
 
   .content {
     @include responsive(desktop) {
-      height: 2200px;
+      height: 2800px;
     }
   }
 
@@ -112,10 +112,20 @@
   $image9-width: 246px;
   $image9-height: 176px;
 
-  $container10-top: -253px;
+  $container10-top: -216px;
   $container10-left: 96px;
   $image10-width: 293px;
   $image10-height: 225px;
+
+  $container11-top: -124px;
+  $container11-left: 450px;
+  $image11-width: 236px;
+  $image11-height: 281px;
+
+  $container12-top: 0px;
+  $container12-left: 210px;
+  $image12-width: 315px;
+  $image12-height: 260px;
 
   .image-description {
     position: relative;
@@ -182,6 +192,16 @@
     .image10 {
       width: $image10-width;
       height: $image10-height;
+    }
+
+    .image11 {
+      width: $image11-width;
+      height: $image11-height;
+    }
+
+    .image12 {
+      width: $image12-width;
+      height: $image12-height;
     }
 
     .desc {
@@ -273,6 +293,16 @@
     .image-description10 {
       margin-top: $container10-top;
       margin-left: $container10-left;
+    }
+
+    .image-description11 {
+      margin-top: $container11-top;
+      margin-left: $container11-left;
+    }
+
+    .image-description12 {
+      margin-top: $container12-top;
+      margin-left: $container12-left;
     }
   }
 }
