@@ -10,30 +10,32 @@
     @extend .background-contain;
     width: $logo-width;
     height: 60px;
-    margin-left: 100px;
-    float: left;
 
-    @include responsive(mobile) {
-      float: none;
-      margin: auto;
-      left: auto;
-      margin-bottom: 16px;
+    float: none;
+    margin: auto;
+    left: auto;
+    margin-bottom: 16px;
+
+    @include responsive(desktop) {
+      float: left;
+      margin-left: 100px;
+      margin-bottom: 0;
     }
   }
 
   .apps-logo {
 
 
-    margin-right: 100px;
-
+    margin-right: 0;
+    left: 50%;
     position: relative;
     height: $app-width;
+    margin-bottom: 30px;
 
-    @include responsive(mobile) {
-      margin-right: 0;
-      left: 50%;
-      margin-bottom: 30px;
-
+    @include responsive(desktop) {
+      margin-right: 100px;
+      left: auto;
+      margin-bottom: 0;
     }
 
     .app {
@@ -49,10 +51,10 @@
   .outer-div {
     float: right;
     position: relative;
+    left: -50%;
 
-    @include responsive(mobile) {
-      left: -50%;
-
+    @include responsive(desktop) {
+      left: auto;
     }
   }
 }

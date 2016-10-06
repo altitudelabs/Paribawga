@@ -201,23 +201,26 @@ body.loading {
     background-image: url("./images/buttons/sosmed_paribawga logo.svg");
     width: 150px;
     height: 60px;
-    margin-left: 100px;
-    float: left; }
-    @media only screen and (max-width: 720px) {
+    float: none;
+    margin: auto;
+    left: auto;
+    margin-bottom: 16px; }
+    @media only screen and (min-width: 1200px) {
       #footer .logo {
-        float: none;
-        margin: auto;
-        left: auto;
-        margin-bottom: 16px; } }
+        float: left;
+        margin-left: 100px;
+        margin-bottom: 0; } }
   #footer .apps-logo {
-    margin-right: 100px;
+    margin-right: 0;
+    left: 50%;
     position: relative;
-    height: 30px; }
-    @media only screen and (max-width: 720px) {
+    height: 30px;
+    margin-bottom: 30px; }
+    @media only screen and (min-width: 1200px) {
       #footer .apps-logo {
-        margin-right: 0;
-        left: 50%;
-        margin-bottom: 30px; } }
+        margin-right: 100px;
+        left: auto;
+        margin-bottom: 0; } }
     #footer .apps-logo .app {
       margin-right: 3px;
       margin-left: 3px;
@@ -226,10 +229,11 @@ body.loading {
       float: left; }
   #footer .outer-div {
     float: right;
-    position: relative; }
-    @media only screen and (max-width: 720px) {
+    position: relative;
+    left: -50%; }
+    @media only screen and (min-width: 1200px) {
       #footer .outer-div {
-        left: -50%; } }
+        left: auto; } }
 
 .mobile-header .title, .collection-page .title, .furniture .title {
   width: 100%;
@@ -925,6 +929,15 @@ body.loading {
     right: 28px; }
   #press-section .text, .mobile-images-collection .image-and-description-box #press-section .name, #collection-section .image-and-description-box #press-section .name, #projects-section .image-and-description-box #press-section .name, #press-section .image-and-description-box .name {
     font-size: 14px; }
+  #press-section .explore-link {
+    font-family: sourceCodePro;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    text-align: left; }
+    #press-section .explore-link a {
+      color: inherit; }
   #press-section .grid:after {
     content: "";
     display: table;
@@ -1025,19 +1038,14 @@ body.loading {
   .collection-page .max-width-content {
     top: 75px;
     position: relative;
-    max-width: 800px;
-    margin: auto;
-    height: 2000px; }
-    @media only screen and (max-width: 720px) {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 150px; }
+    @media only screen and (min-width: 1200px) {
       .collection-page .max-width-content {
-        max-width: 300px;
-        height: auto;
-        margin-bottom: 150px; } }
-    @media only screen and (min-width: 721px) and (max-width: 1199px) {
-      .collection-page .max-width-content {
-        max-width: 300px;
-        height: auto;
-        margin-bottom: 150px; } }
+        max-width: 800px;
+        margin: auto;
+        height: 2000px; } }
   .collection-page .image-description {
     position: relative;
     padding-top: 50px;
@@ -1048,6 +1056,9 @@ body.loading {
       max-width: 320px;
       display: block;
       margin: auto; }
+      @media only screen and (min-width: 1200px) {
+        .collection-page .image-description .image {
+          margin: 0; } }
     .collection-page .image-description .desc {
       font-family: sourceCodePro;
       font-weight: 600;
@@ -1057,6 +1068,9 @@ body.loading {
       text-transform: uppercase;
       margin-top: 20px;
       margin-left: 30px; }
+      @media only screen and (min-width: 1200px) {
+        .collection-page .image-description .desc {
+          margin-left: 0; } }
   .collection-page .image-desc-container {
     position: relative;
     width: 0;

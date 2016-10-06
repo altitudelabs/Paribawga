@@ -26,20 +26,14 @@
   .max-width-content {
     top: 75px;
     position: relative;
-    max-width: 800px;
-    margin: auto;
-    height: 2000px;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 150px;
 
-    @include responsive(mobile) {
-      max-width: 300px;
-      height: auto;
-      margin-bottom: 150px;
-    }
-
-    @include responsive(transition) {
-      max-width: 300px;
-      height: auto;
-      margin-bottom: 150px;
+    @include responsive(desktop) {
+      max-width: 800px;
+      margin: auto;
+      height: 2000px;
     }
   }
 
@@ -91,6 +85,10 @@
       max-width: 320px;
       display: block;
       margin: auto;
+
+      @include responsive(desktop) {
+        margin: 0;
+      }
     }
 
     .desc {
@@ -103,6 +101,10 @@
 
       margin-top: 20px;
       margin-left: 30px;
+
+      @include responsive(desktop) {
+        margin-left: 0;
+      }
     }
   }
 
