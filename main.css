@@ -295,6 +295,7 @@ body.loading {
   text-align: center; }
   @media only screen and (min-width: 1200px) {
     .nav-menu {
+      top: 38px;
       font-size: 15px;
       width: auto; } }
   .nav-menu ul {
@@ -445,6 +446,9 @@ body.loading {
     background-image: url("images/index/1_tagline.png");
     height: 70%;
     width: 80%; }
+    @media only screen and (min-width: 1200px) {
+      #hero-section .cover-tagline {
+        height: 490px; } }
   #hero-section .scroll-tag {
     background-image: url("images/buttons/buttons_scroll.svg");
     position: absolute;
@@ -453,6 +457,10 @@ body.loading {
     bottom: 30px;
     width: 48px;
     padding-bottom: 28.125px; }
+    @media only screen and (min-width: 1200px) {
+      #hero-section .scroll-tag {
+        left: 58px;
+        bottom: 32px; } }
   #hero-section .down-tag {
     background-image: url("images/buttons/buttons_down.svg");
     position: absolute;
@@ -461,6 +469,10 @@ body.loading {
     padding-bottom: 32.64249px;
     right: 22px;
     bottom: 30px; }
+    @media only screen and (min-width: 1200px) {
+      #hero-section .down-tag {
+        right: 58px;
+        bottom: 32px; } }
 
 #aboutus-section {
   height: 660px;
