@@ -9,6 +9,11 @@
     font-size: 43px;
     letter-spacing: .055em;
     margin: auto;
+
+    @include responsive(desktop) {
+      font-size: 80px;
+
+    }
   }
 
   .content {
@@ -18,14 +23,23 @@
 
     p {
       font-family: sourceCodePro;
-      font-weight: 600;
-      font-size: 12px;
-      letter-spacing: .01em;
+      font-weight: 300;
+      font-size: 14px;
+      letter-spacing: .1em;
       margin-top: 20px;
 
+      @include responsive(desktop) {
+        font-size: 18px;
+      }
+
       .info {
+        font-size: 12px;
         font-family: edmondSans;
         font-weight: normal;
+
+        @include responsive(desktop) {
+          font-size: 17px;
+        }
       }
     }
 
@@ -38,6 +52,11 @@
       margin-top: 40px;
       font-family: edmondSans;
       font-weight: normal;
+      font-size: 12px;
+
+      @include responsive(desktop) {
+        font-size: 17px;
+      }
     }
   }
 }

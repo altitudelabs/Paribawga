@@ -1,15 +1,20 @@
 #bespoke-section {
 
+
   $desc-container-width: calc(100% - 190px); // shelf-width
   $desc-container-height: 220px;
 
   $text-width: 290px;
 
-  $shelf-width: 190px;
-  $shelf-height: 246px;
+  $shelf-width: 500px;
+  $shelf-width-mobile: 190px;
+  $shelf-height: 300px;
+  $shelf-height-mobile: 246px;
 
-  $marble-width: 315px;
-  $marble-height: 234px;
+  $marble-width: 750px;
+  $marble-width-mobile: 315px;
+  $marble-height: 300px;
+  $marble-height-mobile: 234px;
 
   $shelf-marble-overlap: 26px;
 
@@ -18,97 +23,117 @@
 
   margin-bottom: 115px;
 
-  .title {
-    font-family: parabola;
-    font-weight: 300;
-    font-size: 43px;
-    letter-spacing: .015em;
-    margin-left: 35px;
-    margin-bottom: 20px;
+  @include responsive(mobile) {
+    padding-left: 100px;
   }
 
-  .desc-container {
-    width: $desc-container-width;
-    height: $desc-container-height;
+  .title {
+    z-index: 1;
+    position: relative;
+    font-family: parabola;
+    font-weight: 300;
+    letter-spacing: .015em;
+    font-size: 80px;
+    margin-left: 130px;
+    margin-bottom: 20px;
+
+    @include responsive(mobile) {
+      font-size: 43px;
+      margin-left: 35px;
+    }
+  }
+
+  .text-container {
+    width: $text-width;
+    z-index: 1;
+    overflow: visible;
     padding-top: 38px; // 48 - text.margin-top
     float: left;
-    overflow: visible;
     position: relative;
+    min-height: 175px;
+    padding-left: 43px;
 
-    .text {
-      float: left;
-      padding-left: 43px;
-      min-height: 175px;
+
+    .desc {
       margin-top: 10px;
-      width: $text-width;
       font-family: edmondSans;
       font-weight: normal;
-      font-size: 12px;
+      font-size: 14px;
       letter-spacing: .05em;
-      line-height: 19px;
+      line-height: 17px;
+
+      @include responsive(mobile) {
+        font-size: 12px;
+      }
     }
 
     .contact-link {
       font-family: sourceCodePro;
       font-weight: 600;
-      font-decoration: underline;
       font-size: 12px;
       letter-spacing: .1em;
       text-transform: uppercase;
-      color: inherit;
+      text-align: right;
+
+      @include responsive(mobile) {
+        text-align: left;
+      }
+
+      a {
+        color: inherit;
+      }
     }
   }
 
-  .img1-shelf-container {
+  .column {
+    float: right;
+    overflow: visible;
+    width: 0;
+  }
+
+  .shelf {
+    background-image: url('images/index/5_bespoke1.jpg');
+    @extend .background-cover;
+
     width: $shelf-width;
-    overflow: visible;
+    height: $shelf-height;
     float: right;
+    position: relative;
+    margin-top: $images-margintop;
 
-    .shelf {
-      background-image: url('images/index/5_bespoke1.jpg');
-      @extend .background-contain;
-
-      width: $shelf-width;
-      height: $shelf-height;
-      right: 0;
-
-      margin-top: $images-margintop;
-
-      @include responsive (mobile) {
-        margin-top: $images-margintop-mobile;
-      }
+    @include responsive (mobile) {
+      width: $shelf-width-mobile;
+      height: $shelf-height-mobile;
+      margin-top: $images-margintop-mobile;
     }
   }
 
-  .img2-marble-container {
-    width: 351px;
-    height: $marble-height - $shelf-marble-overlap;
-    overflow: visible;
+  .marble {
+    background-image: url('images/index/5_bespoke2.jpg');
+    @extend .background-cover;
+
+    position: relative;
+    clear: right;
+    width: $marble-width;
+    height: $marble-height;
+    top: -1 * $shelf-marble-overlap;
+    z-index: -1;
     float: right;
 
-    .marble {
-      background-image: url('images/index/5_bespoke2.jpg');
-      @extend .background-cover;
+    margin-top: $images-margintop;
+    margin-right: 40px;
 
-      position: relative;
-      width: 550px;
-      height: $marble-height;
-      top: -1 * $shelf-marble-overlap;
-      z-index: -1;
-      float: right;
-
-      margin-top: $images-margintop;
-      margin-right: 40px;
-
-      @include responsive (transition) {
-        margin-right: 0;
-      }
-
-      @include responsive (mobile) {
-        width: 100%;
-        margin-top: $images-margintop-mobile;
-        margin-right: 0;
-      }
+    @include responsive (transition) {
+      margin-right: 0;
     }
+
+    @include responsive (mobile) {
+      width: $marble-width-mobile;
+      height: $marble-height-mobile;
+      margin-top: $images-margintop-mobile;
+      margin-right: 0;
+
+    }
+
   }
 }

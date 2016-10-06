@@ -1,20 +1,83 @@
 .collection-page {
+
+  @extend .mobile-header;
+
+  /* * * * * * * * * * * * * * * *
+   * HEADER
+   * * * * * * * * * * * * * * * */
+  $next-prev-top: 300px;
+
+  @include responsive(desktop) {
+
+    .next, .prev {
+      top: $next-prev-top;
+    }
+
+    .main-title {
+      font-size: 80px;
+      text-align: right;
+    }
+  }
+
+
+  /* * * * * * * * * * * * * * * *
+   * CONTENT
+   * * * * * * * * * * * * * * * */
+  .max-width-content {
+    top: 75px;
+    position: relative;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 150px;
+
+    @include responsive(desktop) {
+      max-width: 800px;
+      margin: auto;
+      height: 2000px;
+    }
+  }
+
   $image-height-temp: 200px;
 
   $backtotop-width: 40px;
   $backtotop-bottom: 91px;
   $backtotop-right: 18px;
 
-  .max-width-content {
-    position: relative;
-    max-width: 300px;
-    margin: auto;
-  }
+  $container1-top: -140px;
+  $container1-left: 100px;
+
+  $container2-top: 192px;
+  $container2-left: 319px;
+
+  $container3-top: 51px;
+  $container3-left: 4px;
+
+  $container4-top: 162px;
+  $container4-left: 438px;
+
+  $container5-top: 62px;
+  $container5-left: 75px;
+
+  $container6-top: 150px;
+  $container6-left: 296px;
+
+  $container7-top: 72px;
+  $container7-left: 10px;
+
+  $container8-top: 251px;
+  $container8-left: 206px;
+
+  $container9-top: 233px;
+  $container9-left: 447px;
+
+  $container10-top: 30px;
+  $container10-left: 108px;
 
   .image-description {
-
-    margin-top: 50px;
-
+    position: relative;
+    padding-top: 50px;
+    width: 320px;
+    margin: auto;
 
     .image {
       @extend .background-contain;
@@ -22,6 +85,10 @@
       max-width: 320px;
       display: block;
       margin: auto;
+
+      @include responsive(desktop) {
+        margin: 0;
+      }
     }
 
     .desc {
@@ -34,6 +101,25 @@
 
       margin-top: 20px;
       margin-left: 30px;
+
+      @include responsive(desktop) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .image-desc-container {
+    position: relative;
+    width: 0;
+    height: 50px;
+    overflow: visible;
+
+    @include responsive(mobile) {
+      height: 380px;
+    }
+
+    @include responsive(transition) {
+      height: 380px;
     }
   }
 
@@ -47,5 +133,61 @@
     position: absolute;
     right: $backtotop-right;
     bottom: $backtotop-bottom;
+  }
+
+  @include responsive(desktop) {
+    .image-description {
+      margin: 0;
+    }
+
+    .image-description1 {
+      margin-top: $container1-top;
+      margin-left: $container1-left;
+    }
+
+    .image-description2 {
+      margin-top: $container2-top;
+      margin-left: $container2-left;
+    }
+
+    .image-description3 {
+      margin-top: $container3-top;
+      margin-left: $container3-left;
+    }
+
+    .image-description4 {
+      margin-top: $container4-top;
+      margin-left: $container4-left;
+    }
+
+    .image-description5 {
+      margin-top: $container5-top;
+      margin-left: $container5-left;
+    }
+
+    .image-description6 {
+      margin-top: $container6-top;
+      margin-left: $container6-left;
+    }
+
+    .image-description7 {
+      margin-top: $container7-top;
+      margin-left: $container7-left;
+    }
+
+    .image-description8 {
+      margin-top: $container8-top;
+      margin-left: $container8-left;
+    }
+
+    .image-description9 {
+      margin-top: $container9-top;
+      margin-left: $container9-left;
+    }
+
+    .image-description10 {
+      margin-top: $container10-top;
+      margin-left: $container10-left;
+    }
   }
 }

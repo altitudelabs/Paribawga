@@ -1,3 +1,133 @@
 #projects-section {
-  @extend .images-slide-section;
+  @extend .mobile-images-collection;
+
+  // desktop
+  margin-bottom: 79px;
+  @include responsive(desktop) {
+
+    $image1-width: 250px;
+    $image1-height: 320px;
+
+    $image2-width: 370px;
+    $image2-height: 210px;
+    $image2-marginleft: 80px;
+    $image2-top: -130px;
+
+    $more-tag-top: 250px;
+    $more-tag-width: 30px;
+
+    $content-text-width: 320px;
+
+    .max-width-content {
+      max-width: 700px;
+    }
+
+    .title {
+      font-size: 80px;
+      text-align: left;
+      position: relative;
+      margin-left: -85px;
+    }
+
+    .more-tag { // 166 x 150
+      position: absolute;
+      top: $more-tag-top;
+      right: 28px;
+    }
+
+    .more-tag.desktop-only {
+      left: 28px;
+      right: auto;
+    }
+
+    /* * * * * * * * * * * * * * * * * * * * * * * * * *
+    * Group of images and descriptions
+    * - image-and-description-box: a box to contain
+    *     one image and its description below
+    * - container to contain all boxes that allows
+    *     horizontal scrolling
+    * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+    .images-descriptions-container {
+      overflow: visible;
+      white-space:normal;
+      margin-left: 0;
+      margin-bottom: 79px;
+      width: 100%;
+      height: auto;
+      overflow: visible;
+    }
+
+    .column {
+      float: left;
+      position: relative;
+    }
+
+    .image-and-description-box {
+      display: none;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+      overflow: visible;
+
+      .image1, .image2 {
+        display: block;
+        position: relative;
+        float: left;
+      }
+
+      .image1 {
+        width: $image1-width;
+        height: $image1-height;
+      }
+
+      .image2 {
+        width: $image2-width;
+        height: $image2-height;
+        margin-left: $image2-marginleft;
+        margin-top: $image2-top;
+      }
+
+      .content-text {
+        clear: left;
+        width: $content-text-width;
+        padding: 20px;
+        padding-left: 40px;
+      }
+
+      .text {
+        font-family: edmondSans;
+        font-weight: normal;
+        font-size: 14px;
+        letter-spacing: .05em;
+        line-height: 17px;
+      }
+
+      .name {
+        font-family: sourceCodePro;
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 23px;
+
+        text-transform: uppercase;
+      }
+
+      .explore-link {
+        font-family: sourceCodePro;
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        text-align: left;
+
+        a {
+          color: inherit;
+        }
+      }
+    }
+
+    .image-and-description-box.first {
+      display: block;
+    }
+  }
 }

@@ -104,30 +104,31 @@
   box-sizing: border-box; }
 
 html, body {
-  height: 100%;
   width: 100%;
-  max-width: 100%;
-  overflow-x: hidden; }
+  max-width: 100%; }
 
 .section-container {
   position: relative;
   overflow: hidden; }
 
-.clearfix:before, .clearfix:after {
+a {
+  cursor: pointer; }
+
+.clearfix:before, .furniture .max-width-content:before, .clearfix:after, .furniture .max-width-content:after {
   content: " ";
   display: table; }
 
-.clearfix:after {
+.clearfix:after, .furniture .max-width-content:after {
   clear: both; }
 
-.background-image, .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .img2-marble-container .marble, .background-contain, #footer .logo, #footer .apps-logo .app, .header .navigations .previous, .header .navigations .next, .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair, .collection-page .image-description .image, .collection-page .back-to-top, #furniture .image {
+.background-image, .background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .shelf, #bespoke-section .marble, #sustain-section .img1-chair-container .chair, .furniture .image, .background-contain, #footer .logo, #footer .apps-logo .app, .mobile-header .prev, .collection-page .prev, .furniture .prev, .mobile-header .next, .collection-page .next, .furniture .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, .mobile-images-collection .image-and-description-box .image, #collection-section .image-and-description-box .image, #projects-section .image-and-description-box .image, #press-section .image-and-description-box .image, .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1, .mobile-images-collection .image-and-description-box .image2, #collection-section .image-and-description-box .image2, #projects-section .image-and-description-box .image2, #press-section .image-and-description-box .image2, .mobile-images-collection .image-and-description-box .image3, #collection-section .image-and-description-box .image3, #projects-section .image-and-description-box .image3, #press-section .image-and-description-box .image3, .mobile-images-collection .image-and-description-box .image4, #collection-section .image-and-description-box .image4, #projects-section .image-and-description-box .image4, #press-section .image-and-description-box .image4, #hero-section .cover-tagline, #aboutus-section .image-container .image, .collection-page .image-description .image, .collection-page .back-to-top {
   background-position: center center;
   background-repeat: no-repeat; }
 
-.background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .img2-marble-container .marble {
+.background-cover, #hero-section, #hero-section .scroll-tag, #hero-section .down-tag, #bespoke-section .shelf, #bespoke-section .marble, #sustain-section .img1-chair-container .chair, .furniture .image {
   background-size: cover; }
 
-.background-contain, #footer .logo, #footer .apps-logo .app, .header .navigations .previous, .header .navigations .next, .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, #hero-section .cover-tagline, #aboutus-section .image-container .image, #bespoke-section .img1-shelf-container .shelf, #sustain-section .img1-chair-container .chair, .collection-page .image-description .image, .collection-page .back-to-top, #furniture .image {
+.background-contain, #footer .logo, #footer .apps-logo .app, .mobile-header .prev, .collection-page .prev, .furniture .prev, .mobile-header .next, .collection-page .next, .furniture .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, .mobile-images-collection .image-and-description-box .image, #collection-section .image-and-description-box .image, #projects-section .image-and-description-box .image, #press-section .image-and-description-box .image, .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1, .mobile-images-collection .image-and-description-box .image2, #collection-section .image-and-description-box .image2, #projects-section .image-and-description-box .image2, #press-section .image-and-description-box .image2, .mobile-images-collection .image-and-description-box .image3, #collection-section .image-and-description-box .image3, #projects-section .image-and-description-box .image3, #press-section .image-and-description-box .image3, .mobile-images-collection .image-and-description-box .image4, #collection-section .image-and-description-box .image4, #projects-section .image-and-description-box .image4, #press-section .image-and-description-box .image4, #hero-section .cover-tagline, #aboutus-section .image-container .image, .collection-page .image-description .image, .collection-page .back-to-top {
   background-size: contain; }
 
 body.loading {
@@ -180,81 +181,46 @@ body.loading {
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%); }
 
-.grid:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.grid .grid-item {
-  float: left;
-  position: relative; }
-
-.grid .grid-item.full {
-  width: 100%; }
-
-.grid .grid-item.one-half {
-  width: 50%; }
-
-.grid .grid-item.one-third {
-  width: 33.33%; }
-
-.grid .grid-item.two-third {
-  width: 66.66%; }
-
-.grid .grid-item.one-fourth {
-  width: 25%; }
-
-.grid .grid-item.three-fourth {
-  width: 75%; }
-
-.grid .grid-item.one-fifth {
-  width: 20%; }
-
-.grid .grid-item.two-fifth {
-  width: 40%; }
-
-.grid .grid-item.three-fifth {
-  width: 60%; }
-
-.grid .grid-item.four-fifth {
-  width: 80%; }
-
-.grid .grid-item.one-sixth {
-  width: 16.66%; }
-
-.grid .grid-item.five-sixth {
-  width: 83.33%; }
-
-.grid .grid-item.one-eighth {
-  width: 12.5%; }
-
-.grid .grid-item.three-eighth {
-  width: 37.5%; }
-
-.grid .grid-item.five-eighth {
-  width: 62.5%; }
-
-.grid .grid-item.seven-eighth {
-  width: 87.5%; }
-
 .max-width-content {
   position: relative;
   max-width: 600px;
   margin: auto; }
 
+@media only screen and (max-width: 720px) {
+  .desktop-only {
+    display: none; } }
+
+@media only screen and (min-width: 1200px) {
+  .mobile-transition-only {
+    display: none; } }
+
 #footer {
-  margin-top: 75px; }
+  clear: both;
+  padding-top: 125px; }
   #footer .logo {
     background-image: url("./images/buttons/sosmed_paribawga logo.svg");
     width: 150px;
     height: 60px;
+    float: none;
     margin: auto;
+    left: auto;
     margin-bottom: 16px; }
+    @media only screen and (min-width: 1200px) {
+      #footer .logo {
+        float: left;
+        margin-left: 100px;
+        margin-bottom: 0; } }
   #footer .apps-logo {
+    margin-right: 0;
     left: 50%;
     position: relative;
-    margin-bottom: 30px;
-    height: 30px; }
+    height: 30px;
+    margin-bottom: 30px; }
+    @media only screen and (min-width: 1200px) {
+      #footer .apps-logo {
+        margin-right: 100px;
+        left: auto;
+        margin-bottom: 0; } }
     #footer .apps-logo .app {
       margin-right: 3px;
       margin-left: 3px;
@@ -265,9 +231,11 @@ body.loading {
     float: right;
     position: relative;
     left: -50%; }
+    @media only screen and (min-width: 1200px) {
+      #footer .outer-div {
+        left: auto; } }
 
-.header .title {
-  margin-top: 46px;
+.mobile-header .title, .collection-page .title, .furniture .title {
   width: 100%;
   text-align: center;
   text-transform: uppercase;
@@ -276,41 +244,43 @@ body.loading {
   font-size: 14px;
   letter-spacing: .2em; }
 
-.header .navigations {
-  margin-top: 33px;
-  margin-left: 13px;
-  margin-right: 20px;
-  height: 50px; }
-  .header .navigations .previous {
-    background-image: url("./images/buttons/buttons_previous.svg");
-    float: left;
-    width: 44px;
-    height: 0;
-    padding-bottom: 19.21333px;
-    margin-top: 10px; }
-  .header .navigations .next {
-    background-image: url("./images/buttons/buttons_next.svg");
-    float: right;
-    width: 23px;
-    height: 0;
-    padding-bottom: 25px;
-    margin-top: 4px; }
-  .header .navigations .main-title, .header .navigations .sub-title {
-    font-family: parabola;
-    font-weight: 300;
-    font-size: 43px;
-    letter-spacing: .015em;
-    float: left;
-    width: calc(100% - 67px);
-    text-align: center; }
-  .header .navigations .sub-title {
-    font-family: sourceCodePro;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    margin-top: 10px;
-    width: calc(100% - 76px); }
+.mobile-header .prev, .collection-page .prev, .furniture .prev {
+  background-image: url("./images/buttons/buttons_previous.svg");
+  position: absolute;
+  width: 44px;
+  height: 0;
+  padding-bottom: 19.21333px;
+  top: 80px;
+  left: 0;
+  margin-top: 10px;
+  margin-left: 10px; }
+
+.mobile-header .next, .collection-page .next, .furniture .next {
+  background-image: url("./images/buttons/buttons_next.svg");
+  position: absolute;
+  width: 23px;
+  height: 0;
+  padding-bottom: 25px;
+  top: 80px;
+  right: 0;
+  margin-top: 4px;
+  margin-right: 20px; }
+
+.mobile-header .main-title, .collection-page .main-title, .furniture .main-title {
+  font-family: parabola;
+  font-weight: 300;
+  font-size: 43px;
+  letter-spacing: .015em;
+  text-align: center; }
+
+.mobile-header .sub-title, .collection-page .sub-title, .furniture .sub-title {
+  font-family: sourceCodePro;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  margin-top: 10px;
+  text-align: center; }
 
 .nav-menu {
   z-index: 101;
@@ -320,40 +290,37 @@ body.loading {
   font-weight: 600;
   font-size: 14px;
   letter-spacing: .2em;
-  text-transform: uppercase; }
-  @media only screen and (max-width: 720px) {
+  text-transform: uppercase;
+  width: 250px;
+  text-align: center; }
+  @media only screen and (min-width: 1200px) {
     .nav-menu {
-      width: 250px;
-      text-align: center; } }
+      font-size: 15px;
+      width: auto; } }
   .nav-menu ul {
-    list-style-type: none; }
-    @media only screen and (min-width: 721px) and (max-width: 1023px) {
+    list-style-type: none;
+    display: none; }
+    @media only screen and (min-width: 1200px) {
       .nav-menu ul {
-        display: none; } }
-    @media only screen and (max-width: 720px) {
-      .nav-menu ul {
-        display: none; } }
+        display: block; } }
     .nav-menu ul a {
       text-decoration: none;
       color: inherit; }
     .nav-menu ul li {
-      float: left;
-      margin-left: 15px;
-      margin-right: 15px; }
-      @media only screen and (max-width: 720px) {
+      width: 100%;
+      margin-top: 35px; }
+      @media only screen and (min-width: 1200px) {
         .nav-menu ul li {
-          width: 100%;
-          margin-left: 0;
-          margin-right: 0;
-          margin-top: 35px; } }
+          width: auto;
+          float: left;
+          margin-left: 25px;
+          margin-right: 25px;
+          margin-top: 0; } }
   .nav-menu .title {
-    display: none; }
-    @media only screen and (min-width: 721px) and (max-width: 1023px) {
+    display: block; }
+    @media only screen and (min-width: 1200px) {
       .nav-menu .title {
-        display: block; } }
-    @media only screen and (max-width: 720px) {
-      .nav-menu .title {
-        display: block; } }
+        display: none; } }
 
 .gray-bg {
   z-index: 100;
@@ -362,36 +329,41 @@ body.loading {
   top: 0;
   left: 0;
   width: 100%;
-  height: 650px;
+  height: 558px;
   background-color: #aaaaa9;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
   filter: alpha(opacity=80);
   -moz-opacity: 0.8;
   -khtml-opacity: 0.8;
   opacity: 0.8; }
-  @media only screen and (max-width: 720px) {
+  @media only screen and (min-width: 1200px) {
     .gray-bg {
-      height: 558px; } }
+      height: 650px; } }
 
 .hidden {
   display: none; }
 
-.images-slide-section, #collection-section, #projects-section, #press-section {
+@media only screen and (min-width: 1200px) {
+  .white {
+    color: white; } }
+
+.mobile-images-collection, #collection-section, #projects-section, #press-section {
+  margin-bottom: 0;
   /* * * * * * * * * * * * * * * * * * * * * * * * * *
   * Group of images and descriptions
-  * - image-and-description-box: a box to contain
-  *     one image and its description below
   * - container to contain all boxes that allows
   *     horizontal scrolling
+  * - image-and-description-box: a box to contain
+  *     one image and its description below
   * * * * * * * * * * * * * * * * * * * * * * * * * */ }
-  .images-slide-section .title, #collection-section .title, #projects-section .title, #press-section .title {
+  .mobile-images-collection .title, #collection-section .title, #projects-section .title, #press-section .title {
     font-family: parabola;
     font-weight: 300;
     font-size: 43px;
     letter-spacing: .015em;
     margin-left: 35px;
     margin-bottom: 40px; }
-  .images-slide-section .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag {
+  .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag {
     background-image: url("images/buttons/buttons_more.svg");
     position: absolute;
     top: 0;
@@ -400,29 +372,7 @@ body.loading {
     height: 0;
     padding-bottom: 27.10843px;
     margin-top: 10px; }
-  .images-slide-section .image-and-description-box, #collection-section .image-and-description-box, #projects-section .image-and-description-box, #press-section .image-and-description-box {
-    display: inline-block;
-    vertical-align: top;
-    width: 152px;
-    margin-right: 22px;
-    margin-left: 22px;
-    white-space: normal; }
-    .images-slide-section .image-and-description-box .image, #collection-section .image-and-description-box .image, #projects-section .image-and-description-box .image, #press-section .image-and-description-box .image {
-      width: 152px;
-      height: 177px; }
-    .images-slide-section .image-and-description-box .text, #collection-section .image-and-description-box .text, #projects-section .image-and-description-box .text, #press-section .image-and-description-box .text, .images-slide-section .image-and-description-box .name, #collection-section .image-and-description-box .name, #projects-section .image-and-description-box .name, #press-section .image-and-description-box .name {
-      font-family: edmondSans;
-      font-weight: normal;
-      font-size: 12px;
-      letter-spacing: .05em;
-      line-height: 19px; }
-    .images-slide-section .image-and-description-box .name, #collection-section .image-and-description-box .name, #projects-section .image-and-description-box .name, #press-section .image-and-description-box .name {
-      font-family: sourceCodePro;
-      font-weight: 300;
-      margin-top: 23px;
-      margin-bottom: 23px;
-      text-transform: uppercase; }
-  .images-slide-section .images-descriptions-container, #collection-section .images-descriptions-container, #projects-section .images-descriptions-container, #press-section .images-descriptions-container {
+  .mobile-images-collection .images-descriptions-container, #collection-section .images-descriptions-container, #projects-section .images-descriptions-container, #press-section .images-descriptions-container {
     margin-left: 68px;
     margin-bottom: 79px;
     width: auto;
@@ -430,12 +380,39 @@ body.loading {
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap; }
+  .mobile-images-collection .image-and-description-box, #collection-section .image-and-description-box, #projects-section .image-and-description-box, #press-section .image-and-description-box {
+    display: inline-block;
+    vertical-align: top;
+    width: 180px;
+    margin-right: 22px;
+    margin-left: 22px;
+    white-space: normal; }
+    .mobile-images-collection .image-and-description-box .image, #collection-section .image-and-description-box .image, #projects-section .image-and-description-box .image, #press-section .image-and-description-box .image, .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1, .mobile-images-collection .image-and-description-box .image2, #collection-section .image-and-description-box .image2, #projects-section .image-and-description-box .image2, #press-section .image-and-description-box .image2, .mobile-images-collection .image-and-description-box .image3, #collection-section .image-and-description-box .image3, #projects-section .image-and-description-box .image3, #press-section .image-and-description-box .image3, .mobile-images-collection .image-and-description-box .image4, #collection-section .image-and-description-box .image4, #projects-section .image-and-description-box .image4, #press-section .image-and-description-box .image4 {
+      display: none;
+      width: 180px;
+      height: 210px; }
+    .mobile-images-collection .image-and-description-box .image, #collection-section .image-and-description-box .image, #projects-section .image-and-description-box .image, #press-section .image-and-description-box .image {
+      display: block; }
+    .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1 {
+      display: block; }
+    .mobile-images-collection .image-and-description-box .text, #collection-section .image-and-description-box .text, #projects-section .image-and-description-box .text, #press-section .image-and-description-box .text, .mobile-images-collection .image-and-description-box .name, #collection-section .image-and-description-box .name, #projects-section .image-and-description-box .name, #press-section .image-and-description-box .name {
+      font-family: edmondSans;
+      font-weight: normal;
+      font-size: 12px;
+      letter-spacing: .05em;
+      line-height: 17px; }
+    .mobile-images-collection .image-and-description-box .name, #collection-section .image-and-description-box .name, #projects-section .image-and-description-box .name, #press-section .image-and-description-box .name {
+      font-family: sourceCodePro;
+      font-weight: 300;
+      margin-top: 23px;
+      margin-bottom: 23px;
+      text-transform: uppercase; }
 
 #hero-section {
-  height: 650px; }
-  @media only screen and (max-width: 720px) {
+  height: 558px; }
+  @media only screen and (min-width: 1200px) {
     #hero-section {
-      height: 558px; } }
+      height: 650px; } }
   #hero-section .header {
     height: 100vh;
     position: relative; }
@@ -476,10 +453,6 @@ body.loading {
     bottom: 30px;
     width: 48px;
     padding-bottom: 28.125px; }
-    @media only screen and (max-width: 720px) {
-      #hero-section .scroll-tag {
-        left: 29px;
-        bottom: 30px; } }
   #hero-section .down-tag {
     background-image: url("images/buttons/buttons_down.svg");
     position: absolute;
@@ -488,215 +461,408 @@ body.loading {
     padding-bottom: 32.64249px;
     right: 22px;
     bottom: 30px; }
-    @media only screen and (max-width: 720px) {
-      #hero-section .down-tag {
-        right: 22px;
-        bottom: 30px; } }
 
-#aboutus-section .content {
-  position: relative;
-  margin: auto;
-  width: 75%; }
-  @media only screen and (min-width: 721px) and (max-width: 1023px) {
-    #aboutus-section .content {
-      width: 90%; } }
-  @media only screen and (max-width: 720px) {
-    #aboutus-section .content {
-      width: 100%; } }
-
-@media only screen and (max-width: 720px) {
-  #aboutus-section {
-    height: 660px;
-    margin-bottom: 64px; } }
-
-#aboutus-section .title {
-  text-transform: uppercase;
-  font-family: parabola;
-  font-weight: normal;
-  letter-spacing: .015em;
-  font-size: 64px;
-  margin-top: 58px;
-  margin-left: 10%; }
-  @media only screen and (min-width: 721px) and (max-width: 1023px) {
-    #aboutus-section .title {
-      margin-left: 10%; } }
-  @media only screen and (max-width: 720px) {
-    #aboutus-section .title {
-      font-size: 43px;
-      margin-left: 35px;
-      margin-bottom: 28px; } }
-
-#aboutus-section .text-container {
-  width: 46%;
-  float: left;
-  overflow-x: visible;
-  padding-left: 20%; }
-  @media only screen and (min-width: 721px) and (max-width: 1023px) {
-    #aboutus-section .text-container {
-      width: 46%;
-      padding-left: 20%; } }
-  @media only screen and (max-width: 720px) {
-    #aboutus-section .text-container {
-      padding-left: 0; } }
-  #aboutus-section .text-container .text, #aboutus-section .text-container .images-slide-section .image-and-description-box .name, .images-slide-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #aboutus-section .text-container .name {
-    width: 285px;
-    left: 27px;
-    margin-bottom: 60px; }
-    @media only screen and (max-width: 720px) {
-      #aboutus-section .text-container .text, #aboutus-section .text-container .images-slide-section .image-and-description-box .name, .images-slide-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #aboutus-section .text-container .name {
-        margin-bottom: 0;
-        margin-left: 27px; } }
-    #aboutus-section .text-container .text p, #aboutus-section .text-container .images-slide-section .image-and-description-box .name p, .images-slide-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #aboutus-section .text-container .name p {
-      font-family: edmondSans;
-      font-weight: normal;
-      font-size: 12px;
-      letter-spacing: .05em;
-      line-height: 15px; }
-    #aboutus-section .text-container .text .video-link, #aboutus-section .text-container .images-slide-section .image-and-description-box .name .video-link, .images-slide-section .image-and-description-box #aboutus-section .text-container .name .video-link, #aboutus-section .text-container #collection-section .image-and-description-box .name .video-link, #collection-section .image-and-description-box #aboutus-section .text-container .name .video-link, #aboutus-section .text-container #projects-section .image-and-description-box .name .video-link, #projects-section .image-and-description-box #aboutus-section .text-container .name .video-link, #aboutus-section .text-container #press-section .image-and-description-box .name .video-link, #press-section .image-and-description-box #aboutus-section .text-container .name .video-link {
-      font-family: sourceCodePro;
-      font-weight: 800;
-      font-size: 12px;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: inherit;
-      margin-top: 20px;
-      text-decoration: underline; }
-
-#aboutus-section .image-container {
-  width: 250px;
-  float: left; }
-  @media only screen and (max-width: 720px) {
-    #aboutus-section .image-container {
-      float: right; } }
-  #aboutus-section .image-container .image {
-    z-index: -1;
-    background-image: url("images/index/2_aboutus.jpg");
-    background-position-x: right;
+#aboutus-section {
+  height: 660px;
+  margin-bottom: 64px; }
+  #aboutus-section .content {
     position: relative;
-    width: 200px;
-    height: 500px;
-    margin-top: -190px;
-    float: right;
-    right: -86px; }
-    @media only screen and (max-width: 720px) {
-      #aboutus-section .image-container .image {
-        margin-top: -37px;
-        height: 243px;
-        bottom: 0;
-        right: 0; } }
+    margin: auto;
+    width: 100%; }
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
+      #aboutus-section .content {
+        width: 90%; } }
+    @media only screen and (min-width: 1200px) {
+      #aboutus-section .content {
+        width: 75%; } }
+  #aboutus-section .title {
+    text-transform: uppercase;
+    font-family: parabola;
+    font-weight: normal;
+    letter-spacing: .015em;
+    font-size: 43px;
+    margin-left: 35px;
+    margin-top: 58px;
+    margin-bottom: 28px; }
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
+      #aboutus-section .title {
+        font-size: 64px;
+        margin-left: 10%;
+        margin-bottom: 0; } }
+    @media only screen and (min-width: 1200px) {
+      #aboutus-section .title {
+        font-size: 80px;
+        margin-left: 10%;
+        margin-bottom: 0; } }
+  #aboutus-section .text-container {
+    width: 46%;
+    float: left;
+    overflow-x: visible;
+    padding-left: 0; }
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
+      #aboutus-section .text-container {
+        width: 46%;
+        padding-left: 20%; } }
+    @media only screen and (min-width: 1200px) {
+      #aboutus-section .text-container {
+        padding-left: 20%; } }
+    #aboutus-section .text-container .text, #aboutus-section .text-container .mobile-images-collection .image-and-description-box .name, .mobile-images-collection .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #aboutus-section .text-container .name {
+      width: 285px;
+      left: 27px;
+      margin-bottom: 0;
+      margin-left: 27px; }
+      @media only screen and (min-width: 1200px) {
+        #aboutus-section .text-container .text, #aboutus-section .text-container .mobile-images-collection .image-and-description-box .name, .mobile-images-collection .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #aboutus-section .text-container .name, #aboutus-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #aboutus-section .text-container .name {
+          margin-bottom: 60px;
+          margin-left: 0; } }
+      #aboutus-section .text-container .text p, #aboutus-section .text-container .mobile-images-collection .image-and-description-box .name p, .mobile-images-collection .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #aboutus-section .text-container .name p {
+        font-family: edmondSans;
+        font-weight: normal;
+        font-size: 12px;
+        letter-spacing: .05em;
+        line-height: 15px; }
+        @media only screen and (min-width: 1200px) {
+          #aboutus-section .text-container .text p, #aboutus-section .text-container .mobile-images-collection .image-and-description-box .name p, .mobile-images-collection .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #aboutus-section .text-container .name p, #aboutus-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #aboutus-section .text-container .name p {
+            font-size: 14px;
+            line-height: 17px; } }
+  #aboutus-section .image-container {
+    width: 250px;
+    float: right; }
+    @media only screen and (min-width: 1200px) {
+      #aboutus-section .image-container {
+        float: left; } }
+    #aboutus-section .image-container .image {
+      z-index: -1;
+      background-image: url("images/index/2_aboutus.jpg");
+      background-position-x: right;
+      position: relative;
+      width: 200px;
+      height: 243px;
+      margin-top: -37px;
+      float: right;
+      bottom: 0; }
+      @media only screen and (min-width: 1200px) {
+        #aboutus-section .image-container .image {
+          margin-top: -190px;
+          height: 500px;
+          bottom: auto;
+          right: -86px; } }
 
-#collection-section .image-and-description-box {
-  width: 180px; }
-  #collection-section .image-and-description-box .image {
-    width: 180px;
-    height: 210px; }
+@media only screen and (min-width: 1200px) {
+  #collection-section {
+    /* * * * * * * * * * * * * * * * * * * * * * * * * *
+    * Group of images and descriptions
+    * - image-and-description-box: a box to contain
+    *     one image and its description below
+    * - container to contain all boxes that allows
+    *     horizontal scrolling
+    * * * * * * * * * * * * * * * * * * * * * * * * * */ }
+    #collection-section .max-width-content {
+      max-width: 800px; }
+    #collection-section .title {
+      font-size: 80px;
+      text-align: right;
+      position: relative;
+      margin-right: -35px;
+      margin-bottom: 0; }
+    #collection-section .more-tag {
+      position: absolute;
+      top: 250px;
+      right: 28px; }
+    #collection-section .more-tag.desktop-only {
+      left: 28px;
+      right: auto; }
+    #collection-section .images-descriptions-container {
+      overflow: visible;
+      white-space: normal;
+      margin-left: 0;
+      margin-bottom: 0;
+      width: 100%;
+      height: auto;
+      overflow: visible; }
+    #collection-section .row {
+      width: 100%;
+      clear: both;
+      top: -30px;
+      position: relative; }
+    #collection-section .image-and-description-box {
+      display: none;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+      overflow: visible; }
+      #collection-section .image-and-description-box .image1, #collection-section .image-and-description-box .image2, #collection-section .image-and-description-box .image3, #collection-section .image-and-description-box .image4 {
+        display: block;
+        position: relative;
+        float: left; }
+      #collection-section .image-and-description-box .image1 {
+        width: 180px;
+        height: 210px; }
+      #collection-section .image-and-description-box .image2 {
+        width: 300px;
+        height: 210px;
+        margin-left: 40px;
+        top: -30px; }
+      #collection-section .image-and-description-box .image3 {
+        width: 180px;
+        height: 300px; }
+      #collection-section .image-and-description-box .image4 {
+        width: 210px;
+        height: 400px;
+        margin-left: 60px;
+        top: -98px; }
+      #collection-section .image-and-description-box .content-text {
+        float: left;
+        width: 320px;
+        padding-right: 20px; }
+      #collection-section .image-and-description-box .text, #collection-section .image-and-description-box .name {
+        font-family: edmondSans;
+        font-weight: normal;
+        font-size: 14px;
+        letter-spacing: .05em;
+        line-height: 17px; }
+      #collection-section .image-and-description-box .explore-link {
+        font-family: sourceCodePro;
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        text-align: left; }
+        #collection-section .image-and-description-box .explore-link a {
+          color: inherit; }
+      #collection-section .image-and-description-box .name {
+        font-family: sourceCodePro;
+        font-weight: 300;
+        margin-top: 23px;
+        margin-bottom: 23px;
+        text-transform: uppercase; }
+    #collection-section .image-and-description-box.first {
+      display: block; } }
+
+#projects-section {
+  margin-bottom: 79px; }
+  @media only screen and (min-width: 1200px) {
+    #projects-section {
+      /* * * * * * * * * * * * * * * * * * * * * * * * * *
+    * Group of images and descriptions
+    * - image-and-description-box: a box to contain
+    *     one image and its description below
+    * - container to contain all boxes that allows
+    *     horizontal scrolling
+    * * * * * * * * * * * * * * * * * * * * * * * * * */ }
+      #projects-section .max-width-content {
+        max-width: 700px; }
+      #projects-section .title {
+        font-size: 80px;
+        text-align: left;
+        position: relative;
+        margin-left: -85px; }
+      #projects-section .more-tag {
+        position: absolute;
+        top: 250px;
+        right: 28px; }
+      #projects-section .more-tag.desktop-only {
+        left: 28px;
+        right: auto; }
+      #projects-section .images-descriptions-container {
+        overflow: visible;
+        white-space: normal;
+        margin-left: 0;
+        margin-bottom: 79px;
+        width: 100%;
+        height: auto;
+        overflow: visible; }
+      #projects-section .column {
+        float: left;
+        position: relative; }
+      #projects-section .image-and-description-box {
+        display: none;
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        overflow: visible; }
+        #projects-section .image-and-description-box .image1, #projects-section .image-and-description-box .image2 {
+          display: block;
+          position: relative;
+          float: left; }
+        #projects-section .image-and-description-box .image1 {
+          width: 250px;
+          height: 320px; }
+        #projects-section .image-and-description-box .image2 {
+          width: 370px;
+          height: 210px;
+          margin-left: 80px;
+          margin-top: -130px; }
+        #projects-section .image-and-description-box .content-text {
+          clear: left;
+          width: 320px;
+          padding: 20px;
+          padding-left: 40px; }
+        #projects-section .image-and-description-box .text, #projects-section .image-and-description-box .name {
+          font-family: edmondSans;
+          font-weight: normal;
+          font-size: 14px;
+          letter-spacing: .05em;
+          line-height: 17px; }
+        #projects-section .image-and-description-box .name {
+          font-family: sourceCodePro;
+          font-weight: 300;
+          margin-top: 0;
+          margin-bottom: 23px;
+          text-transform: uppercase; }
+        #projects-section .image-and-description-box .explore-link {
+          font-family: sourceCodePro;
+          font-weight: 600;
+          font-size: 12px;
+          letter-spacing: .1em;
+          text-transform: uppercase;
+          text-align: left; }
+          #projects-section .image-and-description-box .explore-link a {
+            color: inherit; }
+      #projects-section .image-and-description-box.first {
+        display: block; } }
 
 #bespoke-section {
   margin-bottom: 115px; }
+  @media only screen and (max-width: 720px) {
+    #bespoke-section {
+      padding-left: 100px; } }
   #bespoke-section .title {
+    z-index: 1;
+    position: relative;
     font-family: parabola;
     font-weight: 300;
-    font-size: 43px;
     letter-spacing: .015em;
-    margin-left: 35px;
+    font-size: 80px;
+    margin-left: 130px;
     margin-bottom: 20px; }
-  #bespoke-section .desc-container {
-    width: calc(100% - 190px);
-    height: 220px;
+    @media only screen and (max-width: 720px) {
+      #bespoke-section .title {
+        font-size: 43px;
+        margin-left: 35px; } }
+  #bespoke-section .text-container {
+    width: 290px;
+    z-index: 1;
+    overflow: visible;
     padding-top: 38px;
     float: left;
-    overflow: visible;
-    position: relative; }
-    #bespoke-section .desc-container .text, #bespoke-section .desc-container .images-slide-section .image-and-description-box .name, .images-slide-section .image-and-description-box #bespoke-section .desc-container .name, #bespoke-section .desc-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #bespoke-section .desc-container .name, #bespoke-section .desc-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #bespoke-section .desc-container .name, #bespoke-section .desc-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #bespoke-section .desc-container .name {
-      float: left;
-      padding-left: 43px;
-      min-height: 175px;
+    position: relative;
+    min-height: 175px;
+    padding-left: 43px; }
+    #bespoke-section .text-container .desc {
       margin-top: 10px;
-      width: 290px;
       font-family: edmondSans;
       font-weight: normal;
-      font-size: 12px;
+      font-size: 14px;
       letter-spacing: .05em;
-      line-height: 19px; }
-    #bespoke-section .desc-container .contact-link {
+      line-height: 17px; }
+      @media only screen and (max-width: 720px) {
+        #bespoke-section .text-container .desc {
+          font-size: 12px; } }
+    #bespoke-section .text-container .contact-link {
       font-family: sourceCodePro;
       font-weight: 600;
-      font-decoration: underline;
       font-size: 12px;
       letter-spacing: .1em;
       text-transform: uppercase;
-      color: inherit; }
-  #bespoke-section .img1-shelf-container {
-    width: 190px;
-    overflow: visible;
-    float: right; }
-    #bespoke-section .img1-shelf-container .shelf {
-      background-image: url("images/index/5_bespoke1.jpg");
-      width: 190px;
-      height: 246px;
-      right: 0;
-      margin-top: -80px; }
+      text-align: right; }
       @media only screen and (max-width: 720px) {
-        #bespoke-section .img1-shelf-container .shelf {
-          margin-top: 0; } }
-  #bespoke-section .img2-marble-container {
-    width: 351px;
-    height: 208px;
+        #bespoke-section .text-container .contact-link {
+          text-align: left; } }
+      #bespoke-section .text-container .contact-link a {
+        color: inherit; }
+  #bespoke-section .column {
+    float: right;
     overflow: visible;
-    float: right; }
-    #bespoke-section .img2-marble-container .marble {
-      background-image: url("images/index/5_bespoke2.jpg");
-      position: relative;
-      width: 550px;
-      height: 234px;
-      top: -26px;
-      z-index: -1;
-      float: right;
-      margin-top: -80px;
-      margin-right: 40px; }
-      @media only screen and (min-width: 721px) and (max-width: 1023px) {
-        #bespoke-section .img2-marble-container .marble {
-          margin-right: 0; } }
-      @media only screen and (max-width: 720px) {
-        #bespoke-section .img2-marble-container .marble {
-          width: 100%;
-          margin-top: 0;
-          margin-right: 0; } }
+    width: 0; }
+  #bespoke-section .shelf {
+    background-image: url("images/index/5_bespoke1.jpg");
+    width: 500px;
+    height: 300px;
+    float: right;
+    position: relative;
+    margin-top: -80px; }
+    @media only screen and (max-width: 720px) {
+      #bespoke-section .shelf {
+        width: 190px;
+        height: 246px;
+        margin-top: 0; } }
+  #bespoke-section .marble {
+    background-image: url("images/index/5_bespoke2.jpg");
+    position: relative;
+    clear: right;
+    width: 750px;
+    height: 300px;
+    top: -26px;
+    z-index: -1;
+    float: right;
+    margin-top: -80px;
+    margin-right: 40px; }
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
+      #bespoke-section .marble {
+        margin-right: 0; } }
+    @media only screen and (max-width: 720px) {
+      #bespoke-section .marble {
+        width: 315px;
+        height: 234px;
+        margin-top: 0;
+        margin-right: 0; } }
 
 #sustain-section .title {
   font-family: parabola;
   font-weight: 300;
-  font-size: 43px;
+  font-size: 80px;
   letter-spacing: .015em;
-  margin-left: 35px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  float: right;
+  margin-right: 50px; }
+  @media only screen and (max-width: 720px) {
+    #sustain-section .title {
+      font-size: 43px;
+      float: none;
+      margin-left: 35px; } }
 
 #sustain-section .img1-chair-container {
   float: left;
   overflow: visible;
-  width: 197px; }
+  width: 250px;
+  margin-top: 50px; }
+  @media only screen and (max-width: 720px) {
+    #sustain-section .img1-chair-container {
+      margin-top: 0;
+      width: 197px; } }
   #sustain-section .img1-chair-container .chair {
     background-image: url("images/index/6_sustain2.jpg");
+    position: relative;
     width: 100%;
-    height: 231px; }
+    height: 400px;
+    top: -40px; }
+    @media only screen and (max-width: 720px) {
+      #sustain-section .img1-chair-container .chair {
+        top: 0;
+        height: 231px; } }
 
 #sustain-section .img2-marble-container {
   float: left;
   overflow: visible;
-  width: calc(40% - 197px); }
+  width: calc(40% - 197px);
+  margin-top: 50px; }
   @media only screen and (max-width: 720px) {
     #sustain-section .img2-marble-container {
       float: right;
+      margin-top: 0;
       width: calc(100% - 197px); } }
   #sustain-section .img2-marble-container .marble {
     background-image: url("images/index/6_sustain1.jpg");
-    width: 320px;
-    height: 221px;
-    top: -73px;
+    height: 250px;
+    width: 500px;
     position: relative;
     z-index: -1; }
     @media only screen and (max-width: 720px) {
       #sustain-section .img2-marble-container .marble {
+        height: 221px;
+        width: 320px;
+        top: -73px;
         left: -74px; } }
 
 #sustain-section .text-container {
@@ -709,14 +875,14 @@ body.loading {
     #sustain-section .text-container {
       width: 100%;
       margin-bottom: 120px; } }
-  #sustain-section .text-container .text, #sustain-section .text-container .images-slide-section .image-and-description-box .name, .images-slide-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #sustain-section .text-container .name {
+  #sustain-section .text-container .text, #sustain-section .text-container .mobile-images-collection .image-and-description-box .name, .mobile-images-collection .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #sustain-section .text-container .name {
     width: 400px;
     margin-left: -65px; }
     @media only screen and (max-width: 720px) {
-      #sustain-section .text-container .text, #sustain-section .text-container .images-slide-section .image-and-description-box .name, .images-slide-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #sustain-section .text-container .name {
+      #sustain-section .text-container .text, #sustain-section .text-container .mobile-images-collection .image-and-description-box .name, .mobile-images-collection .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #collection-section .image-and-description-box .name, #collection-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #projects-section .image-and-description-box .name, #projects-section .image-and-description-box #sustain-section .text-container .name, #sustain-section .text-container #press-section .image-and-description-box .name, #press-section .image-and-description-box #sustain-section .text-container .name {
         width: 100%;
         margin-left: 0; } }
-    #sustain-section .text-container .text p, #sustain-section .text-container .images-slide-section .image-and-description-box .name p, .images-slide-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #sustain-section .text-container .name p {
+    #sustain-section .text-container .text p, #sustain-section .text-container .mobile-images-collection .image-and-description-box .name p, .mobile-images-collection .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #sustain-section .text-container .name p {
       width: 240px;
       float: left;
       margin-bottom: 20px;
@@ -728,20 +894,89 @@ body.loading {
       letter-spacing: .05em;
       line-height: 19px; }
       @media only screen and (max-width: 720px) {
-        #sustain-section .text-container .text p, #sustain-section .text-container .images-slide-section .image-and-description-box .name p, .images-slide-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #sustain-section .text-container .name p {
+        #sustain-section .text-container .text p, #sustain-section .text-container .mobile-images-collection .image-and-description-box .name p, .mobile-images-collection .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #collection-section .image-and-description-box .name p, #collection-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #projects-section .image-and-description-box .name p, #projects-section .image-and-description-box #sustain-section .text-container .name p, #sustain-section .text-container #press-section .image-and-description-box .name p, #press-section .image-and-description-box #sustain-section .text-container .name p {
           width: 100%;
           min-height: auto; } }
 
-#press-section .text, .images-slide-section .image-and-description-box #press-section .name, #collection-section .image-and-description-box #press-section .name, #projects-section .image-and-description-box #press-section .name, #press-section .image-and-description-box .name {
-  text-align: center;
+#press-section .date {
+  margin-top: 26px;
+  margin-bottom: 12px;
   font-family: sourceCodePro;
-  font-weight: 300;
-  font-size: 12px;
+  font-weight: normal;
+  font-size: 14px;
   letter-spacing: .05em;
-  line-height: 19px;
-  text-transform: uppercase;
-  margin-top: 150px;
-  margin-bottom: 150px; }
+  line-height: 17px;
+  text-transform: uppercase; }
+  @media only screen and (max-width: 720px) {
+    #press-section .date {
+      font-size: 12px; } }
+
+#press-section .text, .mobile-images-collection .image-and-description-box #press-section .name, #collection-section .image-and-description-box #press-section .name, #projects-section .image-and-description-box #press-section .name, #press-section .image-and-description-box .name {
+  margin-top: 19px; }
+
+@media only screen and (min-width: 1200px) {
+  #press-section .max-width-content {
+    max-width: 800px; }
+  #press-section .title {
+    font-size: 80px;
+    text-align: left;
+    position: relative;
+    margin-left: -85px;
+    margin-bottom: 0; }
+  #press-section .more-tag {
+    position: absolute;
+    top: 250px;
+    right: 28px; }
+  #press-section .text, .mobile-images-collection .image-and-description-box #press-section .name, #collection-section .image-and-description-box #press-section .name, #projects-section .image-and-description-box #press-section .name, #press-section .image-and-description-box .name {
+    font-size: 14px; }
+  #press-section .explore-link {
+    font-family: sourceCodePro;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    text-align: left; }
+    #press-section .explore-link a {
+      color: inherit; }
+  #press-section .grid:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #press-section .grid .grid-item {
+    float: left;
+    position: relative; }
+  #press-section .grid .grid-item.full {
+    width: 100%; }
+  #press-section .grid .grid-item.one-half {
+    width: 50%; }
+  #press-section .grid .grid-item.one-third {
+    width: 33.33%; }
+  #press-section .grid .grid-item.two-third {
+    width: 66.66%; }
+  #press-section .grid .grid-item.one-fourth {
+    width: 25%; }
+  #press-section .grid .grid-item.three-fourth {
+    width: 75%; }
+  #press-section .grid .grid-item.one-fifth {
+    width: 20%; }
+  #press-section .grid .grid-item.two-fifth {
+    width: 40%; }
+  #press-section .grid .grid-item.three-fifth {
+    width: 60%; }
+  #press-section .grid .grid-item.four-fifth {
+    width: 80%; }
+  #press-section .grid .grid-item.one-sixth {
+    width: 16.66%; }
+  #press-section .grid .grid-item.five-sixth {
+    width: 83.33%; }
+  #press-section .grid .grid-item.one-eighth {
+    width: 12.5%; }
+  #press-section .grid .grid-item.three-eighth {
+    width: 37.5%; }
+  #press-section .grid .grid-item.five-eighth {
+    width: 62.5%; }
+  #press-section .grid .grid-item.seven-eighth {
+    width: 87.5%; } }
 
 #contact-section {
   text-align: center;
@@ -752,97 +987,243 @@ body.loading {
     font-size: 43px;
     letter-spacing: .055em;
     margin: auto; }
+    @media only screen and (min-width: 1200px) {
+      #contact-section .title {
+        font-size: 80px; } }
   #contact-section .content {
     margin-top: 50px;
     margin-left: 32px;
     margin-right: 28px; }
     #contact-section .content p {
       font-family: sourceCodePro;
-      font-weight: 600;
-      font-size: 12px;
-      letter-spacing: .01em;
+      font-weight: 300;
+      font-size: 14px;
+      letter-spacing: .1em;
       margin-top: 20px; }
+      @media only screen and (min-width: 1200px) {
+        #contact-section .content p {
+          font-size: 18px; } }
       #contact-section .content p .info {
+        font-size: 12px;
         font-family: edmondSans;
         font-weight: normal; }
+        @media only screen and (min-width: 1200px) {
+          #contact-section .content p .info {
+            font-size: 17px; } }
     #contact-section .content a {
       text-decoration: underline;
       color: inherit; }
     #contact-section .content .contact-info {
       margin-top: 40px;
       font-family: edmondSans;
-      font-weight: normal; }
+      font-weight: normal;
+      font-size: 12px; }
+      @media only screen and (min-width: 1200px) {
+        #contact-section .content .contact-info {
+          font-size: 17px; } }
 
-.collection-page .max-width-content {
-  position: relative;
-  max-width: 300px;
-  margin: auto; }
-
-.collection-page .image-description {
-  margin-top: 50px; }
-  .collection-page .image-description .image {
-    height: 200px;
-    max-width: 320px;
-    display: block;
+.collection-page {
+  /* * * * * * * * * * * * * * * *
+   * HEADER
+   * * * * * * * * * * * * * * * */
+  /* * * * * * * * * * * * * * * *
+   * CONTENT
+   * * * * * * * * * * * * * * * */ }
+  @media only screen and (min-width: 1200px) {
+    .collection-page .next, .collection-page .prev {
+      top: 300px; }
+    .collection-page .main-title {
+      font-size: 80px;
+      text-align: right; } }
+  .collection-page .max-width-content {
+    top: 75px;
+    position: relative;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 150px; }
+    @media only screen and (min-width: 1200px) {
+      .collection-page .max-width-content {
+        max-width: 800px;
+        margin: auto;
+        height: 2000px; } }
+  .collection-page .image-description {
+    position: relative;
+    padding-top: 50px;
+    width: 320px;
     margin: auto; }
-  .collection-page .image-description .desc {
+    .collection-page .image-description .image {
+      height: 200px;
+      max-width: 320px;
+      display: block;
+      margin: auto; }
+      @media only screen and (min-width: 1200px) {
+        .collection-page .image-description .image {
+          margin: 0; } }
+    .collection-page .image-description .desc {
+      font-family: sourceCodePro;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: .05em;
+      line-height: 21px;
+      text-transform: uppercase;
+      margin-top: 20px;
+      margin-left: 30px; }
+      @media only screen and (min-width: 1200px) {
+        .collection-page .image-description .desc {
+          margin-left: 0; } }
+  .collection-page .image-desc-container {
+    position: relative;
+    width: 0;
+    height: 50px;
+    overflow: visible; }
+    @media only screen and (max-width: 720px) {
+      .collection-page .image-desc-container {
+        height: 380px; } }
+    @media only screen and (min-width: 721px) and (max-width: 1199px) {
+      .collection-page .image-desc-container {
+        height: 380px; } }
+  .collection-page .back-to-top {
+    background-image: url("./images/buttons/buttons_backtotop.svg");
+    width: 40px;
+    height: 0;
+    padding-bottom: 30.92784px;
+    position: absolute;
+    right: 18px;
+    bottom: 91px; }
+  @media only screen and (min-width: 1200px) {
+    .collection-page .image-description {
+      margin: 0; }
+    .collection-page .image-description1 {
+      margin-top: -140px;
+      margin-left: 100px; }
+    .collection-page .image-description2 {
+      margin-top: 192px;
+      margin-left: 319px; }
+    .collection-page .image-description3 {
+      margin-top: 51px;
+      margin-left: 4px; }
+    .collection-page .image-description4 {
+      margin-top: 162px;
+      margin-left: 438px; }
+    .collection-page .image-description5 {
+      margin-top: 62px;
+      margin-left: 75px; }
+    .collection-page .image-description6 {
+      margin-top: 150px;
+      margin-left: 296px; }
+    .collection-page .image-description7 {
+      margin-top: 72px;
+      margin-left: 10px; }
+    .collection-page .image-description8 {
+      margin-top: 251px;
+      margin-left: 206px; }
+    .collection-page .image-description9 {
+      margin-top: 233px;
+      margin-left: 447px; }
+    .collection-page .image-description10 {
+      margin-top: 30px;
+      margin-left: 108px; } }
+
+.furniture {
+  /* * * * * * * * * * * * * * * *
+   * HEADER
+   * * * * * * * * * * * * * * * */
+  /* * * * * * * * * * * * * * * *
+   * CONTENT
+   * * * * * * * * * * * * * * * */ }
+  @media only screen and (min-width: 1200px) {
+    .furniture .next, .furniture .prev {
+      top: 300px; } }
+  .furniture .max-width-content {
+    position: relative;
+    max-width: 320px;
+    margin: auto;
+    top: 80px; }
+    @media only screen and (min-width: 1200px) {
+      .furniture .max-width-content {
+        max-width: 1000px;
+        min-height: 675px; } }
+  .furniture .image {
+    max-width: 320px;
+    padding-top: 40px;
+    display: block;
+    position: relative;
+    margin: auto; }
+  .furniture .desc {
+    font-family: edmondSans;
+    font-weight: normal;
+    font-size: 12px;
+    letter-spacing: .05em;
+    line-height: 19px;
+    margin: 40px 15px; }
+    @media only screen and (min-width: 1200px) {
+      .furniture .desc {
+        margin-top: 200px;
+        margin-left: 684px;
+        width: 350px; } }
+    .furniture .desc .title {
+      font-family: sourceCodePro;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      margin-top: 10px;
+      text-align: center; }
+  .furniture .back-link {
     font-family: sourceCodePro;
     font-weight: 600;
     font-size: 12px;
     letter-spacing: .05em;
-    line-height: 21px;
+    line-height: 19px;
     text-transform: uppercase;
-    margin-top: 20px;
-    margin-left: 30px; }
-
-.collection-page .back-to-top {
-  background-image: url("./images/buttons/buttons_backtotop.svg");
-  width: 40px;
-  height: 0;
-  padding-bottom: 30.92784px;
-  position: absolute;
-  right: 18px;
-  bottom: 91px; }
-
-#furniture .max-width-content {
-  position: relative;
-  max-width: 500px;
-  margin: auto; }
-
-#furniture .image {
-  padding-top: 40px;
-  height: 340px;
-  max-width: 300px;
-  display: block;
-  position: relative;
-  margin: auto; }
-
-#furniture .desc {
-  font-family: edmondSans;
-  font-weight: normal;
-  font-size: 12px;
-  letter-spacing: .05em;
-  line-height: 19px;
-  margin: 40px 15px; }
-
-#furniture .back-link {
-  font-family: sourceCodePro;
-  font-weight: 600;
-  font-size: 12px;
-  letter-spacing: .05em;
-  line-height: 19px;
-  text-transform: uppercase;
-  color: inherit;
-  text-align: center; }
+    color: inherit;
+    text-align: center; }
+    @media only screen and (min-width: 1200px) {
+      .furniture .back-link {
+        text-align: left; } }
+  @media only screen and (min-width: 1200px) {
+    .furniture .column {
+      float: left;
+      width: 0;
+      height: 500px;
+      overflow: visible; }
+    .furniture .image1 {
+      padding-top: 0;
+      top: 100px;
+      width: 292px;
+      height: 340px; }
+    .furniture .image2 {
+      padding-top: 0;
+      top: 40px;
+      left: 350px;
+      width: 202px;
+      height: 340px; }
+    .furniture .image3 {
+      padding-top: 0;
+      top: 80px;
+      left: 383px;
+      width: 280px;
+      height: 237px; } }
 
 #project-info {
-  padding-top: 20px; }
+  padding-top: 20px;
+  width: 100%;
+  display: table; }
+  @media only screen and (min-width: 1200px) {
+    #project-info {
+      padding-top: 150px;
+      width: 500px;
+      margin: auto; } }
   #project-info .component {
     text-align: center;
     width: 80%;
     max-width: 255px;
     margin: auto;
     margin-top: 35px; }
+    @media only screen and (min-width: 1200px) {
+      #project-info .component {
+        display: table-row;
+        height: 35px; } }
   #project-info .title {
     font-family: sourceCodePro;
     font-weight: 600;
@@ -850,9 +1231,20 @@ body.loading {
     letter-spacing: .05em;
     line-height: 21px;
     text-transform: uppercase; }
+    @media only screen and (min-width: 1200px) {
+      #project-info .title {
+        display: table-cell;
+        text-align: left;
+        width: 150px;
+        border: 5px; } }
   #project-info .desc {
     font-family: edmondSans;
     font-weight: normal;
     font-size: 12px;
     letter-spacing: .05em;
     line-height: 15px; }
+    @media only screen and (min-width: 1200px) {
+      #project-info .desc {
+        display: table-cell;
+        text-align: left;
+        border: 5px; } }

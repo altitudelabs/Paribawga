@@ -14,12 +14,12 @@
     <link rel="stylesheet" type="text/css" href="./../main.css">
   </head>
 
-  <body id="furniture">
+  <body class="furniture">
 
     <!-- NAV MENU -->
     <div class="gray-bg"></div>
-    <div class="nav-menu hidden">
-      <div class="title"> - menu - </div>
+    <div class="nav-menu">
+      <div class="title"> - collection - </div>
       <ul class="links">
         <li>home</li>
         <li><a href="./../index.html#aboutus">about us</a></li>
@@ -32,29 +32,36 @@
       </ul>
     </div>
 
-    <div class="header">
-      <div class="title">-collection-</div>
-      <div class="navigations">
-        <div class="previous"></div>
-        <div class="sub-title">furniture name 3</div>
-        <div class="next"></div>
-      </div>
-    </div>
-    <div class="content max-width-content">
-      <a href="./../images/furniture/1-furniture1.jpg" data-lightbox="furniture1"><img class="image" src="./../images/furniture/1-furniture1.jpg"/></a>
-      <a href="./../images/furniture/1-furniture2.jpg" data-lightbox="furniture1"><img class="image" src="./../images/furniture/1-furniture2.jpg"/></a>
-      <a href="./../images/furniture/1-furniture3.jpg" data-lightbox="furniture1"><img class="image" src="./../images/furniture/1-furniture3.jpg"/></a>
-      <div class="desc">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        <br><br>
-        Material: Wood
-        <br><br>
-        Dimensions: W 110cm x L 500cm x H 150cm
-        <br><br>
-        Finishings: Duis aute irure dolor in
-      </div>
-      <a href="collection.html" class="back-link"><p>back to collection</p></a>
+    <a name="top"></a>
 
+    <div class="prev"></div>
+    <div class="next"></div>
+
+
+    <div class="content max-width-content">
+      <div class="sub-title mobile-transition-only">furniture name 3</div>
+      <div class="column">
+        <a href="./../images/furniture/1-furniture2.jpg" data-lightbox="furniture1"><img class="image image1" src="./../images/furniture/1-furniture2.jpg"/></a>
+      </div>
+      <div class="column">
+        <a href="./../images/furniture/1-furniture1.jpg" data-lightbox="furniture1"><img class="image image2" src="./../images/furniture/1-furniture1.jpg"/></a>
+        <a href="./../images/furniture/1-furniture3.jpg" data-lightbox="furniture1"><img class="image image3" src="./../images/furniture/1-furniture3.jpg"/></a>
+      </div>
+      <div class="column">
+        <div class="desc">
+          <span class="title desktop-only">furniture name 3</span>
+          <br><br>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <br><br>
+          Material: Wood
+          <br><br>
+          Dimensions: W 110cm x L 500cm x H 150cm
+          <br><br>
+          Finishings: Duis aute irure dolor in
+          <br><br><br>
+          <a href="collection.html" class="back-link"><p>back to collection</p></a>
+        </div>
+      </div>
     </div>
     <section class="section-container" id="footer">
       <a href="./../index.html"><div class="logo"></div></a>

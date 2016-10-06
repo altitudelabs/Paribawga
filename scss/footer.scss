@@ -1,26 +1,42 @@
 #footer {
 
   $logo-width: 150px;
-
-  margin-top: 75px;
+  $app-width: 30px;
+  clear: both;
+  padding-top: 125px;
 
   .logo {
     background-image: url('./images/buttons/sosmed_paribawga logo.svg');
     @extend .background-contain;
     width: $logo-width;
     height: 60px;
+
+    float: none;
     margin: auto;
+    left: auto;
     margin-bottom: 16px;
+
+    @include responsive(desktop) {
+      float: left;
+      margin-left: 100px;
+      margin-bottom: 0;
+    }
   }
 
   .apps-logo {
 
-    $app-width: 30px;
 
+    margin-right: 0;
     left: 50%;
     position: relative;
-    margin-bottom: 30px;
     height: $app-width;
+    margin-bottom: 30px;
+
+    @include responsive(desktop) {
+      margin-right: 100px;
+      left: auto;
+      margin-bottom: 0;
+    }
 
     .app {
       @extend .background-contain;
@@ -36,5 +52,9 @@
     float: right;
     position: relative;
     left: -50%;
+
+    @include responsive(desktop) {
+      left: auto;
+    }
   }
 }

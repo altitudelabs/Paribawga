@@ -1,36 +1,130 @@
 #press-section {
-  @extend .images-slide-section;
-  //
-  // .title {
-  //   margin-bottom: 0;
-  // }
-  //
-  // .date {
-  //   margin-top: 26px;
-  //   margin-bottom: 12px;
-  //
-  //   font-family: sourceCodePro;
-  //   font-weight: 300;
-  //   font-size: 12px;
-  //   letter-spacing: .05em;
-  //   line-height: 19px;
-  //   text-transform: uppercase;
-  // }
-  //
-  // .text {
-  //   margin-top: 19px;
-  // }
+  @extend .mobile-images-collection;
 
-  .text {
-    text-align: center;
+  .date {
+    margin-top: 26px;
+    margin-bottom: 12px;
+
     font-family: sourceCodePro;
-    font-weight: 300;
-    font-size: 12px;
+    font-weight: normal;
+    font-size: 14px;
     letter-spacing: .05em;
-    line-height: 19px;
+    line-height: 17px;
     text-transform: uppercase;
 
-    margin-top: 150px;
-    margin-bottom: 150px;
+    @include responsive(mobile) {
+      font-size: 12px;
+    }
   }
+
+  .text {
+    margin-top: 19px;
+  }
+
+  // desktop
+  @include responsive(desktop) {
+
+
+    $more-tag-top: 250px;
+    $more-tag-width: 30px;
+
+    $content-text-width: 320px;
+
+    .max-width-content {
+      max-width: 800px;
+    }
+
+    .title {
+      font-size: 80px;
+      text-align: left;
+      position: relative;
+      margin-left: -85px;
+      margin-bottom: 0;
+    }
+
+    .more-tag { // 166 x 150
+      position: absolute;
+      top: $more-tag-top;
+      right: 28px;
+    }
+
+    .text {
+      font-size: 14px;
+    }
+
+
+    .explore-link {
+      font-family: sourceCodePro;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      text-align: left;
+
+      a {
+        color: inherit;
+      }
+    }
+
+    .grid {
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .grid-item {
+        float: left;
+        position: relative;
+      }
+      .grid-item.full {
+        width: 100%;
+      }
+      .grid-item.one-half {
+        width: 50%;
+      }
+      .grid-item.one-third {
+        width: 33.33%;
+      }
+      .grid-item.two-third {
+        width: 66.66%;
+      }
+      .grid-item.one-fourth {
+        width: 25%;
+      }
+      .grid-item.three-fourth {
+        width: 75%;
+      }
+      .grid-item.one-fifth {
+        width: 20%;
+      }
+      .grid-item.two-fifth {
+        width: 40%;
+      }
+      .grid-item.three-fifth {
+        width: 60%;
+      }
+      .grid-item.four-fifth {
+        width: 80%;
+      }
+      .grid-item.one-sixth {
+        width: 16.66%;
+      }
+      .grid-item.five-sixth {
+        width: 83.33%;
+      }
+      .grid-item.one-eighth {
+        width: 12.5%;
+      }
+      .grid-item.three-eighth {
+        width: 37.5%;
+      }
+      .grid-item.five-eighth {
+        width: 62.5%;
+      }
+      .grid-item.seven-eighth {
+        width: 87.5%;
+      }
+    }
+  }
+
 }

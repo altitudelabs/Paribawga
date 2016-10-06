@@ -1,36 +1,65 @@
 #sustain-section {
 
-  $chair-width: 197px;
-  $chair-height: 231px;
+  $chair-width: 250px;
+  $chair-width-mobile: 197px;
+
+  $chair-height: 400px;
+  $chair-height-mobile: 231px;
 
   $chair-marble-overlap: -74px;
+
+  $image-container-top: 50px;
 
   $marble-container-width: calc(40% - 197px);
   $marble-container-width-mobile: calc(100% - 197px); //chair-width
   $marble-top: -73px;
-  $marble-width: 320px;
-  $marble-height: 221px;
+
+  $marble-width: 500px;
+  $marble-width-mobile: 320px;
+
+  $marble-height: 250px;
+  $marble-height-mobile: 221px;
 
   .title {
     font-family: parabola;
     font-weight: 300;
-    font-size: 43px;
+    font-size: 80px;
     letter-spacing: .015em;
-    margin-left: 35px;
     margin-bottom: 20px;
+    float: right;
+    margin-right: 50px;
+
+    @include responsive(mobile) {
+      font-size: 43px;
+      float: none;
+      margin-left: 35px;
+    }
   }
 
   .img1-chair-container {
     float: left;
     overflow: visible;
     width: $chair-width;
+    margin-top: $image-container-top;
+
+    @include responsive(mobile) {
+      margin-top: 0;
+      width: $chair-width-mobile;
+    }
 
     .chair {
       background-image: url('images/index/6_sustain2.jpg');
-      @extend .background-contain;
-
+      @extend .background-cover;
+      position: relative;
       width: 100%;
       height: $chair-height;
+      top: -40px;
+
+      @include responsive(mobile) {
+        top: 0;
+        height: $chair-height-mobile;
+
+      }
     }
   }
 
@@ -38,21 +67,25 @@
     float: left;
     overflow: visible;
     width: $marble-container-width;
+    margin-top: $image-container-top;
 
     @include responsive (mobile) {
       float: right;
+      margin-top: 0;
       width: $marble-container-width-mobile;
     }
 
     .marble {
       background-image: url('images/index/6_sustain1.jpg');
-      width: $marble-width;
       height: $marble-height;
-      top: $marble-top;
+      width: $marble-width;
       position: relative;
       z-index: -1;
 
       @include responsive (mobile) {
+        height: $marble-height-mobile;
+        width: $marble-width-mobile;
+        top: $marble-top;
         left: $chair-marble-overlap;
 
       }
