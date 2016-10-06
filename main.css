@@ -1240,12 +1240,12 @@ body.loading {
     .furniture .next, .furniture .prev {
       top: 300px; }
     .furniture .prev {
-      left: 77px;
+      left: 20px;
       width: 60px;
       height: 0;
       padding-bottom: 26.2px; }
     .furniture .next {
-      right: 66px;
+      right: 20px;
       width: 35px;
       height: 0;
       padding-bottom: 38.04348px; } }
