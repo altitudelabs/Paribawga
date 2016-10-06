@@ -203,7 +203,7 @@ body.loading {
 
 #footer {
   clear: both;
-  padding-top: 125px; }
+  margin-top: 125px; }
   @media only screen and (min-width: 1200px) {
     #footer {
       position: fixed;
@@ -1156,7 +1156,7 @@ body.loading {
     margin: auto; }
     .collection-page .image-description .image {
       height: 200px;
-      max-width: 320px;
+      max-width: 300px;
       display: block;
       margin: auto; }
       @media only screen and (min-width: 1200px) {
@@ -1257,7 +1257,7 @@ body.loading {
         max-width: 1000px;
         min-height: 675px; } }
   .furniture .image {
-    max-width: 320px;
+    max-width: 300px;
     padding-top: 40px;
     display: block;
     position: relative;
@@ -1300,6 +1300,8 @@ body.loading {
       width: 0;
       height: 500px;
       overflow: visible; }
+    .furniture .image {
+      max-width: none; }
     .furniture .image1 {
       padding-top: 0;
       top: 100px;

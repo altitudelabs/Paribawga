@@ -3,7 +3,7 @@
   $logo-width: 150px;
   $app-width: 30px;
   clear: both;
-  padding-top: 125px;
+  margin-top: 125px;
 
   @include responsive(desktop) {
     position: fixed;
