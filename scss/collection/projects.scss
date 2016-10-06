@@ -1,57 +1,233 @@
-#project-info {
+.project-page {
 
-  padding-top: 20px;
-  width: 100%;
+  @extend .mobile-header;
 
-  display: table;
+  /* * * * * * * * * * * * * * * *
+  * HEADER
+  * * * * * * * * * * * * * * * */
+  $next-prev-top: 215px;
+  $prev-width: 60px;
+  $next-width: 35px;
 
   @include responsive(desktop) {
-    padding-top: 100px;
-    width: 500px;
-    margin: auto;
-    margin-bottom: 100px;
-  }
 
-  .component {
-    text-align: center;
-    width: 80%;
-    max-width: 255px;
-    margin: auto;
-    margin-top: 35px;
+    .next, .prev {
+      top: $next-prev-top;
+    }
 
-    @include responsive(desktop) {
-      display: table-row;
-      height: 35px;
+    .prev {
+      left: 77px;
+      width: $prev-width;
+      height: 0;
+      padding-bottom: 131 / 300 * $prev-width;
+    }
+
+    .next {
+      right: 66px;
+      width: $next-width;
+      height: 0;
+      padding-bottom: 150 / 138 * $next-width;
+    }
+
+    .main-title {
+      font-size: 80px;
+      text-align: right;
     }
   }
 
-  .title {
-    font-family: sourceCodePro;
-    font-weight: 600;
-    font-size: 12px;
-    letter-spacing: .05em;
-    line-height: 21px;
-    text-transform: uppercase;
+  /* * * * * * * * * * * * * * * *
+   * CONTENT
+   * * * * * * * * * * * * * * * */
+  .max-width-content {
+    top: 80px;
+    position: relative;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 150px;
+    overflow: hidden;
 
     @include responsive(desktop) {
-      display: table-cell;
-      text-align: left;
-      width: 150px;
-      border: 5px;
+      max-width: 800px;
+      overflow: visible;
+      margin: auto;
+      top: 150px;
     }
   }
 
-  .desc {
-    font-family: edmondSans;
-    font-weight: normal;
-    font-size: 12px;
-    letter-spacing: .05em;
-    line-height: 15px;
+  .content {
+    @include responsive(desktop) {
+      height: 780px;
+    }
+  }
+
+  $image-height-temp: 200px;
+
+  $backtotop-width: 40px;
+  $backtotop-bottom: 91px;
+  $backtotop-right: 18px;
+
+  $container1-top: -174px;
+  $container1-left: 136px;
+  $image1-width: 412px;
+  $image1-height: 229px;
+
+  $container2-top: 28px;
+  $container2-left: 74px;
+  $image2-width: 296px;
+  $image2-height: 350px;
+
+  $container3-top: -429px;
+  $container3-left: 482px;
+  $image3-width:250px;
+  $image3-height: 300px;
+
+  .image-description {
+    position: relative;
+    padding-top: 50px;
+    width: 300px;
+    margin: auto;
+
+    .image {
+      @extend .background-contain;
+      height: $image-height-temp;
+      display: block;
+      margin: auto;
+      max-width: 250px;
+
+      @include responsive(desktop) {
+        max-width: none;
+        margin: 0;
+      }
+    }
+
+    .image1 {
+      width: $image1-width;
+      height: $image1-height;
+    }
+
+    .image2 {
+      width: $image2-width;
+      height: $image2-height;
+    }
+
+    .image3 {
+      width: $image3-width;
+      height: $image3-height;
+    }
+
+    .desc {
+      font-family: sourceCodePro;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: .05em;
+      line-height: 21px;
+      text-transform: uppercase;
+
+      margin-top: 20px;
+      margin-left: 20px;
+
+      @include responsive(desktop) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .image-desc-container {
+    position: relative;
+    width: 0;
+    height: auto;
+    overflow: visible;
+  }
+
+  .back-to-top { // 194 x 150
+    background-image: url('./images/buttons/buttons_backtotop.svg');
+    @extend .background-contain;
+
+    width: $backtotop-width;
+    height: 0;
+    padding-bottom: 150 / 194 * $backtotop-width;
+    position: absolute;
+    right: $backtotop-right;
+    bottom: $backtotop-bottom;
+  }
+
+  @include responsive(desktop) {
+    .image-description {
+      margin: 0;
+    }
+
+    .image-description1 {
+      margin-top: $container1-top;
+      margin-left: $container1-left;
+    }
+
+    .image-description2 {
+      margin-top: $container2-top;
+      margin-left: $container2-left;
+    }
+
+    .image-description3 {
+      margin-top: $container3-top;
+      margin-left: $container3-left;
+    }
+  }
+
+
+  #project-info {
+
+    padding-top: 20px;
+    width: 100%;
+
+    display: table;
 
     @include responsive(desktop) {
-      display: table-cell;
-      text-align: left;
-      border: 5px;
+      padding-top: 100px;
+      width: 500px;
+      margin: auto;
+      margin-bottom: 100px;
+    }
+
+    .component {
+      text-align: center;
+      width: 80%;
+      max-width: 255px;
+      margin: auto;
+      margin-top: 35px;
+
+      @include responsive(desktop) {
+        display: table-row;
+        height: 35px;
+      }
+    }
+
+    .title {
+      font-family: sourceCodePro;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: .05em;
+      line-height: 21px;
+      text-transform: uppercase;
+
+      @include responsive(desktop) {
+        display: table-cell;
+        text-align: left;
+        width: 150px;
+        border: 5px;
+      }
+    }
+
+    .desc {
+      font-family: edmondSans;
+      font-weight: normal;
+      font-size: 12px;
+      letter-spacing: .05em;
+      line-height: 15px;
+
+      @include responsive(desktop) {
+        display: table-cell;
+        text-align: left;
+        border: 5px;
+      }
     }
   }
 }
