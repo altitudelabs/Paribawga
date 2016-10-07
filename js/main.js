@@ -50,6 +50,7 @@ $(document).ready(function(){
     if (winWidth >= 1024) {
       if (winScrollTop >= 600) { // 1st section-height
         $('.index .nav-menu').removeClass('white');
+        $('.index #footer').addClass('slide-up-full');
         $('.index #footer').removeClass('hidden');
       } else {
         $('.index .nav-menu').addClass('white');
@@ -114,5 +115,14 @@ $(document).ready(function(){
   })();
 
   window.onscroll = checkScrollSpeed;
+
+  // back-to-top
+  $('.back-to-top').click(function(){
+    console.log("test");
+    $('body, html').animate({
+      scrollTop: 0
+    }, 600);
+    return false;
+  });
 
 });

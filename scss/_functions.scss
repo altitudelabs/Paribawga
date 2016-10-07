@@ -32,6 +32,13 @@
 //   transition: $t;
 // }
 
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+  -o-animation: $animation;
+  animation: $animation;
+}
+
 @mixin responsive($media) {
   @if $media == smallmobile {
     @media only screen and (max-width: $mobile-small-width) { @content; }
