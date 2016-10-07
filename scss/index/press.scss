@@ -21,6 +21,25 @@
     margin-top: 19px;
   }
 
+  .explore-link {
+    font-family: sourceCodePro;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    text-align: left;
+    color: inherit;
+
+    @include responsive(desktop) {
+      font-size: 14px;
+    }
+
+    a {
+      color: inherit;
+    }
+  }
+
+
   // desktop
   @include responsive(desktop) {
 
@@ -54,20 +73,6 @@
 
     .text {
       font-size: 14px;
-    }
-
-
-    .explore-link {
-      font-family: sourceCodePro;
-      font-weight: 600;
-      font-size: 12px;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      text-align: left;
-
-      a {
-        color: inherit;
-      }
     }
 
     .images-descriptions-container {

@@ -977,6 +977,20 @@ body.loading {
 #press-section .text, .mobile-images-collection .image-and-description-box #press-section .name, #collection-section .image-and-description-box #press-section .name, #projects-section .image-and-description-box #press-section .name, #press-section .image-and-description-box .name {
   margin-top: 19px; }
 
+#press-section .explore-link {
+  font-family: sourceCodePro;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-align: left;
+  color: inherit; }
+  @media only screen and (min-width: 1200px) {
+    #press-section .explore-link {
+      font-size: 14px; } }
+  #press-section .explore-link a {
+    color: inherit; }
+
 @media only screen and (min-width: 1200px) {
   #press-section .max-width-content {
     max-width: 900px; }
@@ -992,15 +1006,6 @@ body.loading {
     right: 77px; }
   #press-section .text, .mobile-images-collection .image-and-description-box #press-section .name, #collection-section .image-and-description-box #press-section .name, #projects-section .image-and-description-box #press-section .name, #press-section .image-and-description-box .name {
     font-size: 14px; }
-  #press-section .explore-link {
-    font-family: sourceCodePro;
-    font-weight: 600;
-    font-size: 12px;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    text-align: left; }
-    #press-section .explore-link a {
-      color: inherit; }
   #press-section .images-descriptions-container {
     margin-left: 0;
     margin-bottom: 200px; }
@@ -1198,8 +1203,8 @@ body.loading {
       width: 236px;
       height: 281px; }
     .collection-page .image-description .image12 {
-      width: 315px;
-      height: 260px; }
+      width: 280px;
+      height: 229px; }
     .collection-page .image-description .desc {
       font-family: sourceCodePro;
       font-weight: 600;
