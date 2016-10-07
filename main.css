@@ -675,6 +675,15 @@ body.loading {
 
 #projects-section {
   margin-bottom: 79px; }
+  #projects-section .explore-link {
+    font-family: sourceCodePro;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    text-align: left; }
+    #projects-section .explore-link a {
+      color: inherit; }
   @media only screen and (min-width: 1200px) {
     #projects-section {
       margin-bottom: 200px;
@@ -747,15 +756,6 @@ body.loading {
           margin-top: 0;
           margin-bottom: 23px;
           text-transform: uppercase; }
-        #projects-section .image-and-description-box .explore-link {
-          font-family: sourceCodePro;
-          font-weight: 600;
-          font-size: 12px;
-          letter-spacing: .1em;
-          text-transform: uppercase;
-          text-align: left; }
-          #projects-section .image-and-description-box .explore-link a {
-            color: inherit; }
       #projects-section .image-and-description-box.first {
         display: block; } }
 

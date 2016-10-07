@@ -1,8 +1,21 @@
 #projects-section {
   @extend .mobile-images-collection;
 
-  // desktop
   margin-bottom: 79px;
+
+  .explore-link {
+    font-family: sourceCodePro;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    text-align: left;
+
+    a {
+      color: inherit;
+    }
+  }
+  
   @include responsive(desktop) {
     margin-bottom: 200px;
 
@@ -113,19 +126,6 @@
         margin-bottom: 23px;
 
         text-transform: uppercase;
-      }
-
-      .explore-link {
-        font-family: sourceCodePro;
-        font-weight: 600;
-        font-size: 12px;
-        letter-spacing: .1em;
-        text-transform: uppercase;
-        text-align: left;
-
-        a {
-          color: inherit;
-        }
       }
     }
 
