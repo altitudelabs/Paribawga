@@ -977,6 +977,10 @@ body.loading {
 #press-section .text, .mobile-images-collection .image-and-description-box #press-section .name, #collection-section .image-and-description-box #press-section .name, #projects-section .image-and-description-box #press-section .name, #press-section .image-and-description-box .name {
   margin-top: 19px; }
 
+#press-section .image-and-description-box .image {
+  width: 180px;
+  height: 180px; }
+
 #press-section .explore-link {
   font-family: sourceCodePro;
   font-weight: 600;
