@@ -64,8 +64,8 @@
 }
 
 .gray-bg {
-  $section-height: 650px;
-  $section-height-mobile: 558px;
+  $section-height: 100vh;
+  $section-height-mobile: 100vh;
   z-index: 100;
   visibility: hidden;
 
@@ -91,4 +91,5 @@
 
 .index .nav-menu {
   z-index: -2;
+  opacity: 0;
 }

@@ -1,3 +1,7 @@
+.index {
+  overflow: hidden;
+}
+
 #hero-section {
 
   overflow: hidden;
@@ -89,17 +93,47 @@
     }
   }
 
-  .scroll-tag { // 256 x 150
-    background-image: url('images/buttons/buttons_scroll.svg');
-    @extend .background-cover;
+  // .scroll-tag { // 256 x 150
+  //   background-image: url('images/buttons/buttons_scroll.svg');
+  //   @extend .background-cover;
+  //   position: absolute;
+  //   height: 0;
+  //
+  //   left: 29px;
+  //   bottom: 30px;
+  //
+  //   width: $scroll-tag-width-mobile;
+  //   padding-bottom: 150 / 256 * $scroll-tag-width-mobile;
+  //
+  //   @include responsive(desktop) {
+  //     left: 58px;
+  //     bottom: 32px;
+  //   }
+  // }
+  //
+  // .down-tag { // 193 x 150
+  //   background-image: url('images/buttons/buttons_down.svg');
+  //   @extend .background-cover;
+  //   position: absolute;
+  //   height: 0;
+  //
+  //   width: $down-tag-width-mobile;
+  //   padding-bottom: 150 / 193 * $down-tag-width-mobile;
+  //   right: 22px;
+  //   bottom: 30px;
+  //
+  //   @include responsive(desktop) {
+  //     right: 58px;
+  //     bottom: 32px;
+  //   }
+  // }
+
+  .scroll-tag {
+    z-index: -2;
+    font-family: sourceCodePro;
     position: absolute;
-    height: 0;
-
     left: 29px;
-    bottom: 30px;
-
-    width: $scroll-tag-width-mobile;
-    padding-bottom: 150 / 256 * $scroll-tag-width-mobile;
+    bottom: 9px;
 
     @include responsive(desktop) {
       left: 58px;
@@ -107,16 +141,12 @@
     }
   }
 
-  .down-tag { // 193 x 150
-    background-image: url('images/buttons/buttons_down.svg');
-    @extend .background-cover;
+  .down-tag {
+    z-index: -2;
+    font-family: sourceCodePro;
     position: absolute;
-    height: 0;
-
-    width: $down-tag-width-mobile;
-    padding-bottom: 150 / 193 * $down-tag-width-mobile;
-    right: 22px;
-    bottom: 30px;
+    right: 29px;
+    bottom: 9px;
 
     @include responsive(desktop) {
       right: 58px;

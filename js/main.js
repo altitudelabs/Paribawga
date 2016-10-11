@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  var indexPage = $('.index');
+
   /* * * * * * * * * * * *
   *  NAV MENU
   * * * * * * * * * * * */
@@ -53,6 +55,7 @@ $(document).ready(function(){
   // index page nav-menu and footer
   var idxNavMenu = $('.index .nav-menu'),
       idxFooter = $('.index #footer');
+
   $(window).scroll($.throttle(250, function() {
     var winScrollTop = $(window).scrollTop();
     var winWidth = $(window).innerWidth();
@@ -86,10 +89,13 @@ $(document).ready(function(){
 
   var headerTL = new TimelineMax();
   var header = $('.header');
+  var top = 80;
 
   headerTL
     .staggerTo(pathChildren, .05, {autoAlpha: 1, strokeDashoffset: 0}, .05)
-    .to(header, .4, {top: 80, right: 80, bottom: 80, left: 80});
+    .to(header, .4, {top: '10%', right: '10%', bottom: '10%', left: '10%'})
+    .set(idxNavMenu, {zIndex: 101, autoAlpha: 1}, '-=.4')
+    .set(indexPage, {overflow: 'auto'}, '-=.4');
 
   // Friction
 
