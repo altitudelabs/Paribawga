@@ -176,22 +176,10 @@ body.loading {
  // slide from outside the page
 
  .slide-up-full {
-   @include animation((slide-up-full-key .5s ease));
- }
+   @include transform((translateY(100px)));
+   @include transition((all 1s ease));
 
- @-webkit-keyframes slide-up-full-key {
-   0%   { transform: translateY(100px); }
-   100% { transform: translateY(0px); }
- }
- @-moz-keyframes slide-up-full-key {
-   0%   { transform: translateY(100px); }
-   100% { transform: translateY(0px); }
- }
- @-o-keyframes slide-up-full-key {
-   0%   { transform: translateY(100px); }
-   100% { transform: translateY(0px); }
- }
- @keyframes slide-up-full-key {
-   0%   { transform: translateY(100px); }
-   100% { transform: translateY(0px); }
+   &.activate {
+     @include transform((translateY(0)));
+   }
  }

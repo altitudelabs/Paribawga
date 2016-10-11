@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  $(this).scrollTop(0);
+
   var indexPage = $('.index');
 
   /* * * * * * * * * * * *
@@ -63,14 +65,13 @@ $(document).ready(function(){
     if (winWidth >= 1024) {
       if (winScrollTop >= 600) { // 1st section-height
         // idxNavMenu.removeClass('white');
-        idxFooter.addClass('slide-up-full');
-        idxFooter.removeClass('hidden');
+        idxFooter.addClass('activate');
       } else {
         // idxNavMenu.addClass('white');
-        idxFooter.addClass('hidden');
+        idxFooter.removeClass('activate');
       }
     } else {
-      idxFooter.removeClass('hidden');
+      idxFooter.addClass('activate');
     }
   }));
 
@@ -78,7 +79,7 @@ $(document).ready(function(){
   *  ANIMATION
   * * * * * * * * * * * */
 
-  // text animation
+  // header animations
   var path = $('#stroke');
   var pathChildren = path.children();
 
@@ -88,14 +89,27 @@ $(document).ready(function(){
   });
 
   var headerTL = new TimelineMax();
-  var header = $('.header');
-  var top = 80;
+  var header = $('.header'),
+      taglineImg = $('.cover-tagline .img'),
+      scrollTag = $('.scroll-tag, .down-tag'),
+      aboutusSection = $('#aboutus-section');
 
   headerTL
     .staggerTo(pathChildren, .05, {autoAlpha: 1, strokeDashoffset: 0}, .05)
-    .to(header, .4, {top: '10%', right: '10%', bottom: '10%', left: '10%'})
-    .set(idxNavMenu, {zIndex: 101, autoAlpha: 1}, '-=.4')
-    .set(indexPage, {overflow: 'auto'}, '-=.4');
+    .to(header, 1, {top: '10%', right: '10%', bottom: '10%', left: '10%', ease: Circ.easeOut})
+    .set(taglineImg, {autoAlpha: 1}, '-=1')
+    .set(idxNavMenu, {zIndex: 101, autoAlpha: 1}, '-=1')
+    .set(indexPage, {overflow: 'auto'}, '-=1')
+    .set(scrollTag, {zIndex: 101}, '-=1');
+
+
+  scrollTag.click(function(){
+    console.log("test");
+    $('body, html').animate({
+      scrollTop: aboutusSection.position().top+'px'
+    }, 600);
+    return false;
+  });
 
   // Friction
 

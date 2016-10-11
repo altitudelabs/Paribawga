@@ -38,6 +38,7 @@
 
     @include responsive(desktop) {
       max-width: 800px;
+      top: 128px;
     }
   }
 
@@ -78,7 +79,6 @@
 
       font-size: 80px;
 
-      margin-top: 128px;
       margin-left: $title-marginleft;
       margin-bottom: 43px;
     }

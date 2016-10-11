@@ -265,34 +265,21 @@ body.loading {
     transform: translateX(0px); } }
 
 .slide-up-full {
-  -webkit-animation: slide-up-full-key 0.5s ease;
-  -moz-animation: slide-up-full-key 0.5s ease;
-  -o-animation: slide-up-full-key 0.5s ease;
-  animation: slide-up-full-key 0.5s ease; }
-
-@-webkit-keyframes slide-up-full-key {
-  0% {
-    transform: translateY(100px); }
-  100% {
-    transform: translateY(0px); } }
-
-@-moz-keyframes slide-up-full-key {
-  0% {
-    transform: translateY(100px); }
-  100% {
-    transform: translateY(0px); } }
-
-@-o-keyframes slide-up-full-key {
-  0% {
-    transform: translateY(100px); }
-  100% {
-    transform: translateY(0px); } }
-
-@keyframes slide-up-full-key {
-  0% {
-    transform: translateY(100px); }
-  100% {
-    transform: translateY(0px); } }
+  -webkit-transform: translateY(100px);
+  -moz-transform: translateY(100px);
+  -ms-transform: translateY(100px);
+  -o-transform: translateY(100px);
+  transform: translateY(100px);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease; }
+  .slide-up-full.activate {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); }
 
 #footer {
   clear: both;
@@ -566,7 +553,8 @@ body.loading {
     width: 70%; }
     #hero-section .cover-tagline .img {
       background-image: url("images/index/1_tagline_new.png");
-      height: 100%; }
+      height: 100%;
+      opacity: 0; }
     #hero-section .cover-tagline svg {
       position: absolute;
       width: 100%;
@@ -608,7 +596,8 @@ body.loading {
     margin: auto; }
     @media only screen and (min-width: 1200px) {
       #aboutus-section .max-width-content {
-        max-width: 800px; } }
+        max-width: 800px;
+        top: 128px; } }
   #aboutus-section .content {
     position: relative;
     margin: auto;
@@ -636,7 +625,6 @@ body.loading {
     @media only screen and (min-width: 1200px) {
       #aboutus-section .title {
         font-size: 80px;
-        margin-top: 128px;
         margin-left: 0;
         margin-bottom: 43px; } }
   #aboutus-section .text-container {

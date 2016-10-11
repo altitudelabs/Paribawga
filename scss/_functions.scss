@@ -25,12 +25,12 @@
   opacity: $o;
 }
 
-// @mixin transition($t) {
-//   -webkit-transition: $t;
-//   -moz-transition: $t;
-//   -o-transition: $t;
-//   transition: $t;
-// }
+@mixin transition($t) {
+  -webkit-transition: $t;
+  -moz-transition: $t;
+  -o-transition: $t;
+  transition: $t;
+}
 
 @mixin animation($animation) {
   -webkit-animation: $animation;
