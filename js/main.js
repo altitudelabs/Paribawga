@@ -64,10 +64,10 @@ $(document).ready(function(){
 
     if (winWidth >= 1024) {
       if (winScrollTop >= 600) { // 1st section-height
-        // idxNavMenu.removeClass('white');
+        idxNavMenu.removeClass('white');
         idxFooter.addClass('activate');
       } else {
-        // idxNavMenu.addClass('white');
+        idxNavMenu.addClass('white');
         idxFooter.removeClass('activate');
       }
     } else {
@@ -88,19 +88,21 @@ $(document).ready(function(){
       element.getTotalLength();
   });
 
-  var headerTL = new TimelineMax();
+  var headerTL = new TimelineLite();
   var header = $('.header'),
       taglineImg = $('.cover-tagline .img'),
-      scrollTag = $('.scroll-tag, .down-tag'),
+      scrollTag = $('.scroll-tag'),
+      downTag = $('.down-tag'),
       aboutusSection = $('#aboutus-section');
 
   headerTL
     .staggerTo(pathChildren, .05, {autoAlpha: 1, strokeDashoffset: 0}, .05)
-    .to(header, 1, {top: '10%', right: '10%', bottom: '10%', left: '10%', ease: Circ.easeOut})
-    .set(taglineImg, {autoAlpha: 1}, '-=1')
-    .set(idxNavMenu, {zIndex: 101, autoAlpha: 1}, '-=1')
+    //.to(header, 1, {top: '10%', right: '10%', bottom: '10%', left: '10%', ease: Circ.easeOut})
+    .set(taglineImg, {autoAlpha: 1})
+    .fromTo(idxNavMenu, 1, {y: -200, autoAlpha: 0}, {y: 0, autoAlpha: 1}, '-=.5')
+    .from(scrollTag, 1, {x: -200}, '-=1')
+    .from(downTag, 1, {x: 200}, '-=1')
     .set(indexPage, {overflow: 'auto'}, '-=1')
-    .set(scrollTag, {zIndex: 101}, '-=1');
 
 
   scrollTag.click(function(){

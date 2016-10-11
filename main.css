@@ -441,8 +441,7 @@ body.loading {
   .white {
     color: white; } }
 
-.index .nav-menu {
-  z-index: -2;
+.index.nav-menu {
   opacity: 0; }
 
 .mobile-images-collection, #collection-section, #projects-section, #press-section {
@@ -563,7 +562,8 @@ body.loading {
       #hero-section .cover-tagline svg g path {
         opacity: 0; }
   #hero-section .scroll-tag {
-    z-index: -2;
+    color: white;
+    z-index: 101;
     font-family: sourceCodePro;
     position: absolute;
     left: 29px;
@@ -573,7 +573,8 @@ body.loading {
         left: 58px;
         bottom: 32px; } }
   #hero-section .down-tag {
-    z-index: -2;
+    color: white;
+    z-index: 101;
     font-family: sourceCodePro;
     position: absolute;
     right: 29px;
