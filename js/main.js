@@ -3,61 +3,71 @@ $(document).ready(function(){
   /* * * * * * * * * * * *
   *  NAV MENU
   * * * * * * * * * * * */
+  var navMenu = $('.nav-menu'),
+      grayBg = $('.gray-bg'),
+      navTitle = $('.nav-menu .title'),
+      navLinks = $('.nav-menu .links'),
+      navLi = $('.nav-menu ul li');
+  var headerTitle = $('.header .title');
   var isSubNav = $('.nav-menu').hasClass('hidden')? true: false;
 
   function showMenu(){
     console.log($(this), $(this).parent(), "show menu");
-    if (isSubNav) $('.nav-menu').removeClass('hidden');
-    $('.nav-menu .links').css('display', 'block');
-    $('.gray-bg').css('visibility', 'visible');
+    if (isSubNav) navMenu.removeClass('hidden');
+    navLinks.css('display', 'block');
+    grayBg.css('visibility', 'visible');
     $(this).one("click", removeMenu);
-    $('.nav-menu .title').one("click", removeMenu);
+    navTitle.one("click", removeMenu);
 
     var winWidth = $(window).innerWidth();
+
     if (winWidth < 1200) {
-      $('.nav-menu ul li').click(removeMenu);
+      navLi.click(removeMenu);
     } else {
-      $('.nav-menu ul li').off('click');
+      navLi.off('click');
     }
   }
 
   function removeMenu(){
     console.log($(this), "remove menu");
-    if (isSubNav) $('.nav-menu').addClass('hidden');
-    $('.nav-menu .links').css('display', 'none');
-    $('.gray-bg').css('visibility', 'hidden');
-    $('.nav-menu .title').one("click", showMenu);
-    $('.header .title').one("click", showMenu);
+    if (isSubNav) navMenu.addClass('hidden');
+    navLinks.css('display', 'none');
+    grayBg.css('visibility', 'hidden');
+    navTitle.one("click", showMenu);
+    headerTitle.one("click", showMenu);
   }
 
-  $('.nav-menu .title').one("click", showMenu);
-  $('.header .title').one("click", showMenu);
+  navTitle.one("click", showMenu);
+  headerTitle.one("click", showMenu);
 
   $(window).resize($.throttle(250, function(){
     var winWidth = $(window).innerWidth();
     removeMenu();
 
     if (winWidth >= 1200) {
-      $('.nav-menu .links').css('display', 'block');
-      $('.nav-menu ul li').off('click');
+      navLinks.css('display', 'block');
+      navLi.off('click');
     }
   }));
 
+  // index page nav-menu and footer
+  var idxNavMenu = $('.index .nav-menu'),
+      idxFooter = $('.index #footer');
   $(window).scroll($.throttle(250, function() {
     var winScrollTop = $(window).scrollTop();
     var winWidth = $(window).innerWidth();
 
     if (winWidth >= 1024) {
       if (winScrollTop >= 600) { // 1st section-height
-        $('.index .nav-menu').removeClass('white');
-        $('.index #footer').addClass('slide-up-full');
-        $('.index #footer').removeClass('hidden');
+        idxNavMenu.removeClass('white');
+        idxFooter.addClass('slide-up-full');
+        idxFooter.removeClass('hidden');
       } else {
-        $('.index .nav-menu').addClass('white');
-        $('.index #footer').addClass('hidden');
+        idxNavMenu.addClass('white');
+        idxFooter.addClass('hidden');
       }
     } else {
-      $('.index #footer').removeClass('hidden');
+      idxFooter.removeClass('hidden');
     }
   }));
 
@@ -67,57 +77,31 @@ $(document).ready(function(){
 
   // Friction
 
-  var fricFastElement = $('.frictionFast'),
-      fricMedElement = $('.frictionMed'),
-      fricSlowElement = $('.frictionSlow');
+  var element = $('.friction');
+  var lastPos, newPos = 0;
+  var deltaPosVar = [1, 2, 3];
 
-  // distance = const * delta in the checkScrollSpeed function
-  var distanceFast = 5,
-      distanceMed = -5, // add (-) just to make it different~
-      distanceSlow = 7;
 
-  var checkScrollSpeed = (function(settings){
-    settings = settings || {};
+  function friction() {
+    requestAnimationFrame(friction);
+    var winScrollTop = $(window).scrollTop();
+    var variable = 2;
+    lastPos = newPos;
+    newPos = winScrollTop;
+    var speed = newPos - lastPos;
 
-    var lastPos, newPos, timer, delta,
-    delay = settings.delay || 50; // in "ms" (higher means lower fidelity )
+    var maxDeltaPos = variable * speed;
 
-    // set back the velocity to 0
-    function clear() {
-      lastPos = null;
-      delta = 0;
-      fricFastElement.css("transform", "none");
-      fricMedElement.css("transform", "none");
-      fricSlowElement.css("transform", "none");
-    }
+    TweenLite.to(element, 1, {y: maxDeltaPos});
+  }
 
-    clear();
-
-    return function(){
-      newPos = window.scrollY;
-      if ( lastPos != null ){ // && newPos < maxScroll
-        delta = newPos -  lastPos;
-
-        var velocityFast = delta * distanceFast,
-            velocityMed = delta * distanceMed,
-            velocitySlow = delta * distanceSlow;
-
-        fricFastElement.css("transform", "translateY(" + velocityFast.toString() + "px)");
-        fricMedElement.css("transform", "translateY(" + velocityMed.toString() + "px)");
-        fricSlowElement.css("transform", "translateY(" + velocitySlow.toString() + "px)");
-
-      }
-      lastPos = newPos;
-      clearTimeout(timer);
-      timer = setTimeout(clear, delay);
-      return delta;
-    };
-  })();
-
-  window.onscroll = checkScrollSpeed;
+  friction();
 
   // back-to-top
-  $('.back-to-top').click(function(){
+
+  var backToTop = $('.back-to-top');
+
+  backToTop.click(function(){
     console.log("test");
     $('body, html').animate({
       scrollTop: 0

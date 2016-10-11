@@ -204,15 +204,6 @@ body.loading {
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
  * Animation
  * * * * * * * * * * * * * * * * * * * * * * * * * */
-.frictionFast {
-  transition: 1s ease; }
-
-.frictionMed {
-  transition: 2s ease; }
-
-.frictionSlow {
-  transition: 4s ease; }
-
 .slide-left {
   -webkit-animation: slide-left-key 1s ease;
   -moz-animation: slide-left-key 1s ease;
