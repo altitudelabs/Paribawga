@@ -59,11 +59,11 @@ $(document).ready(function(){
 
     if (winWidth >= 1024) {
       if (winScrollTop >= 600) { // 1st section-height
-        idxNavMenu.removeClass('white');
+        // idxNavMenu.removeClass('white');
         idxFooter.addClass('slide-up-full');
         idxFooter.removeClass('hidden');
       } else {
-        idxNavMenu.addClass('white');
+        // idxNavMenu.addClass('white');
         idxFooter.addClass('hidden');
       }
     } else {
@@ -75,12 +75,27 @@ $(document).ready(function(){
   *  ANIMATION
   * * * * * * * * * * * */
 
+  // text animation
+  var path = $('#stroke');
+  var pathChildren = path.children();
+
+  pathChildren.each(function(idx, element){
+    element.style.strokeDasharray = element.style.strokeDashoffset =
+      element.getTotalLength();
+  });
+
+  var headerTL = new TimelineMax();
+  var header = $('.header');
+
+  headerTL
+    .staggerTo(pathChildren, .05, {autoAlpha: 1, strokeDashoffset: 0}, .05)
+    .to(header, .4, {top: 80, right: 80, bottom: 80, left: 80});
+
   // Friction
 
   var element = $('.friction');
   var lastPos, newPos = 0;
   var deltaPosVar = [1, 2, 3];
-
 
   function friction() {
     requestAnimationFrame(friction);

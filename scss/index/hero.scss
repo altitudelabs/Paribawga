@@ -2,12 +2,14 @@
 
   overflow: hidden;
 
-  $section-height: 650px;
-  $section-height-mobile: 558px;
+  // $section-height: 650px;
+  // $section-height-mobile: 558px;
+
+  $section-height: 100vh;
+  $section-height-mobile: 100vh;
 
   $tagline-height: 490px;
-  $tagline-height-mobile: 70%;
-  $tagline-width-mobile: 80%;
+  $tagline-width: 70%;
 
   $scroll-tag-width-mobile: 48px;
   $down-tag-width-mobile: 42px;
@@ -20,18 +22,21 @@
   }
 
   .header {
-    height: 100vh;
-    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
   }
 
   .header .bx-wrapper {
     z-index: -1;
     position: absolute;
     top: 0;
-    left: 0;
     right: 0;
     bottom: 0;
-    border: 0px;
+    left: 0;
+    border: 0;
   }
 
   .header .bx-viewport {
@@ -62,15 +67,25 @@
   }
 
   .cover-tagline {
-    background-image: url('images/index/1_tagline.png');
-    @extend .background-contain;
     @extend .center;
+    height: $tagline-height;
+    width: $tagline-width;
 
-    height: $tagline-height-mobile;
-    width: $tagline-width-mobile;
+    .img {
+      background-image: url('images/index/1_tagline_new.png');
+      @extend .background-contain;
+      height: 100%;
+    }
 
-    @include responsive(desktop) {
-      height: $tagline-height;
+    svg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+
+      g path {
+        opacity: 0;
+      }
     }
   }
 
