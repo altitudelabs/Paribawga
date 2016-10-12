@@ -76,7 +76,7 @@ $(document).ready(function(){
   }));
 
   /* * * * * * * * * * * *
-  *  ANIMATION
+  *  ANIMATIONS
   * * * * * * * * * * * */
 
   // header animations
@@ -115,21 +115,24 @@ $(document).ready(function(){
 
   // Friction
 
-  var element = $('.friction');
+  var fricElements = [$('.frictionFast'),
+                        $('.frictionMed'),
+                        $('.frictionSlow')];
+  var durationVars = [2, 1.5, 1]; // in seconds
+  var deltaPosVars = [1.5, -1, .5];
   var lastPos, newPos = 0;
-  var deltaPosVar = [1, -2, 3];
 
   function friction() {
     requestAnimationFrame(friction);
     var winScrollTop = $(window).scrollTop();
-    var variable = 2;
     lastPos = newPos;
     newPos = winScrollTop;
     var speed = newPos - lastPos;
 
-    var maxDeltaPos = variable * speed;
-
-    TweenLite.to(element, 1, {y: maxDeltaPos});
+    for (var i = 0; i < fricElements.length; ++i){
+      var maxDeltaPos = deltaPosVars[i] * speed;
+      TweenLite.to(fricElements[i], durationVars[i], {y: maxDeltaPos});
+    }
   }
 
   friction();
