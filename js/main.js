@@ -347,10 +347,10 @@ $(document).ready(function(){
 
   var headerTL = new TimelineLite();
   var header = $('.header'),
-  taglineImg = $('.cover-tagline .img'),
-  scrollTag = $('.scroll-tag'),
-  downTag = $('.down-tag'),
-  aboutusSection = $('#aboutus-section');
+      taglineImg = $('.cover-tagline .img'),
+      scrollTag = $('.scroll-tag'),
+      downTag = $('.down-tag'),
+      aboutusSection = $('#aboutus-section');
 
   headerTL
   .staggerTo(pathChildren, .05, {autoAlpha: 1, strokeDashoffset: 0}, .05)
@@ -373,8 +373,8 @@ $(document).ready(function(){
   // Friction
 
   var fricElements = [$('.frictionFast'),
-  $('.frictionMed'),
-  $('.frictionSlow')];
+                      $('.frictionMed'),
+                      $('.frictionSlow')];
   var durationVars = [2, 1.5, 1]; // in seconds
   var deltaPosVars = [1.5, -1, .5];
   var lastPos, newPos = 0;
