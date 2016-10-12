@@ -303,6 +303,115 @@ $(document).ready(function(){
   })());
 
   /* * * * * * * * * * * *
+  *  PRESS
+  * * * * * * * * * * * */
+
+  // variables
+  var pressImg = $('#press-section .image'),
+      pressDate = $('#press-section .date'),
+      pressDesc = $('#press-section .text')
+      projectsTitle = $('#projects-section .name'),
+      projectsDesc  = $('#projects-section .text'),
+      projectsContainer = $('#projects-section .images-descriptions-container');
+
+  // data
+  var PROJECTS_DATA = [
+    {
+      "title": "rau ram",
+      "desc" : "We design, make, and install furniture and accessories for indoor and outdoor environments, including hospitality, retail, and cultural projects. Whether providing a single piece of furniture, an installation, or outfitting an entire restaurant, we pride ourselves on high-quality materials, flexibility, innovation, and the opportunity to bring beautiful Myanmar-made craftsmanship to the rest of the world.",
+      "images": [
+        "images/index/4_projects1.jpg",
+        "images/index/4_projects2.jpg"
+      ]
+    },
+    {
+      "title": "the new project",
+      "desc" : "This is a new project.",
+      "images": [
+        "images/collection/collection_1.jpg",
+        "images/collection/collection_2.jpg"
+      ]
+    }
+  ];
+
+  // build initial structure for mobile and transition
+  (function(){
+    var container = $('#projects-section .mobile-transition-only');
+    var content = "";
+
+    for (var i = 1; i < PROJECTS_DATA.length; ++i) {
+      var data = PROJECTS_DATA[i];
+      content+='<div class="image-and-description-box">'
+                + '<div class="column">'
+                  + '<img class="image1 frictionMed" src="' + data.images[0] + '"/>'
+                + '</div>'
+                + '<div class="column">'
+                  + '<div class="content-text frictionSlow">'
+                    + '<div class="name">' + data.title + '</div>'
+                    + '<p class="text">' + data.desc + '</p>'
+                  + '</div>'
+                + '</div>'
+              + '</div>';
+    }
+    container.html(content);
+  })();
+
+
+  var slideProjectsSection = $.throttle(1000, (function() {
+    var categoryIndex = 0;
+    var nextCategoryIndex = 1;
+    var updateIndex = function(isNext) {
+      if (isNext) {
+        categoryIndex++;
+        if (categoryIndex >= PROJECTS_DATA.length) {
+          categoryIndex = 0;
+        }
+      } else {
+        categoryIndex--;
+        if (categoryIndex < 0) {
+          categoryIndex = PROJECTS_DATA.length - 1;
+        }
+      }
+      nextCategoryIndex = categoryIndex + 1;
+      if (nextCategoryIndex >= PROJECTS_DATA.length) {
+        nextCategoryIndex = 0;
+      }
+    }
+
+    return function(e, isNext) {
+      updateIndex(isNext);
+      var title = PROJECTS_DATA[categoryIndex].title;
+      var desc = PROJECTS_DATA[categoryIndex].desc;
+      var imgs = [];
+      $(PROJECTS_DATA[categoryIndex].images).each(function(idx, element){
+        imgs.push(element);
+      });
+
+      function updateData(){
+        projectsTitle.text(title);
+        projectsDesc.text(desc);
+        projectsImg1.attr("src", imgs[0]);
+        projectsImg2.attr("src", imgs[1]);
+      }
+
+      if (isNext) {
+        x = 1000;
+      } else {
+        x = -1000;
+      }
+
+      TweenMax.from(projectsContainer, 1, {
+        x: x,
+        ease: Power2.easeOut,
+        onUpdate: updateData
+      });
+
+    };
+  })());
+
+
+
+  /* * * * * * * * * * * *
   *  MORE TAG
   * * * * * * * * * * * */
 

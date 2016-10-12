@@ -450,6 +450,15 @@ body.loading {
       margin-top: 23px;
       margin-bottom: 23px;
       text-transform: uppercase; }
+    .mobile-images-collection .image-and-description-box .explore-link, #collection-section .image-and-description-box .explore-link, #projects-section .image-and-description-box .explore-link, #press-section .image-and-description-box .explore-link {
+      font-family: sourceCodePro;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      text-align: left; }
+      .mobile-images-collection .image-and-description-box .explore-link a, #collection-section .image-and-description-box .explore-link a, #projects-section .image-and-description-box .explore-link a, #press-section .image-and-description-box .explore-link a {
+        color: inherit; }
 
 .index {
   overflow: hidden; }
@@ -1010,7 +1019,10 @@ body.loading {
             min-height: auto; } }
 
 #press-section {
-  height: 600px; }
+  height: auto; }
+  #press-section .image {
+    width: 180px !important;
+    height: 180px !important; }
   #press-section .date {
     margin-top: 26px;
     margin-bottom: 12px;
@@ -1042,72 +1054,70 @@ body.loading {
     #press-section .explore-link a {
       color: inherit; }
   @media only screen and (min-width: 1200px) {
-    #press-section {
-      height: 700px; }
-      #press-section .max-width-content {
-        max-width: 900px;
-        top: 50px;
-        height: 100%; }
-      #press-section .title {
-        font-size: 80px;
-        text-align: left;
-        position: relative;
-        margin-left: -85px;
-        margin-bottom: 10px; }
-      #press-section .more-tag {
-        position: absolute;
-        top: 250px;
-        right: 77px; }
-      #press-section .text, .mobile-images-collection .image-and-description-box #press-section .name, #collection-section .image-and-description-box #press-section .name, #projects-section .image-and-description-box #press-section .name, #press-section .image-and-description-box .name {
-        font-size: 14px; }
-      #press-section .images-descriptions-container {
-        margin-left: 0;
-        margin-bottom: 200px; }
-      #press-section .image-and-description-box {
-        margin-right: 35px;
-        margin-left: 35px; }
-        #press-section .image-and-description-box .image {
-          width: 233px;
-          height: 233px; }
-      #press-section .grid:after {
-        content: "";
-        display: table;
-        clear: both; }
-      #press-section .grid .grid-item {
-        float: left;
-        position: relative; }
-      #press-section .grid .grid-item.full {
-        width: 100%; }
-      #press-section .grid .grid-item.one-half {
-        width: 50%; }
-      #press-section .grid .grid-item.one-third {
-        width: 33.33%; }
-      #press-section .grid .grid-item.two-third {
-        width: 66.66%; }
-      #press-section .grid .grid-item.one-fourth {
-        width: 25%; }
-      #press-section .grid .grid-item.three-fourth {
-        width: 75%; }
-      #press-section .grid .grid-item.one-fifth {
-        width: 20%; }
-      #press-section .grid .grid-item.two-fifth {
-        width: 40%; }
-      #press-section .grid .grid-item.three-fifth {
-        width: 60%; }
-      #press-section .grid .grid-item.four-fifth {
-        width: 80%; }
-      #press-section .grid .grid-item.one-sixth {
-        width: 16.66%; }
-      #press-section .grid .grid-item.five-sixth {
-        width: 83.33%; }
-      #press-section .grid .grid-item.one-eighth {
-        width: 12.5%; }
-      #press-section .grid .grid-item.three-eighth {
-        width: 37.5%; }
-      #press-section .grid .grid-item.five-eighth {
-        width: 62.5%; }
-      #press-section .grid .grid-item.seven-eighth {
-        width: 87.5%; } }
+    #press-section .max-width-content {
+      max-width: 900px;
+      top: 50px;
+      height: auto; }
+    #press-section .title {
+      font-size: 80px;
+      text-align: left;
+      position: relative;
+      margin-left: -85px;
+      margin-bottom: 10px; }
+    #press-section .more-tag {
+      position: absolute;
+      top: 250px;
+      right: 77px; }
+    #press-section .text, .mobile-images-collection .image-and-description-box #press-section .name, #collection-section .image-and-description-box #press-section .name, #projects-section .image-and-description-box #press-section .name, #press-section .image-and-description-box .name {
+      font-size: 14px; }
+    #press-section .images-descriptions-container {
+      margin-left: 0;
+      margin-bottom: 200px; }
+    #press-section .image-and-description-box {
+      margin-right: 35px;
+      margin-left: 35px; }
+      #press-section .image-and-description-box .image {
+        width: 233px;
+        height: 233px; }
+    #press-section .grid:after {
+      content: "";
+      display: table;
+      clear: both; }
+    #press-section .grid .grid-item {
+      float: left;
+      position: relative; }
+    #press-section .grid .grid-item.full {
+      width: 100%; }
+    #press-section .grid .grid-item.one-half {
+      width: 50%; }
+    #press-section .grid .grid-item.one-third {
+      width: 33.33%; }
+    #press-section .grid .grid-item.two-third {
+      width: 66.66%; }
+    #press-section .grid .grid-item.one-fourth {
+      width: 25%; }
+    #press-section .grid .grid-item.three-fourth {
+      width: 75%; }
+    #press-section .grid .grid-item.one-fifth {
+      width: 20%; }
+    #press-section .grid .grid-item.two-fifth {
+      width: 40%; }
+    #press-section .grid .grid-item.three-fifth {
+      width: 60%; }
+    #press-section .grid .grid-item.four-fifth {
+      width: 80%; }
+    #press-section .grid .grid-item.one-sixth {
+      width: 16.66%; }
+    #press-section .grid .grid-item.five-sixth {
+      width: 83.33%; }
+    #press-section .grid .grid-item.one-eighth {
+      width: 12.5%; }
+    #press-section .grid .grid-item.three-eighth {
+      width: 37.5%; }
+    #press-section .grid .grid-item.five-eighth {
+      width: 62.5%; }
+    #press-section .grid .grid-item.seven-eighth {
+      width: 87.5%; } }
 
 #contact-section {
   text-align: center;
