@@ -12,6 +12,7 @@
   }
 
   .title {
+    z-index: 100;
     font-family: parabola;
     font-weight: 300;
     font-size: 43px;
@@ -43,6 +44,7 @@
   * * * * * * * * * * * * * * * * * * * * * * * * * */
 
   .images-descriptions-container {
+    z-index: 1;
     margin-left: 68px;
     margin-bottom: 30px;
     width: auto;

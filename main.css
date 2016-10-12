@@ -456,6 +456,7 @@ body.loading {
   .mobile-images-collection .max-width-content, #collection-section .max-width-content, #projects-section .max-width-content, #press-section .max-width-content {
     top: 30px; }
   .mobile-images-collection .title, #collection-section .title, #projects-section .title, #press-section .title {
+    z-index: 100;
     font-family: parabola;
     font-weight: 300;
     font-size: 43px;
@@ -472,6 +473,7 @@ body.loading {
     padding-bottom: 27.10843px;
     margin-top: 10px; }
   .mobile-images-collection .images-descriptions-container, #collection-section .images-descriptions-container, #projects-section .images-descriptions-container, #press-section .images-descriptions-container {
+    z-index: 1;
     margin-left: 68px;
     margin-bottom: 30px;
     width: auto;
@@ -567,7 +569,7 @@ body.loading {
     font-family: sourceCodePro;
     position: absolute;
     left: 29px;
-    bottom: 9px; }
+    bottom: 20px; }
     @media only screen and (min-width: 1200px) {
       #hero-section .scroll-tag {
         left: 58px;
@@ -578,7 +580,7 @@ body.loading {
     font-family: sourceCodePro;
     position: absolute;
     right: 29px;
-    bottom: 9px; }
+    bottom: 20px; }
     @media only screen and (min-width: 1200px) {
       #hero-section .down-tag {
         right: 58px;
