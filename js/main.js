@@ -12,6 +12,10 @@ $(document).ready(function(){
       navLi = $('.nav-menu ul li');
   var headerTitle = $('.header .title');
   var isSubNav = $('.nav-menu').hasClass('hidden')? true: false;
+  // index page nav-menu and footer
+  var idxNavMenu = $('.index .nav-menu'),
+      idxFooter = $('.index #footer');
+
 
   function showMenu(){
     console.log($(this), $(this).parent(), "show menu");
@@ -41,37 +45,6 @@ $(document).ready(function(){
 
   navTitle.one("click", showMenu);
   headerTitle.one("click", showMenu);
-
-  $(window).resize($.throttle(250, function(){
-    var winWidth = $(window).innerWidth();
-    removeMenu();
-
-    if (winWidth >= 1200) {
-      navLinks.css('display', 'block');
-      navLi.off('click');
-    }
-  }));
-
-  // index page nav-menu and footer
-  var idxNavMenu = $('.index .nav-menu'),
-      idxFooter = $('.index #footer');
-
-  $(window).scroll($.throttle(250, function() {
-    var winScrollTop = $(window).scrollTop();
-    var winWidth = $(window).innerWidth();
-
-    if (winWidth >= 1024) {
-      if (winScrollTop >= 600) { // 1st section-height
-        idxNavMenu.removeClass('white');
-        idxFooter.addClass('activate');
-      } else {
-        idxNavMenu.addClass('white');
-        idxFooter.removeClass('activate');
-      }
-    } else {
-      idxFooter.addClass('activate');
-    }
-  }));
 
 
   /* * * * * * * * * * * *
@@ -120,31 +93,31 @@ $(document).ready(function(){
       ]
     }];
 
-  // build initial structure for mobile and transition
-  (function(){
-    var container = $('#collection-section .mobile-transition-only');
-    var content = "";
-
-    for (var i = 1; i < COLLECTION_DATA.length; ++i) {
-      var data = COLLECTION_DATA[i];
-      content+='<div class="image-and-description-box">'
-                + '<div class="row">'
-                  + '<img class="image1 frictionMed" src="' + data.images[0] + '"/>'
-                + '</div>'
-                + '<div class="row">'
-                  + '<div class="content-text frictionSlow">'
-                    + '<div class="name">' + data.title + '</div>'
-                    + '<p class="text">' + data.desc + '</p>'
-                  + '</div>'
-                + '</div>'
-              + '</div>';
-    }
-    container.html(content);
-  })();
-
   var slideCollectionSection = $.throttle(1000, (function() {
     var categoryIndex = 0;
     var nextCategoryIndex = 1;
+    // build initial structure for mobile and transition
+    (function(){
+      var container = $('#collection-section .mobile-transition-only');
+      var content = "";
+
+      for (var i = 1; i < COLLECTION_DATA.length; ++i) {
+        var data = COLLECTION_DATA[i];
+        content+='<div class="image-and-description-box">'
+        + '<div class="row">'
+        + '<img class="image1 frictionMed" src="' + data.images[0] + '"/>'
+        + '</div>'
+        + '<div class="row">'
+        + '<div class="content-text frictionSlow">'
+        + '<div class="name">' + data.title + '</div>'
+        + '<p class="text">' + data.desc + '</p>'
+        + '</div>'
+        + '</div>'
+        + '</div>';
+      }
+      container.html(content);
+    })();
+
     var updateIndex = function(isNext) {
       if (isNext) {
         categoryIndex++;
@@ -227,32 +200,33 @@ $(document).ready(function(){
     }
   ];
 
-  // build initial structure for mobile and transition
-  (function(){
-    var container = $('#projects-section .mobile-transition-only');
-    var content = "";
-
-    for (var i = 1; i < PROJECTS_DATA.length; ++i) {
-      var data = PROJECTS_DATA[i];
-      content+='<div class="image-and-description-box">'
-                + '<div class="column">'
-                  + '<img class="image1 frictionMed" src="' + data.images[0] + '"/>'
-                + '</div>'
-                + '<div class="column">'
-                  + '<div class="content-text frictionSlow">'
-                    + '<div class="name">' + data.title + '</div>'
-                    + '<p class="text">' + data.desc + '</p>'
-                  + '</div>'
-                + '</div>'
-              + '</div>';
-    }
-    container.html(content);
-  })();
 
 
   var slideProjectsSection = $.throttle(1000, (function() {
     var categoryIndex = 0;
     var nextCategoryIndex = 1;
+    // build initial structure for mobile and transition
+    (function(){
+      var container = $('#projects-section .mobile-transition-only');
+      var content = "";
+
+      for (var i = 1; i < PROJECTS_DATA.length; ++i) {
+        var data = PROJECTS_DATA[i];
+        content+='<div class="image-and-description-box">'
+        + '<div class="column">'
+        + '<img class="image1 frictionMed" src="' + data.images[0] + '"/>'
+        + '</div>'
+        + '<div class="column">'
+        + '<div class="content-text frictionSlow">'
+        + '<div class="name">' + data.title + '</div>'
+        + '<p class="text">' + data.desc + '</p>'
+        + '</div>'
+        + '</div>'
+        + '</div>';
+      }
+      container.html(content);
+    })();
+
     var updateIndex = function(isNext) {
       if (isNext) {
         categoryIndex++;
@@ -309,103 +283,141 @@ $(document).ready(function(){
   // variables
   var pressImg = $('#press-section .image'),
       pressDate = $('#press-section .date'),
-      pressDesc = $('#press-section .text')
-      projectsTitle = $('#projects-section .name'),
-      projectsDesc  = $('#projects-section .text'),
-      projectsContainer = $('#projects-section .images-descriptions-container');
+      pressDesc = $('#press-section .text'),
+      grid;
 
   // data
-  var PROJECTS_DATA = [
+  var PRESS_DATA = [
     {
-      "title": "rau ram",
-      "desc" : "We design, make, and install furniture and accessories for indoor and outdoor environments, including hospitality, retail, and cultural projects. Whether providing a single piece of furniture, an installation, or outfitting an entire restaurant, we pride ourselves on high-quality materials, flexibility, innovation, and the opportunity to bring beautiful Myanmar-made craftsmanship to the rest of the world.",
-      "images": [
-        "images/index/4_projects1.jpg",
-        "images/index/4_projects2.jpg"
-      ]
+      "date": "4 October 2016",
+      "desc" : "Paribawga launches at the Myanmar Furniture Fair 2016.",
+      "image": "images/press/press1.jpg",
+      "pdf": "/images/press/press1.pdf"
     },
     {
-      "title": "the new project",
-      "desc" : "This is a new project.",
-      "images": [
-        "images/collection/collection_1.jpg",
-        "images/collection/collection_2.jpg"
-      ]
+      "date": "4 October 2016",
+      "desc" : "Travel and Leisure Asia: Paribawga mentioned in “Road to Rangoon”  for its work on Yangon dining hotspot, Rau Ram.",
+      "image": "images/press/press2.jpg",
+      "pdf": "/images/press/press2.pdf"
+    },
+    {
+      "date": "4 October 2016",
+      "desc" : "Test.",
+      "image": "images/collection/1_1.jpg",
+      "pdf": "/images/press/press1.pdf"
+    },
+    {
+      "date": "5 October 2016",
+      "desc" : "Test.",
+      "image": "images/collection/1_2.jpg",
+      "pdf": "/images/press/press1.pdf"
+    },
+    {
+      "date": "6 October 2016",
+      "desc" : "Test.",
+      "image": "images/collection/1_3.jpg",
+      "pdf": "/images/press/press1.pdf"
+    },
+    {
+      "date": "7 October 2016",
+      "desc" : "Test.",
+      "image": "images/collection/1_4.jpg",
+      "pdf": "/images/press/press1.pdf"
+    },
+    {
+      "date": "8 October 2016",
+      "desc" : "Test.",
+      "image": "images/collection/1_5.jpg",
+      "pdf": "/images/press/press1.pdf"
     }
   ];
 
-  // build initial structure for mobile and transition
-  (function(){
-    var container = $('#projects-section .mobile-transition-only');
-    var content = "";
+  var rowPressSection = $.throttle(1000, (function() {
+    var rowIndex = 0, currRowIdxShown = 0;
+    var maxRow = Math.floor(PRESS_DATA.length / 3);
 
-    for (var i = 1; i < PROJECTS_DATA.length; ++i) {
-      var data = PROJECTS_DATA[i];
-      content+='<div class="image-and-description-box">'
-                + '<div class="column">'
-                  + '<img class="image1 frictionMed" src="' + data.images[0] + '"/>'
-                + '</div>'
-                + '<div class="column">'
-                  + '<div class="content-text frictionSlow">'
-                    + '<div class="name">' + data.title + '</div>'
-                    + '<p class="text">' + data.desc + '</p>'
-                  + '</div>'
-                + '</div>'
-              + '</div>';
-    }
-    container.html(content);
-  })();
+    function showGrid(startRow, endRow, display){
 
+      console.log("showGrid", startRow, endRow, display);
 
-  var slideProjectsSection = $.throttle(1000, (function() {
-    var categoryIndex = 0;
-    var nextCategoryIndex = 1;
-    var updateIndex = function(isNext) {
-      if (isNext) {
-        categoryIndex++;
-        if (categoryIndex >= PROJECTS_DATA.length) {
-          categoryIndex = 0;
-        }
-      } else {
-        categoryIndex--;
-        if (categoryIndex < 0) {
-          categoryIndex = PROJECTS_DATA.length - 1;
-        }
+      for (var i = startRow; i <= endRow; ++i) {
+        $(grid[i]).css('display', display);
       }
-      nextCategoryIndex = categoryIndex + 1;
-      if (nextCategoryIndex >= PROJECTS_DATA.length) {
-        nextCategoryIndex = 0;
+
+      for (var i = endRow + 1; i <= maxRow; ++i) {
+        $(grid[i]).css('display', 'none');
       }
     }
 
-    return function(e, isNext) {
-      updateIndex(isNext);
-      var title = PROJECTS_DATA[categoryIndex].title;
-      var desc = PROJECTS_DATA[categoryIndex].desc;
-      var imgs = [];
-      $(PROJECTS_DATA[categoryIndex].images).each(function(idx, element){
-        imgs.push(element);
-      });
+    // build initial structure
+    (function(){
+      var container = $('#press-section .images-descriptions-container');
+      var content = "";
 
-      function updateData(){
-        projectsTitle.text(title);
-        projectsDesc.text(desc);
-        projectsImg1.attr("src", imgs[0]);
-        projectsImg2.attr("src", imgs[1]);
+      for (var i = 0; i < PRESS_DATA.length; ++i) {
+        var data = PRESS_DATA[i];
+        if (i % 3 == 0) {
+          if (i != 0) {
+            content+= '</div>';
+          }
+          content+= '<div class="grid">';
+        }
+        content+='<div class="image-and-description-box grid-item one-fourth">'
+        + '<div class="date frictionSlow">' + data.date + '</div>'
+        + '<img class="image frictionFast" src="' + data.image + '" alt="press"' + i.toString() + '/>'
+        + '<div class="content-text frictionSlow">'
+        + '<p class="text">' + data.desc + '</p>'
+        + '<br>'
+        + '<p class="explore-link">'
+        + '<a href="' + data.pdf + '">Explore more</a>'
+        + '</p>'
+        + '</div>'
+        + '</div>';
+        if (i == PRESS_DATA.length-1)
+        content+= '</div>';
       }
+      container.html(content);
+
+      grid = $('#press-section .grid');
+
+      var winWidth = $(window).innerWidth();
+      if (winWidth < 1200) {
+        showGrid(0, maxRow, "inline-block");
+      } else {
+        showGrid(0, rowIndex, "block");
+      }
+    })();
+
+    return function(e, isNext, winWidth) {
 
       if (isNext) {
-        x = 1000;
-      } else {
-        x = -1000;
+        rowIndex++;
+        if (rowIndex > maxRow) {
+          rowIndex = maxRow;
+          return;
+        }
+
+        if (currRowIdxShown < rowIndex) {
+          showGrid(currRowIdxShown + 1, rowIndex, "block");
+          var pressTL = new TimelineLite();
+          pressTL
+          .set(grid[rowIndex], {height: 0, overflow: "hidden", autoAlpha: 0})
+          .set(grid[rowIndex], {height: "auto"})
+          .from(grid[rowIndex], 1, {height: 0})
+          .fromTo(grid[rowIndex], 1, {x: -1000}, {x: 0, autoAlpha: 1});
+          currRowIdxShown = rowIndex;
+        }
+
+        return;
       }
 
-      TweenMax.from(projectsContainer, 1, {
-        x: x,
-        ease: Power2.easeOut,
-        onUpdate: updateData
-      });
-
+      console.log('dor');
+      rowIndex = 0;
+      if (winWidth < 1200) {
+        showGrid(0, maxRow, "inline-block");
+      } else {
+        showGrid(0, rowIndex, "block");
+      }
     };
   })());
 
@@ -437,7 +449,44 @@ $(document).ready(function(){
     if (target === '#projects-section') {
       return slideProjectsSection.apply(this, [e, isNext]);
     }
+
+    if (target === '#press-section') {
+      return rowPressSection.apply(this, [e, isNext, 0]);
+    }
   });
+
+  /* * * * * * * * * * * *
+  *  WINDOW RESIZE & SCROLL
+  * * * * * * * * * * * */
+
+  $(window).resize($.throttle(250, function(e){
+    var winWidth = $(window).innerWidth();
+    removeMenu();
+
+    if (winWidth >= 1200) {
+      navLinks.css('display', 'block');
+      navLi.off('click');
+    }
+    rowPressSection.apply(this, [e, false, winWidth]);
+  }));
+
+  $(window).scroll($.throttle(250, function() {
+    var winScrollTop = $(window).scrollTop();
+    var winWidth = $(window).innerWidth();
+
+    if (winWidth >= 1024) {
+      if (winScrollTop >= 600) { // 1st section-height
+        idxNavMenu.removeClass('white');
+        idxFooter.addClass('activate');
+      } else {
+        idxNavMenu.addClass('white');
+        idxFooter.removeClass('activate');
+      }
+    } else {
+      idxFooter.addClass('activate');
+    }
+  }));
+
 
   /* * * * * * * * * * * *
   *  ANIMATIONS
@@ -488,14 +537,14 @@ $(document).ready(function(){
   var deltaPosVars = [1.5, -1, .5];
   var lastPos, newPos = 0;
 
-  function friction() {
+  function friction(){
     requestAnimationFrame(friction);
     var winScrollTop = $(window).scrollTop();
     lastPos = newPos;
     newPos = winScrollTop;
     var speed = newPos - lastPos;
 
-    for (var i = 0; i < fricElements.length; ++i){
+    for (var i = 0; i < fricElements.length; ++i) {
       var maxDeltaPos = deltaPosVars[i] * speed;
       TweenLite.to(fricElements[i], durationVars[i], {y: maxDeltaPos});
     }
