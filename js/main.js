@@ -2,8 +2,6 @@ $(document).ready(function(){
 
   $(this).scrollTop(0);
 
-  var indexPage = $('.index');
-
   /* * * * * * * * * * * *
   *  NAV MENU
   * * * * * * * * * * * */
@@ -350,17 +348,19 @@ $(document).ready(function(){
       taglineImg = $('.cover-tagline .img'),
       scrollTag = $('.scroll-tag'),
       downTag = $('.down-tag'),
-      aboutusSection = $('#aboutus-section');
+      aboutusSection = $('#aboutus-section'),
+      idxPage = $('body');
 
   headerTL
-  .staggerTo(pathChildren, .05, {autoAlpha: 1, strokeDashoffset: 0}, .05)
-  //.to(header, 1, {top: '10%', right: '10%', bottom: '10%', left: '10%', ease: Circ.easeOut})
-  .fromTo(idxNavMenu, 1, {y: -200, autoAlpha: 0}, {y: 0, autoAlpha: 1}, '-=.05')
-  .from(scrollTag, 1, {x: -200}, '-=1')
-  .from(downTag, 1, {x: 200}, '-=1')
-  .set(taglineImg, {autoAlpha: 1}, '-=1')
-  .set(indexPage, {overflow: 'auto'})
-  .set(idxNavMenu, {clearProps: "x"}); // reset position
+    .set(idxPage, {overflow: 'hidden'})
+    .staggerTo(pathChildren, .05, {autoAlpha: 1, strokeDashoffset: 0}, .05)
+    //.to(header, 1, {top: '10%', right: '10%', bottom: '10%', left: '10%', ease: Circ.easeOut})
+    .fromTo(idxNavMenu, 1, {y: -200, autoAlpha: 0}, {y: 0, autoAlpha: 1}, '-=.05')
+    .from(scrollTag, 1, {x: -200}, '-=1')
+    .from(downTag, 1, {x: 200}, '-=1')
+    .set(taglineImg, {autoAlpha: 1}, '-=1')
+    .set(idxPage, {overflow: 'auto'})
+    .set(idxNavMenu, {clearProps: "x"}); // reset position
 
 
   scrollTag.add(downTag).click(function(){
