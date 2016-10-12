@@ -1,6 +1,6 @@
 #sustain-section {
 
-  margin-bottom: 125px;
+  margin-bottom: 75px;
 
   $chair-width: 464px;
   $chair-width-trans: 250px;
@@ -25,6 +25,10 @@
   $marble-height: 330px;
   $marble-height-trans: 240px;
   $marble-height-mobile: 221px;
+
+  .content {
+    top: 50px;
+  }
 
   .title {
     font-family: parabola;

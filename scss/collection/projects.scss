@@ -149,6 +149,8 @@
     position: absolute;
     right: $backtotop-right;
     bottom: $backtotop-bottom;
+
+    @include animation(1s);
   }
 
   @include responsive(desktop) {

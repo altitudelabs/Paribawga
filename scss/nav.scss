@@ -57,13 +57,15 @@
   }
 
   .underline {
-    border-bottom: 1px solid;
+    @include responsive(desktop) {
+      border-bottom: 1px solid;
+    }
   }
 }
 
 .gray-bg {
-  $section-height: 650px;
-  $section-height-mobile: 558px;
+  $section-height: 100vh;
+  $section-height-mobile: 100vh;
   z-index: 100;
   visibility: hidden;
 
@@ -85,4 +87,8 @@
   @include responsive(desktop) {
     color: white;
   }
+}
+
+.index.nav-menu {
+  opacity: 0;
 }

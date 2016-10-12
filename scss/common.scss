@@ -121,3 +121,19 @@ body.loading {
 .hidden {
   display: none;
 }
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Animation
+ * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+ // slide from outside the page
+
+ .slide-up-full {
+   @include transform((translateY(100px)));
+   @include transition((all 1s ease));
+
+   &.activate {
+     @include transform((translateY(0)));
+   }
+ }

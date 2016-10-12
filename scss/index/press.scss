@@ -1,5 +1,6 @@
 #press-section {
   @extend .mobile-images-collection;
+  height: 600px;
 
   .date {
     margin-top: 26px;
@@ -49,7 +50,7 @@
 
   // desktop
   @include responsive(desktop) {
-
+    height: 700px;
     $image-between-margin: 35px;
 
     $image-width: 233px;
@@ -62,6 +63,8 @@
 
     .max-width-content {
       max-width: 900px;
+      top: 50px;
+      height: 100%;
     }
 
     .title {

@@ -1,5 +1,4 @@
 .mobile-images-collection {
-
   margin-bottom: 0;
 
   $image-width: 180px; // 152
@@ -8,7 +7,16 @@
 
   $more-tag-width: 30px;
 
+  .max-width-content {
+    top: 30px;
+  }
+
+  .mobile-transition-only {
+    display: inline-block;
+  }
+
   .title {
+    z-index: 100;
     font-family: parabola;
     font-weight: 300;
     font-size: 43px;
@@ -22,7 +30,7 @@
     @extend .background-contain;
 
     position: absolute;
-    top: 0;
+    top: 30px;
     right: 28px;
 
     width: $more-tag-width;
@@ -40,10 +48,11 @@
   * * * * * * * * * * * * * * * * * * * * * * * * * */
 
   .images-descriptions-container {
+    z-index: 1;
     margin-left: 68px;
-    margin-bottom: 79px;
+    margin-bottom: 30px;
     width: auto;
-    height: auto;
+    min-height: 450px;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;

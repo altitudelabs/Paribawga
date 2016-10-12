@@ -22,7 +22,11 @@
   $images-margintop: -80px;
   $images-margintop-mobile: 0;
 
-  margin-bottom: 115px;
+  margin-bottom: 65px;
+
+  .content {
+    top: 50px;
+  }
 
   .title {
     z-index: 1;

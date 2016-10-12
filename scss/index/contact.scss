@@ -11,6 +11,10 @@
     margin-bottom: 100px;
   }
 
+  .content {
+    top: 50px;
+  }
+
   .title {
     font-family: parabola;
     font-weight: 300;
@@ -85,5 +89,7 @@
     position: absolute;
     right: $backtotop-right;
     top: $backtotop-top;
+
+    @include animation(1s);
   }
 }
