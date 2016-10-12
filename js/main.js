@@ -456,17 +456,45 @@ $(document).ready(function(){
   });
 
   /* * * * * * * * * * * *
+  *  LEVEL
+  * * * * * * * * * * * */
+
+  var level = $('.level');
+
+  function updateLevel(currScroll){
+    var currSection = $.makeArray($('.section-container'))
+      .reduce(function(prev, current) {
+        var target = $(current).data('target');
+
+        if ($(current).offset().top <= currScroll + 200) {
+          return target;
+        }
+        return prev;
+      }, 'zero');
+
+      console.log(currSection);
+
+      if (!level.hasClass(currSection)){
+        $(level).attr('class', 'level');
+        level.addClass(currSection);
+      }
+  }
+
+  /* * * * * * * * * * * *
   *  WINDOW RESIZE & SCROLL
   * * * * * * * * * * * */
 
   $(window).resize($.throttle(250, function(e){
     var winWidth = $(window).innerWidth();
-    removeMenu();
 
+    // nav menu
+    removeMenu();
     if (winWidth >= 1200) {
       navLinks.css('display', 'block');
       navLi.off('click');
     }
+
+    // press
     rowPressSection.apply(this, [e, false, winWidth]);
   }));
 
@@ -474,6 +502,7 @@ $(document).ready(function(){
     var winScrollTop = $(window).scrollTop();
     var winWidth = $(window).innerWidth();
 
+    // nav menu
     if (winWidth >= 1024) {
       if (winScrollTop >= 600) { // 1st section-height
         idxNavMenu.removeClass('white');
@@ -485,6 +514,9 @@ $(document).ready(function(){
     } else {
       idxFooter.addClass('activate');
     }
+
+    // level
+    updateLevel(winScrollTop);
   }));
 
 

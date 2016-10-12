@@ -121,14 +121,14 @@ a {
 .clearfix:after, .furniture .max-width-content:after {
   clear: both; }
 
-.background-image, .background-cover, #hero-section, #bespoke-section .shelf, #bespoke-section .marble, #sustain-section .img1-chair-container .chair, .furniture .image, .background-contain, #footer .logo, #footer .apps-logo .app, .mobile-header .prev, .collection-page .prev, .furniture .prev, .project-page .prev, .mobile-header .next, .collection-page .next, .furniture .next, .project-page .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, .mobile-images-collection .image-and-description-box .image, #collection-section .image-and-description-box .image, #projects-section .image-and-description-box .image, #press-section .image-and-description-box .image, .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1, .mobile-images-collection .image-and-description-box .image2, #collection-section .image-and-description-box .image2, #projects-section .image-and-description-box .image2, #press-section .image-and-description-box .image2, .mobile-images-collection .image-and-description-box .image3, #collection-section .image-and-description-box .image3, #projects-section .image-and-description-box .image3, #press-section .image-and-description-box .image3, .mobile-images-collection .image-and-description-box .image4, #collection-section .image-and-description-box .image4, #projects-section .image-and-description-box .image4, #press-section .image-and-description-box .image4, #hero-section .cover-tagline .img, #aboutus-section .image-container .image, #contact-section .back-to-top, .collection-page .image-description .image, .collection-page .back-to-top, .project-page .image-description .image, .project-page .back-to-top {
+.background-image, .background-cover, #hero-section, #bespoke-section .shelf, #bespoke-section .marble, #sustain-section .img1-chair-container .chair, .furniture .image, .background-contain, #footer .logo, #footer .apps-logo .app, .mobile-header .prev, .collection-page .prev, .furniture .prev, .project-page .prev, .mobile-header .next, .collection-page .next, .furniture .next, .project-page .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, .mobile-images-collection .image-and-description-box .image, #collection-section .image-and-description-box .image, #projects-section .image-and-description-box .image, #press-section .image-and-description-box .image, .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1, .mobile-images-collection .image-and-description-box .image2, #collection-section .image-and-description-box .image2, #projects-section .image-and-description-box .image2, #press-section .image-and-description-box .image2, .mobile-images-collection .image-and-description-box .image3, #collection-section .image-and-description-box .image3, #projects-section .image-and-description-box .image3, #press-section .image-and-description-box .image3, .mobile-images-collection .image-and-description-box .image4, #collection-section .image-and-description-box .image4, #projects-section .image-and-description-box .image4, #press-section .image-and-description-box .image4, #hero-section .cover-tagline .img, #aboutus-section .image-container .image, #contact-section .back-to-top, .level, .collection-page .image-description .image, .collection-page .back-to-top, .project-page .image-description .image, .project-page .back-to-top {
   background-position: center center;
   background-repeat: no-repeat; }
 
 .background-cover, #hero-section, #bespoke-section .shelf, #bespoke-section .marble, #sustain-section .img1-chair-container .chair, .furniture .image {
   background-size: cover; }
 
-.background-contain, #footer .logo, #footer .apps-logo .app, .mobile-header .prev, .collection-page .prev, .furniture .prev, .project-page .prev, .mobile-header .next, .collection-page .next, .furniture .next, .project-page .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, .mobile-images-collection .image-and-description-box .image, #collection-section .image-and-description-box .image, #projects-section .image-and-description-box .image, #press-section .image-and-description-box .image, .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1, .mobile-images-collection .image-and-description-box .image2, #collection-section .image-and-description-box .image2, #projects-section .image-and-description-box .image2, #press-section .image-and-description-box .image2, .mobile-images-collection .image-and-description-box .image3, #collection-section .image-and-description-box .image3, #projects-section .image-and-description-box .image3, #press-section .image-and-description-box .image3, .mobile-images-collection .image-and-description-box .image4, #collection-section .image-and-description-box .image4, #projects-section .image-and-description-box .image4, #press-section .image-and-description-box .image4, #hero-section .cover-tagline .img, #aboutus-section .image-container .image, #contact-section .back-to-top, .collection-page .image-description .image, .collection-page .back-to-top, .project-page .image-description .image, .project-page .back-to-top {
+.background-contain, #footer .logo, #footer .apps-logo .app, .mobile-header .prev, .collection-page .prev, .furniture .prev, .project-page .prev, .mobile-header .next, .collection-page .next, .furniture .next, .project-page .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, .mobile-images-collection .image-and-description-box .image, #collection-section .image-and-description-box .image, #projects-section .image-and-description-box .image, #press-section .image-and-description-box .image, .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1, .mobile-images-collection .image-and-description-box .image2, #collection-section .image-and-description-box .image2, #projects-section .image-and-description-box .image2, #press-section .image-and-description-box .image2, .mobile-images-collection .image-and-description-box .image3, #collection-section .image-and-description-box .image3, #projects-section .image-and-description-box .image3, #press-section .image-and-description-box .image3, .mobile-images-collection .image-and-description-box .image4, #collection-section .image-and-description-box .image4, #projects-section .image-and-description-box .image4, #press-section .image-and-description-box .image4, #hero-section .cover-tagline .img, #aboutus-section .image-container .image, #contact-section .back-to-top, .level, .collection-page .image-description .image, .collection-page .back-to-top, .project-page .image-description .image, .project-page .back-to-top {
   background-size: contain; }
 
 body.loading {
@@ -1184,6 +1184,29 @@ body.loading {
     -moz-animation: 1s;
     -o-animation: 1s;
     animation: 1s; }
+
+.level {
+  background-position: left;
+  z-index: 1;
+  width: 70px;
+  height: 0;
+  padding-bottom: 238.65772px;
+  position: fixed;
+  top: 57px; }
+  .level.zero {
+    background-image: none; }
+  .level.one {
+    background-image: url("./images/levels/1.png"); }
+  .level.two {
+    background-image: url("./images/levels/2.png"); }
+  .level.three {
+    background-image: url("./images/levels/3.png"); }
+  .level.four {
+    background-image: url("./images/levels/4.png"); }
+  .level.five {
+    background-image: url("./images/levels/5.png"); }
+  .level.six {
+    background-image: url("./images/levels/6.png"); }
 
 .collection-page {
   /* * * * * * * * * * * * * * * *
