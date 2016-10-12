@@ -127,52 +127,6 @@ body.loading {
  * Animation
  * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-
- // slide in from within the page
-
- .slide-left {
-   @include animation((slide-left-key 1s ease));
- }
-
- @-webkit-keyframes slide-left-key {
-   0%   { transform: translateX(300px); }
-   100% { transform: translateX(0px); }
- }
- @-moz-keyframes slide-left-key {
-   0%   { transform: translateX(300px); }
-   100% { transform: translateX(0px); }
- }
- @-o-keyframes slide-left-key {
-   0%   { transform: translateX(300px); }
-   100% { transform: translateX(0px); }
- }
- @keyframes slide-left-key {
-   0%   { transform: translateX(300px); }
-   100% { transform: translateX(0px); }
- }
-
-
- .slide-right {
-   @include animation((slide-right-key 1s ease));
- }
-
- @-webkit-keyframes slide-right-key {
-   0%   { transform: translateX(-300px); }
-   100% { transform: translateX(0px); }
- }
- @-moz-keyframes slide-right-key {
-   0%   { transform: translateX(-300px); }
-   100% { transform: translateX(0px); }
- }
- @-o-keyframes slide-right-key {
-   0%   { transform: translateX(-300px); }
-   100% { transform: translateX(0px); }
- }
- @keyframes slide-right-key {
-   0%   { transform: translateX(-300px); }
-   100% { transform: translateX(0px); }
- }
-
  // slide from outside the page
 
  .slide-up-full {

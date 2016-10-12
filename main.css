@@ -204,66 +204,6 @@ body.loading {
 /* * * * * * * * * * * * * * * * * * * * * * * * * *
  * Animation
  * * * * * * * * * * * * * * * * * * * * * * * * * */
-.slide-left {
-  -webkit-animation: slide-left-key 1s ease;
-  -moz-animation: slide-left-key 1s ease;
-  -o-animation: slide-left-key 1s ease;
-  animation: slide-left-key 1s ease; }
-
-@-webkit-keyframes slide-left-key {
-  0% {
-    transform: translateX(300px); }
-  100% {
-    transform: translateX(0px); } }
-
-@-moz-keyframes slide-left-key {
-  0% {
-    transform: translateX(300px); }
-  100% {
-    transform: translateX(0px); } }
-
-@-o-keyframes slide-left-key {
-  0% {
-    transform: translateX(300px); }
-  100% {
-    transform: translateX(0px); } }
-
-@keyframes slide-left-key {
-  0% {
-    transform: translateX(300px); }
-  100% {
-    transform: translateX(0px); } }
-
-.slide-right {
-  -webkit-animation: slide-right-key 1s ease;
-  -moz-animation: slide-right-key 1s ease;
-  -o-animation: slide-right-key 1s ease;
-  animation: slide-right-key 1s ease; }
-
-@-webkit-keyframes slide-right-key {
-  0% {
-    transform: translateX(-300px); }
-  100% {
-    transform: translateX(0px); } }
-
-@-moz-keyframes slide-right-key {
-  0% {
-    transform: translateX(-300px); }
-  100% {
-    transform: translateX(0px); } }
-
-@-o-keyframes slide-right-key {
-  0% {
-    transform: translateX(-300px); }
-  100% {
-    transform: translateX(0px); } }
-
-@keyframes slide-right-key {
-  0% {
-    transform: translateX(-300px); }
-  100% {
-    transform: translateX(0px); } }
-
 .slide-up-full {
   -webkit-transform: translateY(100px);
   -moz-transform: translateY(100px);
@@ -455,6 +395,8 @@ body.loading {
   * * * * * * * * * * * * * * * * * * * * * * * * * */ }
   .mobile-images-collection .max-width-content, #collection-section .max-width-content, #projects-section .max-width-content, #press-section .max-width-content {
     top: 30px; }
+  .mobile-images-collection .mobile-transition-only, #collection-section .mobile-transition-only, #projects-section .mobile-transition-only, #press-section .mobile-transition-only {
+    display: inline-block; }
   .mobile-images-collection .title, #collection-section .title, #projects-section .title, #press-section .title {
     z-index: 100;
     font-family: parabola;
