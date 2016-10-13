@@ -18,7 +18,8 @@ html, body {
 
 .section-container {
   position: relative;
-  overflow: hidden;
+  clear: both;
+  //overflow: hidden;
 }
 
 a {

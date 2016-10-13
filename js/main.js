@@ -49,6 +49,49 @@ $(document).ready(function(){
 
 
   /* * * * * * * * * * * *
+  *  EXPAND/SHRINK text function
+  * * * * * * * * * * * */
+
+  function shrinkText(element, maxLength){
+    var fullText = element.text();
+
+    if (fullText.length <= maxLength) return;
+
+    var shownText = fullText.substr(0, maxLength);
+    var hiddenText = fullText.substr(maxLength, fullText.length);
+
+    element.html(shownText
+                  + '<a class="read-more">Read more</a>'
+                  + '<span class="more-text" style="display: none">' + hiddenText + '</span>');
+
+    $(element).find('a.read-more').click(function(e){
+      e.preventDefault();
+      expandText(element);
+    });
+  }
+
+  function expandText(element) {
+    var readMore = $(element).find('a.read-more');
+    $(readMore).hide();
+    $(readMore).parent().find('.more-text').show();
+  }
+
+  function shrinkSectionText(section) {
+    var itemDescs = $(section).find('.text');
+    $(itemDescs).each(function(){
+      shrinkText($(this), 200);
+    });
+  }
+
+  function expandSectionText(section){
+    var itemDescs = $(section).find('.text');
+    $(itemDescs).each(function(){
+      expandText($(this));
+    });
+  }
+
+
+  /* * * * * * * * * * * *
   *  COLLECTION
   * * * * * * * * * * * */
 
@@ -97,6 +140,7 @@ $(document).ready(function(){
   var slideCollectionSection = $.throttle(1000, (function() {
     var categoryIndex = 0;
     var nextCategoryIndex = 1;
+
     // build initial structure for mobile and transition
     (function(){
       var container = $('#collection-section .mobile-transition-only');
@@ -117,6 +161,10 @@ $(document).ready(function(){
         + '</div>';
       }
       container.html(content);
+
+      var winWidth = $(window).innerWidth();
+      if (winWidth < 1200) shrinkSectionText('#collection-section');
+
     })();
 
     var updateIndex = function(isNext) {
@@ -201,8 +249,6 @@ $(document).ready(function(){
     }
   ];
 
-
-
   var slideProjectsSection = $.throttle(1000, (function() {
     var categoryIndex = 0;
     var nextCategoryIndex = 1;
@@ -279,6 +325,7 @@ $(document).ready(function(){
     };
   })());
 
+
   /* * * * * * * * * * * *
   *  PRESS
   * * * * * * * * * * * */
@@ -339,11 +386,11 @@ $(document).ready(function(){
     var rowIndex = 0, currRowIdxShown = 0;
     var maxRow = Math.floor(PRESS_DATA.length / 3);
 
-    function showGrid(startRow, endRow, display){
+    function showGrid(endRow, display){
 
-      console.log("showGrid", startRow, endRow, display);
+      console.log("showGrid", endRow, display);
 
-      for (var i = startRow; i <= endRow; ++i) {
+      for (var i = 0; i <= endRow; ++i) {
         $(grid[i]).css('display', display);
       }
 
@@ -385,9 +432,9 @@ $(document).ready(function(){
 
       var winWidth = $(window).innerWidth();
       if (winWidth < 1200) {
-        showGrid(0, maxRow, "inline-block");
+        showGrid(maxRow, "inline-block");
       } else {
-        showGrid(0, rowIndex, "block");
+        showGrid(rowIndex, "block");
       }
     })();
 
@@ -401,25 +448,25 @@ $(document).ready(function(){
         }
 
         if (currRowIdxShown < rowIndex) {
-          showGrid(currRowIdxShown + 1, rowIndex, "block");
+          showGrid(rowIndex, "block");
           var pressTL = new TimelineLite();
           pressTL
           .set(grid[rowIndex], {height: 0, overflow: "hidden", autoAlpha: 0})
           .set(grid[rowIndex], {height: "auto"})
           .from(grid[rowIndex], 1, {height: 0})
-          .fromTo(grid[rowIndex], 1, {x: -1000}, {x: 0, autoAlpha: 1});
+          .fromTo(grid[rowIndex], 1, {x: -1000}, {x: 0, autoAlpha: 1})
+          .set(grid[rowIndex], {clearProps: "overflow"});
           currRowIdxShown = rowIndex;
         }
 
         return;
       }
 
-      console.log('dor');
       rowIndex = 0;
       if (winWidth < 1200) {
-        showGrid(0, maxRow, "inline-block");
+        showGrid(maxRow, "inline-block");
       } else {
-        showGrid(0, rowIndex, "block");
+        showGrid(rowIndex, "block");
       }
     };
   })());
@@ -475,7 +522,7 @@ $(document).ready(function(){
         return prev;
       }, 'zero');
 
-      console.log(currSection);
+      //console.log(currSection);
 
       if (!level.hasClass(currSection)){
         $(level).attr('class', 'level desktop-only');
@@ -489,16 +536,23 @@ $(document).ready(function(){
 
   $(window).resize($.throttle(250, function(e){
     var winWidth = $(window).innerWidth();
-
-    // nav menu
     removeMenu();
+
     if (winWidth >= 1200) {
+      // nav menu
       navLinks.css('display', 'block');
       navLi.off('click');
+
+      // collection text
+      expandSectionText($('#collection-section'));
+    } else {
+      shrinkSectionText($('#collection-section'));
     }
 
     // press
     rowPressSection.apply(this, [e, false, winWidth]);
+
+
   }));
 
   $(window).scroll($.throttle(250, function() {

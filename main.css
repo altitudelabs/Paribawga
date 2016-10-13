@@ -109,7 +109,7 @@ html, body {
 
 .section-container {
   position: relative;
-  overflow: hidden; }
+  clear: both; }
 
 a {
   cursor: pointer; }
@@ -459,6 +459,9 @@ body.loading {
       text-align: left; }
       .mobile-images-collection .image-and-description-box .explore-link a, #collection-section .image-and-description-box .explore-link a, #projects-section .image-and-description-box .explore-link a, #press-section .image-and-description-box .explore-link a {
         color: inherit; }
+    .mobile-images-collection .image-and-description-box .read-more, #collection-section .image-and-description-box .read-more, #projects-section .image-and-description-box .read-more, #press-section .image-and-description-box .read-more {
+      text-decoration: underline;
+      font-weight: 500; }
 
 .index {
   overflow: hidden; }
