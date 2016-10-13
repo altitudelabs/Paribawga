@@ -1516,20 +1516,29 @@ body.loading {
       height: 200px;
       display: block;
       margin: auto;
-      max-width: 250px; }
+      max-width: 270px; }
       @media only screen and (min-width: 1200px) {
         .project-page .image-description .image {
           max-width: none;
           margin: 0; } }
     .project-page .image-description .image1 {
-      width: 412px;
-      height: 229px; }
+      width: auto;
+      height: 180px; }
+      @media only screen and (min-width: 1200px) {
+        .project-page .image-description .image1 {
+          height: 229px; } }
     .project-page .image-description .image2 {
-      width: 296px;
-      height: 350px; }
+      width: auto;
+      height: 200px; }
+      @media only screen and (min-width: 1200px) {
+        .project-page .image-description .image2 {
+          height: 350px; } }
     .project-page .image-description .image3 {
-      width: 250px;
-      height: 300px; }
+      width: auto;
+      height: 200px; }
+      @media only screen and (min-width: 1200px) {
+        .project-page .image-description .image3 {
+          height: 300px; } }
     .project-page .image-description .desc {
       font-family: sourceCodePro;
       font-weight: 600;
