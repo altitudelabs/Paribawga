@@ -1140,9 +1140,6 @@ body.loading {
     margin-top: 50px;
     margin-left: 32px;
     margin-right: 28px; }
-    @media only screen and (min-width: 1200px) {
-      #contact-section .content {
-        margin-top: 100px; } }
     #contact-section .content p {
       font-family: sourceCodePro;
       font-weight: 300;

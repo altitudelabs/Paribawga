@@ -29,8 +29,10 @@ $(document).ready(function(){
     var winWidth = $(window).innerWidth();
 
     if (winWidth < 1200) {
+      console.log(winWidth);
       navLi.off('click').on('click', removeMenu);
     } else {
+      console.log(winWidth);
       navLi.off('click');
     }
   }
@@ -637,7 +639,6 @@ $(document).ready(function(){
     $('body, html').animate({
       scrollTop: $(section).position().top+'px'
     }, 600);
-    return false;
   });
 
   // Friction
@@ -666,10 +667,9 @@ $(document).ready(function(){
 
   // back-to-top
 
-  var backToTop = $('.back-to-top');
+  var backToTop = $('.back-to-top, .index .logo');
 
   backToTop.click(function(){
-    console.log("test");
     $('body, html').animate({
       scrollTop: 0
     }, 600);
