@@ -630,6 +630,15 @@ $(document).ready(function(){
     }, 600);
   });
 
+  // messy scroll animation - bespoke section
+  $('#bespoke-section a').click(function(e) {
+    e.preventDefault();
+    var section = $(this).attr('href');
+
+    $('body, html').animate({
+      scrollTop: $(section).position().top+'px'
+    }, 600);
+  });
 
   // nav menu
   $('.index .nav-menu ul li a').click(function(e) {
