@@ -8,7 +8,7 @@
   $more-tag-width: 30px;
 
   .max-width-content {
-    top: 30px;
+    top: 60px;
   }
 
   .mobile-transition-only {
@@ -30,7 +30,7 @@
     @extend .background-contain;
 
     position: absolute;
-    top: 30px;
+    top: 60px;
     right: 28px;
 
     width: $more-tag-width;
@@ -97,6 +97,24 @@
       margin-bottom: 23px;
 
       text-transform: uppercase;
+    }
+
+    .explore-link {
+      font-family: sourceCodePro;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      text-align: left;
+
+      a {
+        color: inherit;
+      }
+    }
+
+    .read-more {
+      text-decoration: underline;
+      font-weight: 500;
     }
   }
 

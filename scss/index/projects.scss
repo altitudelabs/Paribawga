@@ -1,7 +1,7 @@
 #projects-section {
   @extend .mobile-images-collection;
 
-  margin-bottom: 79px;
+  // margin-bottom: 79px;
 
   .explore-link {
     font-family: sourceCodePro;
@@ -20,6 +20,7 @@
   @include responsive(desktop) {
     height: 600px;
     margin-bottom: 150px;
+    padding-top: 60px;
 
     $image1-width: 258px;
     $image1-height: 297px;

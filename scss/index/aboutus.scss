@@ -35,6 +35,7 @@
     position: relative;
     max-width: 600px;
     margin: auto;
+    top: 60px;
 
     @include responsive(desktop) {
       max-width: 800px;
@@ -66,7 +67,6 @@
     font-size: 43px;
 
     margin-left: $title-marginleft-mobile;
-    margin-top: 58px;
     margin-bottom: 28px;
 
     @include responsive(transition) {

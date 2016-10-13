@@ -26,20 +26,22 @@
   <div class="nav-menu white">
     <div class="title"> - menu - </div>
     <ul class="links">
-      <li class="underline"><a href="#top">home</a></li>
-      <li><a href="#aboutus">about us</a></li>
-      <li><a href="#collection">collection</a></li>
-      <li><a href="#projects">projects</a></li>
-      <li><a href="#bespoke">bespoke</a></li>
-      <li><a href="#sustain">sustainability</a></li>
-      <li><a href="#press">press</a></li>
-      <li><a href="#contact">contact</a></li>
+      <li class="underline"><a href="#hero-section">home</a></li>
+      <li><a href="#aboutus-section">about us</a></li>
+      <li><a href="#collection-section">collection</a></li>
+      <li><a href="#projects-section">projects</a></li>
+      <li><a href="#bespoke-section">bespoke</a></li>
+      <li><a href="#sustain-section">sustainability</a></li>
+      <li><a href="#press-section">press</a></li>
+      <li><a href="#contact-section">contact</a></li>
     </ul>
   </div>
 
+  <!-- LEVEL -->
+  <div class="level zero desktop-only"></div>
+
   <!-- HERO SECTION -->
-  <a name="top"></a>
-  <section class="section-container" id="hero-section">
+  <section class="section-container zero" id="hero-section" data-target="zero">
     <div class="header">
       <ul class="bxslider"> <!-- classname bxslider is unique and required! -->
         <li class="slide" style="background-image: url('images/index/idx_1_burma1.jpg');"><a href="#"></a></li>
@@ -692,10 +694,8 @@
     <a><div class="down-tag">-DO<br>WN-</div></a>
   </section>
 
-
   <!-- ABOUTUS SECTION-->
-  <a name="aboutus"></a>
-  <section class="section-container" id="aboutus-section">
+  <section class="section-container one" id="aboutus-section" data-target="one">
     <div class="max-width-content">
       <div class="title frictionMed">about us</div>
       <div class="text-container">
@@ -716,8 +716,7 @@
   </section>
 
   <!-- COLLECTION SECTION -->
-  <a name="collection"></a>
-  <section class="section-container" id="collection-section">
+  <section class="section-container two" id="collection-section" data-target="two">
     <div id="more-left" class="more-tag desktop-only frictionSlow" data-target="#collection-section"></div>
     <div id="more-right" class="more-tag frictionSlow" data-target="#collection-section"></div>
     <div class="max-width-content">
@@ -749,8 +748,7 @@
   </section>
 
   <!-- PROJECTS SECTION -->
-  <a name="projects"></a>
-  <section class="section-container" id="projects-section">
+  <section class="section-container three" id="projects-section" data-target="three">
     <div class="more-tag desktop-only frictionSlow" id="more-left" data-target="#projects-section"></div>
     <div class="more-tag frictionSlow" id="more-right" data-target="#projects-section"></div>
     <div class="max-width-content">
@@ -763,7 +761,7 @@
           <div class="column">
             <a href="./views/projects.html"><img class="image2 frictionFast" src="images/index/4_projects2.jpg" alt="project2"/></a>
             <div class="content-text">
-              <!-- <div class="name">rau ram</div> -->
+              <div class="name">rau ram</div>
               <!-- <p class="text">
               We design, make, and install furniture and accessories for indoor and outdoor environments, including hospitality, retail, and cultural projects. Whether providing a single piece of furniture, an installation, or outfitting an entire restaurant, we pride ourselves on high-quality materials, flexibility, innovation, and the opportunity to bring beautiful Myanmar-made craftsmanship to the rest of the world.
             </p> -->
@@ -781,8 +779,7 @@
 
 
 <!-- BESPOKE SECTION -->
-<a name="bespoke"></a>
-<section class="section-container" id="bespoke-section">
+<section class="section-container four" id="bespoke-section" data-target="four">
   <div class="content">
     <div class="title frictionMed"> bespoke </div>
     <div class="text-container frictionSlow">
@@ -791,7 +788,7 @@
         <br><br>
       </p>
       <p class="contact-link">
-        <a href="#contact">contact us</a>
+        <a href="#contact-section">contact us</a>
       </p>
     </div>
     <div class="column">
@@ -802,8 +799,7 @@
 </section>
 
 <!-- SUSTAINABILITY SECTION -->
-<a name="sustain"></a>
-<section class="section-container" id="sustain-section">
+<section class="section-container five" id="sustain-section" data-target="five">
   <div class="content">
     <div class="title frictionMed"> sustainability </div>
     <div class="img1-chair-container">
@@ -823,77 +819,31 @@
 </section>
 
 <!-- PRESS SECTION -->
-<a name="press"></a>
-<section class="section-container" id="press-section">
-  <div class="more-tag frictionMed"></div>
+<section class="section-container six" id="press-section" data-target="six">
+  <div class="more-tag frictionMed" data-target="#press-section"></div>
   <div class="max-width-content">
     <div class="title frictionMed"> press </div>
     <div class="images-descriptions-container">
-      <div class="grid">
-        <div class="image-and-description-box grid-item one-fourth">
-          <div class="date frictionSlow">4 October 2016</div>
-          <img class="image frictionFast" src="images/press/press1.jpg" alt="press1"/>
-          <p class="text frictionSlow">
-            Paribawga launches at the Myanmar Furniture Fair 2016.
-            <br><br>
-            <span class="explore-link">
-              <a href="./images/press/press1.pdf">Explore more</a>
-            </span>
-          </p>
-        </div>
-        <div class="image-and-description-box grid-item one-fourth">
-          <div class="date frictionSlow">4 October 2016</div>
-          <img class="image frictionFast" src="images/press/press2.jpg" alt="press2"/>
-          <p class="text frictionSlow">
-            Travel and Leisure Asia: Paribawga mentioned in “Road to Rangoon”  for its work on Yangon dining hotspot, Rau Ram.
-            <br><br>
-            <span class="explore-link">
-              <a href="./images/press/press2.pdf">Explore more</a>
-            </span>
-          </p>
-        </div>
-        <div class="image-and-description-box grid-item one-fourth">
-          <div class="date frictionSlow">4 October 2016</div>
-          <img class="image frictionFast" src="images/press/press2.jpg" alt="press2"/>
-          <p class="text frictionSlow">
-            Travel and Leisure Asia: Paribawga mentioned in “Road to Rangoon”  for its work on Yangon dining hotspot, Rau Ram.
-            <br><br>
-            <span class="explore-link">
-              <a href="./images/press/press2.pdf">Explore more</a>
-            </span>
-          </p>
-        </div>
-        <div class="image-and-description-box grid-item one-fourth">
-          <div class="date frictionSlow">4 October 2016</div>
-          <img class="image frictionFast" src="images/press/press2.jpg" alt="press2"/>
-          <p class="text frictionSlow">
-            Travel and Leisure Asia: Paribawga mentioned in “Road to Rangoon”  for its work on Yangon dining hotspot, Rau Ram.
-            <br><br>
-            <span class="explore-link">
-              <a href="./images/press/press2.pdf">Explore more</a>
-            </span>
-          </p>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>
 
 <!-- CONTACT SECTION -->
-<a name="contact"></a>
 <section class="section-container" id="contact-section">
   <div class="content">
     <div class="title frictionMed"> contact </div>
     <div class="content frictionSlow">
-      <p>FOR GENERAL ENQUIRIES - <span class="info">please email <a href="mailto:info@paribawga.com">info@paribawga.com</a></span></p>
-      <p>FOR SALES - <span class="info">please email <a href="mailto:sales@paribawga.com">sales@paribawga.com</a></span></p>
+      <p>FOR GENERAL ENQUIRIES <br><span class="info"><a href="mailto:info@paribawga.com">info@paribawga.com</a></span></p>
+      <br>
+      <p>FOR SALES <br><span class="info"><a href="mailto:sales@paribawga.com">sales@paribawga.com</a></span></p>
       <p class="contact-info">
         810, FMI Centre, 380 Bogyoke Aung Sun Road, Pabedan Township, Yangon, Myanmar
         <br>
         +95 1 248 908
       </p>
     </div>
-    <a><div class="back-to-top desktop-only frictionSlow"></div></a>
+    <a href="#hero-section"><div class="back-to-top desktop-only frictionSlow"></div></a>
   </section>
 
   <section class="section-container slide-up-full" id="footer">

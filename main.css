@@ -109,7 +109,7 @@ html, body {
 
 .section-container {
   position: relative;
-  overflow: hidden; }
+  clear: both; }
 
 a {
   cursor: pointer; }
@@ -121,14 +121,14 @@ a {
 .clearfix:after, .furniture .max-width-content:after {
   clear: both; }
 
-.background-image, .background-cover, #hero-section, #bespoke-section .shelf, #bespoke-section .marble, #sustain-section .img1-chair-container .chair, .furniture .image, .background-contain, #footer .logo, #footer .apps-logo .app, .mobile-header .prev, .collection-page .prev, .furniture .prev, .project-page .prev, .mobile-header .next, .collection-page .next, .furniture .next, .project-page .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, .mobile-images-collection .image-and-description-box .image, #collection-section .image-and-description-box .image, #projects-section .image-and-description-box .image, #press-section .image-and-description-box .image, .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1, .mobile-images-collection .image-and-description-box .image2, #collection-section .image-and-description-box .image2, #projects-section .image-and-description-box .image2, #press-section .image-and-description-box .image2, .mobile-images-collection .image-and-description-box .image3, #collection-section .image-and-description-box .image3, #projects-section .image-and-description-box .image3, #press-section .image-and-description-box .image3, .mobile-images-collection .image-and-description-box .image4, #collection-section .image-and-description-box .image4, #projects-section .image-and-description-box .image4, #press-section .image-and-description-box .image4, #hero-section .cover-tagline .img, #aboutus-section .image-container .image, #contact-section .back-to-top, .collection-page .image-description .image, .collection-page .back-to-top, .project-page .image-description .image, .project-page .back-to-top {
+.background-image, .background-cover, #hero-section, #bespoke-section .shelf, #bespoke-section .marble, #sustain-section .img1-chair-container .chair, .furniture .image, .background-contain, #footer .logo, #footer .apps-logo .app, .mobile-header .prev, .collection-page .prev, .furniture .prev, .project-page .prev, .mobile-header .next, .collection-page .next, .furniture .next, .project-page .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, .mobile-images-collection .image-and-description-box .image, #collection-section .image-and-description-box .image, #projects-section .image-and-description-box .image, #press-section .image-and-description-box .image, .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1, .mobile-images-collection .image-and-description-box .image2, #collection-section .image-and-description-box .image2, #projects-section .image-and-description-box .image2, #press-section .image-and-description-box .image2, .mobile-images-collection .image-and-description-box .image3, #collection-section .image-and-description-box .image3, #projects-section .image-and-description-box .image3, #press-section .image-and-description-box .image3, .mobile-images-collection .image-and-description-box .image4, #collection-section .image-and-description-box .image4, #projects-section .image-and-description-box .image4, #press-section .image-and-description-box .image4, #hero-section .cover-tagline .img, #aboutus-section .image-container .image, #contact-section .back-to-top, .level, .collection-page .image-description .image, .collection-page .back-to-top, .project-page .image-description .image, .project-page .back-to-top {
   background-position: center center;
   background-repeat: no-repeat; }
 
 .background-cover, #hero-section, #bespoke-section .shelf, #bespoke-section .marble, #sustain-section .img1-chair-container .chair, .furniture .image {
   background-size: cover; }
 
-.background-contain, #footer .logo, #footer .apps-logo .app, .mobile-header .prev, .collection-page .prev, .furniture .prev, .project-page .prev, .mobile-header .next, .collection-page .next, .furniture .next, .project-page .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, .mobile-images-collection .image-and-description-box .image, #collection-section .image-and-description-box .image, #projects-section .image-and-description-box .image, #press-section .image-and-description-box .image, .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1, .mobile-images-collection .image-and-description-box .image2, #collection-section .image-and-description-box .image2, #projects-section .image-and-description-box .image2, #press-section .image-and-description-box .image2, .mobile-images-collection .image-and-description-box .image3, #collection-section .image-and-description-box .image3, #projects-section .image-and-description-box .image3, #press-section .image-and-description-box .image3, .mobile-images-collection .image-and-description-box .image4, #collection-section .image-and-description-box .image4, #projects-section .image-and-description-box .image4, #press-section .image-and-description-box .image4, #hero-section .cover-tagline .img, #aboutus-section .image-container .image, #contact-section .back-to-top, .collection-page .image-description .image, .collection-page .back-to-top, .project-page .image-description .image, .project-page .back-to-top {
+.background-contain, #footer .logo, #footer .apps-logo .app, .mobile-header .prev, .collection-page .prev, .furniture .prev, .project-page .prev, .mobile-header .next, .collection-page .next, .furniture .next, .project-page .next, .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag, .mobile-images-collection .image-and-description-box .image, #collection-section .image-and-description-box .image, #projects-section .image-and-description-box .image, #press-section .image-and-description-box .image, .mobile-images-collection .image-and-description-box .image1, #collection-section .image-and-description-box .image1, #projects-section .image-and-description-box .image1, #press-section .image-and-description-box .image1, .mobile-images-collection .image-and-description-box .image2, #collection-section .image-and-description-box .image2, #projects-section .image-and-description-box .image2, #press-section .image-and-description-box .image2, .mobile-images-collection .image-and-description-box .image3, #collection-section .image-and-description-box .image3, #projects-section .image-and-description-box .image3, #press-section .image-and-description-box .image3, .mobile-images-collection .image-and-description-box .image4, #collection-section .image-and-description-box .image4, #projects-section .image-and-description-box .image4, #press-section .image-and-description-box .image4, #hero-section .cover-tagline .img, #aboutus-section .image-container .image, #contact-section .back-to-top, .level, .collection-page .image-description .image, .collection-page .back-to-top, .project-page .image-description .image, .project-page .back-to-top {
   background-size: contain; }
 
 body.loading {
@@ -381,9 +381,6 @@ body.loading {
   .white {
     color: white; } }
 
-.index.nav-menu {
-  opacity: 0; }
-
 .mobile-images-collection, #collection-section, #projects-section, #press-section {
   margin-bottom: 0;
   /* * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -394,7 +391,7 @@ body.loading {
   *     one image and its description below
   * * * * * * * * * * * * * * * * * * * * * * * * * */ }
   .mobile-images-collection .max-width-content, #collection-section .max-width-content, #projects-section .max-width-content, #press-section .max-width-content {
-    top: 30px; }
+    top: 60px; }
   .mobile-images-collection .mobile-transition-only, #collection-section .mobile-transition-only, #projects-section .mobile-transition-only, #press-section .mobile-transition-only {
     display: inline-block; }
   .mobile-images-collection .title, #collection-section .title, #projects-section .title, #press-section .title {
@@ -408,7 +405,7 @@ body.loading {
   .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag {
     background-image: url("images/buttons/buttons_more.svg");
     position: absolute;
-    top: 30px;
+    top: 60px;
     right: 28px;
     width: 30px;
     height: 0;
@@ -450,6 +447,18 @@ body.loading {
       margin-top: 23px;
       margin-bottom: 23px;
       text-transform: uppercase; }
+    .mobile-images-collection .image-and-description-box .explore-link, #collection-section .image-and-description-box .explore-link, #projects-section .image-and-description-box .explore-link, #press-section .image-and-description-box .explore-link {
+      font-family: sourceCodePro;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      text-align: left; }
+      .mobile-images-collection .image-and-description-box .explore-link a, #collection-section .image-and-description-box .explore-link a, #projects-section .image-and-description-box .explore-link a, #press-section .image-and-description-box .explore-link a {
+        color: inherit; }
+    .mobile-images-collection .image-and-description-box .read-more, #collection-section .image-and-description-box .read-more, #projects-section .image-and-description-box .read-more, #press-section .image-and-description-box .read-more {
+      text-decoration: underline;
+      font-weight: 500; }
 
 .index {
   overflow: hidden; }
@@ -538,7 +547,8 @@ body.loading {
   #aboutus-section .max-width-content {
     position: relative;
     max-width: 600px;
-    margin: auto; }
+    margin: auto;
+    top: 60px; }
     @media only screen and (min-width: 1200px) {
       #aboutus-section .max-width-content {
         max-width: 800px;
@@ -560,7 +570,6 @@ body.loading {
     letter-spacing: .015em;
     font-size: 43px;
     margin-left: 35px;
-    margin-top: 58px;
     margin-bottom: 28px; }
     @media only screen and (min-width: 721px) and (max-width: 1199px) {
       #aboutus-section .title {
@@ -625,7 +634,7 @@ body.loading {
 
 @media only screen and (min-width: 1200px) {
   #collection-section {
-    margin-bottom: 100px;
+    margin-bottom: 40px;
     /* * * * * * * * * * * * * * * * * * * * * * * * * *
     * Group of images and descriptions
     * - image-and-description-box: a box to contain
@@ -716,95 +725,95 @@ body.loading {
     #collection-section .image-and-description-box.first {
       display: block; } }
 
-#projects-section {
-  margin-bottom: 79px; }
-  #projects-section .explore-link {
-    font-family: sourceCodePro;
-    font-weight: 600;
-    font-size: 12px;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    text-align: left; }
-    #projects-section .explore-link a {
-      color: inherit; }
-  @media only screen and (min-width: 1200px) {
-    #projects-section {
-      height: 600px;
-      margin-bottom: 150px;
-      /* * * * * * * * * * * * * * * * * * * * * * * * * *
+#projects-section .explore-link {
+  font-family: sourceCodePro;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-align: left; }
+  #projects-section .explore-link a {
+    color: inherit; }
+
+@media only screen and (min-width: 1200px) {
+  #projects-section {
+    height: 600px;
+    margin-bottom: 150px;
+    padding-top: 60px;
+    /* * * * * * * * * * * * * * * * * * * * * * * * * *
     * Group of images and descriptions
     * - image-and-description-box: a box to contain
     *     one image and its description below
     * - container to contain all boxes that allows
     *     horizontal scrolling
     * * * * * * * * * * * * * * * * * * * * * * * * * */ }
-      #projects-section .max-width-content {
-        max-width: 800px;
-        padding-left: 56px; }
-      #projects-section .title {
-        font-size: 80px;
-        text-align: left;
+    #projects-section .max-width-content {
+      max-width: 800px;
+      padding-left: 56px; }
+    #projects-section .title {
+      font-size: 80px;
+      text-align: left;
+      position: relative;
+      margin-left: -85px;
+      margin-bottom: 42px; }
+    #projects-section .more-tag {
+      position: absolute;
+      top: 250px;
+      right: 77px; }
+    #projects-section .more-tag.desktop-only {
+      left: 66px;
+      right: auto; }
+    #projects-section .images-descriptions-container {
+      overflow: visible;
+      white-space: normal;
+      margin-left: 0;
+      margin-bottom: 79px;
+      width: 100%;
+      height: auto;
+      overflow: visible; }
+    #projects-section .column {
+      float: left;
+      position: relative; }
+    #projects-section .image-and-description-box {
+      display: none;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+      overflow: visible; }
+      #projects-section .image-and-description-box .image1, #projects-section .image-and-description-box .image2 {
+        display: block;
         position: relative;
-        margin-left: -85px;
-        margin-bottom: 42px; }
-      #projects-section .more-tag {
-        position: absolute;
-        top: 250px;
-        right: 77px; }
-      #projects-section .more-tag.desktop-only {
-        left: 66px;
-        right: auto; }
-      #projects-section .images-descriptions-container {
-        overflow: visible;
-        white-space: normal;
-        margin-left: 0;
-        margin-bottom: 79px;
-        width: 100%;
-        height: auto;
-        overflow: visible; }
-      #projects-section .column {
-        float: left;
-        position: relative; }
-      #projects-section .image-and-description-box {
-        display: none;
-        width: 100%;
-        margin-right: 0;
-        margin-left: 0;
-        overflow: visible; }
-        #projects-section .image-and-description-box .image1, #projects-section .image-and-description-box .image2 {
-          display: block;
-          position: relative;
-          float: left; }
-        #projects-section .image-and-description-box .image1 {
-          width: 258px;
-          height: 297px; }
-        #projects-section .image-and-description-box .image2 {
-          width: 393px;
-          height: 218px;
-          margin-left: 82px;
-          margin-top: -130px; }
-        #projects-section .image-and-description-box .content-text {
-          clear: left;
-          width: 320px;
-          padding: 22px;
-          padding-left: 45px; }
-        #projects-section .image-and-description-box .text, #projects-section .image-and-description-box .name {
-          font-family: edmondSans;
-          font-weight: normal;
-          font-size: 14px;
-          letter-spacing: .05em;
-          line-height: 17px; }
-        #projects-section .image-and-description-box .name {
-          font-family: sourceCodePro;
-          font-weight: 300;
-          margin-top: 0;
-          margin-bottom: 23px;
-          text-transform: uppercase; }
-      #projects-section .image-and-description-box.first {
-        display: block; } }
+        float: left; }
+      #projects-section .image-and-description-box .image1 {
+        width: 258px;
+        height: 297px; }
+      #projects-section .image-and-description-box .image2 {
+        width: 393px;
+        height: 218px;
+        margin-left: 82px;
+        margin-top: -130px; }
+      #projects-section .image-and-description-box .content-text {
+        clear: left;
+        width: 320px;
+        padding: 22px;
+        padding-left: 45px; }
+      #projects-section .image-and-description-box .text, #projects-section .image-and-description-box .name {
+        font-family: edmondSans;
+        font-weight: normal;
+        font-size: 14px;
+        letter-spacing: .05em;
+        line-height: 17px; }
+      #projects-section .image-and-description-box .name {
+        font-family: sourceCodePro;
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 23px;
+        text-transform: uppercase; }
+    #projects-section .image-and-description-box.first {
+      display: block; } }
 
 #bespoke-section {
-  margin-bottom: 65px; }
+  padding-top: 80px; }
   #bespoke-section .content {
     top: 50px; }
   #bespoke-section .title {
@@ -895,6 +904,7 @@ body.loading {
         margin-right: 0; } }
 
 #sustain-section {
+  padding-top: 85px;
   margin-bottom: 75px; }
   #sustain-section .content {
     top: 50px; }
@@ -905,7 +915,7 @@ body.loading {
     letter-spacing: .015em;
     margin-bottom: 20px;
     position: absolute;
-    top: 60px;
+    top: 137px;
     left: 769px; }
     @media only screen and (min-width: 721px) and (max-width: 1199px) {
       #sustain-section .title {
@@ -1010,8 +1020,13 @@ body.loading {
             min-height: auto; } }
 
 #press-section {
-  height: 600px; }
-  #press-section .date {
+  height: auto; }
+  #press-section .grid {
+    display: none; }
+  #press-section .image-and-description-box .image {
+    width: 180px !important;
+    height: 180px !important; }
+  #press-section .image-and-description-box .date {
     margin-top: 26px;
     margin-bottom: 12px;
     font-family: sourceCodePro;
@@ -1021,14 +1036,11 @@ body.loading {
     line-height: 17px;
     text-transform: uppercase; }
     @media only screen and (max-width: 720px) {
-      #press-section .date {
+      #press-section .image-and-description-box .date {
         font-size: 12px; } }
-  #press-section .text, .mobile-images-collection .image-and-description-box #press-section .name, #collection-section .image-and-description-box #press-section .name, #projects-section .image-and-description-box #press-section .name, #press-section .image-and-description-box .name {
+  #press-section .image-and-description-box .text, #press-section .image-and-description-box .name {
     margin-top: 19px; }
-  #press-section .image-and-description-box .image {
-    width: 180px;
-    height: 180px; }
-  #press-section .explore-link {
+  #press-section .image-and-description-box .explore-link {
     font-family: sourceCodePro;
     font-weight: 600;
     font-size: 12px;
@@ -1037,77 +1049,75 @@ body.loading {
     text-align: left;
     color: inherit; }
     @media only screen and (min-width: 1200px) {
-      #press-section .explore-link {
+      #press-section .image-and-description-box .explore-link {
         font-size: 14px; } }
-    #press-section .explore-link a {
+    #press-section .image-and-description-box .explore-link a {
       color: inherit; }
   @media only screen and (min-width: 1200px) {
-    #press-section {
-      height: 700px; }
-      #press-section .max-width-content {
-        max-width: 900px;
-        top: 50px;
-        height: 100%; }
-      #press-section .title {
-        font-size: 80px;
-        text-align: left;
-        position: relative;
-        margin-left: -85px;
-        margin-bottom: 10px; }
-      #press-section .more-tag {
-        position: absolute;
-        top: 250px;
-        right: 77px; }
-      #press-section .text, .mobile-images-collection .image-and-description-box #press-section .name, #collection-section .image-and-description-box #press-section .name, #projects-section .image-and-description-box #press-section .name, #press-section .image-and-description-box .name {
-        font-size: 14px; }
-      #press-section .images-descriptions-container {
-        margin-left: 0;
-        margin-bottom: 200px; }
-      #press-section .image-and-description-box {
-        margin-right: 35px;
-        margin-left: 35px; }
-        #press-section .image-and-description-box .image {
-          width: 233px;
-          height: 233px; }
-      #press-section .grid:after {
+    #press-section .max-width-content {
+      max-width: 900px;
+      top: 50px;
+      height: auto; }
+    #press-section .title {
+      font-size: 80px;
+      text-align: left;
+      position: relative;
+      margin-left: -85px;
+      margin-bottom: 10px; }
+    #press-section .more-tag {
+      position: absolute;
+      top: 250px;
+      right: 77px; }
+    #press-section .text, .mobile-images-collection .image-and-description-box #press-section .name, #collection-section .image-and-description-box #press-section .name, #projects-section .image-and-description-box #press-section .name, #press-section .image-and-description-box .name {
+      font-size: 14px; }
+    #press-section .images-descriptions-container {
+      margin-left: 0;
+      margin-bottom: 200px; }
+      #press-section .images-descriptions-container .grid:after {
         content: "";
         display: table;
         clear: both; }
-      #press-section .grid .grid-item {
+      #press-section .images-descriptions-container .grid .grid-item {
         float: left;
         position: relative; }
-      #press-section .grid .grid-item.full {
+      #press-section .images-descriptions-container .grid .grid-item.full {
         width: 100%; }
-      #press-section .grid .grid-item.one-half {
+      #press-section .images-descriptions-container .grid .grid-item.one-half {
         width: 50%; }
-      #press-section .grid .grid-item.one-third {
+      #press-section .images-descriptions-container .grid .grid-item.one-third {
         width: 33.33%; }
-      #press-section .grid .grid-item.two-third {
+      #press-section .images-descriptions-container .grid .grid-item.two-third {
         width: 66.66%; }
-      #press-section .grid .grid-item.one-fourth {
+      #press-section .images-descriptions-container .grid .grid-item.one-fourth {
         width: 25%; }
-      #press-section .grid .grid-item.three-fourth {
+      #press-section .images-descriptions-container .grid .grid-item.three-fourth {
         width: 75%; }
-      #press-section .grid .grid-item.one-fifth {
+      #press-section .images-descriptions-container .grid .grid-item.one-fifth {
         width: 20%; }
-      #press-section .grid .grid-item.two-fifth {
+      #press-section .images-descriptions-container .grid .grid-item.two-fifth {
         width: 40%; }
-      #press-section .grid .grid-item.three-fifth {
+      #press-section .images-descriptions-container .grid .grid-item.three-fifth {
         width: 60%; }
-      #press-section .grid .grid-item.four-fifth {
+      #press-section .images-descriptions-container .grid .grid-item.four-fifth {
         width: 80%; }
-      #press-section .grid .grid-item.one-sixth {
+      #press-section .images-descriptions-container .grid .grid-item.one-sixth {
         width: 16.66%; }
-      #press-section .grid .grid-item.five-sixth {
+      #press-section .images-descriptions-container .grid .grid-item.five-sixth {
         width: 83.33%; }
-      #press-section .grid .grid-item.one-eighth {
+      #press-section .images-descriptions-container .grid .grid-item.one-eighth {
         width: 12.5%; }
-      #press-section .grid .grid-item.three-eighth {
+      #press-section .images-descriptions-container .grid .grid-item.three-eighth {
         width: 37.5%; }
-      #press-section .grid .grid-item.five-eighth {
+      #press-section .images-descriptions-container .grid .grid-item.five-eighth {
         width: 62.5%; }
-      #press-section .grid .grid-item.seven-eighth {
-        width: 87.5%; } }
+      #press-section .images-descriptions-container .grid .grid-item.seven-eighth {
+        width: 87.5%; }
+    #press-section .image-and-description-box {
+      margin-right: 35px;
+      margin-left: 35px; }
+      #press-section .image-and-description-box .image {
+        width: 233px !important;
+        height: 233px !important; } }
 
 #contact-section {
   text-align: center;
@@ -1130,9 +1140,6 @@ body.loading {
     margin-top: 50px;
     margin-left: 32px;
     margin-right: 28px; }
-    @media only screen and (min-width: 1200px) {
-      #contact-section .content {
-        margin-top: 100px; } }
     #contact-section .content p {
       font-family: sourceCodePro;
       font-weight: 300;
@@ -1175,6 +1182,29 @@ body.loading {
     -moz-animation: 1s;
     -o-animation: 1s;
     animation: 1s; }
+
+.level {
+  background-position: left;
+  z-index: 1;
+  width: 70px;
+  height: 0;
+  padding-bottom: 238.65772px;
+  position: fixed;
+  top: 57px; }
+  .level.zero {
+    background-image: none; }
+  .level.one {
+    background-image: url("./images/levels/1.png"); }
+  .level.two {
+    background-image: url("./images/levels/2.png"); }
+  .level.three {
+    background-image: url("./images/levels/3.png"); }
+  .level.four {
+    background-image: url("./images/levels/4.png"); }
+  .level.five {
+    background-image: url("./images/levels/5.png"); }
+  .level.six {
+    background-image: url("./images/levels/6.png"); }
 
 .collection-page {
   /* * * * * * * * * * * * * * * *
@@ -1289,11 +1319,7 @@ body.loading {
     padding-bottom: 30.92784px;
     position: absolute;
     right: 18px;
-    bottom: 91px;
-    -webkit-animation: 1s;
-    -moz-animation: 1s;
-    -o-animation: 1s;
-    animation: 1s; }
+    bottom: 14px; }
   @media only screen and (min-width: 1200px) {
     .collection-page .image-description {
       margin: 0; }
@@ -1459,7 +1485,7 @@ body.loading {
       font-size: 80px;
       text-align: right; } }
   .project-page .max-width-content {
-    top: 80px;
+    top: 73px;
     position: relative;
     max-width: 300px;
     height: auto;
@@ -1483,20 +1509,29 @@ body.loading {
       height: 200px;
       display: block;
       margin: auto;
-      max-width: 250px; }
+      max-width: 270px; }
       @media only screen and (min-width: 1200px) {
         .project-page .image-description .image {
           max-width: none;
           margin: 0; } }
     .project-page .image-description .image1 {
-      width: 412px;
-      height: 229px; }
+      width: auto;
+      height: 180px; }
+      @media only screen and (min-width: 1200px) {
+        .project-page .image-description .image1 {
+          height: 229px; } }
     .project-page .image-description .image2 {
-      width: 296px;
-      height: 350px; }
+      width: auto;
+      height: 200px; }
+      @media only screen and (min-width: 1200px) {
+        .project-page .image-description .image2 {
+          height: 350px; } }
     .project-page .image-description .image3 {
-      width: 250px;
-      height: 300px; }
+      width: auto;
+      height: 200px; }
+      @media only screen and (min-width: 1200px) {
+        .project-page .image-description .image3 {
+          height: 300px; } }
     .project-page .image-description .desc {
       font-family: sourceCodePro;
       font-weight: 600;
@@ -1521,11 +1556,7 @@ body.loading {
     padding-bottom: 30.92784px;
     position: absolute;
     right: 18px;
-    bottom: 91px;
-    -webkit-animation: 1s;
-    -moz-animation: 1s;
-    -o-animation: 1s;
-    animation: 1s; }
+    bottom: 14px; }
   @media only screen and (min-width: 1200px) {
     .project-page .image-description {
       margin: 0; }

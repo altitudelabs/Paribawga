@@ -39,7 +39,7 @@
    * CONTENT
    * * * * * * * * * * * * * * * */
   .max-width-content {
-    top: 80px;
+    top: 73px;
     position: relative;
     max-width: 300px;
     height: auto;
@@ -63,23 +63,26 @@
   $image-height-temp: 200px;
 
   $backtotop-width: 40px;
-  $backtotop-bottom: 91px;
+  $backtotop-bottom: 14px;
   $backtotop-right: 18px;
 
   $container1-top: -174px;
   $container1-left: 136px;
-  $image1-width: 412px;
+  $image1-width: auto;
   $image1-height: 229px;
+  $image1-height-mobile: 180px;
 
   $container2-top: 28px;
   $container2-left: 74px;
-  $image2-width: 296px;
+  $image2-width: auto;
   $image2-height: 350px;
+  $image2-height-mobile: 200px;
 
   $container3-top: -429px;
   $container3-left: 482px;
-  $image3-width:250px;
+  $image3-width: auto;
   $image3-height: 300px;
+  $image3-height-mobile: 200px;
 
   .image-description {
     position: relative;
@@ -92,7 +95,7 @@
       height: $image-height-temp;
       display: block;
       margin: auto;
-      max-width: 250px;
+      max-width: 270px;
 
       @include responsive(desktop) {
         max-width: none;
@@ -102,17 +105,29 @@
 
     .image1 {
       width: $image1-width;
-      height: $image1-height;
+      height: $image1-height-mobile;
+
+      @include responsive(desktop) {
+        height: $image1-height;
+      }
     }
 
     .image2 {
       width: $image2-width;
-      height: $image2-height;
+      height: $image2-height-mobile;
+
+      @include responsive(desktop) {
+        height: $image2-height;
+      }
     }
 
     .image3 {
       width: $image3-width;
-      height: $image3-height;
+      height: $image3-height-mobile;
+
+      @include responsive(desktop) {
+        height: $image3-height;
+      }
     }
 
     .desc {
@@ -149,8 +164,6 @@
     position: absolute;
     right: $backtotop-right;
     bottom: $backtotop-bottom;
-
-    @include animation(1s);
   }
 
   @include responsive(desktop) {
