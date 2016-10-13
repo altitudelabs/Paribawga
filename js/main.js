@@ -12,6 +12,7 @@ $(document).ready(function(){
       navLi = $('.nav-menu ul li');
   var headerTitle = $('.header .title');
   var isSubNav = $('.nav-menu').hasClass('hidden')? true: false;
+
   // index page nav-menu and footer
   var idxNavMenu = $('.index .nav-menu'),
       idxFooter = $('.index #footer');
@@ -22,13 +23,13 @@ $(document).ready(function(){
     if (isSubNav) navMenu.removeClass('hidden');
     navLinks.css('display', 'block');
     grayBg.css('visibility', 'visible');
-    $(this).one("click", removeMenu);
-    navTitle.one("click", removeMenu);
+    $(this).off('click').on('click', removeMenu);
+    navTitle.off('click').on('click', removeMenu);
 
     var winWidth = $(window).innerWidth();
 
     if (winWidth < 1200) {
-      navLi.click(removeMenu);
+      navLi.off('click').on('click', removeMenu);
     } else {
       navLi.off('click');
     }
@@ -39,12 +40,12 @@ $(document).ready(function(){
     if (isSubNav) navMenu.addClass('hidden');
     navLinks.css('display', 'none');
     grayBg.css('visibility', 'hidden');
-    navTitle.one("click", showMenu);
-    headerTitle.one("click", showMenu);
+    navTitle.off('click').on('click', showMenu);
+    headerTitle.off('click').on('click', showMenu);
   }
 
-  navTitle.one("click", showMenu);
-  headerTitle.one("click", showMenu);
+  navTitle.on("click", showMenu);
+  headerTitle.on("click", showMenu);
 
 
   /* * * * * * * * * * * *
