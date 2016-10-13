@@ -214,16 +214,18 @@ $(document).ready(function(){
       for (var i = 1; i < PROJECTS_DATA.length; ++i) {
         var data = PROJECTS_DATA[i];
         content+='<div class="image-and-description-box">'
-        + '<div class="column">'
-        + '<img class="image1 frictionMed" src="' + data.images[0] + '"/>'
-        + '</div>'
-        + '<div class="column">'
-        + '<div class="content-text frictionSlow">'
-        + '<div class="name">' + data.title + '</div>'
-        + '<p class="text">' + data.desc + '</p>'
-        + '</div>'
-        + '</div>'
-        + '</div>';
+                  + '<div class="column">'
+                    + '<img class="image1 frictionMed" src="' + data.images[0] + '"/>'
+                  + '</div>'
+                  + '<div class="column">'
+                    + '<div class="content-text frictionSlow">'
+                      + '<div class="name">' + data.title + '</div>'
+                      + '<p class="text">' + data.desc + '</p>'
+                      + '<br>'
+                      + '<p class="explore-link"><a href="./views/projects.html">explore more</a></p>'
+                    + '</div>'
+                  + '</div>'
+                + '</div>';
       }
       container.html(content);
     })();
@@ -476,7 +478,7 @@ $(document).ready(function(){
       console.log(currSection);
 
       if (!level.hasClass(currSection)){
-        $(level).attr('class', 'level');
+        $(level).attr('class', 'level desktop-only');
         level.addClass(currSection);
       }
   }
