@@ -394,7 +394,7 @@ body.loading {
   *     one image and its description below
   * * * * * * * * * * * * * * * * * * * * * * * * * */ }
   .mobile-images-collection .max-width-content, #collection-section .max-width-content, #projects-section .max-width-content, #press-section .max-width-content {
-    top: 30px; }
+    top: 60px; }
   .mobile-images-collection .mobile-transition-only, #collection-section .mobile-transition-only, #projects-section .mobile-transition-only, #press-section .mobile-transition-only {
     display: inline-block; }
   .mobile-images-collection .title, #collection-section .title, #projects-section .title, #press-section .title {
@@ -408,7 +408,7 @@ body.loading {
   .mobile-images-collection .more-tag, #collection-section .more-tag, #projects-section .more-tag, #press-section .more-tag {
     background-image: url("images/buttons/buttons_more.svg");
     position: absolute;
-    top: 30px;
+    top: 60px;
     right: 28px;
     width: 30px;
     height: 0;
@@ -547,7 +547,8 @@ body.loading {
   #aboutus-section .max-width-content {
     position: relative;
     max-width: 600px;
-    margin: auto; }
+    margin: auto;
+    top: 60px; }
     @media only screen and (min-width: 1200px) {
       #aboutus-section .max-width-content {
         max-width: 800px;
@@ -569,7 +570,6 @@ body.loading {
     letter-spacing: .015em;
     font-size: 43px;
     margin-left: 35px;
-    margin-top: 58px;
     margin-bottom: 28px; }
     @media only screen and (min-width: 721px) and (max-width: 1199px) {
       #aboutus-section .title {
@@ -634,7 +634,7 @@ body.loading {
 
 @media only screen and (min-width: 1200px) {
   #collection-section {
-    margin-bottom: 100px;
+    margin-bottom: 40px;
     /* * * * * * * * * * * * * * * * * * * * * * * * * *
     * Group of images and descriptions
     * - image-and-description-box: a box to contain
@@ -725,95 +725,95 @@ body.loading {
     #collection-section .image-and-description-box.first {
       display: block; } }
 
-#projects-section {
-  margin-bottom: 79px; }
-  #projects-section .explore-link {
-    font-family: sourceCodePro;
-    font-weight: 600;
-    font-size: 12px;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    text-align: left; }
-    #projects-section .explore-link a {
-      color: inherit; }
-  @media only screen and (min-width: 1200px) {
-    #projects-section {
-      height: 600px;
-      margin-bottom: 150px;
-      /* * * * * * * * * * * * * * * * * * * * * * * * * *
+#projects-section .explore-link {
+  font-family: sourceCodePro;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-align: left; }
+  #projects-section .explore-link a {
+    color: inherit; }
+
+@media only screen and (min-width: 1200px) {
+  #projects-section {
+    height: 600px;
+    margin-bottom: 150px;
+    padding-top: 60px;
+    /* * * * * * * * * * * * * * * * * * * * * * * * * *
     * Group of images and descriptions
     * - image-and-description-box: a box to contain
     *     one image and its description below
     * - container to contain all boxes that allows
     *     horizontal scrolling
     * * * * * * * * * * * * * * * * * * * * * * * * * */ }
-      #projects-section .max-width-content {
-        max-width: 800px;
-        padding-left: 56px; }
-      #projects-section .title {
-        font-size: 80px;
-        text-align: left;
+    #projects-section .max-width-content {
+      max-width: 800px;
+      padding-left: 56px; }
+    #projects-section .title {
+      font-size: 80px;
+      text-align: left;
+      position: relative;
+      margin-left: -85px;
+      margin-bottom: 42px; }
+    #projects-section .more-tag {
+      position: absolute;
+      top: 250px;
+      right: 77px; }
+    #projects-section .more-tag.desktop-only {
+      left: 66px;
+      right: auto; }
+    #projects-section .images-descriptions-container {
+      overflow: visible;
+      white-space: normal;
+      margin-left: 0;
+      margin-bottom: 79px;
+      width: 100%;
+      height: auto;
+      overflow: visible; }
+    #projects-section .column {
+      float: left;
+      position: relative; }
+    #projects-section .image-and-description-box {
+      display: none;
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+      overflow: visible; }
+      #projects-section .image-and-description-box .image1, #projects-section .image-and-description-box .image2 {
+        display: block;
         position: relative;
-        margin-left: -85px;
-        margin-bottom: 42px; }
-      #projects-section .more-tag {
-        position: absolute;
-        top: 250px;
-        right: 77px; }
-      #projects-section .more-tag.desktop-only {
-        left: 66px;
-        right: auto; }
-      #projects-section .images-descriptions-container {
-        overflow: visible;
-        white-space: normal;
-        margin-left: 0;
-        margin-bottom: 79px;
-        width: 100%;
-        height: auto;
-        overflow: visible; }
-      #projects-section .column {
-        float: left;
-        position: relative; }
-      #projects-section .image-and-description-box {
-        display: none;
-        width: 100%;
-        margin-right: 0;
-        margin-left: 0;
-        overflow: visible; }
-        #projects-section .image-and-description-box .image1, #projects-section .image-and-description-box .image2 {
-          display: block;
-          position: relative;
-          float: left; }
-        #projects-section .image-and-description-box .image1 {
-          width: 258px;
-          height: 297px; }
-        #projects-section .image-and-description-box .image2 {
-          width: 393px;
-          height: 218px;
-          margin-left: 82px;
-          margin-top: -130px; }
-        #projects-section .image-and-description-box .content-text {
-          clear: left;
-          width: 320px;
-          padding: 22px;
-          padding-left: 45px; }
-        #projects-section .image-and-description-box .text, #projects-section .image-and-description-box .name {
-          font-family: edmondSans;
-          font-weight: normal;
-          font-size: 14px;
-          letter-spacing: .05em;
-          line-height: 17px; }
-        #projects-section .image-and-description-box .name {
-          font-family: sourceCodePro;
-          font-weight: 300;
-          margin-top: 0;
-          margin-bottom: 23px;
-          text-transform: uppercase; }
-      #projects-section .image-and-description-box.first {
-        display: block; } }
+        float: left; }
+      #projects-section .image-and-description-box .image1 {
+        width: 258px;
+        height: 297px; }
+      #projects-section .image-and-description-box .image2 {
+        width: 393px;
+        height: 218px;
+        margin-left: 82px;
+        margin-top: -130px; }
+      #projects-section .image-and-description-box .content-text {
+        clear: left;
+        width: 320px;
+        padding: 22px;
+        padding-left: 45px; }
+      #projects-section .image-and-description-box .text, #projects-section .image-and-description-box .name {
+        font-family: edmondSans;
+        font-weight: normal;
+        font-size: 14px;
+        letter-spacing: .05em;
+        line-height: 17px; }
+      #projects-section .image-and-description-box .name {
+        font-family: sourceCodePro;
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 23px;
+        text-transform: uppercase; }
+    #projects-section .image-and-description-box.first {
+      display: block; } }
 
 #bespoke-section {
-  margin-bottom: 65px; }
+  padding-top: 80px; }
   #bespoke-section .content {
     top: 50px; }
   #bespoke-section .title {
@@ -904,6 +904,7 @@ body.loading {
         margin-right: 0; } }
 
 #sustain-section {
+  padding-top: 85px;
   margin-bottom: 75px; }
   #sustain-section .content {
     top: 50px; }
@@ -914,7 +915,7 @@ body.loading {
     letter-spacing: .015em;
     margin-bottom: 20px;
     position: absolute;
-    top: 60px;
+    top: 137px;
     left: 769px; }
     @media only screen and (min-width: 721px) and (max-width: 1199px) {
       #sustain-section .title {
@@ -1491,7 +1492,7 @@ body.loading {
       font-size: 80px;
       text-align: right; } }
   .project-page .max-width-content {
-    top: 80px;
+    top: 73px;
     position: relative;
     max-width: 300px;
     height: auto;

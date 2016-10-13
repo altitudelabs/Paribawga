@@ -1,5 +1,6 @@
 #sustain-section {
 
+  padding-top: 85px;
   margin-bottom: 75px;
 
   $chair-width: 464px;
@@ -37,7 +38,7 @@
     letter-spacing: .015em;
     margin-bottom: 20px;
     position: absolute;
-    top: 60px;
+    top: 137px;
     left: 769px;
 
     @include responsive(transition) {
