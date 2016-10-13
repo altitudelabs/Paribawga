@@ -61,7 +61,7 @@ $(document).ready(function(){
     var hiddenText = fullText.substr(maxLength, fullText.length);
 
     element.html(shownText
-                  + '<a class="read-more">Read more</a>'
+                  + '<br><a class="read-more">Read more</a>'
                   + '<span class="more-text" style="display: none">' + hiddenText + '</span>');
 
     $(element).find('a.read-more').click(function(e){
@@ -598,21 +598,44 @@ $(document).ready(function(){
       aboutusSection = $('#aboutus-section'),
       idxPage = $('body');
 
-  headerTL
-    .set(idxPage, {overflow: 'hidden'})
-    .staggerTo(pathChildren, .05, {autoAlpha: 1, strokeDashoffset: 0}, .05)
-    //.to(header, 1, {top: '10%', right: '10%', bottom: '10%', left: '10%', ease: Circ.easeOut})
-    .fromTo(idxNavMenu, 1, {y: -200, autoAlpha: 0}, {y: 0, autoAlpha: 1}, '-=.05')
-    .from(scrollTag, 1, {x: -200}, '-=1')
-    .from(downTag, 1, {x: 200}, '-=1')
-    .set(taglineImg, {autoAlpha: 1}, '-=1')
-    .set(idxPage, {overflow: 'auto'})
-    .set(idxNavMenu, {clearProps: "x"}); // reset position
+  var urlHash = window.location.hash;
+  console.log(urlHash);
 
+  if (urlHash == "" || urlHash == "#top") {
+
+    headerTL
+      .set(idxPage, {overflow: 'hidden'})
+      .set(idxNavMenu, {autoAlpha: 0})
+      .staggerTo(pathChildren, .05, {autoAlpha: 1, strokeDashoffset: 0}, .05)
+      //.to(header, 1, {top: '10%', right: '10%', bottom: '10%', left: '10%', ease: Circ.easeOut})
+      .fromTo(idxNavMenu, 1, {y: -200}, {y: 0, autoAlpha: 1}, '-=.05')
+      .from(scrollTag, 1, {x: -200}, '-=1')
+      .from(downTag, 1, {x: 200}, '-=1')
+      .set(taglineImg, {autoAlpha: 1}, '-=1')
+      .set(idxPage, {overflow: 'auto'})
+      .set(idxNavMenu, {clearProps: "x"}); // reset position
+  } else {
+    headerTL.set(taglineImg, {autoAlpha: 1});
+
+    $('body, html').animate({
+      scrollTop: $(urlHash).position().top+'px'
+    }, 1000);
+  }
 
   scrollTag.add(downTag).click(function(){
     $('body, html').animate({
       scrollTop: aboutusSection.position().top+'px'
+    }, 600);
+  });
+
+
+  // nav menu
+  $('.index .nav-menu ul li a').click(function(e) {
+    e.preventDefault();
+    var section = $(this).attr('href');
+
+    $('body, html').animate({
+      scrollTop: $(section).position().top+'px'
     }, 600);
     return false;
   });

@@ -63,7 +63,7 @@
   $image-height-temp: 200px;
 
   $backtotop-width: 40px;
-  $backtotop-bottom: 91px;
+  $backtotop-bottom: 14px;
   $backtotop-right: 18px;
 
   $container1-top: -174px;
@@ -164,8 +164,6 @@
     position: absolute;
     right: $backtotop-right;
     bottom: $backtotop-bottom;
-
-    @include animation(1s);
   }
 
   @include responsive(desktop) {

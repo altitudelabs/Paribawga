@@ -381,9 +381,6 @@ body.loading {
   .white {
     color: white; } }
 
-.index.nav-menu {
-  opacity: 0; }
-
 .mobile-images-collection, #collection-section, #projects-section, #press-section {
   margin-bottom: 0;
   /* * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -1325,11 +1322,7 @@ body.loading {
     padding-bottom: 30.92784px;
     position: absolute;
     right: 18px;
-    bottom: 91px;
-    -webkit-animation: 1s;
-    -moz-animation: 1s;
-    -o-animation: 1s;
-    animation: 1s; }
+    bottom: 14px; }
   @media only screen and (min-width: 1200px) {
     .collection-page .image-description {
       margin: 0; }
@@ -1566,11 +1559,7 @@ body.loading {
     padding-bottom: 30.92784px;
     position: absolute;
     right: 18px;
-    bottom: 91px;
-    -webkit-animation: 1s;
-    -moz-animation: 1s;
-    -o-animation: 1s;
-    animation: 1s; }
+    bottom: 14px; }
   @media only screen and (min-width: 1200px) {
     .project-page .image-description {
       margin: 0; }
