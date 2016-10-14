@@ -1208,6 +1208,8 @@ body.loading {
   /* * * * * * * * * * * * * * * *
    * CONTENT
    * * * * * * * * * * * * * * * */ }
+  .collection-page .nav-menu {
+    background-color: white; }
   @media only screen and (min-width: 1200px) {
     .collection-page .next, .collection-page .prev {
       top: 300px; }
@@ -1297,6 +1299,8 @@ body.loading {
   /* * * * * * * * * * * * * * * *
    * CONTENT
    * * * * * * * * * * * * * * * */ }
+  .furniture .nav-menu {
+    background-color: white; }
   @media only screen and (min-width: 1200px) {
     .furniture .next, .furniture .prev {
       top: 364px; }
@@ -1398,6 +1402,8 @@ body.loading {
   /* * * * * * * * * * * * * * * *
    * CONTENT
    * * * * * * * * * * * * * * * */ }
+  .project-page .nav-menu {
+    background-color: white; }
   @media only screen and (min-width: 1200px) {
     .project-page .next, .project-page .prev {
       top: 215px; }
