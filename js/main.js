@@ -611,10 +611,10 @@ $(document).ready(function(){
         .set(idxNavMenu, {autoAlpha: 0})
         .staggerTo(pathChildren, .05, {autoAlpha: 1, strokeDashoffset: 0}, .05)
         //.to(header, 1, {top: '10%', right: '10%', bottom: '10%', left: '10%', ease: Circ.easeOut})
-        .fromTo(idxNavMenu, 1, {y: -200}, {y: 0, autoAlpha: 1}, '-=.05')
+        .set(taglineImg, {autoAlpha: 1})
+        .fromTo(idxNavMenu, 1, {y: -200}, {y: 0, autoAlpha: 1}, '-=.5')
         .from(scrollTag, 1, {x: -200}, '-=1')
         .from(downTag, 1, {x: 200}, '-=1')
-        .set(taglineImg, {autoAlpha: 1}, '-=1')
         .set(idxPage, {overflow: 'auto'})
         .set(idxNavMenu, {clearProps: "x"}); // reset position
     } else {
