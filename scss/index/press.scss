@@ -2,11 +2,8 @@
   @extend .mobile-images-collection;
   height: auto;
 
-  .grid {
-    display: none;
-  }
-
   .image-and-description-box {
+    height: 450px;
 
     .image {
       width: 180px !important;

@@ -79,6 +79,7 @@
       background-image: url('images/index/1_tagline_new.png');
       @extend .background-contain;
       height: 100%;
+      opacity: 0;
     }
 
     svg {
