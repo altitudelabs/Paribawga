@@ -1,10 +1,16 @@
 .nav-menu {
-  $nav-menu-top: 38px;
-  $nav-menu-top-mobile: 5%;
+  $nav-menu-paddingtopbottom: 40px;
+  $nav-menu-paddingtopbottom-mobile: 5%;
+  $nav-menu-top: 0;
+  $nav-menu-top-mobile: 0;
   @extend .horizontal-center;
 
   z-index: 101;
   top: $nav-menu-top-mobile;
+  padding-top: $nav-menu-paddingtopbottom-mobile;
+  padding-bottom: $nav-menu-paddingtopbottom-mobile;
+
+  background-color: transparent;
 
   position: fixed;
   font-family: sourceCodePro;
@@ -12,11 +18,13 @@
   font-size: 14px;
   letter-spacing: .2em;
   text-transform: uppercase;
-  width: 250px;
+  width: 100%;
   text-align: center;
 
   @include responsive(desktop) {
     top: $nav-menu-top;
+    padding-top: $nav-menu-paddingtopbottom;
+    padding-bottom: $nav-menu-paddingtopbottom;
     font-size: 15px;
     width: auto;
   }

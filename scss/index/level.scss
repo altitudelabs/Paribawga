@@ -1,43 +1,20 @@
 .level { // 149x508
-  $width: 70px;
+  $width: 40px;
   $top: 57px;
-
-  @extend .background-contain;
-  background-position: left;
 
   z-index: 1;
   width: $width;
   height: 0;
-  padding-bottom: 508 / 149 * $width;
+
 
   position: fixed;
   top: $top;
 
-  &.zero {
-    background-image: none;
-  }
-
-  &.one {
-    background-image: url('./images/levels/1.png');
-  }
-
-  &.two {
-    background-image: url('./images/levels/2.png');
-  }
-
-  &.three {
-    background-image: url('./images/levels/3.png');
-  }
-
-  &.four {
-    background-image: url('./images/levels/4.png');
-  }
-
-  &.five {
-    background-image: url('./images/levels/5.png');
-  }
-
-  &.six {
-    background-image: url('./images/levels/6.png');
+  div {
+    display: none;
+    width: 100%;
+    padding-bottom: 508 / 149 * $width;
+    @extend .background-contain;
+    background-position: left;
   }
 }

@@ -4,7 +4,7 @@
   $desc-container-width: calc(100% - 190px); // shelf-width
   $desc-container-height: 220px;
 
-  $text-width: 290px;
+  $text-width: 250px;
 
   $shelf-width: 583px;
   $shelf-width-mobile: 190px;
@@ -100,6 +100,7 @@
   .shelf {
     background-image: url('images/index/5_bespoke1.jpg');
     @extend .background-cover;
+    background-position: left;
 
     width: $shelf-width;
     height: $shelf-height;

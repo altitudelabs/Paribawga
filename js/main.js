@@ -2,6 +2,16 @@ $(document).ready(function(){
 
   $(this).scrollTop(0);
 
+  //detect IE
+  var ms_ie = false;
+  var userAgent = window.navigator.userAgent;
+  var old_ie = userAgent.indexOf('MSIE ');
+  var new_ie = userAgent.indexOf('Trident/');
+
+  if ((old_ie > -1) || (new_ie > -1)) {
+      ms_ie = true;
+  }
+
   /* * * * * * * * * * * *
   *  NAV MENU
   * * * * * * * * * * * */
@@ -386,58 +396,60 @@ $(document).ready(function(){
 
   var rowPressSection = $.throttle(1000, (function() {
     var rowIndex = 0, currRowIdxShown = 0;
-    var maxRow = Math.floor(PRESS_DATA.length / 3);
+    var length = PRESS_DATA.length;
+    var maxRow = Math.floor(length / 3);
+    var itemBox;
 
-    function showGrid(endRow, display){
+    function showRow(endRow, display = "inline-block"){
 
-      console.log("showGrid", endRow, display);
+      console.log("showRow", endRow);
 
-      for (var i = 0; i <= endRow; ++i) {
-        $(grid[i]).css('display', display);
+      for (var i = 0; i < (endRow + 1) * 3; ++i) {
+        $(itemBox[i]).css('display', display);
       }
 
-      for (var i = endRow + 1; i <= maxRow; ++i) {
-        $(grid[i]).css('display', 'none');
+      for (var i = (endRow + 1) * 3; i < length; ++i) {
+        $(itemBox[i]).css('display', 'none');
+      }
+    }
+
+    function init() {
+      itemBox = $('#press-section .grid-item');
+      rowIndex = 0;
+      currRowIdxShown = 0;
+
+      var winWidth = $(window).innerWidth();
+      if (winWidth < 1200) {
+        showRow(maxRow); // show all items
+      } else {
+        showRow(rowIndex); // only show the first row
       }
     }
 
     // build initial structure
     (function(){
-      var container = $('#press-section .images-descriptions-container');
+      var container = $('#press-section .images-descriptions-container .grid');
       var content = "";
 
       for (var i = 0; i < PRESS_DATA.length; ++i) {
         var data = PRESS_DATA[i];
-        if (i % 3 == 0) {
-          if (i != 0) {
-            content+= '</div>';
-          }
-          content+= '<div class="grid">';
-        }
+
         content+='<div class="image-and-description-box grid-item one-fourth">'
-        + '<div class="date frictionSlow">' + data.date + '</div>'
-        + '<img class="image frictionFast" src="' + data.image + '" alt="press"' + i.toString() + '/>'
-        + '<div class="content-text frictionSlow">'
-        + '<p class="text">' + data.desc + '</p>'
-        + '<br>'
-        + '<p class="explore-link">'
-        + '<a href="' + data.pdf + '">Explore more</a>'
-        + '</p>'
-        + '</div>'
-        + '</div>';
-        if (i == PRESS_DATA.length-1)
-        content+= '</div>';
+          + '<div class="date frictionSlow">' + data.date + '</div>'
+          + '<img class="image frictionFast" src="' + data.image + '" alt="press"' + i.toString() + '/>'
+          + '<div class="content-text frictionSlow">'
+          + '<p class="text">' + data.desc + '</p>'
+          + '<br>'
+          + '<p class="explore-link">'
+          + '<a href="' + data.pdf + '">Explore more</a>'
+          + '</p>'
+          + '</div>'
+          + '</div>';
+
       }
       container.html(content);
 
-      grid = $('#press-section .grid');
-
-      var winWidth = $(window).innerWidth();
-      if (winWidth < 1200) {
-        showGrid(maxRow, "inline-block");
-      } else {
-        showGrid(rowIndex, "block");
-      }
+      init();
     })();
 
     return function(e, isNext, winWidth) {
@@ -450,27 +462,33 @@ $(document).ready(function(){
         }
 
         if (currRowIdxShown < rowIndex) {
-          showGrid(rowIndex, "block");
-          var pressTL = new TimelineLite();
-          pressTL
-          .set(grid[rowIndex], {height: 0, overflow: "hidden", autoAlpha: 0})
-          .set(grid[rowIndex], {height: "auto"})
-          .from(grid[rowIndex], 1, {height: 0})
-          .fromTo(grid[rowIndex], 1, {x: -1000}, {x: 0, autoAlpha: 1})
-          .set(grid[rowIndex], {clearProps: "overflow"});
-          currRowIdxShown = rowIndex;
+          showRow(rowIndex);
+          var row = [];
+
+          for (var i = rowIndex * 3; i < (rowIndex + 1) * 3; ++i) {
+            if (i >= length) break;
+
+            row.push(itemBox[i]);
+          }
+
+          if (!ms_ie) {
+
+            var pressTL = new TimelineLite();
+
+            pressTL
+            .set(row, {overflow: "hidden", autoAlpha: 0})
+            .fromTo(row, 1, {height: 0}, {height: 450})
+            .fromTo(row, 1, {x: -1000}, {x: 0, autoAlpha: 1})
+            .set(row, {clearProps: "overflow"});
+            currRowIdxShown = rowIndex;
+          }
         }
 
         return;
       }
 
-      rowIndex = 0;
-      if (winWidth < 1200) {
-        showGrid(maxRow, "inline-block");
-      } else {
-        showGrid(rowIndex, "block");
-      }
-    };
+      init();
+    }
   })());
 
 
@@ -518,18 +536,17 @@ $(document).ready(function(){
       .reduce(function(prev, current) {
         var target = $(current).data('target');
 
-        if ($(current).offset().top <= currScroll + 200) {
+        if ($(current).offset().top <= currScroll) {
           return target;
         }
         return prev;
       }, 'zero');
 
       //console.log(currSection);
+      $(level).find('div').css('display', 'none');
 
-      if (!level.hasClass(currSection)){
-        $(level).attr('class', 'level desktop-only');
-        level.addClass(currSection);
-      }
+      var levelDiv = $(level).find("." + currSection);
+      levelDiv.css('display', 'block');
   }
 
   /* * * * * * * * * * * *
@@ -558,32 +575,38 @@ $(document).ready(function(){
   }));
 
   $(window).scroll($.throttle(250, function() {
-    var winScrollTop = $(window).scrollTop();
-    var winWidth = $(window).innerWidth();
+      var winScrollTop = $(window).scrollTop();
+      var winWidth = $(window).innerWidth();
 
-    // nav menu
-    if (winWidth >= 1024) {
-      if (winScrollTop >= 600) { // 1st section-height
-        idxNavMenu.removeClass('white');
-        idxFooter.addClass('activate');
+      // nav menu
+      if (winWidth >= 1024) {
+        if (winScrollTop >= $(window).height()) { // 1st section-height
+          idxNavMenu.removeClass('white');
+          idxFooter.addClass('activate');
+        } else {
+          idxNavMenu.addClass('white');
+          idxFooter.removeClass('activate');
+        }
       } else {
-        idxNavMenu.addClass('white');
-        idxFooter.removeClass('activate');
+        idxFooter.addClass('activate');
       }
-    } else {
-      idxFooter.addClass('activate');
-    }
 
-    // level
-    updateLevel(winScrollTop);
-  }));
+      if (winScrollTop >= $(window).height()) {
+        idxNavMenu.css('background-color', 'white');
+      } else {
+        idxNavMenu.css('background-color', 'transparent');
+      }
+
+      // level
+      updateLevel(winScrollTop);
+    }));
 
 
   /* * * * * * * * * * * *
   *  ANIMATIONS
   * * * * * * * * * * * */
 
-  // header animations
+  // header
   var path = $('#stroke');
   var pathChildren = path.children();
 
@@ -595,6 +618,8 @@ $(document).ready(function(){
   var headerTL = new TimelineLite();
   var header = $('.header'),
       taglineImg = $('.cover-tagline .img'),
+      scrollTag = $('.scroll-tag'),
+      downTag = $('.down-tag'),
       aboutusSection = $('#aboutus-section'),
       idxPage = $('body'),
       scrollTag = $('.scroll-tag'),
@@ -603,27 +628,31 @@ $(document).ready(function(){
   var urlHash = window.location.hash;
   var locationHash = location.pathname.split('/').slice(-1)[0];
 
-  if (locationHash == "" || locationHash == "index.html") {
+  if (locationHash == "" || locationHash == "index.html") { // if main page
 
-    if (urlHash == "" || urlHash == "#top") {
+    if ( ms_ie ) {
+        $(taglineImg).css('opacity', '1');
+    } else {
 
-      headerTL
+      // if not IE, perform header animations
+      if (urlHash == "" || urlHash == "#top") {
+
+        headerTL
         .set(idxPage, {overflow: 'hidden'})
         .set(idxNavMenu, {autoAlpha: 0})
         .staggerTo(pathChildren, .05, {autoAlpha: 1, strokeDashoffset: 0}, .05)
-        //.to(header, 1, {top: '10%', right: '10%', bottom: '10%', left: '10%', ease: Circ.easeOut})
-        .set(taglineImg, {autoAlpha: 1})
         .fromTo(idxNavMenu, 1, {y: -200}, {y: 0, autoAlpha: 1}, '-=.5')
         .from(scrollTag, 1, {x: -200}, '-=1')
         .from(downTag, 1, {x: 200}, '-=1')
         .set(idxPage, {overflow: 'auto'})
         .set(idxNavMenu, {clearProps: "x"}); // reset position
-    } else {
-      headerTL.set(taglineImg, {autoAlpha: 1});
+      } else {
+        $(taglineImg).css('opacity', '1');
 
-      $('body, html').animate({
-        scrollTop: $(urlHash).position().top+'px'
-      }, 1000);
+        $('body, html').animate({
+          scrollTop: $(urlHash).position().top+'px'
+        }, 1000);
+      }
     }
   }
 
@@ -646,8 +675,8 @@ $(document).ready(function(){
   var fricElements = [$('.frictionFast'),
                       $('.frictionMed'),
                       $('.frictionSlow')];
-  var durationVars = [2, 1.5, 1]; // in seconds
-  var deltaPosVars = [1.5, -1, .5];
+  var durationVars = [.5, .75, 1]; // in seconds
+  var deltaPosVars = [1, 1, 1];
   var lastPos, newPos = 0;
 
   function friction(){
