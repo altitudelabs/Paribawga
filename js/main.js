@@ -65,8 +65,13 @@ $(document).ready(function(){
   * * * * * * * * * * * */
 
   function shrinkText(element, maxLength){
-    var fullText = element.text();
 
+    var linkElement = $(element).find('a.read-more');
+
+    console.log(linkElement, linkElement.length);
+    if (linkElement.length) return;
+
+    var fullText = element.text();
     if (fullText.length <= maxLength) return;
 
     var shownText = fullText.substr(0, maxLength);
@@ -83,6 +88,7 @@ $(document).ready(function(){
   }
 
   function expandText(element) {
+
     var readMore = $(element).find('a.read-more');
     $(readMore).hide();
     $(readMore).parent().find('.more-text').show();
