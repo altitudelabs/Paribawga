@@ -518,18 +518,17 @@ $(document).ready(function(){
       .reduce(function(prev, current) {
         var target = $(current).data('target');
 
-        if ($(current).offset().top <= currScroll + 200) {
+        if ($(current).offset().top <= currScroll) {
           return target;
         }
         return prev;
       }, 'zero');
 
       //console.log(currSection);
+      $(level).find('div').css('display', 'none');
 
-      if (!level.hasClass(currSection)){
-        $(level).attr('class', 'level desktop-only');
-        level.addClass(currSection);
-      }
+      var levelDiv = $(level).find("." + currSection);
+      levelDiv.css('display', 'block');
   }
 
   /* * * * * * * * * * * *
@@ -558,25 +557,27 @@ $(document).ready(function(){
   }));
 
   $(window).scroll($.throttle(250, function() {
-    var winScrollTop = $(window).scrollTop();
-    var winWidth = $(window).innerWidth();
+      var winScrollTop = $(window).scrollTop();
+      var winWidth = $(window).innerWidth();
 
-    // nav menu
-    if (winWidth >= 1024) {
-      if (winScrollTop >= 600) { // 1st section-height
-        idxNavMenu.removeClass('white');
-        idxFooter.addClass('activate');
+      // nav menu
+      if (winWidth >= 1024) {
+        if (winScrollTop >= $(window).height()) { // 1st section-height
+          idxNavMenu.removeClass('white');
+          idxNavMenu.css('background-color', 'white');
+          idxFooter.addClass('activate');
+        } else {
+          idxNavMenu.addClass('white');
+          idxNavMenu.css('background-color', 'transparent');
+          idxFooter.removeClass('activate');
+        }
       } else {
-        idxNavMenu.addClass('white');
-        idxFooter.removeClass('activate');
+        idxFooter.addClass('activate');
       }
-    } else {
-      idxFooter.addClass('activate');
-    }
 
-    // level
-    updateLevel(winScrollTop);
-  }));
+      // level
+      updateLevel(winScrollTop);
+    }));
 
 
   /* * * * * * * * * * * *
@@ -594,7 +595,9 @@ $(document).ready(function(){
 
   var headerTL = new TimelineLite();
   var header = $('.header'),
-      taglineImg = $('.cover-tagline .img'),
+      // taglineImg = $('.cover-tagline .img'),
+      scrollTag = $('.scroll-tag'),
+      downTag = $('.down-tag'),
       aboutusSection = $('#aboutus-section'),
       idxPage = $('body'),
       scrollTag = $('.scroll-tag'),
@@ -612,7 +615,7 @@ $(document).ready(function(){
         .set(idxNavMenu, {autoAlpha: 0})
         .staggerTo(pathChildren, .05, {autoAlpha: 1, strokeDashoffset: 0}, .05)
         //.to(header, 1, {top: '10%', right: '10%', bottom: '10%', left: '10%', ease: Circ.easeOut})
-        .set(taglineImg, {autoAlpha: 1})
+        // .set(taglineImg, {autoAlpha: 1})
         .fromTo(idxNavMenu, 1, {y: -200}, {y: 0, autoAlpha: 1}, '-=.5')
         .from(scrollTag, 1, {x: -200}, '-=1')
         .from(downTag, 1, {x: 200}, '-=1')
@@ -646,8 +649,8 @@ $(document).ready(function(){
   var fricElements = [$('.frictionFast'),
                       $('.frictionMed'),
                       $('.frictionSlow')];
-  var durationVars = [2, 1.5, 1]; // in seconds
-  var deltaPosVars = [1.5, -1, .5];
+  var durationVars = [.5, .75, 1]; // in seconds
+  var deltaPosVars = [1, 1, 1];
   var lastPos, newPos = 0;
 
   function friction(){

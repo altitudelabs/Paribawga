@@ -12,7 +12,7 @@
   $section-height: 100vh;
   $section-height-mobile: 100vh;
 
-  $tagline-height: 490px;
+  $tagline-height: 80%;
   $tagline-width: 70%;
 
   $scroll-tag-width-mobile: 48px;
@@ -79,7 +79,6 @@
       background-image: url('images/index/1_tagline_new.png');
       @extend .background-contain;
       height: 100%;
-      opacity: 0;
     }
 
     svg {
