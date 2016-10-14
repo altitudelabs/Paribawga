@@ -136,26 +136,6 @@ $(document).ready(function(){
         "images/collection/1_3.jpg",
         "images/collection/1_4.jpg"
       ]
-    },
-    {
-      "title": "the new collection",
-      "desc" : "This is a new collection. This is a new collection. This is a new collection. This is a new collection. This is a new collection. This is a new collection. This is a new collection.",
-      "images": [
-        "images/collection/collection_1.jpg",
-        "images/collection/collection_2.jpg",
-        "images/collection/collection_3.jpg",
-        "images/collection/collection_4.jpg"
-      ]
-    },
-    {
-      "title": "the new collection - 2",
-      "desc" : "This is a new collection. This is a new collection. This is a new collection. This is a new collection. This is a new collection. This is a new collection. This is a new collection.",
-      "images": [
-        "images/collection/collection_5.jpg",
-        "images/collection/collection_6.jpg",
-        "images/collection/collection_7.jpg",
-        "images/collection/collection_8.jpg"
-      ]
     }];
 
   var slideCollectionSection = $.throttle(1000, (function() {
@@ -258,14 +238,6 @@ $(document).ready(function(){
       "images": [
         "images/index/4_projects1.jpg",
         "images/index/4_projects2.jpg"
-      ]
-    },
-    {
-      "title": "the new project",
-      "desc" : "This is a new project.",
-      "images": [
-        "images/collection/collection_1.jpg",
-        "images/collection/collection_2.jpg"
       ]
     }
   ];
@@ -370,36 +342,6 @@ $(document).ready(function(){
       "desc" : "Travel and Leisure Asia: Paribawga mentioned in “Road to Rangoon”  for its work on Yangon dining hotspot, Rau Ram.",
       "image": "images/press/press2.jpg",
       "pdf": "/images/press/press2.pdf"
-    },
-    {
-      "date": "4 October 2016",
-      "desc" : "Test.",
-      "image": "images/collection/1_1.jpg",
-      "pdf": "/images/press/press1.pdf"
-    },
-    {
-      "date": "5 October 2016",
-      "desc" : "Test.",
-      "image": "images/collection/1_2.jpg",
-      "pdf": "/images/press/press1.pdf"
-    },
-    {
-      "date": "6 October 2016",
-      "desc" : "Test.",
-      "image": "images/collection/1_3.jpg",
-      "pdf": "/images/press/press1.pdf"
-    },
-    {
-      "date": "7 October 2016",
-      "desc" : "Test.",
-      "image": "images/collection/1_4.jpg",
-      "pdf": "/images/press/press1.pdf"
-    },
-    {
-      "date": "8 October 2016",
-      "desc" : "Test.",
-      "image": "images/collection/1_5.jpg",
-      "pdf": "/images/press/press1.pdf"
     }
   ];
 
