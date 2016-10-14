@@ -48,7 +48,7 @@
     overflow: hidden;
 
     @include responsive(desktop) {
-      max-width: 800px;
+      max-width: 820px;
       overflow: visible;
       margin: auto;
       top: 150px;
@@ -61,71 +61,19 @@
     }
   }
 
-  $image-height-temp: 200px;
 
   $backtotop-width: 40px;
   $backtotop-bottom: 14px;
   $backtotop-right: 18px;
 
   $container1-top: -225px;
-  $container1-left: 200px;
-  $image1-width: 210px;
-  $image1-height: 150px;
+  $container1-left: 0;
+  $image-width: auto;
+  $image-height: 250px;
 
-  $container2-top: -27px;
+  $container2-top: 0;
   $container2-left: 441px;
-  $image2-width: 183px;
-  $image2-height: 250px;
 
-  $container3-top: -282px;
-  $container3-left: 156px;
-  $image3-width: 188px;
-  $image3-height: 218px;
-
-  $container4-top: -27px;
-  $container4-left: 510px;
-  $image4-width: 182px;
-  $image4-height: 129px;
-
-  $container5-top: -202px;
-  $container5-left: 254px;
-  $image5-width: 140px;
-  $image5-height: 218px;
-
-  $container6-top: -132px;
-  $container6-left: 548px;
-  $image6-width: 168px;
-  $image6-height: 254px;
-
-  $container7-top: -252px;
-  $container7-left: 103px;
-  $image7-width: 293px;
-  $image7-height: 225px;
-
-  $container8-top: -30px;
-  $container8-left: 261px;
-  $image8-width: 293px;
-  $image8-height: 225px;
-
-  $container9-top: -24px;
-  $container9-left: 493px;
-  $image9-width: 246px;
-  $image9-height: 176px;
-
-  $container10-top: -216px;
-  $container10-left: 96px;
-  $image10-width: 293px;
-  $image10-height: 225px;
-
-  $container11-top: -124px;
-  $container11-left: 450px;
-  $image11-width: 236px;
-  $image11-height: 281px;
-
-  $container12-top: 0px;
-  $container12-left: 210px;
-  $image12-width: 280px;
-  $image12-height: 229px;
 
   .image-description {
     position: relative;
@@ -133,75 +81,24 @@
     width: 300px;
     margin: auto;
 
+    @include responsive(desktop) {
+      width: 400px;
+      height: 300px;
+      padding-top: 20px;
+    }
+
     .image {
       @extend .background-contain;
-      height: $image-height-temp;
+      height: $image-height;
+      width: $image-width;
       display: block;
       margin: auto;
       max-width: 250px;
 
       @include responsive(desktop) {
-        max-width: none;
-        margin: 0;
+        max-width: 400px;
+        margin: auto;
       }
-    }
-
-    .image1 {
-      width: $image1-width;
-      height: $image1-height;
-    }
-
-    .image2 {
-      width: $image2-width;
-      height: $image2-height;
-    }
-
-    .image3 {
-      width: $image3-width;
-      height: $image3-height;
-    }
-
-    .image4 {
-      width: $image4-width;
-      height: $image4-height;
-    }
-    .image5 {
-      width: $image5-width;
-      height: $image5-height;
-    }
-
-    .image6 {
-      width: $image6-width;
-      height: $image6-height;
-    }
-    .image7 {
-      width: $image7-width;
-      height: $image7-height;
-    }
-
-    .image8 {
-      width: $image8-width;
-      height: $image8-height;
-    }
-
-    .image9 {
-      width: $image9-width;
-      height: $image9-height;
-    }
-
-    .image10 {
-      width: $image10-width;
-      height: $image10-height;
-    }
-
-    .image11 {
-      width: $image11-width;
-      height: $image11-height;
-    }
-
-    .image12 {
-      width: $image12-width;
-      height: $image12-height;
     }
 
     .desc {
@@ -221,12 +118,12 @@
     }
   }
 
-  .image-desc-container {
-    position: relative;
-    width: 0;
-    height: auto;
-    overflow: visible;
-  }
+  // .image-desc-container {
+  //   position: relative;
+  //   width: 0;
+  //   height: auto;
+  //   overflow: visible;
+  // }
 
   .back-to-top { // 194 x 150
     background-image: url('./images/buttons/buttons_backtotop.svg');
@@ -254,56 +151,6 @@
     .image-description2 {
       margin-top: $container2-top;
       margin-left: $container2-left;
-    }
-
-    .image-description3 {
-      margin-top: $container3-top;
-      margin-left: $container3-left;
-    }
-
-    .image-description4 {
-      margin-top: $container4-top;
-      margin-left: $container4-left;
-    }
-
-    .image-description5 {
-      margin-top: $container5-top;
-      margin-left: $container5-left;
-    }
-
-    .image-description6 {
-      margin-top: $container6-top;
-      margin-left: $container6-left;
-    }
-
-    .image-description7 {
-      margin-top: $container7-top;
-      margin-left: $container7-left;
-    }
-
-    .image-description8 {
-      margin-top: $container8-top;
-      margin-left: $container8-left;
-    }
-
-    .image-description9 {
-      margin-top: $container9-top;
-      margin-left: $container9-left;
-    }
-
-    .image-description10 {
-      margin-top: $container10-top;
-      margin-left: $container10-left;
-    }
-
-    .image-description11 {
-      margin-top: $container11-top;
-      margin-left: $container11-left;
-    }
-
-    .image-description12 {
-      margin-top: $container12-top;
-      margin-left: $container12-left;
     }
   }
 }

@@ -595,53 +595,43 @@ $(document).ready(function(){
   var headerTL = new TimelineLite();
   var header = $('.header'),
       taglineImg = $('.cover-tagline .img'),
-      scrollTag = $('.scroll-tag'),
-      downTag = $('.down-tag'),
       aboutusSection = $('#aboutus-section'),
-      idxPage = $('body');
+      idxPage = $('body'),
+      scrollTag = $('.scroll-tag'),
+      downTag = $('.down-tag');
 
   var urlHash = window.location.hash;
-  console.log(urlHash);
 
-  if (urlHash == "" || urlHash == "#top") {
+  if (location.pathname.split('/').slice(-1)[0] == "index.html") {
 
-    headerTL
-      .set(idxPage, {overflow: 'hidden'})
-      .set(idxNavMenu, {autoAlpha: 0})
-      .staggerTo(pathChildren, .05, {autoAlpha: 1, strokeDashoffset: 0}, .05)
-      //.to(header, 1, {top: '10%', right: '10%', bottom: '10%', left: '10%', ease: Circ.easeOut})
-      .fromTo(idxNavMenu, 1, {y: -200}, {y: 0, autoAlpha: 1}, '-=.05')
-      .from(scrollTag, 1, {x: -200}, '-=1')
-      .from(downTag, 1, {x: 200}, '-=1')
-      .set(taglineImg, {autoAlpha: 1}, '-=1')
-      .set(idxPage, {overflow: 'auto'})
-      .set(idxNavMenu, {clearProps: "x"}); // reset position
-  } else {
-    headerTL.set(taglineImg, {autoAlpha: 1});
+    if (urlHash == "" || urlHash == "#top") {
 
-    $('body, html').animate({
-      scrollTop: $(urlHash).position().top+'px'
-    }, 1000);
+      headerTL
+        .set(idxPage, {overflow: 'hidden'})
+        .set(idxNavMenu, {autoAlpha: 0})
+        .staggerTo(pathChildren, .05, {autoAlpha: 1, strokeDashoffset: 0}, .05)
+        //.to(header, 1, {top: '10%', right: '10%', bottom: '10%', left: '10%', ease: Circ.easeOut})
+        .set(taglineImg, {autoAlpha: 1})
+        .fromTo(idxNavMenu, 1, {y: -200}, {y: 0, autoAlpha: 1}, '-=.5')
+        .from(scrollTag, 1, {x: -200}, '-=1')
+        .from(downTag, 1, {x: 200}, '-=1')
+        .set(idxPage, {overflow: 'auto'})
+        .set(idxNavMenu, {clearProps: "x"}); // reset position
+    } else {
+      headerTL.set(taglineImg, {autoAlpha: 1});
+
+      $('body, html').animate({
+        scrollTop: $(urlHash).position().top+'px'
+      }, 1000);
+    }
   }
 
-  scrollTag.add(downTag).click(function(){
-    $('body, html').animate({
-      scrollTop: aboutusSection.position().top+'px'
-    }, 600);
-  });
+  // scroll
 
-  // messy scroll animation - bespoke section
-  $('#bespoke-section a').click(function(e) {
-    e.preventDefault();
-    var section = $(this).attr('href');
+  var linkHash = $('a[href^="#"]');
+  console.log(linkHash);
 
-    $('body, html').animate({
-      scrollTop: $(section).position().top+'px'
-    }, 600);
-  });
-
-  // nav menu
-  $('.index .nav-menu ul li a').click(function(e) {
+  linkHash.click(function(e){
     e.preventDefault();
     var section = $(this).attr('href');
 
@@ -673,16 +663,5 @@ $(document).ready(function(){
   }
 
   friction();
-
-  // back-to-top
-
-  var backToTop = $('.back-to-top, .index .logo');
-
-  backToTop.click(function(){
-    $('body, html').animate({
-      scrollTop: 0
-    }, 600);
-    return false;
-  });
 
 });
