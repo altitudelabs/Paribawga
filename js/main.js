@@ -27,12 +27,15 @@ $(document).ready(function(){
   var idxNavMenu = $('.index .nav-menu'),
       idxFooter = $('.index #footer');
 
+  navMenu.css('background-color', 'white');
+  idxNavMenu.css('background-color', 'transparent');
 
   function showMenu(){
     console.log($(this), $(this).parent(), "show menu");
     if (isSubNav) navMenu.removeClass('hidden');
     navLinks.css('display', 'block');
     grayBg.css('visibility', 'visible');
+    navMenu.css('background-color', 'transparent');
     $(this).off('click').on('click', removeMenu);
     navTitle.off('click').on('click', removeMenu);
 
