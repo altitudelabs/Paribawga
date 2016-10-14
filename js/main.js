@@ -596,7 +596,9 @@ $(document).ready(function(){
   var header = $('.header'),
       taglineImg = $('.cover-tagline .img'),
       aboutusSection = $('#aboutus-section'),
-      idxPage = $('body');
+      idxPage = $('body'),
+      scrollTag = $('.scroll-tag'),
+      downTag = $('.down-tag');
 
   var urlHash = window.location.hash;
 
