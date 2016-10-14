@@ -601,8 +601,9 @@ $(document).ready(function(){
       downTag = $('.down-tag');
 
   var urlHash = window.location.hash;
+  var locationHash = location.pathname.split('/').slice(-1)[0];
 
-  if (location.pathname.split('/').slice(-1)[0] == "index.html") {
+  if (locationHash == "" || locationHash == "index.html") {
 
     if (urlHash == "" || urlHash == "#top") {
 
