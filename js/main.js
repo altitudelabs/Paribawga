@@ -351,12 +351,12 @@ $(document).ready(function(){
     var maxRow = Math.floor(length / 3);
     var itemBox;
 
-    function showRow(endRow, display = "inline-block"){
+    function showRow(endRow){
 
-      console.log("showRow", endRow);
+      // console.log("showRow", endRow);
 
       for (var i = 0; i < (endRow + 1) * 3; ++i) {
-        $(itemBox[i]).css('display', display);
+        $(itemBox[i]).css('display', 'inline-block');
       }
 
       for (var i = (endRow + 1) * 3; i < length; ++i) {
